@@ -5,18 +5,42 @@ categories: ["Volume III", "UPS", "DRUPS", "Lithium-Ion Battery", "NFPA 855"]
 
 # Uninterruptible Power Supply (UPS) and Energy Storage {#sec-ups-energy-storage}
 
-## 10.1 Static UPS systems: Double-conversion topologies, modular parallel architectures, static transfer bypasses, and output synchronization
+## Technical-Commercial Overview: Conditioned Power and Energy Storage {.unnumbered}
 
-TODO: Expand section 10.1 (baseline reference: [@ref14_cxplanner]).
+Conditioned, uninterruptible power is maintained by static double-conversion or diesel rotary UPS (DRUPS) modules backed by battery or flywheel energy storage systems [@bicsi2024002; @ref21_jfindia_playbook]. The rapid industry transition from **Valve-Regulated Lead-Acid (VRLA)** batteries to **Lithium-Iron Phosphate (LFP)** or Nickel-Manganese-Cobalt (NMC) chemistries fundamentally restructures battery room and white space economics [@nfpa855; @ref04_helonic].
 
-## 10.2 Rotary UPS (DRUPS) systems: Commercial, mechanical, and maintenance evaluation
+While lithium-ion cabinets reduce physical floor footprint by $50\%\text{ to }65\%$, reduce structural floor loading by $60\%$, and double service life (10–15 years vs. 4–5 years for VRLA), the MEP-QS must account for substantial secondary code-compliance investments mandated by **NFPA 855 (Standard for the Installation of Stationary Energy Storage Systems)** and local GCC Civil Defense directives [@nfpa855; @sbc801_fire; @uae_fire_code; @ref04_helonic].
 
-TODO: Expand section 10.2 (baseline reference: [@ref21_jfindia_playbook]).
+| Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
+| :--- | :--- | :--- | :--- |
+| **Static UPS Modules & Frames** | Number (No.) of modules / kW output ($PF=1.0$) | Rated by unity power factor module capacity ($500\text{ kW to } 2000\text{ kW}$) and topology ($N+1$, $2N$, or distributed redundant) [@ref03_amanengineering]. Includes internal static bypass and external maintenance bypass switchboard. | Battery DC voltage interface; witnessed FAT full-load heat runs; input current harmonic distortion ($\text{THDi} < 3\%$) [@ref14_cxplanner]. |
+| **Battery Energy Storage Cabinets (VRLA / LFP)** | Number (No.) of strings/racks by runtime ($\text{kWh}$) | Measured by autonomy duration ($5\text{ to }15\text{ min}$ at $100\%$ end-of-life load). Includes DC circuit breaker disconnect boxes and factory BMS [@nfpa855; @ref04_helonic]. | UL 9540A thermal runaway testing compliance; dedicated deflagration venting / gas extraction and fire separation under NFPA 855 [@nfpa855]. |
+| **DC Busway & Battery Inter-Cab Cabling** | Linear Meter (m) + Terminations (No.) | Single-core flexible EPR/XLPE battery cables ($240\text{–}630\text{ mm}^2$) or enclosed DC busbar trunking from UPS DC terminals to battery disconnects [@rics2021nrm2]. | High DC short-circuit fault bracing; strict positive/negative polarity segregation and non-magnetic gland plates [@rics2021nrm2]. |
 
-## 10.3 Energy storage chemistries: Valve-Regulated Lead-Acid (VRLA), Lithium-Ion (LFP/NMC), and Sodium-Ion battery cabinets
+: UPS and Stationary Battery Energy Storage System Measurement Breakdown {#tbl-ups-battery-boq}
 
-TODO: Expand section 10.3 (baseline reference: [@nfpa855; @ref04_helonic]).
+## Static UPS systems: Double-conversion topologies, modular parallel architectures, static transfer bypasses, and output synchronization
 
-## 10.4 Battery room installations: Seismic battery racking, integrated battery monitoring systems (BMS), DC busway, and DC disconnect switchboards
+Under RICS NRM2 Section 39, static UPS systems (IEC 62040-3 **VFI-SS-111** Voltage and Frequency Independent online double-conversion) are enumerated (`No.`) by true kilowatt capacity ($\text{kW} = \text{kVA}$ at unity power factor) [@rics2021nrm2; @bicsi2024002]. The MEP-QS must ensure the BOQ separately measures:
 
-TODO: Expand section 10.4 (baseline reference: [@ref04_helonic]).
+- **External Wrap-Around Maintenance Bypass Switchgear (MBS)**: Input, output, and maintenance bypass ACB/MCCB cubicles with Kirk-key or electrical Castell interlocking so the entire UPS module frame can be electrically isolated for maintenance without dropping the critical load [@uptime2018tier; @ref14_cxplanner].
+- **Dual-Bus Load Bus Synchronization (LBS)**: Inter-system synchronization tie cables allowing downstream Static Transfer Switches (STS) to transfer single-corded loads seamlessly ($<4\text{ ms}$) between System A and System B UPS buses [@bicsi2024002].
+
+## Rotary UPS (DRUPS) systems: Commercial, mechanical, and maintenance evaluation
+
+Diesel Rotary UPS (DRUPS) systems combine a kinetic flywheel energy storage accumulator, a synchronous alternator, an inductive coupling reactor, and a diesel engine on a single integrated frame ($1,500\text{ kVA to }3,300\text{ kVA}$) [@ref21_jfindia_playbook]. When evaluating DRUPS against Static UPS + Generator + Battery architectures, the MEP-QS must compare the elimination of battery room space and air conditioning against specialized mechanical rigging weights ($25\text{ to }35\text{ tonnes}$ per skid), flywheel vacuum/bearing maintenance contracts, and starting current harmonics [@ref21_jfindia_playbook].
+
+## Energy storage chemistries: Valve-Regulated Lead-Acid (VRLA), Lithium-Ion (LFP/NMC), and Sodium-Ion battery cabinets
+
+| Technical & Commercial Parameter | VRLA (AGM / Thin-Plate Pure Lead) | Lithium-Iron Phosphate (LFP) | QS Commercial & TCO Implication |
+| :--- | :--- | :--- | :--- |
+| **Typical Backup Runtime** | $10\text{ to }15\text{ minutes}$ | $5\text{ to }10\text{ minutes}$ | Short-duration high-discharge LFP cabinets reduce initial kWh capacity required for generator walk-in [@bicsi2024002]. |
+| **Ambient Operating Temperature** | $20^\circ\text{C}\text{ to }25^\circ\text{C}$ (Strict) | $18^\circ\text{C}\text{ to }30^\circ\text{C}$ | LFP reduces battery room precision cooling tonnage and CRAH CapEx [@ashrae2021tc99]. |
+| **Replacement Cycle (15-Yr Horizon)** | 2 full replacements (Years 5 & 10) | 0 replacements (12–15 yr design life) | VRLA carries lower Day-1 CapEx ($30\%\text{–}40\%$ lower) but higher 15-year TCO due to replacement CapEx and rigging labor [@ref04_helonic]. |
+| **Fire & Life Safety Code Burden** | Hydrogen ventilation (EN 50272-2 / NFPA 75) | NFPA 855 & UL 9540A thermal runaway protection | LFP requires gas off-gassing detection ($\text{CO}/\text{H}_2$), 2-hour fire barriers, and dedicated fire suppression [@nfpa855; @sbc801_fire]. |
+
+: Technical and Commercial Comparison of VRLA vs. Lithium-Iron Phosphate (LFP) UPS Batteries {#tbl-vrla-vs-lfp}
+
+## Battery room installations: Seismic battery racking, integrated battery monitoring systems (BMS), DC busway, and DC disconnect switchboards
+
+For VRLA open-rack installations, the BOQ must measure epoxy-coated **seismic zone-rated steel battery racks**, acid-resistant spill containment bund trays, individual **cell-level Battery Monitoring Systems (BMS)** measuring internal ohmic impedance ($m\Omega$), temperature, and float voltage per jar, plus eye-wash/safety shower stations and hydrogen gas detection interlocked with ATEX explosion-proof exhaust fans [@rics2021nrm2; @nfpa75; @ref04_helonic].

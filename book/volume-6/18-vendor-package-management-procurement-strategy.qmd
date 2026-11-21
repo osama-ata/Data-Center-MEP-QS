@@ -5,18 +5,28 @@ categories: ["Volume VI", "Vendor RFQ", "Bid Leveling", "Incoterms 2020", "Long-
 
 # Vendor Package Management and Procurement Strategy {#sec-vendor-package-procurement}
 
-## 18.1 Developing specialized Request for Quotations (RFQs) and technical compliance matrices for mission-critical equipment
+## Developing specialized Request for Quotations (RFQs) and technical compliance matrices for mission-critical equipment
 
-TODO: Expand section 18.1 (baseline reference: [@ref12_bidforge]).
+Procuring high-value data center plant requires issuing structured **Request for Quotation (RFQ)** packages containing an itemized Commercial Pricing Schedule, a clause-by-clause Technical Compliance Matrix, a Terminal Point Demarcation Schedule, and a Mandatory Commissioning Attendance Schedule [@rics2021nrm2; @ref02_linesight; @ref12_bidforge].
 
-## 18.2 Commercial bid leveling: Normalizing deviations in warranty terms, delivery points (Incoterms 2020: DDP vs. CIF), and factory service technicians
+## Commercial bid leveling: Normalizing deviations in warranty terms, delivery points (Incoterms 2020: DDP vs. CIF), and factory service technicians
 
-TODO: Expand section 18.2 (baseline reference: [@ref12_bidforge]).
+OEM vendor quotations rarely arrive on an apples-to-apples commercial basis. The MEP-QS must construct a **Commercial Bid-Leveling Matrix** that normalizes monetary adjustments across five common vendor exclusions [@rics2021nrm2; @ref12_bidforge]:
 
-## 18.3 Managing supply chain lead-time risk: Factory reservation fees, capacity commitment deposits, and long-lead tracking registers
+| Bid-Leveling Parameter | Typical OEM Baseline Offer (Unleveled) | Required Turnkey EPC Contract Baseline | QS Leveling Adjustment Added to Vendor Bid |
+| :--- | :--- | :--- | :--- |
+| **Incoterms 2020 Delivery** | FCA Factory or CIF Destination Port | DDP Project Site (Duty Paid, Cleared, Delivered to Site Hook) | Add marine freight, customs duties ($5\%\text{–}15\%$ in GCC/international markets), port handling, and inland heavy-haul transport [@ref12_bidforge; @ref37_aecom_meh2024]. |
+| **Warranty Period Start & Duration** | 12 months from operation or 18 months from factory shipment (whichever expires first) | 24 months from Facility Taking-Over Certificate (RFS) + Defect Notification Period [@fidic2017silver] | Add OEM warranty extension premium (typically $1.5\%\text{–}3.5\%$ of equipment value per additional year) to bridge storage/commissioning durations [@fidic2017silver]. |
+| **Site Commissioning Technicians** | 3–5 man-days included; overtime billed at day-work rates | Full attendance across Level 2 SAT, Level 3 Startup, Level 4 FPT, and Level 5 IST (often 15–30 man-days per package) [@ref14_cxplanner] | Monetize required additional OEM engineer man-days, flights, and weekend shift multipliers [@ref19_datacenterscope_cx]. |
+| **First-Fill Fluids & Consumables** | Dry shipment (refrigerant, dielectric oil, or PG25 glycol excluded) | Fully charged and operational | Add factory/site refrigerant, transformer ester oil, or inhibited PG25 coolant volumes [@ashrae2023liquid]. |
+| **Payment Milestones & Bonds** | $30\%$ advance, $60\%$ on shipping docs, $10\%$ at startup (no retention) | Back-to-back with Prime Contract + $10\%$ Advance Payment Bond & $10\%$ Performance Bond [@fidic2017silver] | Add bank guarantee issuance charges and cost-of-capital financing adjustments [@fidic2017silver]. |
 
-TODO: Expand section 18.3 (baseline reference: [@ref02_linesight]).
+: MEP-QS Commercial Bid-Leveling Normalization Matrix for Long-Lead OEM Plant {#tbl-oem-bid-leveling}
 
-## 18.4 Subcontract tendering, scope gap analyses, and bid-leveling for specialized mechanical and electrical trade packages
+## Managing supply chain lead-time risk: Factory reservation fees, capacity commitment deposits, and long-lead tracking registers
 
-TODO: Expand section 18.4 (baseline reference: [@ref02_linesight]).
+With global hyperscale demand saturating manufacturing capacity for MV breakers, power transformers, DCC engines, and chillers, OEMs require non-refundable **Factory Slot Reservation Fees ($5\%\text{ to }15\%$ deposit)** prior to full engineering release [@ref02_linesight]. The MEP-QS administers a live **Long-Lead Procurement Register** linking drawing submittal approval dates (IFC), factory slot lock-in dates, witnessed FAT windows, marine transit durations, and site rigging readiness dates to the master Primavera P6 critical path [@ref02_linesight].
+
+## Subcontract tendering, scope gap analyses, and bid-leveling for specialized mechanical and electrical trade packages
+
+When splitting site works into specialized Tier-1 trade subcontracts (e.g., Primary Mechanical/FWS, White Space TCS Liquid Cooling, HV/MV Electrical, LV & Busway, Fire/VESDA, and BMS/EPMS), the most acute commercial hazard is **inter-trade "white space" scope gaps** [@ref02_linesight]. Every subcontract agreement must bind the trade contractor to a master **Builder's Work in Connection (BWIC) and Inter-Trade Interface Matrix** allocating secondary steel supports, firestopping of multi-service openings, core drilling, temporary testing power, and commissioning attendance [@rics2021nrm2; @ref02_linesight].

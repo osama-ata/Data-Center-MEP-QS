@@ -5,22 +5,46 @@ categories: ["Volume I", "OFCI", "CFCI", "RACI Matrix", "FAT"]
 
 # Equipment Demarcation and Packaging Strategy: OFCI vs. CFCI {#sec-ofci-vs-cfci}
 
-## 2.1 The procurement matrix: Categorization of plant into CFCI, OFCI, and Owner-Furnished, Owner-Installed (OFOI)
+## The procurement matrix: Categorization of plant into CFCI, OFCI, and Owner-Furnished, Owner-Installed (OFOI)
 
-TODO: Expand section 2.1 (baseline reference: [@ref09_orbital_glossary]).
+To protect Ready-for-Service (RFS) milestones against supply-chain lead times that routinely span 50 to 80+ weeks for medium-voltage switchgear, 2.5–4.0 MW standby diesel generators, water-cooled centrifugal chillers, and Coolant Distribution Units (CDUs), hyperscale and colocation employers frequently execute frame agreements with Original Equipment Manufacturers (OEMs) prior to appointing the main EPC contractor [@ref02_linesight; @ref09_orbital_glossary].
 
-## 2.2 Commercial boundary definitions: Offloading, inside-building rigging, setting to pad, and anchor-bolt torque verifications
+The MEP-QS must classify every major asset across three commercial procurement categories [@rics2021nrm2; @ref09_orbital_glossary]:
 
-TODO: Expand section 2.2 (baseline reference: [@ref12_bidforge]).
+- **OFCI (Owner-Furnished, Contractor-Installed)**: The Employer procures and pays for the capital equipment directly; the EPC Contractor takes custodial delivery at the site perimeter, offloads, rigs, installs, terminates, and integrates the equipment into Level 1–5 commissioning.
+- **CFCI (Contractor-Furnished, Contractor-Installed)**: The EPC Contractor procures, supplies, installs, and warrants all balance-of-plant (BoP) distribution systems (piping, ductwork, busways, cables, containment, supports, fire protection, and controls).
+- **OFOI (Owner-Furnished, Owner-Installed)**: IT server racks, AI/HPC clusters, active core networking switches, and occasionally vendor-turnkey security or specialty battery enclosures installed directly by the Employer's IT integration teams.
 
-## 2.3 Responsibility assignment matrices (RACI) for terminal points: Pipe flanges, electrical bus stabs, and dry-contact BMS inputs
+## Commercial boundary definitions: Offloading, inside-building rigging, setting to pad, and anchor-bolt torque verifications
 
-TODO: Expand section 2.3 (baseline reference: [@ref12_bidforge]).
+Ambiguity at the physical handover seam between an OEM delivery truck and the contractor's installation crew is a leading source of variation claims [@ref01_projectassure; @ref09_orbital_glossary]. The tender BOQ and Employer's Requirements must price and allocate:
 
-## 2.4 Owner delay mechanisms: Evaluating contractor stand-down, demurrage, and preservation costs for late OFCI deliveries
+1. **Incoterms 2020 Delivery Point**: Clarifying whether OFCI plant arrives *DAP/DDP Project Site (On-Truck)*—requiring the EPC contractor to provide heavy mobile cranes (200t–500t), spreader bars, and rigging insurance from the vehicle bed—or *Offloaded at Laydown Yard* [@rics2021nrm2].
+2. **Inside-Building Rigging & Skidding**: Providing temporary structural floor protection plates, air-skates or hydraulic jack-and-slide systems, structural leave-out wall openings, and final seismic anchor-bolt installation and calibrated torque verification [@bicsi2024002].
+3. **Shipping Split Re-Assembly**: Large MV switchboards, chillers, and AHUs ship in modular sections; the BOQ must specify whether inter-panel bus-bar torquing, refrigerant piping Brazing, and internal control harness reconnection are performed by the OEM's field technicians or the CFCI trade subcontractor [@ref10_lvi_epc_manager].
 
-TODO: Expand section 2.4 (baseline reference: [@ref01_projectassure]).
+## Responsibility assignment matrices (RACI) for terminal points: Pipe flanges, electrical bus stabs, and dry-contact BMS inputs
 
-## 2.5 Factory Acceptance Testing (FAT) travel, witnessing allowances, and international factory logistics commercialization
+To eliminate scope gaps between OEM vendor packages and MEP trade subcontracts, the MEP-QS incorporates a binding **Terminal Point Demarcation Schedule (RACI Matrix)** into every subcontract package [@rics2021nrm2; @ref09_orbital_glossary; @ref12_bidforge]:
 
-TODO: Expand section 2.5 (baseline reference: [@ref14_cxplanner]).
+| Interface Seam | OFCI OEM Vendor Scope | CFCI MEP Trade Contractor Scope | QS Measurement & Pricing Rule |
+| :--- | :--- | :--- | :--- |
+| **Hydronic Flanges (Chillers, CDUs, CRAHs)** | Companion counter-flanges or grooved stubs at skid edge. | Isolation valves, flexible bellows, dielectric unions, bolts, gaskets, and pipe insulation up to equipment collar [@rics2021nrm2]. | Measure flexible connectors and valve sets per equipment connection pair (No.) [@rics2021nrm2]. |
+| **Electrical Power Terminations (MV/LV/UPS/Gen)** | Factory bus-stabs, pre-drilled gland plates, and internal CTs. | Bi-metallic compression lugs, brass/SS cable glands, busway flex-link adapters, torque-seal marking, and phase rotation testing [@bicsi2024002]. | Measure terminations per conductor end by cross-sectional area ($\text{mm}^2$) plus adapter kits (No.) [@rics2021nrm2]. |
+| **Controls, BMS & EPMS Interfaces** | Factory-mounted DDC/PLC controller with BACnet IP / Modbus TCP gateway card and dry-contact terminal strip. | Cat6A shielded communication cabling, hardwired fire-trip/interlock cabling, IP addressing, and point-to-point graphics mapping [@ref14_cxplanner]. | Measure per physical/soft I/O point verified through Level 4 FPT [@rics2021nrm2; @ref14_cxplanner]. |
+
+: OFCI-to-CFCI Terminal Point Demarcation and QS Measurement Matrix {#tbl-ofci-cfci-raci}
+
+## Owner delay mechanisms: Evaluating contractor stand-down, demurrage, and preservation costs for late OFCI deliveries
+
+When OFCI equipment arrives late, out-of-sequence, or with factory defects, the Employer breaches its implied or express supply obligations under the EPC contract, entitling the Contractor to claim an **Extension of Time (EOT)** and **Prolongation / Disruption Costs** (e.g., under modified FIDIC Silver Book Sub-Clause 8.4/8.5 and Clause 20) [@fidic2017silver; @ref01_projectassure]. Conversely, if OFCI equipment arrives *ahead* of building dry-in readiness, the MEP-QS must evaluate:
+
+- **Climate-Controlled Warehousing & Demurrage**: Bonded storage fees, double-handling crane lifts, and transport re-mobilization.
+- **Preservation Maintenance**: Continuous energizing of anti-condensation space heaters in MV switchgear and generators, dry-nitrogen positive-pressure blanketing of chiller and CDU heat exchangers, and periodic shaft rotation to prevent bearing brinelling during extended storage [@ref09_orbital_glossary; @ref14_cxplanner].
+
+## Factory Acceptance Testing (FAT) travel, witnessing allowances, and international factory logistics commercialization
+
+Level 1 Factory Acceptance Testing (FAT) occurs at OEM manufacturing plants across Europe, North America, Asia, or the Middle East [@ref14_cxplanner]. The MEP-QS must establish transparent **Provisional Sums** or itemized schedule allowances covering:
+
+- Business/economy airfare, accommodation, per-diem subsistence, and visa costs for the Employer's representatives, the independent Commissioning Agent (CxA), and the EPC Contractor's lead MEP engineers [@rics2021nrm2; @ref14_cxplanner].
+- **Re-Inspection Back-Charges**: Contractual deductions stipulating that if an OEM fails a witnessed FAT run due to manufacturing non-conformance, all travel and man-hour costs for the repeat FAT witness trip are back-charged to the defaulting party [@fidic2017silver; @ref19_datacenterscope_cx].

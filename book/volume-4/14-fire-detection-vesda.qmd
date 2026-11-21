@@ -5,18 +5,24 @@ categories: ["Volume IV", "VESDA", "Fire Detection", "Linear Heat Detection", "F
 
 # Fire Detection and Very Early Smoke Detection Apparatus (VESDA) {#sec-fire-detection-vesda}
 
-## 14.1 Aspiration Smoke Detection (ASD/VESDA): Laser detector units, sampling pipe runs, capillary drop tubes, and end-of-line test points
+## Aspiration Smoke Detection (ASD/VESDA): Laser detector units, sampling pipe runs, capillary drop tubes, and end-of-line test points
 
-TODO: Expand section 14.1 (baseline reference: [@ref14_cxplanner]).
+High-velocity airflows inside contained data halls dilute incipient smoke plumes before they can trigger conventional ceiling point detectors [@nfpa75; @ref14_cxplanner]. Consequently, mission-critical white spaces, under-floor plenums, and return-air grilles deploy **Aspirating Smoke Detection (ASD / VESDA)** systems (EN 54-20 Class A / NFPA 76 Very Early Warning Fire Detection) [@nfpa75; @ref14_cxplanner].
 
-## 14.2 Multi-sensor intelligent addressable fire detection: Optical smoke, thermal, and carbon monoxide detectors in hot/cold aisles and ceiling plenums
+Under RICS NRM2 Section 39 and CSI Division 28, ASD takeoff comprises:
 
-TODO: Expand section 14.2 (baseline reference: [@ref14_cxplanner]).
+- **Laser Aspirating Detector Panels (`No.`)**: 1-pipe or 4-pipe laser detection chambers complete with 24V DC dual-monitored power supplies, relay interface cards (Alert, Action, Fire 1, Fire 2), and Ethernet/Modbus monitoring [@rics2021nrm2; @ref14_cxplanner].
+- **Halogen-Free ABS / uPVC Red Sampling Pipework (`m`)**: $25\text{ mm}$ OD air-sampling networks mounted along the ceiling grid, inside hot-aisle containment plenums, and directly across CRAH/FCW return-air faces [@ref14_cxplanner].
+- **Capillary Drop Tubes & End-of-Line Test Ports (`No.`)**: Flexible capillary sampling tubes terminating in flush ceiling nozzles, plus accessible end-of-line smoke test ports for commissioning verification of the **60-second maximum transport time** [@nfpa75; @ref14_cxplanner].
 
-## 14.3 Linear heat detection: Fiber-optic and digital sensor cables in cable trays and busway enclosures
+## Multi-sensor intelligent addressable fire detection: Optical smoke, thermal, and carbon monoxide detectors in hot/cold aisles and ceiling plenums
 
-TODO: Expand section 14.3 (baseline reference: [@ref04_helonic]).
+In addition to VESDA, clean-agent releasing codes (NFPA 72 / NFPA 2001 / SBC 801 / UAE Civil Defense) require **cross-zoned addressable point detection** (two independent detection loops or detector types in coincidence) before triggering gas release [@nfpa75; @sbc801_fire; @uae_fire_code]. Point detectors (optical smoke, rate-of-rise thermal, and multi-criteria optical/thermal/CO sensors for Li-ion battery off-gassing) are enumerated (`No.`) across three vertical horizons: (1) Under-floor void (if present), (2) Room/aisle level, and (3) Above-ceiling return plenum, complete with remote LED response indicators for concealed detectors [@rics2021nrm2; @ref14_cxplanner].
 
-## 14.4 Fire Alarm Control Panels (FACP) and voice evacuation: Executive action matrix mapping, HVAC trip relays, and fire damper release circuits
+## Linear heat detection: Fiber-optic and digital sensor cables in cable trays and busway enclosures
 
-TODO: Expand section 14.4 (baseline reference: [@ref14_cxplanner]).
+To detect overheated joints or insulation breakdown along congested heavy-duty MV/LV cable ladder racks and battery racks, the MEP-QS measures **Digital or Fiber-Optic Linear Heat Detection (LHD) Cable** in linear meters (`m`), clipped in a sinusoidal wave pattern along each tray tier, complete with zone controller modules, end-of-line termination boxes, and distance-locating FACP integration [@rics2021nrm2; @ref04_helonic].
+
+## Fire Alarm Control Panels (FACP) and voice evacuation: Executive action matrix mapping, HVAC trip relays, and fire damper release circuits
+
+The life-safety network centers on peer-to-peer networked **Addressable Fire Alarm Control Panels (FACPs)** and **Agent Releasing Control Panels (ARCPs)** wired in Class A fault-tolerant redundant loops using fire-resistant cable (FP200 / MICC BS 6387 Category CWZ) [@rics2021nrm2; @ref14_cxplanner]. A major cost and commissioning driver is the **Cause-and-Effect (Executive Action) Matrix**: every motorized fire/smoke damper trip, CRAH/FCW fan shutdown relay, aisle containment drop-ceiling release electromagnet, access-control mantrap fail-safe unlock relay, and clean-agent abort/manual-release station must be individually measured, wired via monitored Input/Output (I/O) interface modules, and witness-tested during Level 4 FPT and Civil Defense inspection [@sbc801_fire; @uae_fire_code; @ref14_cxplanner].

@@ -5,22 +5,30 @@ categories: ["Volume V", "BMS", "DDC I/O Points", "EPMS", "DCIM", "Sequence of O
 
 # Building Management Systems (BMS), EPMS, and DCIM {#sec-bms-epms-dcim}
 
-## 17.1 Direct Digital Control (DDC) hardware: Programmable logic controllers (PLCs), remote input/output (I/O) modules, and control enclosure panels
+## Direct Digital Control (DDC) hardware: Programmable logic controllers (PLCs), remote input/output (I/O) modules, and control enclosure panels
 
-TODO: Expand section 17.1 (baseline reference: [@ref14_cxplanner]).
+Unlike commercial building BMS platforms that rely on commercial-grade HVAC controllers, mission-critical data center thermal cooling plants (FWS chillers, VPF pumps, TES valves, and TCS CDUs) utilize **industrial-grade hot-standby redundant Programmable Logic Controllers (PLCs)** with dual redundant power supplies, dual ring-topology fiber communication processors (MRP/PRP zero-recovery-time rings), and local HMI touchscreens [@bicsi2024002; @ref14_cxplanner].
 
-## 17.2 Input/Output (I/O) point quantification: Hardware points (DI, DO, AI, AO) versus soft network-integrated points (Modbus, BACnet, SNMP)
+## Input/Output (I/O) point quantification: Hardware points (DI, DO, AI, AO) versus soft network-integrated points (Modbus, BACnet, SNMP)
 
-TODO: Expand section 17.2 (baseline reference: [@ref14_cxplanner]).
+The foundation of any BMS/EPMS cost estimate is the **Consolidated I/O Point Schedule** [@rics2021nrm2; @ref14_cxplanner]. The MEP-QS must rigorously separate **Hardwired I/O Points** from **Soft (High-Level Interface / HLI) Network Points**:
 
-## 17.3 Electrical Power Monitoring Systems (EPMS): High-speed transient recorders, power quality meters, and digital protection relay networking
+| Point Category | Signal Type | QS Cost Components Included per Point | Relative Cost Weight |
+| :--- | :--- | :--- | :--- |
+| **Hardwired Analog Input/Output (AI / AO)** | $4\text{–}20\text{ mA}, 0\text{–}10\text{ V}, \text{PT1000 RTD}$ | Field sensor/transmitter (immersion thermowell, $\Delta P$ sensor, flowmeter), shielded twisted-pair cable run in conduit, PLC analog I/O card channel ($+20\%$ spare capacity), 3-point NIST calibration, and Level 3/4 loop check [@rics2021nrm2; @ref14_cxplanner]. | $1.00\times$ (Highest unit cost) |
+| **Hardwired Digital Input/Output (DI / DO)** | Dry contact / 24V AC/DC relay | Interposing relay, control cable run, PLC digital I/O terminal, point-to-point continuity test, and graphic status mapping [@rics2021nrm2; @ref14_cxplanner]. | $0.55\times - 0.70\times$ |
+| **Soft HLI Points (BACnet IP / Modbus TCP / SNMP / IEC 61850)** | Protocol register read/write | Protocol gateway hardware, Cat6A/fiber network drop, register mapping, graphic binding, and alarm trending verification (typically 30–150 soft points per chiller, UPS, CDU, or generator) [@ref14_cxplanner]. | $0.08\times - 0.15\times$ per soft point |
 
-TODO: Expand section 17.3 (baseline reference: [@ref14_cxplanner]).
+: BMS and EPMS Hardwired vs. Soft I/O Point Quantification and Pricing Structure {#tbl-bms-io-points}
 
-## 17.4 Data Center Infrastructure Management (DCIM): Software licenses, sensor deployment, rack environmental monitoring, and automated PUE reporting
+## Electrical Power Monitoring Systems (EPMS): High-speed transient recorders, power quality meters, and digital protection relay networking
 
-TODO: Expand section 17.4 (baseline reference: [@ref03_amanengineering]).
+The **Electrical Power Monitoring System (EPMS)** provides millisecond-resolution visibility across the electrical chain [@bicsi2024002; @ref14_cxplanner]. The BOQ must itemize Class 0.2S / Class 0.1 power quality meters (measuring up to the $63\text{rd}$ harmonic, sag/swell waveform capture, and sequence-of-events recording synchronized via GPS/PTP IEEE 1588 precision time protocol to within $1\text{ ms}$) across all MV/LV incomers, generator feeders, UPS input/output buses, and PDU transformers [@ref14_cxplanner].
 
-## 17.5 Sequence of Operations (SOO) cost modeling: Automation programming, graphic user interface (GUI) mapping, and commissioning script verification
+## Data Center Infrastructure Management (DCIM): Software licenses, sensor deployment, rack environmental monitoring, and automated PUE reporting
 
-TODO: Expand section 17.5 (baseline reference: [@ref14_cxplanner]).
+The **DCIM** layer aggregates BMS thermal data, EPMS electrical telemetry, and rack-level environmental sensors (3-tier vertical temperature/humidity strings on every cabinet door plus differential pressure sensors across hot/cold aisles) to compute real-time **Category 3 PUE and WUE** [@ashrae2021tc99; @ref03_amanengineering]. The MEP-QS must verify whether enterprise DCIM software perpetual/subscription licensing fees (often priced per rack or per monitored device) are included in the CFCI controls package or procured directly by the Employer (OFCI) [@ref03_amanengineering; @ref09_orbital_glossary].
+
+## Sequence of Operations (SOO) cost modeling: Automation programming, graphic user interface (GUI) mapping, and commissioning script verification
+
+Hardware accounts for less than half of a mission-critical controls package; the balance lies in **Systems Integration Engineering**—developing, bench-testing (via Factory Witnessed Hardware-in-the-Loop simulation), and executing the **Sequence of Operations (SOO)** for failure-mode transitions (e.g., pump trip failover, TES discharge valve modulation during utility blackout, and CDU secondary loop pressure limiting) across Level 4 FPT and Level 5 IST [@ref14_cxplanner; @ref19_datacenterscope_cx].

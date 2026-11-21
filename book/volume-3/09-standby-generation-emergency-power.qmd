@@ -5,18 +5,38 @@ categories: ["Volume III", "Standby Generators", "ISO 8528", "Fuel Oil Systems"]
 
 # Standby Generation and Emergency Power Systems {#sec-standby-generation-emergency-power}
 
-## 9.1 Diesel and gas-fired generator sets: Continuous mission-critical ratings, paralleling switchgear, and utility transfer controllers
+## Technical-Commercial Overview: Mission-Critical Standby Generation {.unnumbered}
 
-TODO: Expand section 9.1 (baseline reference: [@iso8528_1; @ref03_amanengineering]).
+Standard commercial emergency standby generator ratings are inadequate for mission-critical data center certification [@uptime2018tier; @iso8528_1; @ref30_tecnogera_generators]. While commercial building generators are rated under **ISO 8528-1 Emergency Standby Power (ESP)** for variable load factors (typically $70\%$ average load) with strict annual run-hour caps ($200\text{ h/yr}$), Uptime Institute Tier III and Tier IV facilities require **Continuous Operating Power (COP) or OEM Data Center Continuous (DCC)** ratings [@uptime2018tier; @iso8528_1; @ref30_tecnogera_generators].
 
-## 9.2 Acoustic enclosures, silencers, and high-level exhaust stacks: Stainless steel exhaust runs, bellows, and catalytic converters
+A DCC-rated generator warrants **$100\%$ maximum nameplate load for unlimited annual run hours** with zero thermal derating [@uptime2018tier; @ref30_tecnogera_generators]. Achieving this rating at high ambient temperatures ($45^\circ\text{C}\text{ to }55^\circ\text{C}$ in GCC markets) requires stepping up engine cylinder displacement, specifying oversized low-reactance alternators (for non-linear UPS harmonic loads), and expanding remote or skid-mounted radiator core areas—commanding a **15% to 25% capital cost premium** over standard ESP standby units [@iso8528_1; @ref30_tecnogera_generators; @ref37_aecom_meh2024].
 
-TODO: Expand section 9.2 (baseline reference: [@ref14_cxplanner]).
+| Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
+| :--- | :--- | :--- | :--- |
+| **Standby Diesel Generators (DCC Rated)** | Number (No.) of sets / kVA & kWe output | Measured by ISO 8528-1 DCC continuous kVA/kWe output at site ambient temp and altitude [@iso8528_1; @ref03_amanengineering]. Includes seismic spring isolators, dual 24V DC starter systems, and jacket water heaters. | Diesel fuel burn during Level 4/5 IST testing; EPA Tier 4 / EU Stage V SCR emissions skids; 60–80 week OEM lead times [@ref02_linesight; @ref19_datacenterscope_cx]. |
+| **Acoustic Container Enclosures & Exhausts** | Number (No.) / Linear Meter (m) of flue | Walk-in weatherproof acoustic containers ($75\text{ to }65\text{ dBA}$ at $1\text{ m}$); SS316L double-wall insulated exhaust stacks [@rics2021nrm2; @ref14_cxplanner]. | Structural wind-load gantries for multi-flue high-level stacks; motor-operated intake/discharge attenuator dampers [@ref14_cxplanner]. |
+| **Bulk & Day Fuel Oil Storage Systems** | Number (No.) of tanks + Linear Meter (m) of pipe | UL 58 / UL 1746 double-wall underground or belly tanks (48–72 hr autonomy); pipe-in-pipe leak-monitored transfer lines [@nfpa75; @ref03_amanengineering]. | CivilDefense / SBC 801 hazardous fuel storage clearances, foam/dry-chemical suppression, and initial fuel fill provisional sums [@sbc801_fire; @uae_fire_code]. |
 
-## 9.3 Fuel oil storage and supply systems: Bulk fuel underground tanks, belly tanks, automated day tank transfer pump skids, and fuel filtration/polishing skids
+: Standby Generation and Emergency Fuel System Measurement Breakdown {#tbl-generators-boq}
 
-TODO: Expand section 9.3 (baseline reference: [@ref03_amanengineering]).
+## Diesel and gas-fired generator sets: Continuous mission-critical ratings, paralleling switchgear, and utility transfer controllers
 
-## 9.4 Load bank connection tap boxes and integrated generator testing infrastructure
+Generator sets ($2,000\text{ kVA to }4,500\text{ kVA}$ at $400\text{ V}$ or $11\text{ kV}/13.8\text{ kV}$) are measured as complete generating assemblies (`No.`) [@rics2021nrm2]. In distributed-redundant or bus-paralleled architectures, the MEP-QS must separately measure the **Master Generator Paralleling Switchgear (MGPS)**, high-resistance neutral grounding resistors (NGRs), and PLC-based load-shedding/synchronizing controllers capable of paralleling an entire generator farm onto the dead MV bus within 10 to 15 seconds [@uptime2018tier; @bicsi2024002].
 
-TODO: Expand section 9.4 (baseline reference: [@ref31_unitedrentals_loadbanks]).
+## Acoustic enclosures, silencers, and high-level exhaust stacks: Stainless steel exhaust runs, bellows, and catalytic converters
+
+Where generators are packaged in external yards rather than dedicated concrete generator halls, each genset is housed in a custom walk-in **Acoustic Container Enclosure** [@ref14_cxplanner]. The BOQ must itemize:
+
+- **Acoustic Attenuation**: Intake and discharge splitter attenuators sized for maximum permissible pressure drop across the radiator fan, complete with sand-trap louvers for Middle East dust storms [@ref35_rttr_oman].
+- **High-Level Exhaust Flues**: Schedule 10S SS316L inner flue with $50\text{–}100\text{ mm}$ high-density mineral wool insulation and aluminum/SS304 outer cladding (`m`), stainless steel flexible engine bellows (`No.`), primary ($-25\text{ dBA}$) and secondary ($-35\text{ dBA}$) residential/hospital-grade silencers (`No.`), and SCR urea dosing skids where $\text{NO}_x$ limits apply [@rics2021nrm2; @ref14_cxplanner].
+
+## Fuel oil storage and supply systems: Bulk fuel underground tanks, belly tanks, automated day tank transfer pump skids, and fuel filtration/polishing skids
+
+Uptime Tier III/IV and enterprise SLA standards typically mandate **24 to 72 hours of on-site fuel autonomy** at $100\%$ continuous full load [@uptime2018tier; @bicsi2024002]. At a specific fuel consumption of roughly $0.25\text{ to }0.27\text{ L/kWh}$, a $20\text{ MW}$ facility requires over $250,000\text{ to }380,000\text{ Liters}$ of bulk diesel storage [@ref19_datacenterscope_cx]. Measurement must cover:
+
+1. **Double-Wall Bulk Storage Tanks & Sub-Base Belly Tanks**: Complete with interstitial vacuum/liquid leak sensors, overfill prevention valves, flame arrestor vents, and concrete anti-flotation anchor slabs [@rics2021nrm2; @sbc801_fire].
+2. **Duplex Fuel Transfer & Kidney-Loop Fuel Polishing Skids**: Automated duplex transfer pumps moving fuel through secondary-contained (pipe-in-pipe) welded carbon steel or stainless steel supply/return headers to generator day tanks, plus programmable kidney-loop filtration skids that continuously strip water and microbial sludge from stored diesel [@bicsi2024002; @ref03_amanengineering].
+
+## Load bank connection tap boxes and integrated generator testing infrastructure
+
+To facilitate routine monthly maintenance testing and Level 4/5 commissioning without disrupting white space operations, every generator or MV paralleling lineup requires a permanent **Load Bank Connection Tap Box (or Outgoing Breaker Cubicle)** equipped with color-coded quick-connect Camlock receptacles or pre-bushed cable termination bars [@ref30_tecnogera_generators; @ref31_unitedrentals_loadbanks].

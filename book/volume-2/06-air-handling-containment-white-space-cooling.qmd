@@ -5,22 +5,41 @@ categories: ["Volume II", "CRAH", "Fan Coil Wall", "Aisle Containment", "HAC/CAC
 
 # Air Handling, Containment, and White Space Cooling {#sec-air-handling-containment}
 
-## 6.1 Computer Room Air Handler (CRAH) and Computer Room Air Conditioning (CRAC) units: Direct expansion (DX) vs. chilled water (CW)
+## Technical-Commercial Overview: White Space Air Thermal Management {.unnumbered}
 
-TODO: Expand section 6.1 (baseline reference: [@ref03_amanengineering]).
+Conventional contained air-cooling configurations using chilled-water Computer Room Air Handlers (CRAHs), direct-expansion Computer Room Air Conditioners (CRACs), or perimeter Fan Coil Walls (FCWs) manage low-to-moderate rack power densities (8 kW to 25 kW per cabinet) [@ashrae2021tc99; @ref03_amanengineering]. Even in high-density direct-to-chip liquid-cooled AI halls (where liquid cold plates capture $70\%\text{ to }80\%$ of server heat), white space air handling remains mandatory to reject the remaining $20\%\text{ to }30\%$ airborne heat load from power supplies, storage drives, and networking gear [@ashrae2023liquid; @ref25_budlong_cooling].
 
-## 6.2 Fan Coil Walls (FCW) and Air Handling Units (AHU): Economizer dampers, variable frequency drives (VFDs), and filtration media stages
+| Mechanical System Element | Takeoff Measurement Unit | Primary Material & Engineering Specifications | Critical QS Inclusions & Cost Drivers |
+| :--- | :--- | :--- | :--- |
+| **CRAH / Fan Coil Wall (FCW) Units** | Number (No.) / Sensible Cooling Capacity ($\text{kW}_{\text{sensible}}$) | Chilled water coils (Cu/Al or Cu/Cu), EC plug fans in $N+1$ array, dual A/B ATS power feeds, PICV control valves [@ashrae2021tc99; @ref03_amanengineering]. | Floor stand seismic frames, under-unit drip pans with leak detection rope, BACnet IP cards, and G4/F7 filtration sets [@rics2021nrm2; @ref04_helonic]. |
+| **Aisle Containment Assemblies (HAC / CAC)** | Square Meter ($\text{m}^2$) / Linear Meter (m) | Structural anodized aluminum frames; multi-wall polycarbonate or tempered fire-rated glass panels [@ref04_helonic]. | Integration with fire suppression release mechanisms (fusible/electromagnetic drop panels), automated sliding doors, and blanking brush seals [@nfpa75; @ref04_helonic]. |
+| **Sheet Metal Ductwork & Dampers** | Square Meter ($\text{m}^2$) of surface area by gauge | Galvanized steel (DW/144 or SMACNA Class B/C air-tightness); motorized smoke/fire dampers [@rics2021nrm2; @ref04_helonic]. | Acoustic attenuators, ductwork pressure testing (DW/143), seismic cable bracing, and phenolic/elastomeric thermal insulation [@rics2021nrm2]. |
 
-TODO: Expand section 6.2 (baseline reference: [@ref04_helonic]).
+: White Space Air Handling and Aisle Containment Measurement Breakdown {#tbl-air-containment-boq}
 
-## 6.3 Aisle containment architectures: Hot Aisle Containment (HAC) vs. Cold Aisle Containment (CAC), structural ceiling grids, and auto-closing doors
+## Computer Room Air Handler (CRAH) and Computer Room Air Conditioning (CRAC) units: Direct expansion (DX) vs. chilled water (CW)
 
-TODO: Expand section 6.3 (baseline reference: [@ref04_helonic]).
+When pricing white space cooling units, the MEP-QS must verify that vendor quotations are leveled on **Net Sensible Cooling Capacity ($\text{kW}_{\text{sensible}}$)** at a Sensible Heat Ratio ($\text{SHR} \ge 0.95$) rather than gross total cooling capacity, because data center white spaces generate negligible latent moisture load [@ashrae2021tc99; @bicsi2024002].
 
-## 6.4 Sheet metal ductwork systems: High-velocity supply/return mains, fire/smoke dampers, motorized modulating dampers, and acoustic attenuation
+- **Downflow Raised-Floor CRAHs**: Require heavy-duty adjustable seismic floor stands ($600\text{ mm to }1200\text{ mm}$ height), turning vanes, and perforated floor tiles with volume control dampers [@bicsi2024002].
+- **Direct-Expansion (DX) CRACs**: Used in smaller edge facilities or administrative/telecom rooms (MMRs); require measurement of hard-drawn ACR copper refrigerant liquid/suction lines, nitrogen-purged brazing, refrigerant charge ($\text{kg}$), and outdoor air-cooled condensers [@rics2021nrm2].
 
-TODO: Expand section 6.4 (baseline reference: [@ref04_helonic]).
+## Fan Coil Walls (FCW) and Air Handling Units (AHU): Economizer dampers, variable frequency drives (VFDs), and filtration media stages
 
-## 6.5 Thermal and acoustic insulation: Closed-cell elastomeric foam, rockwool wraps, vapor barriers, and condensation mitigation
+Hyperscale slab-on-grade data centers frequently replace raised floors and perimeter CRAHs with floor-to-ceiling **Fan Coil Walls (FCWs)** installed in a mechanical gallery behind the white space bulkhead wall [@bicsi2024002; @ref04_helonic]. FCWs flood the cold white space horizontally at low velocity while hot aisle containment chimneys return warm air through an overhead ceiling plenum [@ref04_helonic]. Takeoff inclusions must cover structural partition framing, acoustic louver walls, hot-swappable EC fan arrays, and fresh-air make-up AHUs equipped with MERV 8 / MERV 14 (G4/F8) filtration and sand-trap louvers (critical in GCC desert environments) [@ref35_rttr_oman; @ref37_aecom_meh2024].
 
-TODO: Expand section 6.5 (baseline reference: [@ref23_keentel_cdu]).
+## Aisle containment architectures: Hot Aisle Containment (HAC) vs. Cold Aisle Containment (CAC), structural ceiling grids, and auto-closing doors
+
+Strict separation of supply and return air streams via **Hot Aisle Containment (HAC)** or **Cold Aisle Containment (CAC)** prevents bypass airflow and allows elevated supply air temperatures ($24^\circ\text{C}\text{ to }27^\circ\text{C}$ per ASHRAE TC 9.9 Recommended Envelope) [@ashrae2021tc99; @ref04_helonic]. The MEP-QS measures containment systems by:
+
+1. **Vertical Partition Panels & Chimney Extensions**: Measured in $\text{m}^2$ from the top of the IT rack ($2200\text{–}2400\text{ mm}$) to the suspended ceiling plenum or return duct collar [@rics2021nrm2; @ref04_helonic].
+2. **Aisle End-of-Row Doors**: Enumerated (`No.`) as dual sliding or self-closing bi-parting doors with vision panels and magnetic hold-open releases tied to the Fire Alarm Control Panel (FACP) [@nfpa75; @ref04_helonic].
+3. **Vacant Rack Blanking Panels**: Provision of modular full-height blanking panels for Day-1 unpopulated rack positions to maintain aisle static pressure during Level 5 IST commissioning [@ref14_cxplanner].
+
+## Sheet metal ductwork systems: High-velocity supply/return mains, fire/smoke dampers, motorized modulating dampers, and acoustic attenuation
+
+Under RICS NRM2, rectangular and circular sheet metal ductwork is quantified by external surface area ($\text{m}^2$), classified by shape, cross-sectional dimension bands, static pressure rating, and air-tightness testing class [@rics2021nrm2]. Motorized fire and smoke dampers (UL 555 / UL 555S or EN 1366-2 compliant, mandatory at every fire-compartment wall penetration under NFPA 75 and SBC 801) are enumerated separately complete with actuator wiring and BMS end-switch monitoring [@nfpa75; @sbc801_fire; @rics2021nrm2].
+
+## Thermal and acoustic insulation: Closed-cell elastomeric foam, rockwool wraps, vapor barriers, and condensation mitigation
+
+Chilled water piping and cold supply air ducts operating below ambient dew point require continuous closed-cell elastomeric nitrile rubber or cellular glass insulation with zero-perm vapor barriers and factory-prefabricated insulated pipe supports to prevent thermal bridging and condensation dripping inside technical galleries [@rics2021nrm2; @ref23_keentel_cdu].

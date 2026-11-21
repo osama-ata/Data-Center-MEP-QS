@@ -5,22 +5,41 @@ categories: ["Volume IV", "Pre-Action Sprinkler", "Clean Agent Suppression", "No
 
 # Fire Suppression Systems for Mission-Critical White Space {#sec-fire-suppression-white-space}
 
-## 13.1 Double-interlock pre-action sprinkler systems: Riser check valves, dry pipe valves, nitrogen inerting generators, and supervisory pressure sensors
+## Double-interlock pre-action sprinkler systems: Riser check valves, dry pipe valves, nitrogen inerting generators, and supervisory pressure sensors
 
-TODO: Expand section 13.1 (baseline reference: [@nfpa75; @ref14_cxplanner]).
+To prevent accidental water discharge in energized white spaces, **NFPA 75 (Standard for the Fire Protection of Information Technology Equipment)** and insurer standards (FM Global Data Sheet 5-32) mandate **Double-Interlock Pre-Action (DIPA)** sprinkler systems [@nfpa75; @ref14_cxplanner]. Water enters the overhead distribution piping only when *two independent events* occur simultaneously: (1) cross-zoned smoke/VESDA detection trips the electric solenoid release valve, and (2) thermal fusing of a sprinkler head drops supervisory gas pressure in the pipe network [@nfpa75; @ref14_cxplanner].
 
-## 13.2 Clean agent gaseous suppression systems: Chemical agents (FK-5-1-12 / Novec 1230, FM-200) and inert gas systems (IG-541 Inergen, IG-55)
+Under RICS NRM2 Section 33 and CSI Division 21, the MEP-QS must measure:
 
-TODO: Expand section 13.2 (baseline reference: [@nfpa75; @ref14_cxplanner]).
+- **Pre-Action Valve Cabinets (`No.`)**: Factory-assembled skid housing the deluge/pre-action clapper valve, electric solenoid, pneumatic actuator, local releasing control panel, and air/nitrogen maintenance trim [@rics2021nrm2; @ref14_cxplanner].
+- **Corrosion-Inhibiting Nitrogen ($\text{N}_2$) Generators (`No.`)**: Membrane or PSA nitrogen generation skids that fill the dry sprinkler network with $98\%+$ pure $\text{N}_2$ instead of compressed air, eliminating oxygen corrosion and preventing pinhole leaks over the 20-year pipe lifecycle [@nfpa75; @ref14_cxplanner].
+- **Galvanized or Internally Coated Schedule 40 Steel Piping (`m`)**: Complete with FM-approved grooved couplings and protective wire cages on all concealed/pendant heads [@rics2021nrm2].
 
-## 13.3 Gas distribution networks: High-pressure seamless steel piping, discharge nozzles, directional selector valves, and cylinder bank assemblies
+## Clean agent gaseous suppression systems: Chemical agents (FK-5-1-12 / Novec 1230, FM-200) and inert gas systems (IG-541 Inergen, IG-55)
 
-TODO: Expand section 13.3 (baseline reference: [@ref14_cxplanner]).
+Total-flooding gaseous suppression systems (governed by **NFPA 2001**, **ISO 14520**, and **GCC Civil Defense codes such as Saudi SBC 801 and the UAE Fire and Life Safety Code**) protect electrical rooms (MV/LV/UPS), battery rooms, Meet-Me Rooms (MMRs), and white spaces [@nfpa75; @sbc801_fire; @uae_fire_code; @ref14_cxplanner]:
 
-## 13.4 Room integrity testing: Door fan tests, enclosure air tightness requirements, and automated pressure relief dampers
+| Clean Agent System | Chemical / Gas Composition | Cylinder Storage Pressure | QS Measurement & Commercial Cost Drivers |
+| :--- | :--- | :--- | :--- |
+| **FK-5-1-12 (Fluoro-ketone / Novec 1230)** | $\text{CF}_3\text{CF}_2\text{C(O)CF(CF}_3)_2$ ($\text{GWP} < 1$) | $25\text{ bar}, 42\text{ bar}, \text{or } 50\text{ bar}$ (super-pressurized with $\text{N}_2$) | Measured by agent mass ($\text{kg}$) and cylinder volume ($\text{L}$). High agent unit rate per kg; minimal cylinder footprint [@nfpa75; @ref14_cxplanner]. |
+| **HFC-227ea (FM-200)** | Heptafluoropropane ($\text{CF}_3\text{CHFCF}_3$) | $25\text{ bar or } 42\text{ bar}$ | Widely approved by GCC Civil Defense authorities; subject to HFC phase-down levies in EU/North America [@sbc801_fire; @uae_fire_code]. |
+| **Inert Gas (IG-541 Inergen / IG-55)** | $\text{N}_2, \text{Ar}, \text{CO}_2$ blend ($0\text{ GWP}$) | $200\text{ bar or } 300\text{ bar}$ | Low gas refill cost, but requires $4\text{ to }6\times$ more cylinders (dedicated cylinder bank rooms), heavy manifold framing, and larger over-pressure relief vents [@rics2021nrm2; @ref14_cxplanner]. |
 
-TODO: Expand section 13.4 (baseline reference: [@ref14_cxplanner]).
+: Clean Agent Gaseous Suppression System Comparison for MEP-QS Takeoff {#tbl-clean-agent-comparison}
 
-## 13.5 High-pressure water mist systems: Zone control valves, pump skids, stainless steel distribution lines, and micro-droplet discharge nozzles
+- **Connected Main & $100\%$ Reserve Cylinder Banks**: High-availability Tier III/IV facilities and GCC Civil Defense regulations frequently mandate a **$100\%$ connected reserve cylinder bank** equipped with a manual/automated changeover manifold valve so fire protection is immediately restored after a discharge without waiting for off-site cylinder recharging [@uptime2018tier; @sbc801_fire; @uae_fire_code].
 
-TODO: Expand section 13.5 (baseline reference: [@nfpa75]).
+## Gas distribution networks: High-pressure seamless steel piping, discharge nozzles, directional selector valves, and cylinder bank assemblies
+
+Clean agent distribution pipework must be priced using **ASTM A106 Grade B Schedule 40 or Schedule 80 seamless black/galvanized steel** (for $25\text{–}50\text{ bar}$ chemical systems and $200\text{–}300\text{ bar}$ inert manifolds upstream of orifice restrictors) with high-pressure forged steel fittings (ASTM A105 Class 3000), custom-drilled $360^\circ/180^\circ$ brass/stainless discharge nozzles (`No.`), and pneumatic directional selector valves where a central cylinder bank serves multiple hazard zones [@rics2021nrm2; @ref14_cxplanner].
+
+## Room integrity testing: Door fan tests, enclosure air tightness requirements, and automated pressure relief dampers
+
+A gaseous suppression system fails if the extinguishant leaks out of the room before the mandatory **10-minute minimum hold time** defined by NFPA 2001 [@nfpa75; @ref14_cxplanner]. The MEP-QS must ensure the BOQ includes:
+
+1. **UL-Listed / Civil-Defense-Approved Pressure Relief Vents (PRVs)**: Gravity or motorized free-area relief dampers (`No.`) ducted to the exterior to prevent structural wall collapse from the positive/negative pressure spike during the 10-second gas discharge (especially critical for $200/300\text{ bar}$ inert gas systems) [@rics2021nrm2; @ref14_cxplanner].
+2. **Enclosure Air-Tightness Sealing & Door Fan Integrity Testing**: Intumescent and elastomeric perimeter sealing of all cable trays, busways, and pipe penetrations, plus third-party calibrated **Retrotec / Minneapolis Door Fan Integrity Testing** (`No.` per protected enclosure) during Level 3/4 commissioning [@ref14_cxplanner].
+
+## High-pressure water mist systems: Zone control valves, pump skids, stainless steel distribution lines, and micro-droplet discharge nozzles
+
+High-pressure water mist systems (operating at $80\text{ to }140\text{ bar}$ via multi-piston positive-displacement stainless steel pump skids or nitrogen-driven cylinders) atomize demineralized water into micro-droplets ($<100\text{ }\mu\text{m}$) that cool fires and displace oxygen optically without flooding equipment [@nfpa75]. The entire distribution network must be measured in high-pressure **SS316Ti / SS316L seamless tubing** with compression or orbital-welded fittings [@rics2021nrm2].

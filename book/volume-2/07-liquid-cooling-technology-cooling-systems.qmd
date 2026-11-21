@@ -5,23 +5,57 @@ categories: ["Volume II", "Liquid Cooling", "Direct-to-Chip", "CDU", "TCS", "Cal
 
 # Liquid Cooling, High-Density Architectures, and Technology Cooling Systems (TCS) {#sec-liquid-cooling-tcs}
 
-## Worked Example: Direct-to-Chip ($\Delta T$) Volumetric Flow Rate & Pipe Sizing
+## Technical-Commercial Measurement Breakdown: Liquid Cooling and TCS Packages {.unnumbered}
 
-The thermodynamic relationship governing the fluid mass flow rate ($\dot{m}$) required to remove heat from the white space is [@ref22_reliabilityengine_liquid]:
+When rack thermal power densities surpass 20 kW to 30 kW per cabinet, air becomes thermodynamically inefficient and physically constrained due to fan power consumption, acoustic thresholds, and volumetric airflow limits [@ashrae2023liquid; @ref24_h2x_dtc]. The deployment of artificial intelligence (AI) and high-performance computing (HPC) clusters operating between 40 kW and 132 kW per rack requires **Direct-to-Chip (DTC)** or immersion liquid cooling architectures [@ashrae2023liquid; @ref17_apaltek_liquid].
+
+This transition fundamentally alters the Bill of Quantities (BOQ), requiring quantity surveyors to measure two distinct, hydronically isolated circuits: the primary **Facility Water System (FWS)** and the secondary **Technology Cooling System (TCS)**, coupled thermally through plate-frame **Coolant Distribution Units (CDUs)** [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
+
+The secondary TCS circuit, operating directly across micro-channel server cold plates ($25\text{ to }100\text{ }\mu\text{m}$ fin pitch), demands warmer supply temperatures (ASHRAE W27 to W45 classes) and strict fluid cleanliness [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. This loop must be priced using high-grade stainless steel (**ASTM A312 TP304L or TP316L**) or high-density polypropylene (**PP-RCT**) pipework to prevent chemical leaching, galvanic corrosion, and particulate fouling [@ashrae2023liquid; @ref17_apaltek_liquid]. The CDU serves as the technical and contractual partition between FWS and TCS, housing primary modulating control valves, brazed or gasketed SS316/titanium plate heat exchangers, redundant variable-speed circulators, dual A/B power feeds, and $50\text{ }\mu\text{m}$ filtration skids [@ref22_reliabilityengine_liquid; @ref23_keentel_cdu].
+
+| Mechanical System Element | Takeoff Measurement Unit | Primary Material & Engineering Specifications | Critical QS Inclusions & Cost Drivers |
+| :--- | :--- | :--- | :--- |
+| **Coolant Distribution Units (CDUs)** | Number (No.) / Exchange Capacity (kW) | Liquid-to-liquid floor-standing or in-row units ($300\text{ kW to } 1500+\text{ kW}$); brazed or gasketed titanium/SS316 plates [@ashrae2023liquid; @ref23_keentel_cdu]. | Redundant $N+1$ integrated pumps, dual A/B UPS electrical power supplies, leak containment drip trays, $50\text{ }\mu\text{m}$ duplex filters, and Modbus/BACnet interface cards [@ref22_reliabilityengine_liquid]. |
+| **Secondary Technology Piping (TCS)** | Linear Meter (m) by diameter | Grade 304L or 316L stainless steel (Schedule 10S/40S); orbital TIG welded or sanitary flanged; PP-RCT alternatives [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. | Precision chemical pickling and passivation, clean-room particulate flushing protocols, borescope weld inspection, and continuous under-pipe drip containment trays [@rics2021nrm2; @ref04_helonic]. |
+| **Blind-Mate Quick Disconnects (QD)** | Number (No.) of sets | Non-drip, flat-face push-to-connect dual shut-off valved couplings (OCP / Mila standard); SS316 construction [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. | High-pressure EPDM/FKM wetted elastomer seals, low pressure-drop coefficient ($C_v$), and $100\%$ factory helium/hydrostatic leak testing [@ref22_reliabilityengine_liquid]. |
+
+: Secondary Technology Cooling System (TCS) BOQ Measurement Breakdown {#tbl-tcs-boq-breakdown}
+
+## Direct-to-Chip (DTC) liquid cooling infrastructure: Coolant Distribution Units (CDUs)—Liquid-to-Liquid and Liquid-to-Air typology measurement
+
+The MEP-QS classifies CDUs into two architectural typologies [@ashrae2023liquid; @ref22_reliabilityengine_liquid]:
+
+1. **Liquid-to-Liquid (L2L) CDUs**: Reject TCS heat directly into the primary chilled water or condenser water FWS loop. Sized from $300\text{ kW}$ (in-row rack footprint) to $1,500\text{–}2,500\text{ kW}$ (end-of-row or gallery skid). Require both primary FWS carbon-steel/stainless connections and secondary TCS SS316L header connections [@ref23_keentel_cdu].
+2. **Liquid-to-Air (L2A) CDUs**: Reject TCS heat directly into the white space air stream via an internal finned coil and fan array. Used for tactical AI cluster retrofits inside legacy air-cooled halls where extending FWS piping is unfeasible [@ref17_apaltek_liquid].
+
+## Secondary hydronic network (TCS): Stainless steel (304/316L) headers, polypropylene-RCT piping, clean-break blind-mate quick disconnects (QD)
+
+Unlike primary FWS carbon steel pipework, secondary TCS pipework cannot tolerate mill scale, welding slag, or iron oxide corrosion products that would instantly plug server micro-channel cold plates [@ashrae2023liquid]. Takeoff rates for SS316L TCS headers must include:
+
+- **High-Purity Orbital TIG Welding**: Automated orbital welding with internal argon purge gas backing to eliminate interior weld oxidation ("sugaring"), plus borescope inspection logs [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
+- **Rack Cooling Manifolds & Flexible Whip Hoses**: Vertical stainless steel rack manifolds ($40\text{ to }84\text{ ports}$ per rack) and kink-resistant EPDM/PTFE braided flexible hoses connecting header isolation ball valves to each server blade via dripless **Quick Disconnects (QDs)** [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
+
+## Heat transfer thermodynamics: Determining hydronic flow demand from design rack Delta-T ($\Delta T$) and chip envelope limits
+
+The thermodynamic relationship governing the fluid mass flow rate ($\dot{m}$) required to remove heat from the white space is [@ashrae2023liquid; @ref22_reliabilityengine_liquid]:
 
 $$Q = \dot{m} C_p \Delta T$$ {#eq-heat-rejection}
+
+where $Q$ represents the heat rejection duty in kilowatts ($\text{kW}$), $\dot{m}$ is the fluid mass flow rate in kilograms per second ($\text{kg/s}$), $C_p$ is the specific heat capacity of the heat transfer fluid in $\text{kJ/(kg}\cdot\text{K)}$, and $\Delta T$ represents the temperature difference between the TCS supply and return lines in kelvin ($\text{K}$) [@ref22_reliabilityengine_liquid].
 
 Converting mass flow into volumetric flow rate ($\dot{V}$) in liters per second ($\text{L/s}$), accounting for fluid density ($\rho$):
 
 $$\dot{V} = \frac{Q}{\rho C_p \Delta T}$$ {#eq-volumetric-flow}
 
-In a direct-to-chip architecture with a design temperature difference of $\Delta T = 10\text{ K}$ using a standard 25% propylene glycol solution (PG25: $\rho \approx 1020\text{ kg/m}^3$, $C_p \approx 3.93\text{ kJ/(kg}\cdot\text{K)}$), the volumetric flow rate per megawatt ($1000\text{ kW}$) of critical IT heat load is:
+For the MEP-QS, changes in the design $\Delta T$ alter fluid flow requirements, which directly impacts pipe sizing, valve bodies, pumping kilowatts, and insulation volumes [@ref24_h2x_dtc]. In a direct-to-chip architecture with a narrow design temperature difference ($\Delta T = 10\text{ K}$) using a standard 25% propylene glycol solution (PG25: $\rho \approx 1020\text{ kg/m}^3$, $C_p \approx 3.93\text{ kJ/(kg}\cdot\text{K)}$), the volumetric flow rate per megawatt ($1000\text{ kW}$) of critical IT heat load is:
 
 $$\dot{V} = \frac{1000\text{ kW}}{1.02\text{ kg/L} \times 3.93\text{ kJ/(kg}\cdot\text{K)} \times 10\text{ K}} \approx 24.95\text{ L/s} \quad (1497\text{ L/min})$$ {#eq-pg25-10k}
 
+This confirms the empirical rule of approximately $1.5\text{ L/min}$ per kilowatt of critical load [@ref23_keentel_cdu]. Expanding the design $\Delta T$ to $20\text{ K}$ halves the volumetric flow rate to $12.47\text{ L/s}$ ($748.4\text{ L/min}$) [@ref24_h2x_dtc]. This reduction permits smaller header sizes (reducing a nominal bore from $\text{DN125}$ to $\text{DN80}$), cutting stainless steel tonnage and orbital welding labor while reducing secondary pumping power requirements by approximately $70\%$ [@ref24_h2x_dtc].
+
 ```{python}
 #| label: tbl-dtc-flow-calculator
-#| tbl-cap: "Interactive Python Calculator: Volumetric Flow Rate and Header Pipe Bore vs. Design Delta-T (1 MW IT Load, PG25)"
+#| tbl-cap: "Executable Python Calculator: Volumetric Flow Rate and SS316L Header Pipe Bore vs. Design Delta-T (1 MW IT Load, PG25)"
 
 import math
 
@@ -43,31 +77,20 @@ def dtc_flow_calculator(it_load_kw=1000.0, delta_t_k=10.0, rho_kg_m3=1020.0, cp_
 
 print(f"{'Delta-T (K)':<12} | {'Flow (L/s)':<12} | {'Flow (L/min)':<14} | {'L/min/kW':<10} | {'Header DN':<10} | {'Velocity (m/s)'}")
 print("-" * 78)
-for dt in [10.0, 15.0, 20.0]:
+for dt in [8.0, 10.0, 12.0, 15.0, 20.0]:
     v_ls, v_lmin, l_kw, dn, vel = dtc_flow_calculator(1000.0, dt)
     print(f"{dt:<12.1f} | {v_ls:<12.2f} | {v_lmin:<14.1f} | {l_kw:<10.2f} | DN{dn:<8} | {vel:.2f}")
 ```
 
-## 7.1 Direct-to-Chip (DTC) liquid cooling infrastructure: Coolant Distribution Units (CDUs)—Liquid-to-Liquid and Liquid-to-Air typology measurement
+## Heat exchanger approach temperature analysis and secondary pumping power quantification
 
-TODO: Expand section 7.1 (baseline reference: [@ref22_reliabilityengine_liquid]).
+The CDU plate heat exchanger approach temperature ($\Delta T_{\text{approach}} = T_{\text{TCS,supply}} - T_{\text{FWS,supply}}$) typically ranges from $2\text{ K to }4\text{ K}$ [@ashrae2023liquid; @ref23_keentel_cdu]. Tightening the approach temperature to $1.5\text{ K}$ enables warmer FWS water and higher economizer free-cooling hours, but increases CDU titanium/SS316 plate surface area ($A = Q / (U \cdot \text{LMTD})$) and CDU unit CapEx by $25\%\text{ to }40\%$ [@ref23_keentel_cdu]. Furthermore, because liquid-cooled racks possess minimal thermal mass and can suffer thermal trip in seconds if coolant circulation stops, all secondary CDU pumps must be priced on **uninterruptible UPS electrical feeds** [@ref24_h2x_dtc; @ref25_budlong_cooling].
 
-## 7.2 Secondary hydronic network (TCS): Stainless steel (304/316L) headers, polypropylene-RCT piping, clean-break blind-mate quick disconnects (QD)
+## Rear Door Heat Exchangers (RDHx) and Immersion Cooling systems: Single-phase and two-phase dielectric fluid measurement and containment tanks
 
-TODO: Expand section 7.2 (baseline reference: [@ref22_reliabilityengine_liquid]).
+- **Rear Door Heat Exchangers (RDHx)**: Passive or active fan-assisted chilled-water coils mounted directly to the rear frame of standard 19-inch racks ($25\text{ to }50\text{ kW/rack}$), measured per door (`No.`) plus overhead/underfloor flexible hose drops and condensation management controls [@ashrae2023liquid; @ref17_apaltek_liquid].
+- **Single-Phase & Two-Phase Immersion Tanks**: Submerge IT servers in synthetic hydrocarbon or fluorocarbon dielectric fluids inside horizontal bath tanks ($50\text{ to }200\text{ kW/tank}$). The MEP-QS must quantify the dielectric fluid initial fill volume ($\text{Liters}$, often representing a major chemical capital cost), overhead gantry cranes for blade extraction, and vapor recovery condensers [@ref17_apaltek_liquid; @ref25_budlong_cooling].
 
-## 7.3 Heat transfer thermodynamics: Determining hydronic flow demand from design rack Delta-T ($\Delta T$) and chip envelope limits
+## Secondary loop treatment: Treated demineralized water, propylene glycol mixes (PG25), biocide packages, micron filtration, and wetted materials compatibility
 
-TODO: Expand section 7.3 (baseline reference: [@ref22_reliabilityengine_liquid]).
-
-## 7.4 Heat exchanger approach temperature analysis and secondary pumping power quantification
-
-TODO: Expand section 7.4 (baseline reference: [@ref23_keentel_cdu]).
-
-## 7.5 Rear Door Heat Exchangers (RDHx) and Immersion Cooling systems: Single-phase and two-phase dielectric fluid measurement and containment tanks
-
-TODO: Expand section 7.5 (baseline reference: [@ref17_apaltek_liquid]).
-
-## 7.6 Secondary loop treatment: Treated demineralized water, propylene glycol mixes (PG25), biocide packages, micron filtration, and wetted materials compatibility
-
-TODO: Expand section 7.6 (baseline reference: [@ref22_reliabilityengine_liquid]).
+ASHRAE TC 9.9 mandates strict wetted-materials compatibility across the entire TCS loop (restricting wetted components to SS316L, copper, brass, EPDM, and inhibited PG25 or deionized water with azole corrosion inhibitors and non-oxidizing biocides—strictly prohibiting aluminum or galvanized steel) [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. Pre-commissioning BOQ items must include full chemical pickling, passivation, $5\text{ }\mu\text{m}$ temporary bypass flushing cartridges, and accredited laboratory water quality testing certificates prior to server cold-plate connection [@ashrae2023liquid; @ref14_cxplanner].

@@ -5,18 +5,22 @@ categories: ["Volume V", "ELV Security", "Structured Cabling", "Meet-Me Room", "
 
 # Extra-Low Voltage (ELV), Security, and Access Control {#sec-elv-security-access-control}
 
-## 16.1 Physical security systems: Multi-tier biometric access control, mantrap interlocks, turnstiles, and electronic cabinet locks
+## Physical security systems: Multi-tier biometric access control, mantrap interlocks, turnstiles, and electronic cabinet locks
 
-TODO: Expand section 16.1 (baseline reference: [@ref34_scribd_hk1_boq]).
+Mission-critical data centers enforce a **six-to-seven-layer concentric physical security architecture** (Site Perimeter $\to$ Guardhouse Vehicle Crash Gates $\to$ Building Lobby Turnstiles $\to$ Biometric Mantrap Portals $\to$ Data Hall Corridors $\to$ White Space $\to$ Intelligent Rack Cabinet Locks) [@bicsi2024002; @ref34_scribd_hk1_boq]. Under CSI Division 28 and RICS NRM2 Section 39, the MEP-QS measures:
 
-## 16.2 Closed-Circuit Television (CCTV): High-resolution IP cameras, perimeter thermal detection, video management servers, and storage arrays
+- **Perimeter Crash-Rated Barriers**: ASTM F2656 / PAS 68 K12 hydraulic wedges or bollards, perimeter taut-wire/fiber-optic fence intrusion detection (`m`), and under-vehicle surveillance scanners (`No.`) [@bicsi2024002].
+- **Circular or Rectangular Biometric Mantrap Portals (`No.`)**: Interlocked dual-door security booths with weight-sensing/3D-stereoscopic anti-tailgating sensors, iris/facial/palm-vein biometric readers, and bullet-resistant glazing [@bicsi2024002; @ref34_scribd_hk1_boq].
+- **Rack-Level Electronic Handles (`No.`)**: Dual-door intelligent swing-handles on every IT rack wired to the Access Control System (ACS) for audit-trail compliance (SOC 2 / ISO 27001 / PCI-DSS) [@bicsi2024002].
 
-TODO: Expand section 16.2 (baseline reference: [@ref34_scribd_hk1_boq]).
+## Closed-Circuit Television (CCTV): High-resolution IP cameras, perimeter thermal detection, video management servers, and storage arrays
 
-## 16.3 Structured cabling: Fiber-optic backbones (Single-Mode OS2, Multi-Mode OM4/OM5), MPO/MTP pre-terminated trunks, and patch panels
+CCTV takeoff encompasses perimeter radiometric thermal cameras, PTZ domes, and high-density fixed IP cameras installed down **every hot and cold aisle** (eliminating blind spots at every rack door) [@bicsi2024002; @ref34_scribd_hk1_boq]. A frequently underestimated cost driver is the **Video Management System (VMS) Storage Array**: retaining 90 to 180 days of continuous 4K/1080p video across 300 to 1,000+ cameras requires petabyte-scale SAN/NAS storage servers, enterprise VMS camera-channel licenses, and redundant PoE++ aggregation switches [@ref34_scribd_hk1_boq].
 
-TODO: Expand section 16.3 (baseline reference: [@bicsi2024002; @ref03_amanengineering]).
+## Structured cabling: Fiber-optic backbones (Single-Mode OS2, Multi-Mode OM4/OM5), MPO/MTP pre-terminated trunks, and patch panels
 
-## 16.4 Telecommunications pathways: Dual diverse Meet-Me Rooms (MMR), redundant carrier fiber entrance conduits, and overhead basket trays
+In accordance with **ANSI/BICSI 002-2024** and **TIA-942-C**, structured cabling between Meet-Me Rooms (MMRs), Main Distribution Areas (MDAs), and Intermediate/Horizontal Distribution Areas (IDAs/HDAs) utilizes high-core-count **Single-Mode OS2** (up to 144–3456f ribbon fiber) and **Laser-Optimized Multi-Mode OM4/OM5** pre-terminated **MPO/MTP trunk assemblies** [@bicsi2024002; @ref03_amanengineering]. Every fiber link must be priced inclusive of bi-directional **Tier 1 (OLTS attenuation) and Tier 2 (OTDR reflectance trace)** certification testing [@bicsi2024002].
 
-TODO: Expand section 16.4 (baseline reference: [@bicsi2024002; @ref03_amanengineering]).
+## Telecommunications pathways: Dual diverse Meet-Me Rooms (MMR), redundant carrier fiber entrance conduits, and overhead basket trays
+
+Tier III and Tier IV facilities mandate **at least two physically diverse Carrier Entrance Points and two geographically separated Meet-Me Rooms (MMR A and MMR B)** separated by a minimum of $20\text{ m}$ (with zero shared manholes or conduit banks) [@uptime2018tier; @bicsi2024002; @ref03_amanengineering]. External civil-telecom works must quantify concrete-encased multi-way uPVC/HDPE duct banks, reinforced concrete draw-pits, gas/water-tight duct seals at building entry walls, and dedicated yellow/aqua overhead fiber raceway systems [@rics2021nrm2; @bicsi2024002].

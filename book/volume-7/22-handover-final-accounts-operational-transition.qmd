@@ -5,22 +5,50 @@ categories: ["Volume VII", "COBie Handover", "Final Account", "Capital Spares", 
 
 # Handover, Final Accounts, and Operational Transition {#sec-handover-final-accounts}
 
-## 22.1 As-Built documentation, 5D BIM asset parameter compilation, and digital handover compliance (COBie standards)
+## As-Built documentation, 5D BIM asset parameter compilation, and digital handover compliance (COBie standards)
 
-TODO: Expand section 22.1 (baseline reference: [@ref28_koenig_5dbim]).
+Under FIDIC Silver Book Sub-Clause 5.6 (*As-Built Records*) and 5.7 (*Operation and Maintenance Manuals*), the Taking-Over Certificate (Sub-Clause 10.1) will not be issued until the Contractor delivers verified **LOD 500 As-Built BIM Models** and structured **COBie (Construction Operations Building Information Exchange / ISO 19650)** data drops [@fidic2017silver; @ref28_koenig_5dbim]. Every serialized MEP asset (breaker, valve, pump, CDU, UPS module, sensor) must carry its barcode/QR asset tag, factory test certificate, warranty start/end date, and preventive maintenance schedule pre-formatted for direct import into the operator's CMMS (Maximo / SAP) [@ref28_koenig_5dbim].
 
-## 22.2 Operation and Maintenance (O&M) manuals, emergency operating procedures (EOP), and maintenance staff training packages
+## Operation and Maintenance (O&M) manuals, emergency operating procedures (EOP), and maintenance staff training packages
 
-TODO: Expand section 22.2 (baseline reference: [@ref14_cxplanner]).
+Mission-critical handover requires three distinct operational documentation suites beyond standard vendor catalog sheets [@bicsi2024002; @ref14_cxplanner]:
 
-## 22.3 Spare parts procurement: Capital spares, operational consumables, and 2-year manufacturer service agreements
+1. **Standard Operating Procedures (SOPs)**: Step-by-step switching and isolation procedures for normal concurrent maintenance (e.g., transferring a UPS lineup to external maintenance bypass or isolating a primary chilled water loop header).
+2. **Emergency Operating Procedures (EOPs)**: Immediate single-page fault-response flowcharts for critical alarms (e.g., manual generator paralleling override, clean-agent discharge recovery, or TCS liquid-cooling leak isolation).
+3. **Video-Recorded Site Training Sessions**: Hands-on classroom and plantroom operational training for the Employer's Facilities Management (FM) engineering team across all shifts [@ref14_cxplanner].
 
-TODO: Expand section 22.3 (baseline reference: [@ref35_rttr_oman]).
+## Spare parts procurement: Capital spares, operational consumables, and 2-year manufacturer service agreements
 
-## 22.4 Final account settlement: Reconciliation of prime contracts, provisional sums, change orders, credits, and commercial release waivers
+The MEP-QS must separate spare parts into three commercial schedules in the BOQ [@rics2021nrm2; @ref35_rttr_oman]:
 
-TODO: Expand section 22.4 (baseline reference: [@ref15_irecruit_qs]).
+- **Commissioning Consumables (Contractor Risk)**: Temporary flushing filters, initial G4/F7 air filter sets used during construction dust phases, and gaskets consumed prior to Taking-Over.
+- **Handover Operational Spares (Attic Stock)**: Complete change-out sets of air filters, CDU $50\text{ }\mu\text{m}$ cartridges, fuses, indicator lamps, and clean-break QD spare couplings handed over in climate-controlled storage racks at RFS [@ashrae2023liquid; @rics2021nrm2].
+- **Strategic Capital Spares & 2-Year DLP Maintenance Agreements**: Long-lead critical spares (e.g., one spare MV vacuum circuit breaker per rating, spare UPS power submodule, spare CRAH EC fan assembly, spare CDU circulation pump) and OEM preventive maintenance service contracts covering the 12- to 24-month Defect Notification Period [@fidic2017silver; @ref35_rttr_oman].
 
-## 22.5 Defect Notification Period (DNP) administration, retention release bonds, and warranty transfer protocols
+## Final account settlement: Reconciliation of prime contracts, provisional sums, change orders, credits, and commercial release waivers
 
-TODO: Expand section 22.5 (baseline reference: [@fidic2017silver; @ref05_scribd_epc_ankara]).
+Preparing the **Final Statement / Final Account** (FIDIC Silver Book Sub-Clause 14.11) requires the MEP-QS to reconcile [@fidic2017silver; @rics2021nrm2; @ref15_irecruit_qs]:
+
+1. Original Lump-Sum Contract Price.
+2. Adjustment of all Defined and Undefined Provisional Sums (Sub-Clause 13.5)—specifically reconciling actual Level 4/5 IST utility electricity meter readings, certified diesel fuel delivery tickets, and FAT travel receipts against tender allowances.
+3. Agreed Variations (Clause 13) and resolved Claims/Contra-charges (including any OFCI back-charges or aborted-test deductions).
+4. Execution of mutual **Final Release and Waiver of Liens/Claims Deeds** across all Tier-1 MEP subcontractors and long-lead OEM suppliers [@fidic2017silver; @ref15_irecruit_qs].
+
+## Defect Notification Period (DNP) administration, retention release bonds, and warranty transfer protocols
+
+Upon issuance of the **Taking-Over Certificate (RFS)**, the first moiety ($50\%$) of **Retention Money** (typically $5\%$ of the $10\%$ total retention under Sub-Clause 14.9) is certified for release (or substituted with an on-demand Retention Bond) [@fidic2017silver; @ref05_scribd_epc_ankara]. The remaining $50\%$ retention and the **Performance Security** are released upon issuance of the **Performance Certificate** (Sub-Clause 11.9) at the conclusion of the 12- to 24-month Defect Notification Period (DNP), conditioned on full assignment of all extended OEM equipment warranties to the Employer [@fidic2017silver; @ref05_scribd_epc_ankara].
+
+---
+
+## Commercial Delivery Synthesis and Post-Contract Governance {.unnumbered}
+
+Governing commercial delivery across a mission-critical data center EPC project requires coordinating technical engineering design with strict contract administration [@fidic2017silver; @ref07_gopaengineering]. Because 60% to 75% of total capital expenditure is concentrated in mechanical, electrical, plumbing, and automation scopes, quantity surveying on these projects requires fluency across thermodynamic limits, high-voltage distribution networks, and industrial control architectures [@ref04_helonic].
+
+Managing commercial risk across the asset lifecycle requires establishing clear contractual and measurement boundaries across four critical project seams:
+
+1. **The OFCI–CFCI Procurement Seam**: The commercial boundary between Owner-Furnished, Contractor-Installed (OFCI) plant deliveries and Contractor-Furnished, Contractor-Installed (CFCI) contractor works requires precise responsibility mapping within trade subcontracts [@ref09_orbital_glossary]. Interface ambiguity can allow minor supplier delivery adjustments or factory wiring discrepancies to trigger severe site disruption, demobilization claims, and schedule slippage across the critical path [@ref01_projectassure]. The MEP-QS must establish detailed responsibility matrices that clearly allocate the scope and financial liabilities for terminal point adapters, internal rigging, intermediate preservation, and OEM startup attendance [@ref09_orbital_glossary].
+2. **Thermodynamic & Fluid-Dynamic Cost Modeling for Liquid Cooling**: The deployment of direct-to-chip liquid cooling architectures requires moving away from traditional gross-floor-area cost planning toward thermodynamic and fluid-dynamic metrics [@ashrae2023liquid; @ref23_keentel_cdu]. Cost engineers must model the direct relationships between target rack densities, secondary loop temperature deltas ($\Delta T$), fluid flow rates, piping material specifications, and pumping power demands [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. Optimizing the temperature differential allows the commercial team to reduce stainless steel material volumes and lower operational pumping loads, balancing capital expenditure against total cost of ownership [@ref24_h2x_dtc].
+3. **Redundancy & Raceway Separation Envelopes**: System redundancy and regulatory raceway separation requirements demand rigorous spatial and cost modeling [@uptime2018tier; @bicsi2024002; @ref03_amanengineering]. Code mandates enforcing physical separation between power and communications lines, combined with 40% to 50% cable tray fill restrictions, effectively double the required pathway quantities relative to standard installations [@bicsi2024002; @ref04_helonic]. The MEP-QS must quantify these raceway networks based on final thermal and expansion envelopes rather than baseline conductor counts, preventing late variations during BIM coordination and field execution [@ref04_helonic].
+4. **Five-Level Commissioning & Retesting Governance**: Finally, testing and commissioning must be budgeted and administered as a core engineering phase rather than an administrative turnover activity [@ref19_datacenterscope_cx]. With commissioning accounting for 8% to 12% of total capital cost, project teams must accurately quantify temporary load banks, testing fuel, utility consumption, and controls integration [@ref04_helonic; @ref19_datacenterscope_cx]. Clear contractual protocols defining financial liability for aborted tests, re-commissioning runs, and delayed Ready-for-Service dates protect project margins against delay liquidated damages and performance shortfalls [@fidic2017silver; @ref01_projectassure].
+
+Applying this integrated commercial governance framework across pre-contract cost planning, automated 5D BIM takeoff, vendor package leveling, and five-level commissioning closeout enables EPC contractors and mission-critical developers to deliver complex, reliable data center infrastructure with cost and schedule certainty [@fidic2017silver; @rics2021nrm2; @ref08_oracle_estimator].

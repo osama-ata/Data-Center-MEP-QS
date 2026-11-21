@@ -5,22 +5,44 @@ categories: ["Volume II", "Chilled Water Plant", "Cooling Towers", "TES", "FWS"]
 
 # Central Chilled Water Plants and Primary Heat Rejection {#sec-central-chilled-water-plants}
 
-## 5.1 Water-cooled and air-cooled centrifugal/magnetic-bearing chillers: Capacity measurement, equipment scheduling, and vibration isolation bases
+## Technical-Commercial Overview: The Primary Facility Water System (FWS) {.unnumbered}
 
-TODO: Expand section 5.1 (baseline reference: [@ref10_lvi_epc_manager]).
+The structural composition of data center mechanical systems is dictated by rack thermal power density and ambient climate conditions [@ashrae2021tc99; @ref25_budlong_cooling]. Across both high-capacity air-cooled halls and high-density liquid-cooled facilities, the primary **Facility Water System (FWS)** forms the bulk heat-rejection backbone [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. The primary FWS circuit operates at lower supply temperatures and higher flow rates, utilizing heavy-wall carbon steel or ductile iron mains that link outdoor cooling towers, adiabatic fluid coolers, and water-cooled or air-cooled chillers to Computer Room Air Handlers (CRAHs) or the primary side of Coolant Distribution Units (CDUs) [@ashrae2023liquid; @ref10_lvi_epc_manager].
 
-## 5.2 Heat rejection infrastructure: Open and closed-circuit cooling towers, dry coolers, and adiabatic fluid coolers
+| Mechanical System Element | Takeoff Measurement Unit | Primary Material & Engineering Specifications | Critical QS Inclusions & Cost Drivers |
+| :--- | :--- | :--- | :--- |
+| **Water-Cooled Centrifugal Chillers** | Number (No.) / Capacity (TR or kW) | Variable-speed centrifugal or magnetic-bearing compressors; R-134a, R-513A, or low-GWP HFO-1234ze refrigerants [@ashrae2021tc99; @ref10_lvi_epc_manager]. | Dual-power active ATS, active harmonic filters ($\text{THDi} < 5\%$), fast-restart UPS controls, witnessed FAT, and seismic spring isolator pads [@ref10_lvi_epc_manager]. |
+| **Cooling Towers / Adiabatic Coolers** | Number (No.) / Heat Rejection (kW) | Induced draft, counter-flow/cross-flow; SS316L cold water basins; VFD-driven direct-drive EC fans [@ref10_lvi_epc_manager]. | Variable-frequency drives, basin heaters/sweeper piping, automated biocide/scale chemical skids, and acoustic attenuation baffles [@ref10_lvi_epc_manager]. |
+| **Primary Chilled Water Mains (FWS)** | Linear Meter (m) by diameter | Schedule 40 carbon steel (ASTM A53 / A106 Gr. B); butt-welded joints $\ge 200\text{ mm}$, roll-grooved joints $< 200\text{ mm}$ [@rics2021nrm2; @ref04_helonic]. | Non-destructive testing (NDT radiograph/ultrasonic on $10\%\text{–}100\%$ of welds), hydrostatic testing to $1.5\times$ design pressure, chemical flushing, and closed-cell insulation with vapor barrier [@rics2021nrm2; @ref04_helonic]. |
 
-TODO: Expand section 5.2 (baseline reference: [@ref10_lvi_epc_manager]).
+: Central Chilled Water Plant and Primary FWS Measurement Breakdown {#tbl-fws-chilled-water-boq}
 
-## 5.3 Primary, secondary, and tertiary hydronic pumping arrangements: Variable Primary Flow (VPF) headers, in-line circulators, and differential pressure sensors
+## Water-cooled and air-cooled centrifugal/magnetic-bearing chillers: Capacity measurement, equipment scheduling, and vibration isolation bases
 
-TODO: Expand section 5.3 (baseline reference: [@ref22_reliabilityengine_liquid]).
+Under RICS NRM2 Section 38 and CSI Division 23, chillers are enumerated individually (`No.`) by cooling capacity ($\text{kW}_{\text{th}}$ or Tons of Refrigeration, $\text{TR}$), entering/leaving chilled water temperatures (e.g., $12^\circ\text{C}/18^\circ\text{C}$ or $18^\circ\text{C}/26^\circ\text{C}$ for elevated-temperature free-cooling loops), and design ambient conditions [@rics2021nrm2; @ashrae2021tc99].
 
-## 5.4 Primary facility piping: Heavy-wall carbon steel, welded/grooved joints, valves, strainers, and balancing devices
+- **GCC High-Ambient Derating ($50^\circ\text{C}\text{ to }55^\circ\text{C}$)**: In Saudi Arabia, UAE, Qatar, and Oman, air-cooled chillers must be selected and priced with **high-ambient tropicalized condenser coils**, oversized VFD EC fan decks, and anti-corrosion epoxy/e-coated fins (for coastal corrosion resistance) capable of delivering $100\%$ rated duty at $50^\circ\text{C}$ ($122^\circ\text{F}$) ambient dry-bulb without high-pressure trip [@ref35_rttr_oman; @ref37_aecom_meh2024].
+- **Fast-Restart & Ride-Through Inclusions**: The MEP-QS must ensure chiller unit rates include UPS-backed micro-processor control panels and rapid-restart VFD software capable of restoring $80\%\text{ to }100\%$ cooling capacity within 30 to 45 seconds of generator power transfer [@uptime2018tier; @ref24_h2x_dtc].
 
-TODO: Expand section 5.4 (baseline reference: [@ref04_helonic]).
+## Heat rejection infrastructure: Open and closed-circuit cooling towers, dry coolers, and adiabatic fluid coolers
 
-## 5.5 Thermal Energy Storage (TES) systems: Stratified chilled water tanks, phase-change storage, and emergency ride-through quantification
+Heat rejection plant selection balances Power Usage Effectiveness (PUE) against Water Usage Effectiveness (WUE) [@ashrae2021tc99; @ref03_amanengineering]:
 
-TODO: Expand section 5.5 (baseline reference: [@ref24_h2x_dtc]).
+- **Open-Circuit Cooling Towers**: Achieve lower approach temperatures to ambient wet-bulb (yielding lower PUE) but consume significant make-up water via evaporation, drift, and blowdown—a major commercial constraint in water-scarce GCC jurisdictions [@ref37_aecom_meh2024].
+- **Adiabatic Fluid Coolers & Dry Coolers**: Utilize dry finned-tube heat rejection during cooler months and pre-cool intake air via wetted adiabatic pads only during peak summer hours, cutting annual water consumption by $70\%\text{ to }90\%$ [@ashrae2021tc99; @ref10_lvi_epc_manager]. The BOQ must separately quantify adiabatic pad replacement sets and UV/RO feed-water treatment skids [@rics2021nrm2].
+
+## Primary, secondary, and tertiary hydronic pumping arrangements: Variable Primary Flow (VPF) headers, in-line circulators, and differential pressure sensors
+
+Modern hyperscale chilled water plants favor **Variable Primary Flow (VPF)** or primary-secondary-tertiary pumping topologies [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. Each pump skid is measured by flow rate ($\text{L/s}$), total dynamic head ($\text{kPa}$ or $\text{m H}_2\text{O}$), motor kilowatt rating, and VFD enclosure IP rating, inclusive of inertia bases, suction diffusers, triple-duty check/balance valves, and remote differential pressure ($\Delta P$) transmitters wired in $N+1$ redundancy [@rics2021nrm2].
+
+## Primary facility piping: Heavy-wall carbon steel, welded/grooved joints, valves, strainers, and balancing devices
+
+In accordance with RICS NRM2, primary chilled water and condenser water pipework is measured in linear meters (`m`) along the centerline over all fittings, grouped by nominal diameter ($\text{DN15}$ to $\text{DN600+}$) and pipe schedule (ASTM A53 / A106 Grade B Schedule 40) [@rics2021nrm2]. Extra-over (`EO`) item counts must be taken off for butt-welded elbows, tees, concentric/eccentric reducers, grooved couplings, PN16/PN25 lugged butterfly valves, motorized isolation valves (MOVs) for Tier III/IV loop isolation, and pressure-independent control valves (PICVs) [@uptime2018tier; @rics2021nrm2; @ref04_helonic].
+
+## Thermal Energy Storage (TES) systems: Stratified chilled water tanks, phase-change storage, and emergency ride-through quantification
+
+During a utility blackout, standby generators require 10 to 30 seconds to synchronize and accept load, and chillers require an additional 30 to 90 seconds to ramp compressor capacity [@uptime2018tier; @ref24_h2x_dtc]. To satisfy Uptime Tier III/IV continuous cooling mandates, the MEP-QS must quantify **Thermal Energy Storage (TES)** vessels [@uptime2018tier; @ref24_h2x_dtc]:
+
+$$V_{\text{TES (Liters)}} = \frac{Q_{\text{IT (kW)}} \times t_{\text{ride-through (s)}}}{\rho \cdot C_p \cdot \Delta T_{\text{chw}} \cdot \eta_{\text{stratification}}}$$ {#eq-tes-volume}
+
+Pressurized steel buffer vessels (typically ASME Section VIII certified) or atmospheric stratified chilled water tanks ($\eta_{\text{stratification}} \approx 0.85\text{–}0.90$) must be measured complete with internal diffuser nozzles, external polyisocyanurate (PIR) insulation, aluminum cladding, and UPS-backed emergency discharge pumps [@rics2021nrm2; @ref24_h2x_dtc].

@@ -5,26 +5,73 @@ categories: ["Volume III", "LV Switchboards", "Overhead Busway", "Cable Tray Fil
 
 # Low-Voltage (LV) Distribution and White Space Power Delivery {#sec-lv-distribution-white-space-power}
 
-## 11.1 Main Low-Voltage Switchboards (MLVS) and Power Distribution Units (PDUs): Isolation transformers, static transfer switches (STS), sub-feed breakers
+## Technical-Commercial Overview: White Space LV Power & Raceway Economics {.unnumbered}
 
-TODO: Expand section 11.1 (baseline reference: [@ref03_amanengineering]).
+Within the data center white space, traditional under-floor whip distribution from Remote Power Panels (RPPs) has largely been superseded by continuous **overhead track busways** rated between $800\text{A}$ and $5000\text{A}$ [@bicsi2024002; @ref04_helonic]. Downstream power delivery routes through dual A/B overhead copper or aluminum busway runs, terminating in plug-in tap-off boxes that feed redundant rack Power Distribution Units (rPDUs) within each server cabinet [@bicsi2024002; @ref04_helonic].
 
-## 11.2 Overhead track busway systems: Open-channel busway (800A to 5000A), end-feed boxes, plug-in bus tap-off units, and drop cords
+Furthermore, raceway measurement is strictly governed by physical separation and thermal derating mandates [@bicsi2024002; @ref04_helonic]. Under the National Electrical Code (NEC), IEC 60364, and ANSI/BICSI 002 standards, low-voltage power cables must maintain physical separation from copper and fiber-optic telecommunications pathways to prevent electromagnetic interference (EMI) [@bicsi2024002; @ref04_helonic]. This separation doubles overhead containment requirements relative to standard commercial buildings [@ref04_helonic]. Simultaneously, cable trays must adhere to a strict **40% to 50% maximum cross-sectional fill ratio** to facilitate convective heat dissipation and accommodate future expansion, requiring physical tray dimensions to be $2.0\text{ to }2.5\times$ larger than baseline conductor volumes dictate [@bicsi2024002; @ref04_helonic].
 
-TODO: Expand section 11.2 (baseline reference: [@ref04_helonic]).
+| Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
+| :--- | :--- | :--- | :--- |
+| **Main LV Switchboards (MLVS) & PDUs** | Number (No.) of assemblies / cubicles | IEC 61439-2 Form 4b Type 6 or7 verification; rated by busbar current ($2500\text{A to }6300\text{A}$) and fault withstand ($65\text{–}100\text{ kA}$ for $1\text{ s}$) [@rics2021nrm2; @ref03_amanengineering]. | Internal arc-flash containment, motorized draw-out ACBs, and branch-circuit revenue-grade power metering [@ref14_cxplanner]. |
+| **Overhead Power Busway** | Linear Meter (m) + Number (No.) of fittings | Measured down centerline of bus duct housing by ampere rating ($800\text{A to } 5000\text{A}$) [@rics2021nrm2; @ref04_helonic]. Fittings, elbows, end-feeds, and tap-off units measured separately. | Structural ceiling grid load allowances; 3D BIM clash resolution with fire suppression and TCS liquid piping mains [@ref04_helonic]. |
+| **Low-Voltage Power Cabling** | Linear Meter (m) by size/conductor count | Measured along length of designed route [@rics2021nrm2; @ref26_aginera_takeoff]. Terminations (lugs, glands, shrouds) measured per connection set. | London Metal Exchange (LME) copper and aluminum price escalation; allowance for routing sag and vertical riser drops [@ref16_umbrex_epc]. |
+| **Wire Mesh & Ladder Cable Tray** | Linear Meter (m) by width and depth | Measured along centerline; separate line items for elbows, tees, reducers, trapeze assemblies, and earth bonding straps [@rics2021nrm2; @ref04_helonic]. | Adherence to 40%–50% maximum fill capacity rules; physical separation between power and structured cabling [@bicsi2024002; @ref04_helonic]. |
 
-## 11.3 Remote Power Panels (RPPs) and floor distribution: Branch circuit monitoring, transient voltage surge suppressors (TVSS), panelboard schedules
+: Low-Voltage Switchboards, Overhead Busway, Cabling, and Containment BOQ Breakdown {#tbl-lv-busway-boq}
 
-TODO: Expand section 11.3 (baseline reference: [@ref14_cxplanner]).
+## Main Low-Voltage Switchboards (MLVS) and Power Distribution Units (PDUs): Isolation transformers, static transfer switches (STS), sub-feed breakers
 
-## 11.4 Containment and raceway infrastructure: Heavy-duty ladder racks, wire mesh basket trays, and enclosed conduits
+In accordance with RICS NRM2, Main Low-Voltage Switchboards ($400\text{V}/415\text{V}$ or $480\text{V}$, Form 4b Type 6/7) and floor-standing Power Distribution Units (PDUs with K-13/K-20 harmonic-mitigating Zig-Zag isolation transformers) are enumerated (`No.`) with full component schedules detailing incoming/bus-tie Air Circuit Breakers (ACBs), outgoing Molded Case Circuit Breakers (MCCBs), Surge Protective Devices (SPDs Type 1+2), and Static Transfer Switches (STS) [@rics2021nrm2; @bicsi2024002; @ref03_amanengineering].
 
-TODO: Expand section 11.4 (baseline reference: [@ref04_helonic]).
+## Overhead track busway systems: Open-channel busway (800A to 5000A), end-feed boxes, plug-in bus tap-off units, and drop cords
 
-## 11.5 Physical pathway segregation: Enforcing National Electrical Code (NEC) / local standard separation between power and communications
+Measuring overhead track busway requires a strict two-part takeoff under RICS NRM2 [@rics2021nrm2; @ref04_helonic]:
 
-TODO: Expand section 11.5 (baseline reference: [@ref04_helonic]).
+1. **Straight Busway Housing (`m`)**: Measured per linear meter along the centerline by bus material (99.9% conductivity ETP copper vs. aluminum), pole configuration ($3\text{P}+100\%\text{N}+50\%\text{PE}$ or $200\%\text{N}$ for high third-harmonic loads), and IP rating (IP54/IP55 in liquid-cooled halls to protect against coolant spray leaks) [@ashrae2023liquid; @ref04_helonic].
+2. **Discrete Busway Fittings & Tap-Off Units (`No.`)**: Every end-feed cable tap box, horizontal/vertical elbow, expansion joint section (required every $30\text{–}45\text{ m}$), end cap, and **Plug-In Tap-Off Box** ($32\text{A}, 63\text{A}, \text{or } 100\text{A}$ three-phase with internal MCB/MCCB, revenue-grade Modbus/SNMP branch circuit meter, and IEC 60309 pin-and-sleeve drop cord) must be enumerated as distinct BOQ line items [@rics2021nrm2; @ref26_aginera_takeoff].
 
-## 11.6 Tray sizing economics: Complying with 40%–50% cable fill ratio mandates for thermal dissipation and future expansion capacity
+## Remote Power Panels (RPPs) and floor distribution: Branch circuit monitoring, transient voltage surge suppressors (TVSS), panelboard schedules
 
-TODO: Expand section 11.6 (baseline reference: [@ref04_helonic]).
+Where raised-floor whip distribution is specified, each RPP ($225\text{A to }800\text{A}$, dual-bus 42- to 84-circuit panelboards) is measured complete with factory-integrated **Branch Circuit Monitoring Systems (BCMS)** (current transformer strips monitoring every individual pole for EPMS/DCIM billing and overload trending) and pre-manufactured liquid-tight flexible metal conduit (LFMC) under-floor whips [@bicsi2024002; @ref14_cxplanner].
+
+## Containment and raceway infrastructure: Heavy-duty ladder racks, wire mesh basket trays, and enclosed conduits
+
+Primary feeder routes utilize heavy-duty galvanized or hot-dip galvanized (HDG BS EN ISO 1461) perforated cable trays and NEMA VE-1 Class 20C ladder racks (`m`), while white space fiber and patch distribution utilizes zinc-nickel or powder-coated **wire mesh basket trays** (`m`, color-coded to distinguish System A Power, System B Power, BMS/ELV, and Telecom Fiber) [@rics2021nrm2; @bicsi2024002; @ref04_helonic].
+
+## Physical pathway segregation: Enforcing National Electrical Code (NEC) / local standard separation between power and communications
+
+To satisfy ANSI/BICSI 002-2024 and EN 50174-2 electromagnetic compatibility (EMC) mandates, unshielded communications trays must maintain a minimum $150\text{ mm to }600\text{ mm}$ clearance (depending on total power circuit amperage and metallic divider shielding) from LV power trays and at least $1.0\text{ m}$ from MV feeders [@bicsi2024002; @ref04_helonic]. In congested corridors, this forces multi-tiered Unistrut trapeze hangers ($2\text{- to }4\text{-tier}$ drop-rod assemblies), increasing support steelwork tonnage per linear meter of tray by $40\%\text{ to }60\%$ [@rics2021nrm2; @ref04_helonic].
+
+## Tray sizing economics: Complying with 40%–50% cable fill ratio mandates for thermal dissipation and future expansion capacity
+
+The cross-sectional area occupied by $N$ circular cables of outer diameter $d_i$ inside a rectangular tray of width $W$ and usable depth $D$ is governed by the maximum fill ratio $f_{\max} \in [0.40, 0.50]$ [@bicsi2024002; @ref04_helonic]:
+
+$$A_{\text{cables}} = \sum_{i=1}^{N} \pi \left(\frac{d_i}{2}\right)^2 \le f_{\max} \cdot (W \cdot D) \implies W_{\min} = \frac{A_{\text{cables}}}{f_{\max} \cdot D}$$ {#eq-tray-fill-ratio}
+
+```{python}
+#| label: tbl-cable-tray-fill-calculator
+#| tbl-cap: "Executable Python Calculator: Standard Cable Tray Width Selection under 40% and 50% Maximum Fill Mandates (100 mm Tray Depth)"
+
+import math
+
+def tray_sizing_calculator(cable_count=48, cable_od_mm=18.0, max_fill=0.40, depth_mm=100.0):
+    single_area = math.pi * (cable_od_mm / 2.0) ** 2
+    total_area = cable_count * single_area
+    min_width = (total_area / max_fill) / depth_mm
+    standard_widths = [100, 150, 225, 300, 450, 600, 750, 900]
+    selected_w = standard_widths[-1]
+    for w in standard_widths:
+        if w >= min_width:
+            selected_w = w
+            break
+    actual_fill = total_area / (selected_w * depth_mm)
+    return total_area, min_width, selected_w, actual_fill
+
+print(f"{'Cables':<8} | {'OD (mm)':<8} | {'Max Fill':<10} | {'Cable Area (mm2)':<18} | {'Min Width (mm)':<15} | {'Selected Tray (mm)':<18} | {'Actual Fill'}")
+print("-" * 102)
+for count in [24, 36, 48, 64]:
+    for f_max in [0.40, 0.50]:
+        area, min_w, sel_w, act_f = tray_sizing_calculator(count, 18.0, f_max, 100.0)
+        print(f"{count:<8} | {18.0:<8.1f} | {int(f_max*100):<9}% | {area:<18.1f} | {min_w:<15.1f} | {sel_w} x 100          | {act_f*100:.1f}%")
+```

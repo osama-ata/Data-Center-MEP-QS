@@ -5,17 +5,36 @@ categories: ["Volume VII", "Load Banks", "IST Utility Cost", "Generator Fuel", "
 
 # Temporary Commissioning Infrastructure, Power, and Utilities {#sec-temporary-commissioning-utilities}
 
-## Worked Example: 8-Hour 20 MW Level 5 IST Load-Bank Energy & Utility Cost
+## Technical-Commercial Overview: Temporary Load Banks, Utilities, and Retesting Risk {.unnumbered}
 
-Running an 8-hour full-load thermal heat test on a $20\text{ MW}$ critical facility requires $160\text{ MWh}$ ($160,000\text{ kWh}$) of electrical energy [@ref19_datacenterscope_cx]:
+The MEP-QS must establish explicit BOQ line items for Level 4 and Level 5 Integrated System Testing (IST) temporary infrastructure and consumables [@rics2021nrm2; @ref19_datacenterscope_cx]. During Level 5 IST, the entire facility is operated as a synchronized thermal and electrical system under simulated load prior to client handover [@ref14_cxplanner]. This verification requires the rental procurement, temporary cabling, crane/forklift logistics, and continuous operation of large fleets of resistive, reactive, and rack-mountable low-$\Delta T$ load banks [@ref19_datacenterscope_cx; @ref31_unitedrentals_loadbanks]. For high-density liquid-cooled facilities, specialized **liquid-cooled load banks** equipped with blind-mate quick-disconnect manifolds are required to simulate thermal production directly on the secondary TCS loop [@ashrae2023liquid; @ref32_rentaload; @ref39_equipmentshare_liquid_loadbank].
+
+## Load bank procurement and logistics: Resistive, reactive, and low Delta-T rack-mountable and floor-standing load banks
+
+Load bank fleets are priced on a weekly or monthly rental basis (`No. × Weeks`), categorized into three functional tiers [@ref31_unitedrentals_loadbanks; @ref32_rentaload]:
+
+1. **Outdoor MV/LV Resistive-Reactive ($\cos\phi = 0.8$) Load Banks ($1,000\text{ kVA to }3,500\text{ kVA}$)**: Deployed at generator tap boxes and main LV switchboards to test generators and transformers at lagging power factor (testing both engine real power $\text{kWe}$ and alternator reactive excitation $\text{kVAr}$) [@iso8528_1; @ref30_tecnogera_generators; @ref31_unitedrentals_loadbanks].
+2. **White Space Floor-Standing or Rack-Mounted Air Load Banks ($10\text{ kW to }100\text{ kW}$)**: Equipped with dual A/B IEC 60309 power cords (to test seamless STS/rPDU A-to-B failover) and calibrated variable-speed fans matched to actual server airflow $\Delta T$ ($12\text{ K to }18\text{ K}$) so hot-aisle containment and CRAH/FCW airflow physics are accurately simulated [@ref32_rentaload].
+
+## Liquid-cooled load bank rentals and temporary cooling heat rejection during high-density white space testing
+
+In direct-to-chip AI data halls ($40\text{ to }132\text{ kW/rack}$), air load banks cannot test the secondary TCS liquid loop or CDUs [@ashrae2023liquid; @ref39_equipmentshare_liquid_loadbank]. The MEP-QS must budget for **Liquid-Cooled Load Banks** ($50\text{ kW to }500\text{ kW}$ modules) that draw electrical power from the overhead busway tap-off boxes and reject heat directly into the TCS PG25 coolant via sanitary stainless steel immersion heaters and flow-control valves [@ref32_rentaload; @ref39_equipmentshare_liquid_loadbank].
+
+## Temporary medium-voltage/low-voltage cabling, disconnect boxes, and Camlock distribution headers
+
+Connecting hundreds of load banks across multiple data halls requires renting miles of temporary flexible single-core rubber cables (H07RN-F $120\text{–}240\text{ mm}^2$ with color-coded 400A Camlock connectors), temporary spider distribution boards, cable ramps, and full-time licensed electricians to rig, torque, thermographically scan, and de-rig the temporary network between phases [@ref19_datacenterscope_cx].
+
+## Utility fuel and electrical consumption: Quantifying fuel consumption for continuous generator burn-in and utility power usage during IST
+
+The primary consumable cost drivers during Level 4/5 commissioning are utility electrical energy and generator diesel fuel [@ref19_datacenterscope_cx]. Running an 8-hour full-load thermal heat test on a $20\text{ MW}$ critical facility requires $160\text{ MWh}$ ($160,000\text{ kWh}$) of electrical energy [@ref19_datacenterscope_cx]:
 
 $$E_{\text{IST}} = P_{\text{critical}} \times t_{\text{test}} = 20\text{ MW} \times 8\text{ h} = 160\text{ MWh}$$ {#eq-ist-energy}
 
-At an industrial utility tariff of $\$0.10/\text{kWh}$, the utility electrical consumption cost for a single 8-hour test run is $\$16,000$, exclusive of load-bank rental, temporary MV/LV cabling, setup labor, and test engineering fees [@ref19_datacenterscope_cx].
+At an industrial utility rate of $\$0.10/\text{kWh}$, the utility power cost alone is $\$16,000$ for a single 8-hour test run (or $\$48,000$ for a 24-hour burn-in), exclusive of PUE cooling overhead, load-bank rental, temporary MV/LV cabling, setup labor, and test engineering fees [@ref19_datacenterscope_cx]. Similarly, running a $20\text{ MW}$ generator farm under a 12-hour blackout endurance test at a specific fuel consumption of $0.26\text{ L/kWh}$ burns $62,400\text{ Liters}$ of diesel fuel per test cycle [@iso8528_1; @ref19_datacenterscope_cx].
 
 ```{python}
 #| label: tbl-ist-loadbank-calculator
-#| tbl-cap: "Interactive Python Calculator: Level 5 IST Electrical Energy and Diesel Fuel Consumption"
+#| tbl-cap: "Executable Python Calculator: Level 5 IST Electrical Energy and Diesel Fuel Consumption"
 
 def ist_cost_calculator(load_mw=20.0, hours=8.0, tariff_per_kwh=0.10, genset_hours=4.0, l_per_kwh=0.26, diesel_per_l=1.10):
     energy_mwh = load_mw * hours
@@ -31,22 +50,11 @@ for mw, hrs in [(10.0, 8.0), (20.0, 8.0), (20.0, 24.0), (40.0, 24.0)]:
     print(f"{mw:<10.1f} | {hrs:<12.1f} | {e_mwh:<13.1f} | ${u_usd:<15,.2f} | {d_l:<20,.1f} | ${d_usd:,.2f}")
 ```
 
-## 21.1 Load bank procurement and logistics: Resistive, reactive, and low Delta-T rack-mountable and floor-standing load banks
+## Rework allowances, retesting liquidated agreements, and allocating failed test re-execution costs
 
-TODO: Expand section 21.1 (baseline reference: [@ref31_unitedrentals_loadbanks]).
+Commercial management during Level 5 testing must account for **retesting risks** [@ref19_datacenterscope_cx]. In data center commissioning, an unexpected breaker trip, a PLC software timing mismatch within the building automation Sequence of Operations (SOO), or a faulty motorized control valve can abort a multi-day IST run [@ref14_cxplanner]. Aborting an IST run frequently requires resetting the entire testing sequence, necessitating an additional 24 to 72 hours of continuous operations [@ref19_datacenterscope_cx]. This triggers extended weekly rental fees for load banks, tens of thousands of dollars in additional diesel fuel and utility electricity consumption, and repeat attendance fees for the independent CxA and OEM engineers [@ref19_datacenterscope_cx].
 
-## 21.2 Liquid-cooled load bank rentals and temporary cooling heat rejection during high-density white space testing
+The MEP-QS must ensure that trade subcontract agreements contain explicit **Retesting Responsibility Matrices** [@ref19_datacenterscope_cx]:
 
-TODO: Expand section 21.2 (baseline reference: [@ref32_rentaload; @ref39_equipmentshare_liquid_loadbank]).
-
-## 21.3 Temporary medium-voltage/low-voltage cabling, disconnect boxes, and Camlock distribution headers
-
-TODO: Expand section 21.3 (baseline reference: [@ref19_datacenterscope_cx]).
-
-## 21.4 Utility fuel and electrical consumption: Quantifying fuel consumption for continuous generator burn-in and utility power usage during IST
-
-TODO: Expand section 21.4 (baseline reference: [@ref19_datacenterscope_cx]).
-
-## 21.5 Rework allowances, retesting liquidated agreements, and allocating failed test re-execution costs
-
-TODO: Expand section 21.5 (baseline reference: [@ref19_datacenterscope_cx]).
+- **Contractor / Trade Execution Defect**: If an IST run is aborted due to a CFCI trade installation or controls programming defect, the responsible subcontractor bears $100\%$ of the re-test fuel, utility power, load bank rental extension, and CxA re-witnessing costs [@fidic2017silver; @ref19_datacenterscope_cx].
+- **OFCI Equipment Fault or Employer Script Modification**: If an IST run fails due to an internal defect in an Owner-Furnished (OFCI) plant item, a third-party utility grid disturbance, or an Employer-directed modification to the approved IST script, the cost and schedule impact are reimbursed via prime contract Provisional Sums or Variation orders [@fidic2017silver; @ref05_scribd_epc_ankara; @ref09_orbital_glossary].

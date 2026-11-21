@@ -5,14 +5,29 @@ categories: ["Volume III", "Earthing", "MCBN", "Signal Reference Grid", "Lightni
 
 # Earthing, Bonding, and Lightning Protection {#sec-earthing-bonding-lightning}
 
-## 12.1 Facility earthing grids: Deep driven earth electrodes, copper perimeter ground rings, and exothermic welded connections
+## Technical-Commercial Overview: Earthing and Equipotential Bonding {.unnumbered}
 
-TODO: Expand section 12.1 (baseline reference: [@ref14_cxplanner]).
+Mission-critical facilities require a low-impedance earth electrode grid (typically $<1.0\text{ }\Omega$ overall earth resistance for substations and data halls, vs. $<5\text{ to }10\text{ }\Omega$ in commercial buildings) coupled with an equipotential white-space **Mesh Common Bonding Network (MCBN)** to dissipate high-frequency switching noise and lightning transients [@bicsi2024002; @ref14_cxplanner].
 
-## 12.2 White space Mesh Common Bonding Networks (MCBN): Signal reference grids (SRG), raised-floor stringer bonding, and rack grounding kits
+| Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
+| :--- | :--- | :--- | :--- |
+| **Below-Grade Facility Earthing Grid** | Linear Meter (m) + Number (No.) of pits/rods | Bare stranded copper conductor ($70\text{–}240\text{ mm}^2$) or $50\times 6\text{ mm}$ copper tape; copper-bonded earth rods; heavy-duty concrete inspection pits [@rics2021nrm2; @ref14_cxplanner]. | High soil resistivity in arid/rocky GCC sites requiring deep-bored earth wells ($15\text{–}30\text{ m}$) and bentonite/marconite backfill [@sec_grid_code; @ref35_rttr_oman]. |
+| **Mesh Common Bonding Network (MCBN)** | Linear Meter (m) + Number (No.) of ground bars | Measured per meter of bare/tinned copper tape ($25 \times 3\text{ mm}$ or $50 \times 6\text{ mm}$) or $\#2 / \#6\text{ AWG}$ grid and signal reference grid (SRG) pedestal clamps [@bicsi2024002; @ref14_cxplanner]. | Exothermic welding quantities (Cadweld molds/shots); raised-floor pedestal bonding every $4\text{th–}6\text{th}$ stringer; transient surge testing [@ref14_cxplanner]. |
+| **Structural Lightning Protection (IEC 62305 LPL I)** | Linear Meter (m) + Number (No.) of air terminals | Class I Faraday cage mesh ($5\times 5\text{ m}$ roof grid), air rods, down conductors, and bimetallic test clamps [@rics2021nrm2]. | Bonding of all roof-mounted chillers, adiabatic coolers, generator exhaust stacks, and structural steel columns [@rics2021nrm2]. |
 
-TODO: Expand section 12.2 (baseline reference: [@ref14_cxplanner]).
+: Facility Earthing, White Space MCBN, and Lightning Protection BOQ Breakdown {#tbl-mcbn-earthing-boq}
 
-## 12.3 Structural lightning protection: Early streamer emission or Faraday cage air terminals, down conductors, and test disconnect pits
+## Facility earthing grids: Deep driven earth electrodes, copper perimeter ground rings, and exothermic welded connections
 
-TODO: Expand section 12.3 (baseline reference: [@rics2021nrm2]).
+Under RICS NRM2 Section 39, buried perimeter earth rings and substation ground mats are measured in linear meters (`m`) of bare stranded copper ($95\text{ mm}^2, 150\text{ mm}^2, \text{or } 240\text{ mm}^2$), while every **exothermic weld joint** (cross-connection, tee-joint, rod-to-cable weld) is enumerated (`No.`) to account for graphite mold wear and copper oxide weld cartridges [@rics2021nrm2; @ref14_cxplanner]. In rocky or dry desert soils (common across Riyadh, Abu Dhabi, and Muscat), standard $3.0\text{ m}$ driven rods fail to achieve $<1.0\text{ }\Omega$; the MEP-QS must include rotary-drilled deep earth boreholes ($15\text{ to }30\text{ m}$ deep) backfilled with conductive low-resistivity cementitious grout (Marconite) or sodium bentonite slurry [@sec_grid_code; @ref35_rttr_oman].
+
+## White space Mesh Common Bonding Networks (MCBN): Signal reference grids (SRG), raised-floor stringer bonding, and rack grounding kits
+
+In accordance with **ANSI/BICSI 002-2024** and **TIA-607-D**, every data hall houses a **Telecommunications Main Grounding Busbar (TMGB)** and localized **Telecommunications Grounding Busbars (TGBs)** interconnected to a high-frequency **Signal Reference Grid (SRG)** [@bicsi2024002; @ref14_cxplanner]. The MEP-QS must quantify:
+
+- Prefabricated flat-copper-strip SRG grids or bare copper conductor meshes ($600\text{ mm}\times 600\text{ mm}$ or $1200\text{ mm}\times 1200\text{ mm}$ spacing) bonded to raised-floor pedestals via UL-listed low-impedance pedestal clamps (`No.`) [@bicsi2024002; @ref14_cxplanner].
+- Individual **Rack Grounding Kits** (`No.` per cabinet): Two-hole long-barrel compression lugs, green/yellow $\text{LSZH }16\text{ mm}^2$ bonding jumpers, paint-piercing star washers, and antioxidant joint compound for every server rack, CDU, CRAH, and section of wire-mesh cable tray [@bicsi2024002].
+
+## Structural lightning protection: Early streamer emission or Faraday cage air terminals, down conductors, and test disconnect pits
+
+Mission-critical facilities are designed to **IEC 62305 Lightning Protection Level I (LPL I)** ($99\%$ interception efficiency, rolling sphere radius $r = 20\text{ m}$, roof mesh spacing $5\text{ m}\times 5\text{ m}$, down-conductor spacing every $10\text{ m}$ of building perimeter) [@rics2021nrm2]. All rooftop mechanical plant (chillers, cooling towers, FCW intake hoods, and generator flues) must be protected by isolated vertical air-termination masts or bonded via spark-gap surge arrestors into the Faraday grid [@rics2021nrm2].

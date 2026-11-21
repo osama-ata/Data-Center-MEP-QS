@@ -5,18 +5,38 @@ categories: ["Volume III", "HV Substation", "MV Switchgear", "GIS/AIS", "Transfo
 
 # High-Voltage (HV) and Medium-Voltage (MV) Power Distribution {#sec-hv-mv-power-distribution}
 
-## 8.1 Utility interconnection substations: Gas-Insulated Switchgear (GIS) vs. Air-Insulated Switchgear (AIS), line bays, and transformer yards
+## Technical-Commercial Overview: Electrical Distribution Hierarchy {.unnumbered}
 
-TODO: Expand section 8.1 (baseline reference: [@ref10_lvi_epc_manager]).
+The electrical distribution system forms the single largest capital cost driver of a mission-critical data center, representing roughly **40% to 48% of total project CapEx** (with core MV/LV distribution packages alone accounting for 25%+) [@ref03_amanengineering; @ref37_aecom_meh2024]. Standard measurement frameworks—including **RICS NRM2 Section 39** and **CSI MasterFormat Division 26**—require granular takeoff from the high-voltage utility substation down to white-space rack PDUs [@rics2021nrm2; @csi2020masterformat; @ref15_irecruit_qs].
 
-## 8.2 Medium-voltage switchgear assemblies: Vacuum circuit breakers, protection relays, arc flash mitigation barriers, and interlocking schemes
+| Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
+| :--- | :--- | :--- | :--- |
+| **HV/MV GIS & AIS Substations** | Number (No.) of bays / line-ups | Enumerated by voltage level ($132\text{ kV} / 33\text{ kV} / 13.8\text{ kV}$), bay type (incomer, transformer feeder, bus-section), and $\text{SF}_6$ or clean-air insulation [@sec_grid_code; @dewa_hv_regulations]. | Utility authority demarcation (SEC / DEWA approval & adoption), protection relay coordination studies, and 60–85 week manufacturing lead times [@ref02_linesight; @ref11_irecruit_substation]. |
+| **Medium-Voltage (MV) Switchgear** | Number (No.) of cubicles/breakers | Measured per breaker cubicle; incoming, outgoing, and bus-coupler sections [@rics2021nrm2; @ref14_cxplanner]. Must include digital relays, CTs, VTs, and internal arc-venting plenums. | SCADA/EPMS IEC 61850 integration interfaces; specialized factory wiring testing; shipping split site assembly [@ref10_lvi_epc_manager]. |
+| **Substation & Unit Transformers** | Number (No.) by MVA / kVA rating | Enumerated by rating ($2.5\text{ MVA to } 63\text{ MVA}$), vector group (Dyn11), and cooling class (ONAN/ONAF or AN/AF cast-resin) [@rics2021nrm2]. | Oil containment bunds ($110\%$ volume), high-velocity water spray deluge interfaces, and harmonic K-factor rating [@nfpa75; @ref10_lvi_epc_manager]. |
 
-TODO: Expand section 8.2 (baseline reference: [@ref10_lvi_epc_manager]).
+: High-Voltage and Medium-Voltage Electrical Package Measurement Breakdown {#tbl-hv-mv-boq}
 
-## 8.3 Substation and unit transformers: Cast resin dry-type versus oil-immersed transformers, containment bunds, and deluge interfaces
+## Utility interconnection substations: Gas-Insulated Switchgear (GIS) vs. Air-Insulated Switchgear (AIS), line bays, and transformer yards
 
-TODO: Expand section 8.3 (baseline reference: [@ref10_lvi_epc_manager]).
+Campus-scale data centers ($20\text{ MW to }200+\text{ MW}$) interconnect directly at high voltage ($110\text{ kV}, 132\text{ kV}, \text{or } 220\text{ kV}$) [@ref10_lvi_epc_manager; @ref11_irecruit_substation]:
 
-## 8.4 Medium-voltage raceways and cabling: Armored MV cabling, trefoil/triplex configurations, cable cleats, and trench/tray routing
+- **Gas-Insulated Switchgear (GIS)**: Reduces substation footprint by up to $70\%$ compared to outdoor Air-Insulated Switchgear (AIS) and encloses live buses against desert dust and coastal salt pollution [@sec_grid_code; @dewa_hv_regulations].
+- **GCC Utility Demarcation (SEC & DEWA)**: In Saudi Arabia (**SEC** $132\text{ kV}/33\text{ kV}$ or $13.8\text{ kV}$) and the UAE (**DEWA** $132/11\text{ kV}$), the MEP-QS must explicitly separate the **Contestability / Utility-Adopted Scope** (built to utility specification and handed over to SEC/DEWA ownership, including teleprotection, tariff metering panels, and fiber-optic pilot cables) from the **Customer Private MV Side** [@sec_grid_code; @dewa_hv_regulations].
 
-TODO: Expand section 8.4 (baseline reference: [@ref10_lvi_epc_manager]).
+## Medium-voltage switchgear assemblies: Vacuum circuit breakers, protection relays, arc flash mitigation barriers, and interlocking schemes
+
+MV distribution line-ups ($11\text{ kV}, 13.8\text{ kV}, 22\text{ kV}, \text{or } 33\text{ kV}$, typically IEC 62271-200 metal-clad, LSC2B-PM, Internal Arc Classified IAC AFLR $31.5\text{–}50\text{ kA}$ for $1\text{ s}$) are measured per vertical panel cubicle (`No.`) [@rics2021nrm2; @ref10_lvi_epc_manager]. Critical BOQ inclusions frequently missed in preliminary estimates include:
+
+1. **Sheet-Metal Arc-Flash Exhaust Ducts**: Custom overhead plenums venting hot arc gases from the top of the MV switchgear line-up safely outside the electrical room through blast dampers [@ref10_lvi_epc_manager].
+2. **Kirk-Key / Castell Mechanical & Electrical Interlocks**: Preventing parallel closure of unsynchronized utility and generator sources across Tier III/IV distribution rings [@uptime2018tier; @ref10_lvi_epc_manager].
+3. **IEC 61850 / GOOSE Fiber Networking**: Redundant fiber-optic patch cords linking multifunction protection relays (e.g., differential, directional overcurrent, arc-flash optical sensors) to the Electrical Power Monitoring System (EPMS) [@ref14_cxplanner].
+
+## Substation and unit transformers: Cast resin dry-type versus oil-immersed transformers, containment bunds, and deluge interfaces
+
+- **Cast-Resin Dry-Type Transformers ($1.5\text{ MVA to }4.0\text{ MVA}$)**: Installed indoors within MV/LV skids or electrical rooms; eliminates oil fire hazards and bunding under NFPA 75 and SBC 801, but requires forced-air cooling fans (AN/AF) and room HVAC heat-load allowances for transformer no-load and load losses [@nfpa75; @sbc801_fire; @ref10_lvi_epc_manager].
+- **Mineral-Oil or Ester-Filled Transformers**: Installed in outdoor yards; require reinforced concrete blast walls, $110\%$-capacity oil-containment bund pits with flame-trap gravel beds, oil-water separator drainage connections, and high-velocity water-spray deluge fire protection [@nfpa75; @ref10_lvi_epc_manager].
+
+## Medium-voltage raceways and cabling: Armored MV cabling, trefoil/triplex configurations, cable cleats, and trench/tray routing
+
+Single-core or three-core MV XLPE/EPR cables (e.g., $185\text{ mm}^2\text{ to }630\text{ mm}^2$ Cu/Al, LSZH outer sheath, AWA/SWA armor) are measured in linear meters (`m`) along the installed route [@rics2021nrm2]. When single-core MV cables are installed in **trefoil configuration** on heavy-duty ladder racks, the MEP-QS must measure short-circuit-rated **stainless steel trefoil cable cleats** spaced every $600\text{ to }900\text{ mm}$ (designed to withstand peak electromechanical fault forces at $31.5\text{–}50\text{ kA}$), heat-shrink or cold-shrink stress-cone termination kits (`No.`), and VLF (Very Low Frequency $0.1\text{ Hz}$) or partial-discharge site testing [@rics2021nrm2; @ref10_lvi_epc_manager].

@@ -5,26 +5,48 @@ categories: ["Volume VII", "Five-Level Commissioning", "FAT", "SAT", "FPT", "IST
 
 # The Five-Level Commissioning Commercial Framework {#sec-five-level-commissioning}
 
-## 20.1 Commissioning cost dynamics: Structuring testing budgets across Level 1 (FAT) to Level 5 (IST)
+## Testing, Commissioning, and Integrated Systems Testing Cost Governance {.unnumbered}
 
-TODO: Expand section 20.1 (baseline reference: [@ref04_helonic]).
+Commissioning (Cx) represents a major scope and financial component within data center EPC execution [@ref04_helonic; @ref19_datacenterscope_cx]. While commissioning in standard commercial buildings typically commands $1\%\text{ to }2\%$ of construction value, mission-critical data center commissioning—inclusive of Factory Acceptance Testing (FAT), chemical flushing/passivation, temporary load bank rentals, test utilities/fuel, OEM startup engineers, and multi-trade attendance across five verification levels—represents between **8% and 12% of total project capital expenditure** [@ref04_helonic; @ref19_datacenterscope_cx].
 
-## 20.2 Level 1: Factory Acceptance Testing (FAT)—Red Tag; manufacturer certifications, witness fees, and non-conformance rectifications
+This investment reflects the absolute necessity of proving fault-tolerant system reliability under simulated full load before live client IT equipment is deployed [@uptime2018tier; @ref14_cxplanner]. The commissioning process follows a strict five-level tag hierarchy:
 
-TODO: Expand section 20.2 (baseline reference: [@ref14_cxplanner]).
+- **Level 1 (Red Tag)**: Factory Acceptance Testing (FAT)
+- **Level 2 (Yellow Tag)**: Component Delivery, Receipt Verification, and Site Acceptance Testing (SAT)
+- **Level 3 (Green Tag)**: Pre-Commissioning and Individual System Startup
+- **Level 4 (Blue Tag)**: Functional Performance Testing (FPT)
+- **Level 5 (White Tag)**: Facility-Wide Integrated System Testing (IST) [@bicsi2024002; @ref14_cxplanner]
 
-## 20.3 Level 2: Component Delivery, Receipt Verification, and Site Acceptance Testing (SAT)—Yellow Tag
+| Commissioning Level | Engineering & Verification Activities | Scope Inclusions & Contractor Obligations | Dominant Cost Elements & Budget Allocation |
+| :--- | :--- | :--- | :--- |
+| **Level 1: FAT (Red Tag)** | Factory inspection and witnessed capacity runs for major plant (generators, switchgear, UPS, CDUs, chillers) [@ref10_lvi_epc_manager]. | Third-party commissioning agent (CxA) witnessing, vendor test benches, and defect rectification prior to release [@ref14_cxplanner]. | Travel/accommodations for client and CxA teams, manufacturer testing surcharges, and re-inspection penalties [@ref19_datacenterscope_cx]. |
+| **Level 2: SAT (Yellow Tag)** | Receiving inspection, physical undamaged verification, static mechanical alignment, and insulation testing [@ref14_cxplanner]. | Rigging onto housekeeping pads, anchor bolt torquing, moisture-protection verification, and storage environment maintenance [@ref12_bidforge]. | Crane rental, internal rigging crews, continuous dry-nitrogen purging of piping, and de-humidification heating [@ref12_bidforge]. |
+| **Level 3: Pre-Cx (Green Tag)** | Energization readiness checks, duct pressure testing, hydronic flushing, and wire meggering/cold point checks [@ref14_cxplanner]. | Cold wire point-to-point terminations, piping chemical cleaning, pipe passivation, and rotational checks on fans and pumps [@ref14_cxplanner]. | Specialized chemical passivation contractors, pre-commissioning consumables, and trade contractor stand-down labor [@ref19_datacenterscope_cx]. |
+| **Level 4: FPT (Blue Tag)** | Standalone functional testing of individual systems under varying operational and setpoint conditions [@ref14_cxplanner]. | Verifying sequence of operations (SOO), safety cutouts, motorized valve strokes, and automated transfer switches (ATS) [@ref14_cxplanner]. | Specialized controls engineering fees, vendor startup technicians, calibration instruments, and initial load banks [@ref14_cxplanner]. |
+| **Level 5: IST (White Tag)** | Full facility integrated performance verification: complete electrical and thermal stress under simulated loads [@ref14_cxplanner]. | Simulating utility failure (blackout chaos testing), thermal runaways, component failure ride-through, and loop failover [@ref14_cxplanner]. | Load bank rental and setup, temporary cabling, fuel for continuous diesel runs, and utility consumption [@ref19_datacenterscope_cx]. |
 
-TODO: Expand section 20.3 (baseline reference: [@ref14_cxplanner]).
+: Five-Level Data Center Commissioning Commercial and Technical Matrix {#tbl-five-level-commissioning}
 
-## 20.4 Level 3: Pre-Commissioning and Individual System Startup—Green Tag
+## Commissioning cost dynamics: Structuring testing budgets across Level 1 (FAT) to Level 5 (IST)
 
-TODO: Expand section 20.4 (baseline reference: [@ref14_cxplanner]).
+To prevent cash-flow front-loading by trade subcontractors, the MEP-QS links interim payment valuation milestones directly to **Commissioning Tag Sign-Offs** in the Schedule of Values (e.g., releasing only $70\%$ of equipment installation value upon physical setting to pad, $10\%$ upon Level 2 Yellow Tag, $10\%$ upon Level 3 Green Tag, $5\%$ upon Level 4 Blue Tag, and $5\%$ upon Level 5 White Tag IST completion) [@rics2021nrm2; @ref14_cxplanner].
 
-## 20.5 Level 4: Functional Performance Testing (FPT)—Blue Tag; component operating loops, redundancy switchovers, and interlock verifications
+## Level 1: Factory Acceptance Testing (FAT)—Red Tag; manufacturer certifications, witness fees, and non-conformance rectifications
 
-TODO: Expand section 20.5 (baseline reference: [@ref14_cxplanner]).
+Covers factory type-testing and routine production witness tests (e.g., MV/LV switchgear primary current injection and dielectric withstand, transformer heat-run tests, generator $100\%$ load-step acceptance tests per ISO 8528-5, and CDU hydrostatic/performance bench tests) prior to issuing the **Order to Ship (Red Tag closure)** [@iso8528_1; @ref14_cxplanner].
 
-## 20.6 Level 5: Integrated System Testing (IST)—White Tag; full facility stress testing, blackout simulation, and heat load burn-in
+## Level 2: Component Delivery, Receipt Verification, and Site Acceptance Testing (SAT)—Yellow Tag
 
-TODO: Expand section 20.6 (baseline reference: [@ref14_cxplanner]).
+Covers shock-watch/tilt-indicator log downloads upon truck arrival, physical nameplate verification against approved IFC submittals, Megger insulation resistance testing, and **Yellow Tag** release confirming the asset is physically installed on its pad and ready for pre-commissioning connections [@ref12_bidforge; @ref14_cxplanner].
+
+## Level 3: Pre-Commissioning and Individual System Startup—Green Tag
+
+Covers de-energized ("cold") and initial energized point-to-point checks: torque-mark audits, busway ductor (micro-ohm contact resistance) testing, MV cable VLF/partial-discharge testing, FWS/TCS closed-loop chemical flushing and passivation verification, and OEM vendor first-startup sign-off (**Green Tag**) [@ashrae2023liquid; @ref14_cxplanner].
+
+## Level 4: Functional Performance Testing (FPT)—Blue Tag; component operating loops, redundancy switchovers, and interlock verifications
+
+Validates each standalone system across its full operating envelope ($0\%, 25\%, 50\%, 75\%, 100\%$ load steps), tuning PID control loops, verifying BMS/EPMS alarm thresholds, and completing the **Blue Tag** prerequisite before facility-wide integration [@ref14_cxplanner].
+
+## Level 5: Integrated System Testing (IST)—White Tag; full facility stress testing, blackout simulation, and heat load burn-in
+
+Operates the entire mechanical, electrical, fire/life-safety, and automation infrastructure simultaneously under $100\%$ simulated critical IT load to prove Uptime Tier III concurrent maintainability (isolating every distribution path and major plant item while maintaining load) and Tier IV fault tolerance (unannounced utility blackout "pull-the-plug" test, generator N+1/2N failure during run, chilled water header rupture simulation, and TES thermal ride-through verification), culminating in **White Tag** issuance [@uptime2018tier; @ref14_cxplanner].
