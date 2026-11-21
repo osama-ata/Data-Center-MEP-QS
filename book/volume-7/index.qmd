@@ -1,0 +1,8 @@
+---
+description: "Volume VII overview: Testing, Five-Level Commissioning (L1 FAT to L5 IST), Temporary Load Bank Utilities, COBie Handover, and Final Account Closeout."
+categories: ["Volume VII", "Commissioning", "Integrated System Testing", "Final Accounts"]
+---
+
+# Volume VII: Testing, Commissioning, Integrated Systems Testing, and Closeout
+
+This volume provides the commercial governance framework for the five-level data center commissioning hierarchy (Level 1 FAT Red Tag through Level 5 IST White Tag), temporary resistive/reactive and liquid-cooled load bank fleets, utility and fuel burn-in budgeting, retesting liability matrices, and COBie 5D BIM handover.

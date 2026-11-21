@@ -1,0 +1,26 @@
+---
+description: "Chapter 3: Functional area ($/m2) vs capacity ($/kW, $/MW) cost baselines, Uptime Tier I-IV and ANSI/BICSI 002-2024 redundancy ($N+1, 2N, 2N+1$), AI/HPC liquid vs air cooling economics, and CSI MasterFormat / RICS NRM2 WBS alignment."
+categories: ["Volume I", "Cost Benchmarking", "Uptime Tier", "RICS NRM2", "CSI MasterFormat"]
+---
+
+# Pre-Contract Cost Planning, Estimating, and Benchmarking {#sec-cost-planning-benchmarking}
+
+## 3.1 Establishing the cost baseline: Functional area metrics (\$/m², \$/ft²) versus capacity metrics (\$/kW, \$/MW IT critical load)
+
+TODO: Expand section 3.1 (baseline reference: [@ref03_amanengineering]).
+
+## 3.2 Uptime Institute Tier Standards (Tier I through Tier IV) and ANSI/BICSI 002-2024 redundancy cost implications ($N+1$, $2N$, $2N+1$)
+
+TODO: Expand section 3.2 (baseline reference: [@uptime2018tier; @bicsi2024002; @ref01_projectassure]).
+
+## 3.3 High-density AI/HPC infrastructure economics: Modeling financial differentials between legacy air-cooled halls (8–15 kW/rack) and liquid-cooled clusters (40–100+ kW/rack)
+
+TODO: Expand section 3.3 (baseline reference: [@ref17_apaltek_liquid]).
+
+## 3.4 Work Breakdown Structures (WBS) and Cost Breakdown Structures (CBS) aligned with CSI MasterFormat (Divisions 21, 22, 23, 25, 26, 27, 28) and RICS NRM2
+
+TODO: Expand section 3.4 (baseline reference: [@csi2020masterformat; @rics2021nrm2; @ref16_umbrex_epc]).
+
+## 3.5 Value engineering methodologies: Capital expenditure (CapEx) versus operational expenditure (OpEx) optimization for total cost of ownership (TCO)
+
+TODO: Expand section 3.5 (baseline reference: [@ref15_irecruit_qs]).

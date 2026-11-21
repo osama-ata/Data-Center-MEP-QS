@@ -1,0 +1,22 @@
+---
+description: "Chapter 10: Static double-conversion and rotary (DRUPS) uninterruptible power supplies, VRLA vs Lithium-Ion (LFP/NMC) and Sodium-Ion battery cabinets, NFPA 855 thermal runaway protection, and DC busways."
+categories: ["Volume III", "UPS", "DRUPS", "Lithium-Ion Battery", "NFPA 855"]
+---
+
+# Uninterruptible Power Supply (UPS) and Energy Storage {#sec-ups-energy-storage}
+
+## 10.1 Static UPS systems: Double-conversion topologies, modular parallel architectures, static transfer bypasses, and output synchronization
+
+TODO: Expand section 10.1 (baseline reference: [@ref14_cxplanner]).
+
+## 10.2 Rotary UPS (DRUPS) systems: Commercial, mechanical, and maintenance evaluation
+
+TODO: Expand section 10.2 (baseline reference: [@ref21_jfindia_playbook]).
+
+## 10.3 Energy storage chemistries: Valve-Regulated Lead-Acid (VRLA), Lithium-Ion (LFP/NMC), and Sodium-Ion battery cabinets
+
+TODO: Expand section 10.3 (baseline reference: [@nfpa855; @ref04_helonic]).
+
+## 10.4 Battery room installations: Seismic battery racking, integrated battery monitoring systems (BMS), DC busway, and DC disconnect switchboards
+
+TODO: Expand section 10.4 (baseline reference: [@ref04_helonic]).

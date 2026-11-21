@@ -1,0 +1,22 @@
+---
+description: "Chapter 4: Automated symbol and multi-sheet feeder takeoff, BIM LOD 300-500 quantity reliability, MEP clash detection cost auditing, and rapid tender addenda differential takeoffs."
+categories: ["Volume I", "5D BIM", "Digital Takeoff", "LOD 300-500"]
+---
+
+# Digital Takeoff, 5D BIM, and Automated Measurement Standards {#sec-digital-takeoff-5d-bim}
+
+## 4.1 Digital quantity surveying: High-density schedule extraction, automated symbol counts, and multi-sheet feeder takeoff
+
+TODO: Expand section 4.1 (baseline reference: [@ref26_aginera_takeoff]).
+
+## 4.2 Building Information Modeling (BIM) Level of Development (LOD 300 to LOD 500) and model-derived quantity reliability
+
+TODO: Expand section 4.2 (baseline reference: [@ref21_jfindia_playbook]).
+
+## 4.3 Navigating MEP coordination conflicts: Clash detection quantification and pre-construction cost exposure auditing
+
+TODO: Expand section 4.3 (baseline reference: [@ref04_helonic]).
+
+## 4.4 Automated addenda differential takeoffs and tracking rapid engineering revisions during tender phases
+
+TODO: Expand section 4.4 (baseline reference: [@ref26_aginera_takeoff]).

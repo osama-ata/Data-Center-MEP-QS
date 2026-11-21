@@ -1,0 +1,354 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery"
+  subtitle: "Commercial Architecture, Technical Takeoff Methodologies, and Comprehensive Table of Contents"
+  description: "Open reference manual and interactive calculation toolkit for MEP Quantity Surveyors (MEP-QS), Cost Engineers, and EPC Contract Administrators delivering hyperscale and high-density AI/HPC data centers."
+  author: "Osama Ata"
+  date: last-modified
+  site-url: https://osama-ata.github.io/Data-Center-MEP-QS/
+  repo-url: https://github.com/osama-ata/Data-Center-MEP-QS
+  repo-subdir: book
+  repo-branch: main
+  repo-actions: [edit, issue, source]
+  downloads: [pdf, epub]
+  search: true
+  page-navigation: true
+  llms-txt: true
+  chapters:
+    - index.qmd
+    - intro-commercial-architecture.qmd
+    - part: volume-1/index.qmd
+      chapters:
+        - volume-1/01-epc-delivery-fundamentals.qmd
+        - volume-1/02-equipment-demarcation-packaging-ofci-vs-cfci.qmd
+        - volume-1/03-pre-contract-cost-planning-estimating-benchmarking.qmd
+        - volume-1/04-digital-takeoff-5d-bim-automated-measurement.qmd
+    - part: volume-2/index.qmd
+      chapters:
+        - volume-2/05-central-chilled-water-plants-heat-rejection.qmd
+        - volume-2/06-air-handling-containment-white-space-cooling.qmd
+        - volume-2/07-liquid-cooling-technology-cooling-systems.qmd
+    - part: volume-3/index.qmd
+      chapters:
+        - volume-3/08-hv-mv-power-distribution.qmd
+        - volume-3/09-standby-generation-emergency-power.qmd
+        - volume-3/10-ups-energy-storage.qmd
+        - volume-3/11-lv-distribution-white-space-power-delivery.qmd
+        - volume-3/12-earthing-bonding-lightning-protection.qmd
+    - part: volume-4/index.qmd
+      chapters:
+        - volume-4/13-fire-suppression-for-white-space.qmd
+        - volume-4/14-fire-detection-vesda.qmd
+        - volume-4/15-mission-critical-plumbing-drainage-environmental-protection.qmd
+    - part: volume-5/index.qmd
+      chapters:
+        - volume-5/16-elv-security-access-control.qmd
+        - volume-5/17-bms-epms-dcim.qmd
+    - part: volume-6/index.qmd
+      chapters:
+        - volume-6/18-vendor-package-management-procurement-strategy.qmd
+        - volume-6/19-variation-governance-change-control-claims.qmd
+    - part: volume-7/index.qmd
+      chapters:
+        - volume-7/20-the-five-level-commissioning-commercial-framework.qmd
+        - volume-7/21-temporary-commissioning-infrastructure-power-utilities.qmd
+        - volume-7/22-handover-final-accounts-operational-transition.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    lang: en
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    html-math-method: katex
+    include-in-header:
+      - text: |
+          <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+          <meta name="ai-content-declaration" content="human-authored-open-knowledge; license=CC-BY-SA-4.0; code-license=MIT">
+          <meta name="ai-agent-instructions" content="Machine-readable index at /llms.txt. Append .llms.md to any page URL (or replace .html with .llms.md) for clean, token-efficient Markdown. In-browser AI agents can invoke WebMCP tools via document.modelContext or window.DataCenterMEPQS.">
+          <link rel="llms-txt" href="https://osama-ata.github.io/Data-Center-MEP-QS/llms.txt" title="LLM Context Index (llms.txt)">
+          <script type="application/ld+json" id="mep-qs-book-jsonld">
+          {
+            "@context": "https://schema.org",
+            "@type": "Book",
+            "@id": "https://osama-ata.github.io/Data-Center-MEP-QS/#book",
+            "name": "Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery",
+            "alternativeHeadline": "Commercial Architecture, Technical Takeoff Methodologies, and Comprehensive Table of Contents",
+            "author": {
+              "@type": "Person",
+              "name": "Osama Ata",
+              "url": "https://github.com/osama-ata"
+            },
+            "inLanguage": "en",
+            "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "isAccessibleForFree": true,
+            "url": "https://osama-ata.github.io/Data-Center-MEP-QS/",
+            "codeRepository": "https://github.com/osama-ata/Data-Center-MEP-QS",
+            "about": [
+              "Data Center MEP Quantity Surveying",
+              "Turnkey EPC FIDIC Silver Book",
+              "OFCI vs CFCI Demarcation",
+              "Direct-to-Chip Liquid Cooling Takeoff",
+              "Mission-Critical Electrical Distribution",
+              "Five-Level Data Center Commissioning (L1-L5 IST)"
+            ]
+          }
+          </script>
+          <script>
+          (function () {
+            // 1. Dynamically inject page-specific <link rel="alternate" type="text/markdown"> and TechArticle JSON-LD
+            document.addEventListener("DOMContentLoaded", function () {
+              var path = window.location.pathname || "/";
+              var mdPath = path.endsWith(".html")
+                ? path.replace(/\.html$/, ".llms.md")
+                : (path.endsWith("/") ? path + "index.llms.md" : path + ".llms.md");
+          
+              var altLink = document.createElement("link");
+              altLink.rel = "alternate";
+              altLink.type = "text/markdown";
+              altLink.href = mdPath;
+              altLink.title = "AI Agent Clean Markdown Mirror (.llms.md)";
+              document.head.appendChild(altLink);
+          
+              // Annotate main semantic landmarks & tables with deterministic data-agent-* attributes
+              var mainEl = document.querySelector("main");
+              if (mainEl) {
+                mainEl.setAttribute("data-agent-role", "primary-technical-content");
+                mainEl.setAttribute("data-agent-markdown-mirror", mdPath);
+              }
+              document.querySelectorAll("table").forEach(function (tbl, idx) {
+                tbl.setAttribute("data-agent-component", "boq-or-commercial-matrix");
+                tbl.setAttribute("data-agent-table-index", String(idx + 1));
+                tbl.querySelectorAll("thead th").forEach(function (th) {
+                  if (!th.getAttribute("scope")) th.setAttribute("scope", "col");
+                });
+              });
+              document.querySelectorAll("pre").forEach(function (pre, idx) {
+                if (!pre.hasAttribute("tabindex")) pre.setAttribute("tabindex", "0");
+                if (!pre.hasAttribute("role")) pre.setAttribute("role", "region");
+                if (!pre.hasAttribute("aria-label")) pre.setAttribute("aria-label", "Code or calculation block " + (idx + 1));
+              });
+          
+              // Inject Page-level Schema.org TechArticle JSON-LD
+              var h1 = document.querySelector("main h1, h1.title");
+              var metaDesc = document.querySelector('meta[name="description"]');
+              var articleLd = {
+                "@context": "https://schema.org",
+                "@type": "TechArticle",
+                "headline": h1 ? h1.textContent.trim() : document.title,
+                "description": metaDesc ? metaDesc.content : document.title,
+                "url": window.location.href,
+                "inLanguage": "en",
+                "proficiencyLevel": "Expert",
+                "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "isAccessibleForFree": true,
+                "isPartOf": { "@id": "https://osama-ata.github.io/Data-Center-MEP-QS/#book" },
+                "encoding": {
+                  "@type": "MediaObject",
+                  "encodingFormat": "text/markdown",
+                  "contentUrl": new URL(mdPath, window.location.href).href
+                }
+              };
+              var scriptEl = document.createElement("script");
+              scriptEl.type = "application/ld+json";
+              scriptEl.textContent = JSON.stringify(articleLd);
+              document.head.appendChild(scriptEl);
+            });
+          
+            // 2. Deterministic MEP-QS Calculators for AI Agents (window.DataCenterMEPQS & W3C WebMCP)
+            var pipesSS316L = [
+              [25, 27.86], [32, 36.62], [40, 42.72], [50, 54.79],
+              [65, 66.93], [80, 82.80], [100, 108.20], [125, 134.50],
+              [150, 161.46], [200, 211.56], [250, 264.67], [300, 314.71]
+            ];
+            var standardTrayWidths = [100, 150, 225, 300, 450, 600, 750, 900];
+          
+            function calcDtcLiquidCooling(params) {
+              var p = params || {};
+              var qKw = Number(p.it_load_kw ?? 1000.0);
+              var dT = Number(p.delta_t_k ?? 10.0);
+              var rho = Number(p.density_kg_m3 ?? 1020.0);
+              var cp = Number(p.cp_kj_kg_k ?? 3.93);
+              var maxVel = Number(p.max_velocity_m_s ?? 2.4);
+          
+              var rhoKgL = rho / 1000.0;
+              var vLs = qKw / (rhoKgL * cp * dT);
+              var vLmin = vLs * 60.0;
+              var selectedDn = pipesSS316L[pipesSS316L.length - 1][0];
+              var actualVel = 0;
+          
+              for (var i = 0; i < pipesSS316L.length; i++) {
+                var dn = pipesSS316L[i][0];
+                var idMm = pipesSS316L[i][1];
+                var areaM2 = Math.PI * Math.pow((idMm / 1000.0) / 2.0, 2);
+                var vel = (vLs / 1000.0) / areaM2;
+                if (vel <= maxVel) {
+                  selectedDn = dn;
+                  actualVel = vel;
+                  break;
+                }
+              }
+              return {
+                it_load_kw: qKw,
+                delta_t_k: dT,
+                density_kg_m3: rho,
+                cp_kj_kg_k: cp,
+                volumetric_flow_l_s: Number(vLs.toFixed(2)),
+                volumetric_flow_l_min: Number(vLmin.toFixed(1)),
+                l_min_per_kw: Number((vLmin / qKw).toFixed(3)),
+                recommended_ss316l_header_dn_mm: selectedDn,
+                fluid_velocity_m_s: Number(actualVel.toFixed(2))
+              };
+            }
+          
+            function calcCableTrayFill(params) {
+              var p = params || {};
+              var count = Number(p.cable_count ?? 48);
+              var od = Number(p.cable_od_mm ?? 18.0);
+              var maxFill = Number(p.max_fill_ratio ?? 0.40);
+              var depth = Number(p.tray_depth_mm ?? 100.0);
+          
+              var singleArea = Math.PI * Math.pow(od / 2.0, 2);
+              var totalCableArea = count * singleArea;
+              var reqArea = totalCableArea / maxFill;
+              var minWidth = reqArea / depth;
+              var selWidth = standardTrayWidths[standardTrayWidths.length - 1];
+          
+              for (var i = 0; i < standardTrayWidths.length; i++) {
+                if (standardTrayWidths[i] >= minWidth) {
+                  selWidth = standardTrayWidths[i];
+                  break;
+                }
+              }
+              return {
+                cable_count: count,
+                cable_od_mm: od,
+                max_fill_ratio: maxFill,
+                tray_depth_mm: depth,
+                total_cable_area_mm2: Number(totalCableArea.toFixed(1)),
+                min_tray_width_mm: Number(minWidth.toFixed(1)),
+                selected_standard_tray_width_mm: selWidth,
+                achieved_fill_ratio: Number((totalCableArea / (selWidth * depth)).toFixed(3))
+              };
+            }
+          
+            function calcIstEnergyCost(params) {
+              var p = params || {};
+              var mw = Number(p.critical_load_mw ?? 20.0);
+              var hrs = Number(p.duration_hours ?? 8.0);
+              var tariff = Number(p.utility_tariff_per_kwh ?? 0.10);
+              var gensetHrs = Number(p.diesel_genset_hours ?? 4.0);
+              var sfc = Number(p.specific_fuel_l_per_kwh ?? 0.26);
+              var fuelPrice = Number(p.diesel_price_per_liter ?? 1.10);
+          
+              var mwh = mw * hrs;
+              var kwh = mwh * 1000.0;
+              var utilityUsd = kwh * tariff;
+              var dieselL = (mw * 1000.0 * gensetHrs) * sfc;
+              var dieselUsd = dieselL * fuelPrice;
+          
+              return {
+                critical_load_mw: mw,
+                duration_hours: hrs,
+                total_energy_mwh: Number(mwh.toFixed(2)),
+                utility_cost_usd: Number(utilityUsd.toFixed(2)),
+                diesel_genset_hours: gensetHrs,
+                diesel_fuel_liters: Number(dieselL.toFixed(1)),
+                diesel_cost_usd: Number(dieselUsd.toFixed(2)),
+                total_combined_cost_usd: Number((utilityUsd + dieselUsd).toFixed(2))
+              };
+            }
+          
+            window.DataCenterMEPQS = {
+              version: "0.1.0",
+              license: "MIT",
+              calcDtcLiquidCooling: calcDtcLiquidCooling,
+              calcCableTrayFill: calcCableTrayFill,
+              calcIstEnergyCost: calcIstEnergyCost
+            };
+          
+            // Register W3C WebMCP tools if supported by the browser agent runtime
+            var mc = document.modelContext || navigator.modelContext;
+            if (mc && typeof mc.registerTool === "function") {
+              var tools = [
+                {
+                  name: "calc_dtc_liquid_cooling",
+                  title: "Direct-to-Chip (DTC) Liquid Cooling Flow & Header Sizing Calculator",
+                  description: "Calculates secondary TCS coolant volumetric flow rate (L/s and L/min) and recommends Sch 10S SS316L header DN pipe size from IT heat load (kW) and design Delta-T (K).",
+                  inputSchema: {
+                    type: "object",
+                    properties: {
+                      it_load_kw: { type: "number", description: "Critical IT thermal heat load in kW (default 1000)." },
+                      delta_t_k: { type: "number", description: "Supply-to-return temperature differential in Kelvin (default 10)." },
+                      density_kg_m3: { type: "number", description: "Coolant density in kg/m3 (default 1020 for PG25)." },
+                      cp_kj_kg_k: { type: "number", description: "Specific heat capacity in kJ/(kg.K) (default 3.93 for PG25)." }
+                    }
+                  },
+                  annotations: { readOnlyHint: true },
+                  execute: async function (args) {
+                    var res = calcDtcLiquidCooling(args);
+                    return { content: [{ type: "text", text: JSON.stringify(res, null, 2) }], structuredContent: res };
+                  }
+                },
+                {
+                  name: "calc_cable_tray_fill",
+                  title: "Mission-Critical Cable Tray 40%-50% Fill Ratio Sizing Calculator",
+                  description: "Selects standard wire-mesh or ladder cable tray width complying with 40%-50% maximum cable fill ratio mandates.",
+                  inputSchema: {
+                    type: "object",
+                    properties: {
+                      cable_count: { type: "integer", description: "Number of cables in the tray." },
+                      cable_od_mm: { type: "number", description: "Outer diameter of each cable in mm." },
+                      max_fill_ratio: { type: "number", description: "Maximum permitted fill ratio (e.g. 0.40 or 0.50)." },
+                      tray_depth_mm: { type: "number", description: "Tray depth in mm (default 100)." }
+                    }
+                  },
+                  annotations: { readOnlyHint: true },
+                  execute: async function (args) {
+                    var res = calcCableTrayFill(args);
+                    return { content: [{ type: "text", text: JSON.stringify(res, null, 2) }], structuredContent: res };
+                  }
+                },
+                {
+                  name: "calc_ist_energy_and_fuel",
+                  title: "Level 5 IST Load-Bank Utility Energy & Diesel Generator Fuel Calculator",
+                  description: "Quantifies temporary utility electricity (MWh and USD) and standby diesel generator fuel consumption (Liters and USD) for Level 5 Integrated System Testing.",
+                  inputSchema: {
+                    type: "object",
+                    properties: {
+                      critical_load_mw: { type: "number", description: "Facility critical IT load tested in MW (default 20)." },
+                      duration_hours: { type: "number", description: "Full-load utility thermal test duration in hours (default 8)." },
+                      utility_tariff_per_kwh: { type: "number", description: "Industrial electricity tariff in USD/kWh (default 0.10)." },
+                      diesel_genset_hours: { type: "number", description: "Blackout simulation generator run duration in hours (default 4)." }
+                    }
+                  },
+                  annotations: { readOnlyHint: true },
+                  execute: async function (args) {
+                    var res = calcIstEnergyCost(args);
+                    return { content: [{ type: "text", text: JSON.stringify(res, null, 2) }], structuredContent: res };
+                  }
+                }
+              ];
+              tools.forEach(function (t) {
+                try { mc.registerTool(t); } catch (e) {}
+              });
+            }
+          })();
+          </script>
+  pdf:
+    documentclass: scrreprt
+    toc: true
+    number-sections: true
+    colorlinks: true
+  epub:
+    toc: true
+    number-sections: true

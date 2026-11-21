@@ -1,0 +1,8 @@
+---
+description: "Volume V overview: Automation, Building Management Systems (BMS), Electrical Power Monitoring (EPMS), DCIM, and Telecommunication Infrastructure."
+categories: ["Volume V", "Automation", "BMS", "EPMS", "DCIM", "Telecom"]
+---
+
+# Volume V: Automation, Building Management, and Telecommunication Infrastructure
+
+This volume examines Extra-Low Voltage (ELV) physical security, dual diverse Meet-Me Room (MMR) structured cabling pathways, Direct Digital Control (DDC) I/O point quantification, Electrical Power Monitoring Systems (EPMS), and Data Center Infrastructure Management (DCIM).

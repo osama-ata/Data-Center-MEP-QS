@@ -1,0 +1,22 @@
+---
+description: "Chapter 15: Reverse osmosis (RO) and water softening treatment skids, cooling tower blowdown and oily-water drainage, distance-locating leak detection cables around CDUs/CRAHs, and technical zone domestic plumbing."
+categories: ["Volume IV", "Reverse Osmosis", "Leak Detection", "Industrial Drainage"]
+---
+
+# Mission-Critical Plumbing, Drainage, and Environmental Protection {#sec-plumbing-drainage-environmental}
+
+## 15.1 Water treatment and supply infrastructure: Reverse osmosis (RO) systems, water softeners, chemical feed skids, and potable water booster stations
+
+TODO: Expand section 15.1 (baseline reference: [@ref22_reliabilityengine_liquid]).
+
+## 15.2 Critical drainage systems: Chilled water leak containment, cooling tower blowdown drains, oily water separators, and fuel trap chambers
+
+TODO: Expand section 15.2 (baseline reference: [@ref04_helonic]).
+
+## 15.3 Distance-locating leak detection systems: Sensing cables, zonal location modules, alarm panels, and under-floor sensing grids around CDUs and CRACs
+
+TODO: Expand section 15.3 (baseline reference: [@ref14_cxplanner]).
+
+## 15.4 Domestic water, emergency eyewash stations, and sanitary installations within technical and administrative zones
+
+TODO: Expand section 15.4 (baseline reference: [@rics2021nrm2]).

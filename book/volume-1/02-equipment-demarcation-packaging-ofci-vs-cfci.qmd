@@ -1,0 +1,26 @@
+---
+description: "Chapter 2: Categorization of data center plant into CFCI, OFCI, and OFOI; rigging and pad-setting boundaries; terminal point RACI matrices; late OFCI delay claims; and FAT allowances."
+categories: ["Volume I", "OFCI", "CFCI", "RACI Matrix", "FAT"]
+---
+
+# Equipment Demarcation and Packaging Strategy: OFCI vs. CFCI {#sec-ofci-vs-cfci}
+
+## 2.1 The procurement matrix: Categorization of plant into CFCI, OFCI, and Owner-Furnished, Owner-Installed (OFOI)
+
+TODO: Expand section 2.1 (baseline reference: [@ref09_orbital_glossary]).
+
+## 2.2 Commercial boundary definitions: Offloading, inside-building rigging, setting to pad, and anchor-bolt torque verifications
+
+TODO: Expand section 2.2 (baseline reference: [@ref12_bidforge]).
+
+## 2.3 Responsibility assignment matrices (RACI) for terminal points: Pipe flanges, electrical bus stabs, and dry-contact BMS inputs
+
+TODO: Expand section 2.3 (baseline reference: [@ref12_bidforge]).
+
+## 2.4 Owner delay mechanisms: Evaluating contractor stand-down, demurrage, and preservation costs for late OFCI deliveries
+
+TODO: Expand section 2.4 (baseline reference: [@ref01_projectassure]).
+
+## 2.5 Factory Acceptance Testing (FAT) travel, witnessing allowances, and international factory logistics commercialization
+
+TODO: Expand section 2.5 (baseline reference: [@ref14_cxplanner]).

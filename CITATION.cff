@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use or reference this book or its calculators, please cite it as below."
+type: book
+title: "Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery: Commercial Architecture, Technical Takeoff Methodologies, and Comprehensive Table of Contents"
+authors:
+  - family-names: "Ata"
+    given-names: "Osama"
+version: 0.1.0
+date-released: 2026-11-21
+license: CC-BY-SA-4.0
+repository-code: "https://github.com/osama-ata/Data-Center-MEP-QS"
+url: "https://osama-ata.github.io/Data-Center-MEP-QS/"
+keywords:
+  - quantity-surveying
+  - data-center
+  - mep
+  - epc
+  - fidic-silver-book
+  - liquid-cooling
+  - commissioning
+  - rics-nrm2

@@ -1,0 +1,22 @@
+---
+description: "Chapter 16: Multi-tier biometric access control, mantrap portals, IP/thermal CCTV and storage arrays, OS2/OM4/OM5 MPO/MTP structured cabling backbones, and dual diverse Meet-Me Room (MMR) pathways."
+categories: ["Volume V", "ELV Security", "Structured Cabling", "Meet-Me Room", "BICSI 002"]
+---
+
+# Extra-Low Voltage (ELV), Security, and Access Control {#sec-elv-security-access-control}
+
+## 16.1 Physical security systems: Multi-tier biometric access control, mantrap interlocks, turnstiles, and electronic cabinet locks
+
+TODO: Expand section 16.1 (baseline reference: [@ref34_scribd_hk1_boq]).
+
+## 16.2 Closed-Circuit Television (CCTV): High-resolution IP cameras, perimeter thermal detection, video management servers, and storage arrays
+
+TODO: Expand section 16.2 (baseline reference: [@ref34_scribd_hk1_boq]).
+
+## 16.3 Structured cabling: Fiber-optic backbones (Single-Mode OS2, Multi-Mode OM4/OM5), MPO/MTP pre-terminated trunks, and patch panels
+
+TODO: Expand section 16.3 (baseline reference: [@bicsi2024002; @ref03_amanengineering]).
+
+## 16.4 Telecommunications pathways: Dual diverse Meet-Me Rooms (MMR), redundant carrier fiber entrance conduits, and overhead basket trays
+
+TODO: Expand section 16.4 (baseline reference: [@bicsi2024002; @ref03_amanengineering]).

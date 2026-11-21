@@ -1,0 +1,30 @@
+---
+description: "Chapter 20: Structuring the 8%-12% mission-critical commissioning budget across Level 1 FAT (Red Tag), Level 2 SAT (Yellow Tag), Level 3 Pre-Commissioning (Green Tag), Level 4 FPT (Blue Tag), and Level 5 Integrated System Testing (White Tag)."
+categories: ["Volume VII", "Five-Level Commissioning", "FAT", "SAT", "FPT", "IST"]
+---
+
+# The Five-Level Commissioning Commercial Framework {#sec-five-level-commissioning}
+
+## 20.1 Commissioning cost dynamics: Structuring testing budgets across Level 1 (FAT) to Level 5 (IST)
+
+TODO: Expand section 20.1 (baseline reference: [@ref04_helonic]).
+
+## 20.2 Level 1: Factory Acceptance Testing (FAT)—Red Tag; manufacturer certifications, witness fees, and non-conformance rectifications
+
+TODO: Expand section 20.2 (baseline reference: [@ref14_cxplanner]).
+
+## 20.3 Level 2: Component Delivery, Receipt Verification, and Site Acceptance Testing (SAT)—Yellow Tag
+
+TODO: Expand section 20.3 (baseline reference: [@ref14_cxplanner]).
+
+## 20.4 Level 3: Pre-Commissioning and Individual System Startup—Green Tag
+
+TODO: Expand section 20.4 (baseline reference: [@ref14_cxplanner]).
+
+## 20.5 Level 4: Functional Performance Testing (FPT)—Blue Tag; component operating loops, redundancy switchovers, and interlock verifications
+
+TODO: Expand section 20.5 (baseline reference: [@ref14_cxplanner]).
+
+## 20.6 Level 5: Integrated System Testing (IST)—White Tag; full facility stress testing, blackout simulation, and heat load burn-in
+
+TODO: Expand section 20.6 (baseline reference: [@ref14_cxplanner]).

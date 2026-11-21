@@ -1,0 +1,22 @@
+---
+description: "Chapter 18: Mission-critical equipment RFQs, commercial bid leveling across Incoterms 2020 (DDP vs CIF) and warranty boundaries, factory capacity reservation fees, and MEP trade subcontract scope gap analysis."
+categories: ["Volume VI", "Vendor RFQ", "Bid Leveling", "Incoterms 2020", "Long-Lead Plant"]
+---
+
+# Vendor Package Management and Procurement Strategy {#sec-vendor-package-procurement}
+
+## 18.1 Developing specialized Request for Quotations (RFQs) and technical compliance matrices for mission-critical equipment
+
+TODO: Expand section 18.1 (baseline reference: [@ref12_bidforge]).
+
+## 18.2 Commercial bid leveling: Normalizing deviations in warranty terms, delivery points (Incoterms 2020: DDP vs. CIF), and factory service technicians
+
+TODO: Expand section 18.2 (baseline reference: [@ref12_bidforge]).
+
+## 18.3 Managing supply chain lead-time risk: Factory reservation fees, capacity commitment deposits, and long-lead tracking registers
+
+TODO: Expand section 18.3 (baseline reference: [@ref02_linesight]).
+
+## 18.4 Subcontract tendering, scope gap analyses, and bid-leveling for specialized mechanical and electrical trade packages
+
+TODO: Expand section 18.4 (baseline reference: [@ref02_linesight]).

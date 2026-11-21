@@ -1,0 +1,22 @@
+---
+description: "Chapter 9: ISO 8528 Data Center Continuous (DCC) diesel and gas standby generators, paralleling switchgear, acoustic enclosures, stainless exhaust stacks, bulk underground/belly fuel oil tanks, and load bank tap boxes."
+categories: ["Volume III", "Standby Generators", "ISO 8528", "Fuel Oil Systems"]
+---
+
+# Standby Generation and Emergency Power Systems {#sec-standby-generation-emergency-power}
+
+## 9.1 Diesel and gas-fired generator sets: Continuous mission-critical ratings, paralleling switchgear, and utility transfer controllers
+
+TODO: Expand section 9.1 (baseline reference: [@iso8528_1; @ref03_amanengineering]).
+
+## 9.2 Acoustic enclosures, silencers, and high-level exhaust stacks: Stainless steel exhaust runs, bellows, and catalytic converters
+
+TODO: Expand section 9.2 (baseline reference: [@ref14_cxplanner]).
+
+## 9.3 Fuel oil storage and supply systems: Bulk fuel underground tanks, belly tanks, automated day tank transfer pump skids, and fuel filtration/polishing skids
+
+TODO: Expand section 9.3 (baseline reference: [@ref03_amanengineering]).
+
+## 9.4 Load bank connection tap boxes and integrated generator testing infrastructure
+
+TODO: Expand section 9.4 (baseline reference: [@ref31_unitedrentals_loadbanks]).

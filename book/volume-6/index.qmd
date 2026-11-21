@@ -1,0 +1,8 @@
+---
+description: "Volume VI overview: Procurement Execution, Subcontract Management, Supply Chain Risk, and FIDIC Silver Book Variation/Claims Governance."
+categories: ["Volume VI", "Procurement", "Subcontracts", "Claims Management"]
+---
+
+# Volume VI: Procurement Execution, Subcontract Management, and Supply Chain
+
+This volume focuses on vendor package RFQ development, commercial bid leveling across Incoterms 2020 and warranty boundaries, factory capacity reservation fees, post-award Engineering Change Notices (ECNs), FIDIC Silver Book Time Impact Analysis (TIA), and PUE performance liquidated damages.

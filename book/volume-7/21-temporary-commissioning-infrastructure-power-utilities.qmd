@@ -1,0 +1,52 @@
+---
+description: "Chapter 21: Resistive, reactive, and liquid-cooled load bank rentals, temporary MV/LV Camlock distribution, 20 MW 8-hour IST utility electricity and diesel generator burn-in cost quantification, and aborted test retesting liability matrices."
+categories: ["Volume VII", "Load Banks", "IST Utility Cost", "Generator Fuel", "Retesting Risk", "Calculator"]
+---
+
+# Temporary Commissioning Infrastructure, Power, and Utilities {#sec-temporary-commissioning-utilities}
+
+## Worked Example: 8-Hour 20 MW Level 5 IST Load-Bank Energy & Utility Cost
+
+Running an 8-hour full-load thermal heat test on a $20\text{ MW}$ critical facility requires $160\text{ MWh}$ ($160,000\text{ kWh}$) of electrical energy [@ref19_datacenterscope_cx]:
+
+$$E_{\text{IST}} = P_{\text{critical}} \times t_{\text{test}} = 20\text{ MW} \times 8\text{ h} = 160\text{ MWh}$$ {#eq-ist-energy}
+
+At an industrial utility tariff of $\$0.10/\text{kWh}$, the utility electrical consumption cost for a single 8-hour test run is $\$16,000$, exclusive of load-bank rental, temporary MV/LV cabling, setup labor, and test engineering fees [@ref19_datacenterscope_cx].
+
+```{python}
+#| label: tbl-ist-loadbank-calculator
+#| tbl-cap: "Interactive Python Calculator: Level 5 IST Electrical Energy and Diesel Fuel Consumption"
+
+def ist_cost_calculator(load_mw=20.0, hours=8.0, tariff_per_kwh=0.10, genset_hours=4.0, l_per_kwh=0.26, diesel_per_l=1.10):
+    energy_mwh = load_mw * hours
+    utility_usd = energy_mwh * 1000.0 * tariff_per_kwh
+    diesel_l = (load_mw * 1000.0 * genset_hours) * l_per_kwh
+    diesel_usd = diesel_l * diesel_per_l
+    return energy_mwh, utility_usd, diesel_l, diesel_usd
+
+print(f"{'Load (MW)':<10} | {'Duration (h)':<12} | {'Energy (MWh)':<13} | {'Utility Cost ($)':<16} | {'4h Genset Diesel (L)':<20} | {'Diesel Cost ($)'}")
+print("-" * 94)
+for mw, hrs in [(10.0, 8.0), (20.0, 8.0), (20.0, 24.0), (40.0, 24.0)]:
+    e_mwh, u_usd, d_l, d_usd = ist_cost_calculator(mw, hrs)
+    print(f"{mw:<10.1f} | {hrs:<12.1f} | {e_mwh:<13.1f} | ${u_usd:<15,.2f} | {d_l:<20,.1f} | ${d_usd:,.2f}")
+```
+
+## 21.1 Load bank procurement and logistics: Resistive, reactive, and low Delta-T rack-mountable and floor-standing load banks
+
+TODO: Expand section 21.1 (baseline reference: [@ref31_unitedrentals_loadbanks]).
+
+## 21.2 Liquid-cooled load bank rentals and temporary cooling heat rejection during high-density white space testing
+
+TODO: Expand section 21.2 (baseline reference: [@ref32_rentaload; @ref39_equipmentshare_liquid_loadbank]).
+
+## 21.3 Temporary medium-voltage/low-voltage cabling, disconnect boxes, and Camlock distribution headers
+
+TODO: Expand section 21.3 (baseline reference: [@ref19_datacenterscope_cx]).
+
+## 21.4 Utility fuel and electrical consumption: Quantifying fuel consumption for continuous generator burn-in and utility power usage during IST
+
+TODO: Expand section 21.4 (baseline reference: [@ref19_datacenterscope_cx]).
+
+## 21.5 Rework allowances, retesting liquidated agreements, and allocating failed test re-execution costs
+
+TODO: Expand section 21.5 (baseline reference: [@ref19_datacenterscope_cx]).

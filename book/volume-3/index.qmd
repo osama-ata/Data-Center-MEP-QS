@@ -1,0 +1,8 @@
+---
+description: "Volume III overview: Mission-Critical Electrical Infrastructure and Power Systems Measurement from HV/MV Substations to White Space Overhead Busways."
+categories: ["Volume III", "Electrical Infrastructure", "Power Distribution"]
+---
+
+# Volume III: Mission-Critical Electrical Infrastructure and Power Systems Measurement
+
+This volume covers quantity surveying and commercial risk management across the electrical distribution chain: HV/MV substations, ISO 8528 Data Center Continuous standby generators, static and rotary UPS systems, VRLA and Li-ion battery energy storage, overhead track busways, and Mesh Common Bonding Networks (MCBN).

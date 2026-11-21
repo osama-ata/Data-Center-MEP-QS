@@ -1,0 +1,22 @@
+---
+description: "Chapter 14: Very Early Smoke Detection Apparatus (ASD/VESDA) sampling pipe networks, multi-sensor addressable smoke/thermal/CO detectors, linear heat detection in cable trays, and FACP cause-and-effect matrices."
+categories: ["Volume IV", "VESDA", "Fire Detection", "Linear Heat Detection", "FACP"]
+---
+
+# Fire Detection and Very Early Smoke Detection Apparatus (VESDA) {#sec-fire-detection-vesda}
+
+## 14.1 Aspiration Smoke Detection (ASD/VESDA): Laser detector units, sampling pipe runs, capillary drop tubes, and end-of-line test points
+
+TODO: Expand section 14.1 (baseline reference: [@ref14_cxplanner]).
+
+## 14.2 Multi-sensor intelligent addressable fire detection: Optical smoke, thermal, and carbon monoxide detectors in hot/cold aisles and ceiling plenums
+
+TODO: Expand section 14.2 (baseline reference: [@ref14_cxplanner]).
+
+## 14.3 Linear heat detection: Fiber-optic and digital sensor cables in cable trays and busway enclosures
+
+TODO: Expand section 14.3 (baseline reference: [@ref04_helonic]).
+
+## 14.4 Fire Alarm Control Panels (FACP) and voice evacuation: Executive action matrix mapping, HVAC trip relays, and fire damper release circuits
+
+TODO: Expand section 14.4 (baseline reference: [@ref14_cxplanner]).

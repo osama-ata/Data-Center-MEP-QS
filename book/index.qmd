@@ -1,0 +1,32 @@
+---
+description: "Preface and executive overview of Mechanical, Electrical, and Plumbing Quantity Surveying (MEP-QS) in Data Center EPC delivery, covering 60%-75% MEP CapEx allocation and seven-volume architecture."
+categories: ["Preface", "Data Center MEP-QS", "EPC Delivery"]
+---
+
+# Preface {.unnumbered}
+
+**Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery** is an open reference manual for Quantity Surveyors (MEP-QS), Cost Engineers, Estimators, and EPC Contract Administrators delivering hyperscale, colocation, and high-density AI/HPC data centers.
+
+Unlike standard commercial real estate, where architectural and structural scopes dictate the cost baseline, mission-critical data center capital expenditure (CapEx) is concentrated in Mechanical, Electrical, Plumbing, and Automation infrastructure—routinely representing **60% to 75% of the total construction budget** [@ref03_amanengineering; @ref04_helonic].
+
+## Structure of the Book
+
+- **Commercial Architecture Overview**: Turnkey EPC contracting under the FIDIC Silver Book and the OFCI vs. CFCI procurement demarcation framework.
+- **Volume I**: Commercial Governance, Contract Administration, and Pre-Contract Cost Planning (Chapters 1–4)
+- **Volume II**: Mechanical Infrastructure and Thermal Management Systems Measurement (Chapters 5–7)
+- **Volume III**: Mission-Critical Electrical Infrastructure and Power Systems Measurement (Chapters 8–12)
+- **Volume IV**: Specialized Fire Protection, Mission-Critical Plumbing, and Life Safety (Chapters 13–15)
+- **Volume V**: Automation, Building Management, and Telecommunication Infrastructure (Chapters 16–17)
+- **Volume VI**: Procurement Execution, Subcontract Management, and Supply Chain (Chapters 18–19)
+- **Volume VII**: Testing, Commissioning, Integrated Systems Testing, and Closeout (Chapters 20–22)
+
+::: {.content-visible when-format="llms-txt"}
+## AI Agent & LLM Quick-Reference Index
+
+- **Machine-Readable Index**: `/llms.txt`
+- **Per-Chapter Clean Markdown**: Replace `.html` with `.llms.md` on any chapter URL.
+- **In-Browser WebMCP Tools (`document.modelContext` / `window.DataCenterMEPQS`)**:
+  1. `calc_dtc_liquid_cooling({ it_load_kw, delta_t_k, density_kg_m3, cp_kj_kg_k })`: Computes secondary TCS coolant volumetric flow (`L/s`, `L/min`, `L/min/kW`) and selects Schedule 10S SS316L header nominal bore (`DN`).
+  2. `calc_cable_tray_fill({ cable_count, cable_od_mm, max_fill_ratio, tray_depth_mm })`: Computes total conductor cross-sectional area and selects standard tray width under 40%–50% maximum fill rules.
+  3. `calc_ist_energy_and_fuel({ critical_load_mw, duration_hours, utility_tariff_per_kwh, diesel_genset_hours })`: Computes Level 5 Integrated System Testing (IST) utility MWh/cost and diesel generator fuel liters/cost.
+:::

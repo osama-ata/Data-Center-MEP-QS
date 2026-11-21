@@ -1,0 +1,26 @@
+---
+description: "Chapter 13: Double-interlock pre-action sprinklers, nitrogen inerting, clean agent gaseous suppression (FK-5-1-12 Novec 1230, FM-200, IG-541 Inergen), door-fan room integrity testing, and high-pressure water mist systems."
+categories: ["Volume IV", "Pre-Action Sprinkler", "Clean Agent Suppression", "Novec 1230", "NFPA 75"]
+---
+
+# Fire Suppression Systems for Mission-Critical White Space {#sec-fire-suppression-white-space}
+
+## 13.1 Double-interlock pre-action sprinkler systems: Riser check valves, dry pipe valves, nitrogen inerting generators, and supervisory pressure sensors
+
+TODO: Expand section 13.1 (baseline reference: [@nfpa75; @ref14_cxplanner]).
+
+## 13.2 Clean agent gaseous suppression systems: Chemical agents (FK-5-1-12 / Novec 1230, FM-200) and inert gas systems (IG-541 Inergen, IG-55)
+
+TODO: Expand section 13.2 (baseline reference: [@nfpa75; @ref14_cxplanner]).
+
+## 13.3 Gas distribution networks: High-pressure seamless steel piping, discharge nozzles, directional selector valves, and cylinder bank assemblies
+
+TODO: Expand section 13.3 (baseline reference: [@ref14_cxplanner]).
+
+## 13.4 Room integrity testing: Door fan tests, enclosure air tightness requirements, and automated pressure relief dampers
+
+TODO: Expand section 13.4 (baseline reference: [@ref14_cxplanner]).
+
+## 13.5 High-pressure water mist systems: Zone control valves, pump skids, stainless steel distribution lines, and micro-droplet discharge nozzles
+
+TODO: Expand section 13.5 (baseline reference: [@nfpa75]).

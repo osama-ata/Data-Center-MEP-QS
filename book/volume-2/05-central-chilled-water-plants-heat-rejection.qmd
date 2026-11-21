@@ -1,0 +1,26 @@
+---
+description: "Chapter 5: Takeoff and cost drivers for water-cooled and air-cooled centrifugal/magnetic-bearing chillers, cooling towers, adiabatic fluid coolers, VPF hydronic pumping, Schedule 40 carbon steel mains, and Thermal Energy Storage (TES) tanks."
+categories: ["Volume II", "Chilled Water Plant", "Cooling Towers", "TES", "FWS"]
+---
+
+# Central Chilled Water Plants and Primary Heat Rejection {#sec-central-chilled-water-plants}
+
+## 5.1 Water-cooled and air-cooled centrifugal/magnetic-bearing chillers: Capacity measurement, equipment scheduling, and vibration isolation bases
+
+TODO: Expand section 5.1 (baseline reference: [@ref10_lvi_epc_manager]).
+
+## 5.2 Heat rejection infrastructure: Open and closed-circuit cooling towers, dry coolers, and adiabatic fluid coolers
+
+TODO: Expand section 5.2 (baseline reference: [@ref10_lvi_epc_manager]).
+
+## 5.3 Primary, secondary, and tertiary hydronic pumping arrangements: Variable Primary Flow (VPF) headers, in-line circulators, and differential pressure sensors
+
+TODO: Expand section 5.3 (baseline reference: [@ref22_reliabilityengine_liquid]).
+
+## 5.4 Primary facility piping: Heavy-wall carbon steel, welded/grooved joints, valves, strainers, and balancing devices
+
+TODO: Expand section 5.4 (baseline reference: [@ref04_helonic]).
+
+## 5.5 Thermal Energy Storage (TES) systems: Stratified chilled water tanks, phase-change storage, and emergency ride-through quantification
+
+TODO: Expand section 5.5 (baseline reference: [@ref24_h2x_dtc]).

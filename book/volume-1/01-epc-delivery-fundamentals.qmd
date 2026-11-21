@@ -1,0 +1,26 @@
+---
+description: "Chapter 1: Structural economics of mission-critical facilities, FEED-to-RFS commercial lifecycle, FIDIC Silver Book turnkey risk allocation, and PUE/WUE/CUE performance liabilities."
+categories: ["Volume I", "EPC Delivery", "FIDIC Silver Book", "PUE"]
+---
+
+# Data Center EPC Delivery Fundamentals {#sec-epc-delivery-fundamentals}
+
+## 1.1 Structural economics of mission-critical facilities: CapEx allocations across civil, structural, architectural, and MEP domains
+
+TODO: Expand section 1.1 (baseline reference: [@ref03_amanengineering]).
+
+## 1.2 The EPC commercial lifecycle: From Front-End Engineering Design (FEED) and Owner's Project Requirements (OPR) to Ready-for-Service (RFS)
+
+TODO: Expand section 1.2 (baseline reference: [@ref01_projectassure]).
+
+## 1.3 Contractual frameworks: FIDIC Silver Book (1999/2017) and modified turnkey structures in mission-critical construction
+
+TODO: Expand section 1.3 (baseline reference: [@fidic2017silver; @ref01_projectassure]).
+
+## 1.4 Single-point design liability, fitness for purpose, and operational performance metrics (PUE, WUE, CUE)
+
+TODO: Expand section 1.4 (baseline reference: [@ref03_amanengineering]).
+
+## 1.5 Commercial risk allocation: Unforeseen site conditions, grid interconnection delays, and environmental permitting liabilities
+
+TODO: Expand section 1.5 (baseline reference: [@ref03_amanengineering]).

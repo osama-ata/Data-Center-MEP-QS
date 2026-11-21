@@ -1,0 +1,26 @@
+---
+description: "Chapter 19: Bid addenda and post-award Engineering Change Notices (ECNs), labor productivity and overtime claim auditing, FIDIC Silver Book Sub-Clause 8.4/8.5 Time Impact Analysis (TIA), delay/PUE performance liquidated damages, and provisional sums."
+categories: ["Volume VI", "Variation Management", "Time Impact Analysis", "Liquidated Damages", "FIDIC"]
+---
+
+# Variation Governance, Change Control, and Claims Management {#sec-variation-governance-claims}
+
+## 19.1 Commercial impact of design iteration: Managing addenda during the bid phase and post-award Engineering Change Notices (ECNs)
+
+TODO: Expand section 19.1 (baseline reference: [@ref08_oracle_estimator]).
+
+## 19.2 Evaluating contractor-asserted variations: Material pricing verification, labor productivity benchmarking, and non-productive overtime claims
+
+TODO: Expand section 19.2 (baseline reference: [@ref15_irecruit_qs]).
+
+## 19.3 Time Impact Analysis (TIA) and extension of time (EOT) commercial valuations under FIDIC Silver Book Sub-Clause 8.4/8.5
+
+TODO: Expand section 19.3 (baseline reference: [@fidic2017silver; @ref01_projectassure]).
+
+## 19.4 Quantifying delay liquidated damages (LDs), performance liquidated damages (PUE non-attainment), and commercial cap structures
+
+TODO: Expand section 19.4 (baseline reference: [@fidic2017silver; @ref01_projectassure]).
+
+## 19.5 Provisional sums administration: Conversion of undefined and defined provisional sums into lump-sum packages
+
+TODO: Expand section 19.5 (baseline reference: [@fidic2017silver; @ref05_scribd_epc_ankara]).

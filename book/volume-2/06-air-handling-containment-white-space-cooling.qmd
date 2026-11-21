@@ -1,0 +1,26 @@
+---
+description: "Chapter 6: Measurement of CRAH/CRAC units, Fan Coil Walls (FCW), Hot and Cold Aisle Containment (HAC/CAC), fire-release ceiling grids, high-velocity sheet metal ductwork, and elastomeric/acoustic insulation."
+categories: ["Volume II", "CRAH", "Fan Coil Wall", "Aisle Containment", "HAC/CAC"]
+---
+
+# Air Handling, Containment, and White Space Cooling {#sec-air-handling-containment}
+
+## 6.1 Computer Room Air Handler (CRAH) and Computer Room Air Conditioning (CRAC) units: Direct expansion (DX) vs. chilled water (CW)
+
+TODO: Expand section 6.1 (baseline reference: [@ref03_amanengineering]).
+
+## 6.2 Fan Coil Walls (FCW) and Air Handling Units (AHU): Economizer dampers, variable frequency drives (VFDs), and filtration media stages
+
+TODO: Expand section 6.2 (baseline reference: [@ref04_helonic]).
+
+## 6.3 Aisle containment architectures: Hot Aisle Containment (HAC) vs. Cold Aisle Containment (CAC), structural ceiling grids, and auto-closing doors
+
+TODO: Expand section 6.3 (baseline reference: [@ref04_helonic]).
+
+## 6.4 Sheet metal ductwork systems: High-velocity supply/return mains, fire/smoke dampers, motorized modulating dampers, and acoustic attenuation
+
+TODO: Expand section 6.4 (baseline reference: [@ref04_helonic]).
+
+## 6.5 Thermal and acoustic insulation: Closed-cell elastomeric foam, rockwool wraps, vapor barriers, and condensation mitigation
+
+TODO: Expand section 6.5 (baseline reference: [@ref23_keentel_cdu]).

@@ -1,0 +1,9 @@
+---
+description: "Master bibliography of primary standards (FIDIC, RICS NRM2, ASHRAE TC 9.9, Uptime Institute, ANSI/BICSI 002-2024, NFPA 75/855, ISO 8528) and industry references."
+categories: ["Bibliography", "Standards", "References"]
+---
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

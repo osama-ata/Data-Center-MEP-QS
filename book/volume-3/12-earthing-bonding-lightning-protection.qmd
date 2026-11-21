@@ -1,0 +1,18 @@
+---
+description: "Chapter 12: Deep-driven facility earthing grids, exothermic welds, white space Mesh Common Bonding Networks (MCBN), Signal Reference Grids (SRG), and Faraday cage lightning protection."
+categories: ["Volume III", "Earthing", "MCBN", "Signal Reference Grid", "Lightning Protection"]
+---
+
+# Earthing, Bonding, and Lightning Protection {#sec-earthing-bonding-lightning}
+
+## 12.1 Facility earthing grids: Deep driven earth electrodes, copper perimeter ground rings, and exothermic welded connections
+
+TODO: Expand section 12.1 (baseline reference: [@ref14_cxplanner]).
+
+## 12.2 White space Mesh Common Bonding Networks (MCBN): Signal reference grids (SRG), raised-floor stringer bonding, and rack grounding kits
+
+TODO: Expand section 12.2 (baseline reference: [@ref14_cxplanner]).
+
+## 12.3 Structural lightning protection: Early streamer emission or Faraday cage air terminals, down conductors, and test disconnect pits
+
+TODO: Expand section 12.3 (baseline reference: [@rics2021nrm2]).

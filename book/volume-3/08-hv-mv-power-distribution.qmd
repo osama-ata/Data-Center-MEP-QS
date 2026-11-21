@@ -1,0 +1,22 @@
+---
+description: "Chapter 8: Utility interconnection substations (GIS vs AIS), MV vacuum circuit breaker switchgear cubicles, cast-resin vs oil-immersed transformers, and trefoil armored MV cabling takeoff."
+categories: ["Volume III", "HV Substation", "MV Switchgear", "GIS/AIS", "Transformers"]
+---
+
+# High-Voltage (HV) and Medium-Voltage (MV) Power Distribution {#sec-hv-mv-power-distribution}
+
+## 8.1 Utility interconnection substations: Gas-Insulated Switchgear (GIS) vs. Air-Insulated Switchgear (AIS), line bays, and transformer yards
+
+TODO: Expand section 8.1 (baseline reference: [@ref10_lvi_epc_manager]).
+
+## 8.2 Medium-voltage switchgear assemblies: Vacuum circuit breakers, protection relays, arc flash mitigation barriers, and interlocking schemes
+
+TODO: Expand section 8.2 (baseline reference: [@ref10_lvi_epc_manager]).
+
+## 8.3 Substation and unit transformers: Cast resin dry-type versus oil-immersed transformers, containment bunds, and deluge interfaces
+
+TODO: Expand section 8.3 (baseline reference: [@ref10_lvi_epc_manager]).
+
+## 8.4 Medium-voltage raceways and cabling: Armored MV cabling, trefoil/triplex configurations, cable cleats, and trench/tray routing
+
+TODO: Expand section 8.4 (baseline reference: [@ref10_lvi_epc_manager]).

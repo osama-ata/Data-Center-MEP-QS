@@ -1,0 +1,73 @@
+---
+description: "Chapter 7: Direct-to-Chip (DTC) and Immersion liquid cooling takeoff: Coolant Distribution Units (CDUs), SS304L/316L and PP-RCT TCS piping, blind-mate Quick Disconnects (QD), Delta-T thermodynamic flow modeling (1.5 L/min/kW at 10K), and PG25 fluid treatment."
+categories: ["Volume II", "Liquid Cooling", "Direct-to-Chip", "CDU", "TCS", "Calculator"]
+---
+
+# Liquid Cooling, High-Density Architectures, and Technology Cooling Systems (TCS) {#sec-liquid-cooling-tcs}
+
+## Worked Example: Direct-to-Chip ($\Delta T$) Volumetric Flow Rate & Pipe Sizing
+
+The thermodynamic relationship governing the fluid mass flow rate ($\dot{m}$) required to remove heat from the white space is [@ref22_reliabilityengine_liquid]:
+
+$$Q = \dot{m} C_p \Delta T$$ {#eq-heat-rejection}
+
+Converting mass flow into volumetric flow rate ($\dot{V}$) in liters per second ($\text{L/s}$), accounting for fluid density ($\rho$):
+
+$$\dot{V} = \frac{Q}{\rho C_p \Delta T}$$ {#eq-volumetric-flow}
+
+In a direct-to-chip architecture with a design temperature difference of $\Delta T = 10\text{ K}$ using a standard 25% propylene glycol solution (PG25: $\rho \approx 1020\text{ kg/m}^3$, $C_p \approx 3.93\text{ kJ/(kg}\cdot\text{K)}$), the volumetric flow rate per megawatt ($1000\text{ kW}$) of critical IT heat load is:
+
+$$\dot{V} = \frac{1000\text{ kW}}{1.02\text{ kg/L} \times 3.93\text{ kJ/(kg}\cdot\text{K)} \times 10\text{ K}} \approx 24.95\text{ L/s} \quad (1497\text{ L/min})$$ {#eq-pg25-10k}
+
+```{python}
+#| label: tbl-dtc-flow-calculator
+#| tbl-cap: "Interactive Python Calculator: Volumetric Flow Rate and Header Pipe Bore vs. Design Delta-T (1 MW IT Load, PG25)"
+
+import math
+
+def dtc_flow_calculator(it_load_kw=1000.0, delta_t_k=10.0, rho_kg_m3=1020.0, cp_kj_kg_k=3.93, max_vel_m_s=2.4):
+    rho_kg_l = rho_kg_m3 / 1000.0
+    v_dot_l_s = it_load_kw / (rho_kg_l * cp_kj_kg_k * delta_t_k)
+    v_dot_l_min = v_dot_l_s * 60.0
+    l_min_per_kw = v_dot_l_min / it_load_kw
+    # Standard Sch 10S SS316L pipes (DN, ID_mm)
+    pipes = [(50, 54.79), (65, 66.93), (80, 82.80), (100, 108.20), (125, 134.50), (150, 161.46)]
+    selected_dn, actual_vel = pipes[-1][0], 0.0
+    for dn, id_mm in pipes:
+        area_m2 = math.pi * ((id_mm / 1000.0) / 2.0) ** 2
+        vel = (v_dot_l_s / 1000.0) / area_m2
+        if vel <= max_vel_m_s:
+            selected_dn, actual_vel = dn, vel
+            break
+    return v_dot_l_s, v_dot_l_min, l_min_per_kw, selected_dn, actual_vel
+
+print(f"{'Delta-T (K)':<12} | {'Flow (L/s)':<12} | {'Flow (L/min)':<14} | {'L/min/kW':<10} | {'Header DN':<10} | {'Velocity (m/s)'}")
+print("-" * 78)
+for dt in [10.0, 15.0, 20.0]:
+    v_ls, v_lmin, l_kw, dn, vel = dtc_flow_calculator(1000.0, dt)
+    print(f"{dt:<12.1f} | {v_ls:<12.2f} | {v_lmin:<14.1f} | {l_kw:<10.2f} | DN{dn:<8} | {vel:.2f}")
+```
+
+## 7.1 Direct-to-Chip (DTC) liquid cooling infrastructure: Coolant Distribution Units (CDUs)—Liquid-to-Liquid and Liquid-to-Air typology measurement
+
+TODO: Expand section 7.1 (baseline reference: [@ref22_reliabilityengine_liquid]).
+
+## 7.2 Secondary hydronic network (TCS): Stainless steel (304/316L) headers, polypropylene-RCT piping, clean-break blind-mate quick disconnects (QD)
+
+TODO: Expand section 7.2 (baseline reference: [@ref22_reliabilityengine_liquid]).
+
+## 7.3 Heat transfer thermodynamics: Determining hydronic flow demand from design rack Delta-T ($\Delta T$) and chip envelope limits
+
+TODO: Expand section 7.3 (baseline reference: [@ref22_reliabilityengine_liquid]).
+
+## 7.4 Heat exchanger approach temperature analysis and secondary pumping power quantification
+
+TODO: Expand section 7.4 (baseline reference: [@ref23_keentel_cdu]).
+
+## 7.5 Rear Door Heat Exchangers (RDHx) and Immersion Cooling systems: Single-phase and two-phase dielectric fluid measurement and containment tanks
+
+TODO: Expand section 7.5 (baseline reference: [@ref17_apaltek_liquid]).
+
+## 7.6 Secondary loop treatment: Treated demineralized water, propylene glycol mixes (PG25), biocide packages, micron filtration, and wetted materials compatibility
+
+TODO: Expand section 7.6 (baseline reference: [@ref22_reliabilityengine_liquid]).

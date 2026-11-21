@@ -1,0 +1,26 @@
+---
+description: "Chapter 22: As-built 5D BIM and COBie digital handover, O&M manuals and Emergency Operating Procedures (EOP), capital spares and 2-year OEM service agreements, Final Account reconciliation, and Defect Notification Period (DNP) bond release."
+categories: ["Volume VII", "COBie Handover", "Final Account", "Capital Spares", "Defect Notification Period"]
+---
+
+# Handover, Final Accounts, and Operational Transition {#sec-handover-final-accounts}
+
+## 22.1 As-Built documentation, 5D BIM asset parameter compilation, and digital handover compliance (COBie standards)
+
+TODO: Expand section 22.1 (baseline reference: [@ref28_koenig_5dbim]).
+
+## 22.2 Operation and Maintenance (O&M) manuals, emergency operating procedures (EOP), and maintenance staff training packages
+
+TODO: Expand section 22.2 (baseline reference: [@ref14_cxplanner]).
+
+## 22.3 Spare parts procurement: Capital spares, operational consumables, and 2-year manufacturer service agreements
+
+TODO: Expand section 22.3 (baseline reference: [@ref35_rttr_oman]).
+
+## 22.4 Final account settlement: Reconciliation of prime contracts, provisional sums, change orders, credits, and commercial release waivers
+
+TODO: Expand section 22.4 (baseline reference: [@ref15_irecruit_qs]).
+
+## 22.5 Defect Notification Period (DNP) administration, retention release bonds, and warranty transfer protocols
+
+TODO: Expand section 22.5 (baseline reference: [@fidic2017silver; @ref05_scribd_epc_ankara]).

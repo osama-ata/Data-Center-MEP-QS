@@ -1,0 +1,26 @@
+---
+description: "Chapter 17: Direct Digital Control (DDC) PLC panels, hardware (DI/DO/AI/AO) vs soft (Modbus/BACnet/SNMP) I/O point takeoff, high-speed EPMS transient power quality metering, DCIM licensing, and Sequence of Operations (SOO) cost modeling."
+categories: ["Volume V", "BMS", "DDC I/O Points", "EPMS", "DCIM", "Sequence of Operations"]
+---
+
+# Building Management Systems (BMS), EPMS, and DCIM {#sec-bms-epms-dcim}
+
+## 17.1 Direct Digital Control (DDC) hardware: Programmable logic controllers (PLCs), remote input/output (I/O) modules, and control enclosure panels
+
+TODO: Expand section 17.1 (baseline reference: [@ref14_cxplanner]).
+
+## 17.2 Input/Output (I/O) point quantification: Hardware points (DI, DO, AI, AO) versus soft network-integrated points (Modbus, BACnet, SNMP)
+
+TODO: Expand section 17.2 (baseline reference: [@ref14_cxplanner]).
+
+## 17.3 Electrical Power Monitoring Systems (EPMS): High-speed transient recorders, power quality meters, and digital protection relay networking
+
+TODO: Expand section 17.3 (baseline reference: [@ref14_cxplanner]).
+
+## 17.4 Data Center Infrastructure Management (DCIM): Software licenses, sensor deployment, rack environmental monitoring, and automated PUE reporting
+
+TODO: Expand section 17.4 (baseline reference: [@ref03_amanengineering]).
+
+## 17.5 Sequence of Operations (SOO) cost modeling: Automation programming, graphic user interface (GUI) mapping, and commissioning script verification
+
+TODO: Expand section 17.5 (baseline reference: [@ref14_cxplanner]).

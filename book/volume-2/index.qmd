@@ -1,0 +1,8 @@
+---
+description: "Volume II overview: Mechanical Infrastructure and Thermal Management Systems Measurement across Facility Water Systems (FWS), White Space Air Containment, and Direct-to-Chip Technology Cooling Systems (TCS)."
+categories: ["Volume II", "Mechanical Systems", "Thermal Management"]
+---
+
+# Volume II: Mechanical Infrastructure and Thermal Management Systems Measurement
+
+This volume details technical takeoff methodologies and cost drivers for central chilled water plants, primary heat rejection, white space air handling and aisle containment, and high-density Direct-to-Chip (DTC) and immersion liquid cooling Technology Cooling Systems (TCS).

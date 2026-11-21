@@ -1,0 +1,8 @@
+---
+description: "Volume IV overview: Specialized Fire Protection, Mission-Critical Plumbing, VESDA Detection, and Environmental Life Safety."
+categories: ["Volume IV", "Fire Protection", "Mission-Critical Plumbing"]
+---
+
+# Volume IV: Specialized Fire Protection, Mission-Critical Plumbing, and Life Safety
+
+This volume addresses measurement rules and specifications for double-interlock pre-action sprinklers, clean agent gaseous suppression, high-pressure water mist, VESDA aspiration smoke detection, reverse osmosis (RO) water treatment, and distance-locating leak detection systems.

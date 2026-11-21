@@ -1,0 +1,8 @@
+---
+description: "Volume I overview: Commercial Governance, Contract Administration, OFCI/CFCI Demarcation, $/kW Cost Benchmarking, and 5D BIM Digital Takeoff."
+categories: ["Volume I", "Commercial Governance", "Cost Planning"]
+---
+
+# Volume I: Commercial Governance, Contract Administration, and Pre-Contract Cost Planning
+
+This volume establishes the commercial foundation for mission-critical data center delivery under turnkey EPC frameworks (FIDIC Silver Book), hybrid procurement demarcation (OFCI vs. CFCI), pre-contract cost benchmarking ($/kW and $/MW), and 5D BIM digital takeoff methodologies.

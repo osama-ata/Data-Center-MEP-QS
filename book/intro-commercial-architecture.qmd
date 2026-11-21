@@ -1,0 +1,38 @@
+---
+description: "Turnkey EPC contractual governance under the FIDIC Silver Book, fitness-for-purpose PUE/WUE warranties, and the commercial demarcation matrix between OFCI and CFCI long-lead plant."
+categories: ["Commercial Governance", "FIDIC Silver Book", "OFCI vs CFCI"]
+---
+
+# Commercial Governance and EPC Contractual Architecture {.unnumbered}
+
+Mission-critical data center delivery has converged around turnkey Engineering, Procurement, and Construction (EPC) delivery models as hyperscale cloud operators and wholesale colocation developers seek to compress time-to-market while securing absolute cost and schedule certainty [@ref01_projectassure]. Unlike standard commercial or institutional real estate, where architectural and structural scopes dictate the cost baseline, data center capital expenditure (CapEx) is fundamentally inverted. Mechanical, Electrical, and Plumbing (MEP) infrastructure routinely commands between 60% and 75% of the total construction budget, with civil and structural works accounting for only 15% to 20% [@ref03_amanengineering].
+
+The financial exposure associated with facility failure elevates MEP cost management to the central commercial discipline of the build. With unplanned downtime carrying an average industry cost of \$9,000 per minute and catastrophic outages regularly exceeding \$1 million in direct financial and reputational damages, the commercial management of mission-critical engineering systems governs overall project viability [@ref04_helonic].
+
+## Turnkey Contracting under the FIDIC Silver Book
+
+Turnkey EPC project delivery for mission-critical facilities typically utilizes international standard forms, most notably the FIDIC Conditions of Contract for EPC/Turnkey Projects (Silver Book) [@fidic2017silver; @ref01_projectassure]. Under the Silver Book regime, the EPC contractor assumes single-point responsibility for the totality of engineering design, procurement, site construction, and multi-stage testing [@fidic2017silver; @ref05_scribd_epc_ankara]. This model transfers substantial technical and environmental risk away from the project employer.
+
+The contractor warrants not merely that the works comply with descriptive drawings, but that the completed facility achieves strict fitness-for-purpose requirements, including guaranteed operational performance thresholds such as design Power Usage Effectiveness (PUE) and Water Usage Effectiveness (WUE) [@ref03_amanengineering].
+
+Consequently, the MEP Quantity Surveyor (MEP-QS) must administer the contract with an acute awareness of performance liability. Traditional claims for ground condition variances, design interface ambiguities, or spatial congestion are largely foreclosed under turnkey contracting rules, requiring pre-contract estimates to embed comprehensive cost models for constructability and site execution [@fidic2017silver; @ref05_scribd_epc_ankara].
+
+## Hybrid Procurement Strategies: OFCI vs. CFCI
+
+A critical operational complexity within modern data center EPC delivery is the administration of hybrid procurement strategies, specifically the commercial interface between Owner-Furnished, Contractor-Installed (OFCI) plant and Contractor-Furnished, Contractor-Installed (CFCI) elements [@ref09_orbital_glossary]. To preserve milestone commitments against lead times that frequently extend from 50 to over 80 weeks for medium-voltage switchgear, utility-scale standby generators, and high-density liquid cooling equipment, project owners frequently place direct enterprise orders with original equipment manufacturers (OEMs) well before general contract execution [@ref02_linesight].
+
+The resulting commercial framework requires the turnkey contractor to take delivery of these owner-procured assets at the project perimeter, assume custodial care, and execute offloading, staging, inside-building rigging, setting to foundation pads, terminal point interconnections, and integrated commissioning [@ref09_orbital_glossary].
+
+This OFCI-to-CFCI interface represents a primary point of commercial and legal risk on data center projects [@ref10_lvi_epc_manager]. Incomplete interface coordination frequently produces high-value variation claims and delay disputes [@ref01_projectassure]. When owner-procured equipment arrives late, missing specialized terminal adapters, or with internal control configurations that deviate from site engineering submittals, the downstream trade contractors experience severe disruption [@ref01_projectassure].
+
+To protect the commercial baseline, the MEP-QS must develop detailed equipment demarcation matrices within the tender documents and subcontract agreements [@ref09_orbital_glossary]. These schedules must explicitly delineate the financial and operational boundaries for crane hooks, preservation heating, inter-module cabling, warranty continuity, and OEM vendor technical support during site acceptance testing [@ref09_orbital_glossary].
+
+| Commercial & Technical Parameter | Pure EPC / Contractor-Furnished (CFCI) | Hybrid EPC / Owner-Furnished (OFCI) | Split Package / Construction Management |
+| :--- | :--- | :--- | :--- |
+| **Long-Lead Plant Procurement** | Contractor procures directly; carries full supply chain inflation and delivery risk [@ref06_scribd_epc_vs_db]. | Owner procures directly; Contractor manages logistics, rigging, and installation [@ref09_orbital_glossary]. | Multiple trade packages procured independently by Owner/CM [@ref15_irecruit_qs]. |
+| **Lead Time Exposure** | 50–80 weeks for MV switchgear, generators, and chillers borne by EPC schedule [@ref02_linesight]. | Owner assumes manufacturing slot risks; late delivery yields contractor claims [@ref01_projectassure]. | Owner directly assumes programmatic delay risks across multi-package interfaces [@ref15_irecruit_qs]. |
+| **Warranty & Defect Seams** | Single-point warranty from EPC contractor covering manufacture and installation [@ref06_scribd_epc_vs_db]. | Dual warranty: OEM warranties equipment; EPC contractor warranties site terminations [@ref09_orbital_glossary]. | Fragmented warranties between individual trade contractors and OEM suppliers [@ref15_irecruit_qs]. |
+| **Commissioning Responsibility** | EPC Contractor executes Level 1 through Level 5 Integrated System Testing (IST) [@ref14_cxplanner]. | EPC Contractor provides multi-trade technician support; OEM executes startup [@ref09_orbital_glossary]. | Commissioning Agent (CxA) coordinates; trade contractors bill for hourly attendance [@ref19_datacenterscope_cx]. |
+| **MEP Scope Budget Share** | 60%–75% of total prime contract value [@ref04_helonic]. | 25%–35% of prime contract value (excluding OFCI capital purchases) [@ref03_amanengineering]. | Variable; managed across 15+ trade contracts [@ref15_irecruit_qs]. |
+
+: Commercial and Technical Comparison of Data Center EPC Procurement Models {#tbl-epc-procurement-models}

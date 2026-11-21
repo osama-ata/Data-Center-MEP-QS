@@ -1,0 +1,30 @@
+---
+description: "Chapter 11: Main LV switchboards, PDUs, static transfer switches (STS), 800A-5000A overhead track busways and tap-off boxes, NEC power/telecom pathway separation, and 40%-50% cable tray fill ratio sizing economics."
+categories: ["Volume III", "LV Switchboards", "Overhead Busway", "Cable Tray Fill", "Calculator"]
+---
+
+# Low-Voltage (LV) Distribution and White Space Power Delivery {#sec-lv-distribution-white-space-power}
+
+## 11.1 Main Low-Voltage Switchboards (MLVS) and Power Distribution Units (PDUs): Isolation transformers, static transfer switches (STS), sub-feed breakers
+
+TODO: Expand section 11.1 (baseline reference: [@ref03_amanengineering]).
+
+## 11.2 Overhead track busway systems: Open-channel busway (800A to 5000A), end-feed boxes, plug-in bus tap-off units, and drop cords
+
+TODO: Expand section 11.2 (baseline reference: [@ref04_helonic]).
+
+## 11.3 Remote Power Panels (RPPs) and floor distribution: Branch circuit monitoring, transient voltage surge suppressors (TVSS), panelboard schedules
+
+TODO: Expand section 11.3 (baseline reference: [@ref14_cxplanner]).
+
+## 11.4 Containment and raceway infrastructure: Heavy-duty ladder racks, wire mesh basket trays, and enclosed conduits
+
+TODO: Expand section 11.4 (baseline reference: [@ref04_helonic]).
+
+## 11.5 Physical pathway segregation: Enforcing National Electrical Code (NEC) / local standard separation between power and communications
+
+TODO: Expand section 11.5 (baseline reference: [@ref04_helonic]).
+
+## 11.6 Tray sizing economics: Complying with 40%–50% cable fill ratio mandates for thermal dissipation and future expansion capacity
+
+TODO: Expand section 11.6 (baseline reference: [@ref04_helonic]).
