@@ -25,7 +25,33 @@ Ambiguity at the physical handover seam between an OEM delivery truck and the co
 
 ## Responsibility assignment matrices (RACI) for terminal points: Pipe flanges, electrical bus stabs, and dry-contact BMS inputs
 
-To eliminate scope gaps between OEM vendor packages and MEP trade subcontracts, the MEP-QS incorporates a binding **Terminal Point Demarcation Schedule (RACI Matrix)** (@tbl-ofci-cfci-raci) into every subcontract package [@rics2021nrm2; @ref09_orbital_glossary; @ref12_bidforge]:
+To eliminate scope gaps between OEM vendor packages and MEP trade subcontracts, the MEP-QS maps the physical custody and terminal seam illustrated in @fig-ofci-cfci-demarcation and incorporates a binding **Terminal Point Demarcation Schedule (RACI Matrix)** (@tbl-ofci-cfci-raci) into every subcontract package [@rics2021nrm2; @ref09_orbital_glossary; @ref12_bidforge]:
+
+::: {#fig-ofci-cfci-demarcation}
+
+```{mermaid}
+flowchart LR
+  subgraph OEM["OFCI OEM Scope (Employer Purchase)"]
+    A["Factory Build &\nLevel 1 FAT"]
+    B["Site Perimeter Delivery\n(DAP / DDP Hook)"]
+    C["Skid Bus-Stabs,\nFlanges & Gateway"]
+    A --> B --> C
+  end
+  subgraph EPC["CFCI EPC Contractor Scope"]
+    D["Cranage, Skidding &\nSeismic Anchors"]
+    E["Valves, Lugs, Busway\n& Cat6A I/O Cabling"]
+    F["Level 2 SAT to\nLevel 5 IST"]
+    D --> E --> F
+  end
+  subgraph IT["OFOI Employer IT Scope"]
+    G["Compute Racks &\nCore Networking"]
+  end
+  C ==>|"Custody & Terminal\nDemarcation Seam"| D
+  F ==>|"White Tag RFS\nHandover"| G
+```
+
+Physical Custody and Terminal Point Demarcation Across OFCI, CFCI, and OFOI Scopes
+:::
 
 | Interface Seam | OFCI OEM Vendor Scope | CFCI MEP Trade Contractor Scope | QS Measurement & Pricing Rule |
 | :--- | :--- | :--- | :--- |

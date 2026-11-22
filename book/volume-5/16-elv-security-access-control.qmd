@@ -7,7 +7,16 @@ categories: ["Volume V", "ELV Security", "Structured Cabling", "Meet-Me Room", "
 
 ## Physical security systems: Multi-tier biometric access control, mantrap interlocks, turnstiles, and electronic cabinet locks
 
-Mission-critical data centers enforce a **six-to-seven-layer concentric physical security architecture** (Site Perimeter $\to$ Guardhouse Vehicle Crash Gates $\to$ Building Lobby Turnstiles $\to$ Biometric Mantrap Portals $\to$ Data Hall Corridors $\to$ White Space $\to$ Intelligent Rack Cabinet Locks) [@bicsi2024002; @ref34_scribd_hk1_boq]. Under CSI Division 28 and RICS NRM2 Section 39, the MEP-QS measures:
+Mission-critical data centers enforce a **six-to-seven-layer concentric physical security architecture** (Site Perimeter $\to$ Guardhouse Vehicle Crash Gates $\to$ Building Lobby Turnstiles $\to$ Biometric Mantrap Portals $\to$ Data Hall Corridors $\to$ White Space $\to$ Intelligent Rack Cabinet Locks) [@bicsi2024002; @ref34_scribd_hk1_boq]. Under CSI Division 27/28 and RICS NRM2 Section 39, the MEP-QS structures takeoff across the four packages in @tbl-elv-security-cabling-boq:
+
+| ELV, Security & Telecom Package | Primary Unit of Measurement | Standard Measurement Rules & Specifications | Critical QS Inclusions & Cost Drivers |
+| :--- | :--- | :--- | :--- |
+| **Perimeter & Biometric Access Control** | Number (No.) of portals / locks + Linear Meter (m) | ASTM F2656 / PAS 68 K12 wedges/bollards, fence intrusion fiber, dual-door biometric mantraps, and electronic rack swing-handles [@bicsi2024002; @rics2021nrm2]. | Anti-tailgating 3D/weight sensors, bullet-resistant glazing, FACP emergency unlock relays, and per-rack audit-trail wiring [@bicsi2024002; @ref34_scribd_hk1_boq]. |
+| **IP/Thermal CCTV & VMS Storage** | Number (No.) of cameras / servers | Perimeter radiometric thermal cameras, PTZ domes, aisle-level fixed IP cameras, PoE++ switches, and SAN/NAS retention arrays [@bicsi2024002; @ref34_scribd_hk1_boq]. | Petabyte-scale storage for 90–180 days of continuous 4K/1080p retention plus enterprise per-camera VMS software licenses [@ref34_scribd_hk1_boq]. |
+| **Structured Fiber & Copper Cabling** | Linear Meter (m) / Number (No.) of trunks | Single-mode OS2 ribbon trunks (up to 3456f) and OM4/OM5 pre-terminated MPO/MTP trunks, cassettes, and patch panels [@bicsi2024002; @rics2021nrm2]. | Bidirectional Tier 1 (OLTS attenuation) and Tier 2 (OTDR trace) optical certification testing included per fiber link [@bicsi2024002]. |
+| **Dual Diverse MMR & Telecom Pathways** | Linear Meter (m) of duct bank / basket tray | Concrete-encased multi-way uPVC/HDPE carrier ducts, draw-pits, gas/water-tight entry seals, and overhead fiber raceways [@uptime2018tier; @bicsi2024002; @rics2021nrm2]. | Minimum $20\text{ m}$ geographic separation between MMR A and MMR B with zero shared manholes or conduit banks [@uptime2018tier; @bicsi2024002]. |
+
+: Physical Security, CCTV, Structured Fiber Cabling, and Telecom Pathway BOQ Breakdown {#tbl-elv-security-cabling-boq}
 
 - **Perimeter Crash-Rated Barriers**: ASTM F2656 / PAS 68 K12 hydraulic wedges or bollards, perimeter taut-wire/fiber-optic fence intrusion detection (`m`), and under-vehicle surveillance scanners (`No.`) [@bicsi2024002].
 - **Circular or Rectangular Biometric Mantrap Portals (`No.`)**: Interlocked dual-door security booths with weight-sensing/3D-stereoscopic anti-tailgating sensors, iris/facial/palm-vein biometric readers, and bullet-resistant glazing [@bicsi2024002; @ref34_scribd_hk1_boq].

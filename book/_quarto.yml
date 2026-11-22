@@ -395,7 +395,7 @@ format:
       - footskip=12mm
     toc: true
     toc-depth: 3
-    lof: false
+    lof: true
     lot: true
     number-sections: true
     colorlinks: true

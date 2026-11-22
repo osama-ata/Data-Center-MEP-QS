@@ -7,7 +7,16 @@ categories: ["Volume IV", "Reverse Osmosis", "Leak Detection", "Industrial Drain
 
 ## Water treatment and supply infrastructure: Reverse osmosis (RO) systems, water softeners, chemical feed skids, and potable water booster stations
 
-Data centers utilizing evaporative cooling towers, adiabatic dry coolers, or ultrasonic/steam white-space humidifiers require high-purity water treatment plants to prevent scale deposition and Legionella proliferation [@ashrae2021tc99; @ref22_reliabilityengine_liquid]. Under RICS NRM2 Section 32/33 and CSI Division 22, the MEP-QS quantifies:
+Data centers utilizing evaporative cooling towers, adiabatic dry coolers, or ultrasonic/steam white-space humidifiers require high-purity water treatment plants to prevent scale deposition and Legionella proliferation [@ashrae2021tc99; @ref22_reliabilityengine_liquid]. Under RICS NRM2 Section 32/33 and CSI Division 22, the MEP-QS quantifies the core plumbing, drainage, and leak-detection systems summarized in @tbl-plumbing-leak-detection-boq:
+
+| Plumbing & Environmental Package | Primary Unit of Measurement | Standard Measurement Rules & Specifications | Critical QS Inclusions & Risk Factors |
+| :--- | :--- | :--- | :--- |
+| **Make-Up Water Tanks & RO Skids** | Number (No.) of tanks / skids | Sectional GRP or concrete tanks (24–72 hr peak summer autonomy); multimedia/carbon filters, duplex softeners, and RO membrane skids [@uptime2018tier; @rics2021nrm2]. | Permeate capacity ($\text{m}^3/\text{h}$), UV sterilization, chemical dosing pumps, and reject-brine neutralization [@ashrae2021tc99; @ref37_aecom_meh2024]. |
+| **Technical Condensate & Oil Drainage** | Linear Meter (m) + Number (No.) of interceptors | Segregated insulated copper, stainless, or HDPE condensate drains; EN 858 Class 1 coalescing oil-water separators [@bicsi2024002; @rics2021nrm2]. | Waterless mechanical traps for low-humidity halls; automatic closure valves and high-oil BMS alarms on transformer/diesel bunds [@rics2021nrm2; @ref04_helonic]. |
+| **Distance-Locating Leak Detection** | Linear Meter (m) of cable + Number (No.) of panels | Conductive polymer sensing rope around CRAHs, CDUs, and drip pans with hold-down clips every $600\text{ mm}$ and master controllers [@ashrae2023liquid; @rics2021nrm2]. | Pinpointing water or PG25 glycol contact within $\pm 1.0\text{ m}$ and mapping Modbus TCP/BACnet alarm coordinates to BMS/DCIM [@ref14_cxplanner]. |
+| **Emergency Showers & Eyewash Units** | Number (No.) of assemblies | ANSI Z358.1 tempered-water safety showers and eyewash stations in VRLA battery, chemical, and fuel unloading zones [@nfpa75; @rics2021nrm2]. | Thermostatic tepid-water mixing valves, dedicated floor drains, and flow-switch BMS/security alarm contacts [@nfpa75; @rics2021nrm2]. |
+
+: Mission-Critical Water Treatment, Segregated Drainage, and Leak Detection BOQ Breakdown {#tbl-plumbing-leak-detection-boq}
 
 - **Raw & Make-Up Water Storage Tanks**: Sectional GRP or reinforced concrete concrete-lined tanks sized for **24 to 72 hours of peak summer evaporative cooling autonomy** [@uptime2018tier; @ref37_aecom_meh2024].
 - **Duplex Water Softeners & Reverse Osmosis ([RO]{.gls}) Skids (`No.`)**: Multi-media sand filters, activated carbon filters, duplex ion-exchange softeners, high-pressure RO membrane skids ($\text{m}^3/\text{h}$ permeate rating), UV sterilizers, and chemical dosing pumps [@ref22_reliabilityengine_liquid].

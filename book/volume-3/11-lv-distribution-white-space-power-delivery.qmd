@@ -37,7 +37,7 @@ Where raised-floor whip distribution is specified, each RPP ($225\text{A to }800
 
 ## Containment and raceway infrastructure: Heavy-duty ladder racks, wire mesh basket trays, and enclosed conduits
 
-Primary feeder routes utilize heavy-duty galvanized or hot-dip galvanized (HDG BS EN ISO 1461) perforated cable trays and NEMA VE-1 Class 20C ladder racks (`m`), while white space fiber and patch distribution utilizes zinc-nickel or powder-coated **wire mesh basket trays** (`m`, color-coded to distinguish System A Power, System B Power, BMS/ELV, and Telecom Fiber) [@rics2021nrm2; @bicsi2024002; @ref04_helonic].
+Primary feeder routes utilize heavy-duty galvanized or hot-dip galvanized (HDG BS EN ISO 1461) perforated cable trays and NEMA VE-1 Class 20C ladder racks (`m`), while white space fiber and patch distribution utilizes zinc-nickel or powder-coated **wire mesh basket trays** (`m`, color-coded to distinguish System A Power, System B Power, [BMS]{.gls}/[ELV]{.gls}, and Telecom Fiber) [@rics2021nrm2; @bicsi2024002; @ref04_helonic].
 
 ## Physical pathway segregation: Enforcing National Electrical Code (NEC) / local standard separation between power and communications
 

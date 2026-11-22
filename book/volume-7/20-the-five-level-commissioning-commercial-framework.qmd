@@ -22,14 +22,30 @@ This investment reflects the absolute necessity of proving fault-tolerant system
 | **Level 1: FAT (Red Tag)** | Factory inspection and witnessed capacity runs for major plant (generators, switchgear, UPS, CDUs, chillers) [@ref10_lvi_epc_manager]. | Third-party commissioning agent (CxA) witnessing, vendor test benches, and defect rectification prior to release [@ref14_cxplanner]. | Travel/accommodations for client and CxA teams, manufacturer testing surcharges, and re-inspection penalties [@ref19_datacenterscope_cx]. |
 | **Level 2: SAT (Yellow Tag)** | Receiving inspection, physical undamaged verification, static mechanical alignment, and insulation testing [@ref14_cxplanner]. | Rigging onto housekeeping pads, anchor bolt torquing, moisture-protection verification, and storage environment maintenance [@ref12_bidforge]. | Crane rental, internal rigging crews, continuous dry-nitrogen purging of piping, and de-humidification heating [@ref12_bidforge]. |
 | **Level 3: Pre-Cx (Green Tag)** | Energization readiness checks, duct pressure testing, hydronic flushing, and wire meggering/cold point checks [@ref14_cxplanner]. | Cold wire point-to-point terminations, piping chemical cleaning, pipe passivation, and rotational checks on fans and pumps [@ref14_cxplanner]. | Specialized chemical passivation contractors, pre-commissioning consumables, and trade contractor stand-down labor [@ref19_datacenterscope_cx]. |
-| **Level 4: FPT (Blue Tag)** | Standalone functional testing of individual systems under varying operational and setpoint conditions [@ref14_cxplanner]. | Verifying sequence of operations (SOO), safety cutouts, motorized valve strokes, and automated transfer switches (ATS) [@ref14_cxplanner]. | Specialized controls engineering fees, vendor startup technicians, calibration instruments, and initial load banks [@ref14_cxplanner]. |
+| **Level 4: FPT (Blue Tag)** | Standalone functional testing of individual systems under varying operational and setpoint conditions [@ref14_cxplanner]. | Verifying sequence of operations (SOO), safety cutouts, motorized valve strokes, and automated transfer switches ([ATS]{.gls}) [@ref14_cxplanner]. | Specialized controls engineering fees, vendor startup technicians, calibration instruments, and initial load banks [@ref14_cxplanner]. |
 | **Level 5: IST (White Tag)** | Full facility integrated performance verification: complete electrical and thermal stress under simulated loads [@ref14_cxplanner]. | Simulating utility failure (blackout chaos testing), thermal runaways, component failure ride-through, and loop failover [@ref14_cxplanner]. | Load bank rental and setup, temporary cabling, fuel for continuous diesel runs, and utility consumption [@ref19_datacenterscope_cx]. |
 
 : Five-Level Data Center Commissioning Commercial and Technical Matrix {#tbl-five-level-commissioning}
 
 ## Commissioning cost dynamics: Structuring testing budgets across Level 1 (FAT) to Level 5 (IST)
 
-To prevent cash-flow front-loading by trade subcontractors, the MEP-QS links interim payment valuation milestones directly to **Commissioning Tag Sign-Offs** in the Schedule of Values (e.g., releasing only $70\%$ of equipment installation value upon physical setting to pad, $10\%$ upon Level 2 Yellow Tag, $10\%$ upon Level 3 Green Tag, $5\%$ upon Level 4 Blue Tag, and $5\%$ upon Level 5 White Tag IST completion) [@rics2021nrm2; @ref14_cxplanner].
+To prevent cash-flow front-loading by trade subcontractors, the MEP-QS links interim payment valuation milestones directly to **Commissioning Tag Sign-Offs** in the Schedule of Values, as illustrated in @fig-five-level-cx-gates (e.g., releasing only $70\%$ of equipment installation value upon physical setting to pad, $10\%$ upon Level 2 Yellow Tag, $10\%$ upon Level 3 Green Tag, $5\%$ upon Level 4 Blue Tag, and $5\%$ upon Level 5 White Tag IST completion) [@rics2021nrm2; @ref14_cxplanner].
+
+::: {#fig-five-level-cx-gates}
+
+```{mermaid}
+flowchart LR
+  L1["L1: FAT\n(Red Tag)\nShip Release"]
+  PAD["Rigged on Pad\n(70% SOV\nValuation)"]
+  L2["L2: SAT\n(Yellow Tag)\n+10% SOV"]
+  L3["L3: Pre-Cx\n(Green Tag)\n+10% SOV"]
+  L4["L4: FPT\n(Blue Tag)\n+5% SOV"]
+  L5["L5: IST\n(White Tag)\n+5% SOV -> RFS"]
+  L1 --> PAD --> L2 --> L3 --> L4 --> L5
+```
+
+Five-Level Data Center Commissioning Tag Progression and Linked Schedule of Values Payment Gates
+:::
 
 ## Level 1: Factory Acceptance Testing (FAT)—Red Tag; manufacturer certifications, witness fees, and non-conformance rectifications
 

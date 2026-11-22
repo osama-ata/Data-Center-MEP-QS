@@ -11,7 +11,34 @@ When rack thermal power densities surpass 20 kW to 30 kW per cabinet, air become
 
 This transition fundamentally alters the Bill of Quantities ([BOQ]{.gls}), requiring quantity surveyors to measure two distinct, hydronically isolated circuits: the primary **Facility Water System ([FWS]{.gls})** and the secondary **Technology Cooling System ([TCS]{.gls})**, coupled thermally through plate-frame **Coolant Distribution Units ([CDUs]{.gls key="cdu"})** [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
 
-The secondary TCS circuit, operating directly across micro-channel server cold plates ($25\text{ to }100\text{ }\mu\text{m}$ fin pitch), demands warmer supply temperatures (ASHRAE W27 to W45 classes) and strict fluid cleanliness [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. This loop must be priced using high-grade stainless steel (**ASTM A312 TP304L or TP316L**) or high-density polypropylene (**PP-RCT**) pipework to prevent chemical leaching, galvanic corrosion, and particulate fouling [@ashrae2023liquid; @ref17_apaltek_liquid]. The CDU serves as the technical and contractual partition between the primary FWS (@sec-central-chilled-water-plants) and secondary TCS, housing primary modulating control valves, brazed or gasketed SS316/titanium plate heat exchangers, redundant variable-speed circulators, dual A/B power feeds, and $50\text{ }\mu\text{m}$ filtration skids, as broken down in @tbl-tcs-boq-breakdown [@ref22_reliabilityengine_liquid; @ref23_keentel_cdu].
+The secondary TCS circuit, operating directly across micro-channel server cold plates ($25\text{ to }100\text{ }\mu\text{m}$ fin pitch), demands warmer supply temperatures (ASHRAE W27 to W45 classes) and strict fluid cleanliness [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. This loop must be priced using high-grade stainless steel (**ASTM A312 TP304L or TP316L**) or high-density polypropylene (**PP-RCT**) pipework to prevent chemical leaching, galvanic corrosion, and particulate fouling [@ashrae2023liquid; @ref17_apaltek_liquid]. The CDU serves as the technical and contractual partition between the primary FWS (@sec-central-chilled-water-plants) and secondary TCS, as illustrated in @fig-fws-cdu-tcs-loop, housing primary modulating control valves, brazed or gasketed SS316/titanium plate heat exchangers, redundant variable-speed circulators, dual A/B power feeds, and $50\text{ }\mu\text{m}$ filtration skids, as broken down in @tbl-tcs-boq-breakdown [@ref22_reliabilityengine_liquid; @ref23_keentel_cdu].
+
+::: {#fig-fws-cdu-tcs-loop}
+
+```{mermaid}
+flowchart LR
+  subgraph FWS["Primary FWS Loop (Carbon Steel)"]
+    P1["Chillers & Adiabatic\nHeat Rejection"]
+    P2["FWS Mains &\nPICV Control"]
+    P1 --> P2
+  end
+  subgraph CDU["CDU Partition Skid"]
+    C1["SS316 / Titanium\nPlate HX (2-4 K)"]
+    C2["Dual UPS Pumps &\n50 um Duplex Filter"]
+    C1 --> C2
+  end
+  subgraph TCS["Secondary TCS Loop (SS316L / PP-RCT)"]
+    T1["Orbital-Welded\nPG25 Headers"]
+    T2["Rack Manifolds &\nBlind-Mate QDs"]
+    T3["Server Cold Plates\n(40-132 kW/Rack)"]
+    T1 --> T2 --> T3
+  end
+  P2 <==>|"Hydronic\nIsolation"| C1
+  C2 <==>|"Clean Fluid\nDemarcation"| T1
+```
+
+Hydronic Isolation Architecture Linking Primary FWS, Liquid-to-Liquid CDU, and Secondary TCS Loops
+:::
 
 | Mechanical System Element | Takeoff Measurement Unit | Primary Material & Engineering Specifications | Critical QS Inclusions & Cost Drivers |
 | :--- | :--- | :--- | :--- |

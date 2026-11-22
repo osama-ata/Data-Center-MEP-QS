@@ -7,7 +7,27 @@ categories: ["Volume III", "HV Substation", "MV Switchgear", "GIS/AIS", "Transfo
 
 ## Technical-Commercial Overview: Electrical Distribution Hierarchy {.unnumbered}
 
-The electrical distribution system forms the single largest capital cost driver of a mission-critical data center, representing roughly **40% to 48% of total project CapEx** (@tbl-capex-distribution, with core MV/LV distribution packages alone accounting for 25%+) [@ref03_amanengineering; @ref37_aecom_meh2024]. Standard measurement frameworks—including **RICS NRM2 Section 39** and **CSI MasterFormat Division 26**—require granular takeoff from the high-voltage utility substation (@tbl-hv-mv-boq) down to white-space rack PDUs (@sec-lv-distribution-white-space-power) [@rics2021nrm2; @csi2020masterformat; @ref15_irecruit_qs].
+The electrical distribution system forms the single largest capital cost driver of a mission-critical data center, representing roughly **40% to 48% of total project CapEx** (@tbl-capex-distribution, with core MV/LV distribution packages alone accounting for 25%+) [@ref03_amanengineering; @ref37_aecom_meh2024]. Standard measurement frameworks—including **RICS NRM2 Section 39** and **CSI MasterFormat Division 26**—require granular takeoff across the voltage hierarchy shown in @fig-dc-electrical-hierarchy, from the high-voltage utility substation (@tbl-hv-mv-boq) down to white-space rack PDUs (@sec-lv-distribution-white-space-power) [@rics2021nrm2; @csi2020masterformat; @ref15_irecruit_qs].
+
+::: {#fig-dc-electrical-hierarchy}
+
+```{mermaid}
+flowchart TD
+  U["Utility HV Grid Substation\n(110-220 kV GIS / AIS)"]
+  MV["Customer MV Switchgear\n(11-33 kV VCB Line-Ups)"]
+  GEN["DCC Standby Generators &\nMGPS Paralleling"]
+  TX["MV / LV Transformers\n(Cast-Resin or Oil-Bunded)"]
+  MLV["Main LV Switchboards\n(400-480 V Form 4b)"]
+  UPS["Static UPS / DRUPS &\nLFP / VRLA Energy Storage"]
+  BUS["Dual A/B Overhead Busways\n(800-5000 A) & Tap-Offs"]
+  RACK["White-Space Rack PDUs\n(Dual-Corded IT Cabinets)"]
+  U ==>|"Contestability\nDemarcation"| MV
+  GEN ==> MV
+  MV --> TX --> MLV --> UPS --> BUS --> RACK
+```
+
+End-to-End Data Center Electrical Distribution Hierarchy and Utility Demarcation Chain
+:::
 
 | Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
 | :--- | :--- | :--- | :--- |

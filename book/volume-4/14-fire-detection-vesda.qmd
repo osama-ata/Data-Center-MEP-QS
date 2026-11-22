@@ -7,7 +7,16 @@ categories: ["Volume IV", "VESDA", "Fire Detection", "Linear Heat Detection", "F
 
 ## Aspiration Smoke Detection (ASD/VESDA): Laser detector units, sampling pipe runs, capillary drop tubes, and end-of-line test points
 
-High-velocity airflows inside contained data halls (@sec-air-handling-containment) dilute incipient smoke plumes before they can trigger conventional ceiling point detectors [@nfpa75; @ref14_cxplanner]. Consequently, mission-critical white spaces, under-floor plenums, and return-air grilles deploy **Aspirating Smoke Detection ([ASD]{.gls} / [VESDA]{.gls})** systems (EN 54-20 Class A / NFPA 76 Very Early Warning Fire Detection) [@nfpa75; @ref14_cxplanner].
+High-velocity airflows inside contained data halls (@sec-air-handling-containment) dilute incipient smoke plumes before they can trigger conventional ceiling point detectors [@nfpa75; @ref14_cxplanner]. Consequently, mission-critical white spaces, under-floor plenums, and return-air grilles deploy **Aspirating Smoke Detection ([ASD]{.gls} / [VESDA]{.gls})** systems (EN 54-20 Class A / NFPA 76 Very Early Warning Fire Detection), measured across the four life-safety packages in @tbl-fire-detection-vesda-boq [@nfpa75; @ref14_cxplanner].
+
+| Life-Safety Detection Package | Primary Unit of Measurement | Standard Measurement Rules & Specifications | Critical QS Inclusions & Commissioning Drivers |
+| :--- | :--- | :--- | :--- |
+| **Aspirating Smoke Detection (ASD / VESDA)** | Number (No.) of detectors + Linear Meter (m) of pipe | 1-pipe or 4-pipe laser chambers (EN 54-20 Class A); $25\text{ mm}$ OD halogen-free ABS/uPVC sampling pipework [@nfpa75; @rics2021nrm2]. | Dual-monitored 24V DC power supplies, capillary drop tubes, end-of-line test ports, and witnessed $\le 60\text{ s}$ smoke transport testing [@nfpa75; @ref14_cxplanner]. |
+| **Cross-Zoned Addressable Point Detection** | Number (No.) by mounting horizon | Optical smoke, rate-of-rise thermal, and multi-criteria optical/thermal/CO detectors across under-floor, room, and ceiling voids [@nfpa75; @rics2021nrm2]. | Two independent coincidence loops required prior to gaseous discharge; remote LED indicators for concealed detectors [@sbc801_fire; @uae_fire_code]. |
+| **Linear Heat Detection (LHD) Cabling** | Linear Meter (m) + Number (No.) of controllers | Digital or fiber-optic thermal sensing cable routed along MV/LV ladder racks and stationary battery frames [@rics2021nrm2; @ref04_helonic]. | Sinusoidal wave clipping length allowance over straight tray runs, end-of-line boxes, and distance-locating zone modules [@rics2021nrm2]. |
+| **FACP, ARCP & Executive Action Relays** | Number (No.) of panels / monitored I/O modules | Networked Class A fault-tolerant loops in fire-resistant cable (BS 6387 Category CWZ) with monitored trip/status modules [@rics2021nrm2; @ref14_cxplanner]. | Cause-and-effect witness testing for fire dampers, CRAH/FCW trips, aisle drop-panels, mantrap fail-safe releases, and Civil Defense sign-off [@sbc801_fire; @uae_fire_code]. |
+
+: Fire Detection, Aspirating Smoke Detection, and Alarm Control BOQ Breakdown {#tbl-fire-detection-vesda-boq}
 
 Under RICS NRM2 Section 39 and CSI Division 28, ASD takeoff comprises:
 
