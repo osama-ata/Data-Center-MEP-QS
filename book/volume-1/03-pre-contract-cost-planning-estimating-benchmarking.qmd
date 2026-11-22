@@ -9,7 +9,7 @@ categories: ["Volume I", "Cost Benchmarking", "Uptime Tier", "RICS NRM2", "CSI M
 
 In commercial real estate, pre-contract cost plans rely on Gross Internal Floor Area ($\text{GIFA}$, expressed in $\text{\$/m}^2$ or $\text{\$/ft}^2$) [@rics2021nrm2]. In data center quantity surveying, floor-area metrics are secondary because two buildings with identical footprints can differ in capital cost by $200\%$ to $300\%$ depending on electrical and thermal power density [@bicsi2024002; @ref03_amanengineering].
 
-Consequently, the primary unit of functional benchmarking is **Cost per Megawatt ($\text{\$/MW}_{\text{IT}}$) or Kilowatt ($\text{\$/kW}_{\text{IT}}$) of net critical IT load** delivered to the white space UPS output [@uptime2018tier; @ref37_aecom_meh2024]:
+Consequently, the primary unit of functional benchmarking is **Cost per Megawatt ($\text{\$/MW}_{\text{IT}}$) or Kilowatt ($\text{\$/kW}_{\text{IT}}$) of net critical IT load** delivered to the white space UPS output, expressed in @eq-capex-per-kw [@uptime2018tier; @ref37_aecom_meh2024]:
 
 $$\text{CapEx Intensity (\$/kW}_{\text{IT}}\text{)} = \frac{\text{Total EPC Construction Cost (USD)}}{P_{\text{Critical IT Load (kW)}}}$$ {#eq-capex-per-kw}
 
@@ -17,7 +17,7 @@ International and GCC market benchmarks (aligned with AECOM and Linesight Middle
 
 ## Uptime Institute Tier Standards (Tier I through Tier IV) and ANSI/BICSI 002-2024 redundancy cost implications ($N+1$, $2N$, $2N+1$)
 
-System topology under the **Uptime Institute Tier Standard: Topology** and **ANSI/BICSI 002-2024** directly multiplies MEP equipment counts and distribution pathway quantities [@uptime2018tier; @bicsi2024002]:
+System topology under the **Uptime Institute Tier Standard: Topology** and **ANSI/BICSI 002-2024** directly multiplies MEP equipment counts and distribution pathway quantities, as benchmarked in @tbl-tier-redundancy-cost [@uptime2018tier; @bicsi2024002]:
 
 | Topology Tier | Redundancy Architecture | Electrical & Mechanical Distribution Impact | Relative MEP Cost Multiplier (Tier II = 1.00x) |
 | :--- | :--- | :--- | :--- |
@@ -33,11 +33,11 @@ System topology under the **Uptime Institute Tier Standard: Topology** and **ANS
 Transitioning from an $8\text{ to }15\text{ kW/rack}$ cloud/colocation hall to a $40\text{ to }132\text{ kW/rack}$ AI/HPC liquid-cooled cluster compresses white space floor area per megawatt by up to $75\%$, reducing CSA shell and raised-floor costs per MW while shifting CapEx into specialized hydronics [@ashrae2023liquid; @ref17_apaltek_liquid]:
 
 - **CSA & Containment Savings per MW**: Fewer racks per MW reduce white space $\text{m}^2/\text{MW}$, overhead busway linear runs, and hot-aisle containment framing.
-- **TCS Hydronic Premium**: Introduces liquid-to-liquid Coolant Distribution Units (CDUs), orbital-welded SS316L secondary distribution headers, rack manifolds, and hundreds of blind-mate quick-disconnect couplings (QDs) [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
+- **TCS Hydronic Premium**: Introduces liquid-to-liquid Coolant Distribution Units ([CDUs]{.gls key="cdu"}), orbital-welded SS316L secondary distribution headers, rack manifolds, and hundreds of blind-mate quick-disconnect couplings ([QDs]{.gls key="qd"}) (@sec-liquid-cooling-tcs) [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
 
 ## Work Breakdown Structures (WBS) and Cost Breakdown Structures (CBS) aligned with CSI MasterFormat (Divisions 21, 22, 23, 25, 26, 27, 28) and RICS NRM2
 
-To enable cross-regional benchmarking between North American hyperscalers and UK/Commonwealth/GCC quantity surveyors, the Cost Breakdown Structure (CBS) must cross-map **CSI MasterFormat (2020)** divisions directly to **RICS NRM2 (2nd Edition, 2021)** work sections [@csi2020masterformat; @rics2021nrm2]:
+To enable cross-regional benchmarking between North American hyperscalers and UK/Commonwealth/GCC quantity surveyors, the Work Breakdown Structure ([WBS]{.gls}) and Cost Breakdown Structure ([CBS]{.gls}) must cross-map **CSI MasterFormat (2020)** divisions directly to **RICS [NRM2]{.gls} (2nd Edition, 2021)** work sections as set out in @tbl-csi-nrm2-mapping [@csi2020masterformat; @rics2021nrm2]:
 
 | MEP Discipline | CSI MasterFormat Division | RICS NRM2 Work Section | Core Data Center Takeoff Elements |
 | :--- | :--- | :--- | :--- |
@@ -53,7 +53,7 @@ To enable cross-regional benchmarking between North American hyperscalers and UK
 
 ## Value engineering methodologies: Capital expenditure (CapEx) versus operational expenditure (OpEx) optimization for total cost of ownership (TCO)
 
-In mission-critical cost engineering, Value Engineering (VE) cannot degrade Uptime Tier concurrent maintainability or fault tolerance [@uptime2018tier; @ref15_irecruit_qs]. Valid VE evaluations model 10- to 15-year **Total Cost of Ownership (TCO)**:
+In mission-critical cost engineering, Value Engineering (VE) cannot degrade Uptime Tier concurrent maintainability or fault tolerance [@uptime2018tier; @ref15_irecruit_qs]. Valid VE evaluations model 10- to 15-year **Total Cost of Ownership ([TCO]{.gls})** (@eq-tco-model):
 
 $$\text{TCO} = \text{CapEx}_{\text{EPC}} + \sum_{t=1}^{N} \frac{E_{\text{IT},t} \cdot \text{PUE} \cdot C_{\text{elec},t} + \text{OpEx}_{\text{O\&M},t}}{(1 + r)^t}$$ {#eq-tco-model}
 

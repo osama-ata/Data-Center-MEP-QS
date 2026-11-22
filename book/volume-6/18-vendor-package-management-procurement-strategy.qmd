@@ -7,11 +7,11 @@ categories: ["Volume VI", "Vendor RFQ", "Bid Leveling", "Incoterms 2020", "Long-
 
 ## Developing specialized Request for Quotations (RFQs) and technical compliance matrices for mission-critical equipment
 
-Procuring high-value data center plant requires issuing structured **Request for Quotation (RFQ)** packages containing an itemized Commercial Pricing Schedule, a clause-by-clause Technical Compliance Matrix, a Terminal Point Demarcation Schedule, and a Mandatory Commissioning Attendance Schedule [@rics2021nrm2; @ref02_linesight; @ref12_bidforge].
+Procuring high-value data center plant requires issuing structured **Request for Quotation ([RFQ]{.gls})** packages containing an itemized Commercial Pricing Schedule, a clause-by-clause Technical Compliance Matrix, a Terminal Point Demarcation Schedule (@sec-ofci-vs-cfci), and a Mandatory Commissioning Attendance Schedule [@rics2021nrm2; @ref02_linesight; @ref12_bidforge].
 
 ## Commercial bid leveling: Normalizing deviations in warranty terms, delivery points (Incoterms 2020: DDP vs. CIF), and factory service technicians
 
-OEM vendor quotations rarely arrive on an apples-to-apples commercial basis. The MEP-QS must construct a **Commercial Bid-Leveling Matrix** that normalizes monetary adjustments across five common vendor exclusions [@rics2021nrm2; @ref12_bidforge]:
+OEM vendor quotations rarely arrive on an apples-to-apples commercial basis. The MEP-QS must construct a **Commercial Bid-Leveling Matrix** (@tbl-oem-bid-leveling) that normalizes monetary adjustments across five common vendor exclusions [@rics2021nrm2; @ref12_bidforge]:
 
 | Bid-Leveling Parameter | Typical OEM Baseline Offer (Unleveled) | Required Turnkey EPC Contract Baseline | QS Leveling Adjustment Added to Vendor Bid |
 | :--- | :--- | :--- | :--- |
@@ -29,4 +29,4 @@ With global hyperscale demand saturating manufacturing capacity for MV breakers,
 
 ## Subcontract tendering, scope gap analyses, and bid-leveling for specialized mechanical and electrical trade packages
 
-When splitting site works into specialized Tier-1 trade subcontracts (e.g., Primary Mechanical/FWS, White Space TCS Liquid Cooling, HV/MV Electrical, LV & Busway, Fire/VESDA, and BMS/EPMS), the most acute commercial hazard is **inter-trade "white space" scope gaps** [@ref02_linesight]. Every subcontract agreement must bind the trade contractor to a master **Builder's Work in Connection (BWIC) and Inter-Trade Interface Matrix** allocating secondary steel supports, firestopping of multi-service openings, core drilling, temporary testing power, and commissioning attendance [@rics2021nrm2; @ref02_linesight].
+When splitting site works into specialized Tier-1 trade subcontracts (e.g., Primary Mechanical/FWS, White Space TCS Liquid Cooling, HV/MV Electrical, LV & Busway, Fire/VESDA, and BMS/EPMS), the most acute commercial hazard is **inter-trade "white space" scope gaps** [@ref02_linesight]. Every subcontract agreement must bind the trade contractor to a master **Builder's Work in Connection ([BWIC]{.gls}) and Inter-Trade Interface Matrix** allocating secondary steel supports, firestopping of multi-service openings, core drilling, temporary testing power, and commissioning attendance [@rics2021nrm2; @ref02_linesight].

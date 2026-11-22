@@ -7,7 +7,7 @@ categories: ["Volume I", "EPC Delivery", "FIDIC Silver Book", "PUE"]
 
 ## Structural economics of mission-critical facilities: CapEx allocations across civil, structural, architectural, and MEP domains
 
-Unlike standard commercial or institutional real estate—where structural frames, facades, and architectural finishes dominate the construction budget—mission-critical data center capital expenditure (CapEx) is fundamentally inverted [@rics2021nrm2; @ref03_amanengineering]. Mechanical, Electrical, Plumbing, and Automation (MEP) infrastructure routinely commands between **60% and 75% of the total construction contract value**, whereas civil, structural, and architectural (CSA) works typically account for only **15% to 20%** (with the balance allocated to preliminaries, general conditions, and integrated commissioning) [@ref03_amanengineering; @ref04_helonic].
+Unlike standard commercial or institutional real estate—where structural frames, facades, and architectural finishes dominate the construction budget—mission-critical data center capital expenditure ([CapEx]{.gls}) is fundamentally inverted, as broken down in @tbl-capex-distribution [@rics2021nrm2; @ref03_amanengineering]. Mechanical, Electrical, Plumbing, and Automation (MEP) infrastructure routinely commands between **60% and 75% of the total construction contract value**, whereas civil, structural, and architectural ([CSA]{.gls}) works typically account for only **15% to 20%** (with the balance allocated to preliminaries, general conditions, and integrated commissioning) [@ref03_amanengineering; @ref04_helonic].
 
 The financial exposure associated with facility failure elevates MEP Quantity Surveying (MEP-QS) to the central commercial discipline of the project. With unplanned downtime carrying an industry-benchmarked cost of approximately \$9,000 per minute and major outages regularly exceeding \$1 million in direct SLA penalties and reputational damage, commercial governance of mission-critical engineering systems dictates overall asset viability [@uptime2018tier; @ref04_helonic].
 
@@ -23,13 +23,13 @@ The financial exposure associated with facility failure elevates MEP Quantity Su
 
 ## The EPC commercial lifecycle: From Front-End Engineering Design (FEED) and Owner's Project Requirements (OPR) to Ready-for-Service (RFS)
 
-Hyperscale cloud operators and wholesale colocation developers structure project delivery around compressed timelines from land acquisition and power allocation to **Ready-for-Service (RFS)** [@bicsi2024002; @ref01_projectassure]. The commercial lifecycle progresses through five gated milestones:
+Hyperscale cloud operators and wholesale colocation developers structure project delivery around compressed timelines from land acquisition and power allocation to **Ready-for-Service ([RFS]{.gls})** [@bicsi2024002; @ref01_projectassure]. The commercial lifecycle progresses through five gated milestones:
 
-1. **Owner's Project Requirements (OPR) & Basis of Design (BOD)**: Defines critical IT load ($\text{MW}_{\text{IT}}$), Uptime Tier topology (Tier III Concurrently Maintainable or Tier IV Fault Tolerant), target rack density ($\text{kW/rack}$), and guaranteed annual design PUE [@uptime2018tier; @bicsi2024002].
-2. **Front-End Engineering Design (FEED) & Early Works / Long-Lead Procurement**: Advances engineering to RIBA Stage 3 / LOD 300 to lock in single-line diagrams (SLDs), P&IDs, and equipment schedules so Owner-Furnished, Contractor-Installed (OFCI) orders can be placed 50 to 80 weeks ahead of site installation [@ref02_linesight].
-3. **Turnkey EPC Tendering & Contract Award**: Conversion of FEED schedules into a lump-sum turnkey contract under the FIDIC Silver Book or bespoke EPC terms [@fidic2017silver].
+1. **Owner's Project Requirements ([OPR]{.gls}) & Basis of Design ([BOD]{.gls})**: Defines critical IT load ($\text{MW}_{\text{IT}}$), Uptime Tier topology (Tier III Concurrently Maintainable or Tier IV Fault Tolerant), target rack density ($\text{kW/rack}$), and guaranteed annual design [PUE]{.gls} [@uptime2018tier; @bicsi2024002].
+2. **Front-End Engineering Design ([FEED]{.gls}) & Early Works / Long-Lead Procurement**: Advances engineering to RIBA Stage 3 / [LOD]{.gls} 300 to lock in single-line diagrams (SLDs), P&IDs, and equipment schedules so Owner-Furnished, Contractor-Installed ([OFCI]{.gls}) orders can be placed 50 to 80 weeks ahead of site installation [@ref02_linesight].
+3. **Turnkey [EPC]{.gls} Tendering & Contract Award**: Conversion of FEED schedules into a lump-sum turnkey contract under the [FIDIC]{.gls} Silver Book or bespoke EPC terms [@fidic2017silver].
 4. **Detailed Design (LOD 350–400), Off-Site Manufacturing & Site Installation**: Concurrent modular skid fabrication, MV/LV electrical room fit-out, and mechanical pipework installation.
-5. **Five-Level Commissioning (L1–L5 IST) & Ready-for-Service (RFS) Handover**: Integrated stress testing under simulated 100% thermal and electrical load prior to Taking-Over Certificate issuance [@fidic2017silver; @ref14_cxplanner].
+5. **Five-Level Commissioning (L1–L5 [IST]{.gls}) & Ready-for-Service (RFS) Handover**: Integrated stress testing under simulated 100% thermal and electrical load prior to Taking-Over Certificate issuance [@fidic2017silver; @ref14_cxplanner].
 
 ## Contractual frameworks: FIDIC Silver Book (1999/2017) and modified turnkey structures in mission-critical construction
 
@@ -40,18 +40,18 @@ Turnkey EPC delivery for data centers predominantly adopts the **FIDIC Condition
 
 ## Single-point design liability, fitness for purpose, and operational performance metrics (PUE, WUE, CUE)
 
-Under FIDIC Silver Book Sub-Clause 4.1, the completed facility must be **fit for the purposes** for which it is intended, as defined in the Employer's Requirements [@fidic2017silver]. In mission-critical contracts, fitness for purpose is quantified through legally binding operational performance guarantees verified during Level 5 IST and seasonal performance testing [@ashrae2021tc99; @ref03_amanengineering]:
+Under FIDIC Silver Book Sub-Clause 4.1, the completed facility must be **fit for the purposes** for which it is intended, as defined in the Employer's Requirements [@fidic2017silver]. In mission-critical contracts, fitness for purpose is quantified through legally binding operational performance guarantees (@eq-pue-definition and @eq-wue-definition) verified during Level 5 IST (@sec-five-level-commissioning) and seasonal performance testing [@ashrae2021tc99; @ref03_amanengineering]:
 
 $$\text{PUE} = \frac{P_{\text{Total Facility}}}{P_{\text{IT Equipment}}} = 1 + \frac{P_{\text{Cooling}} + P_{\text{Electrical Losses}} + P_{\text{Auxiliaries}}}{P_{\text{IT Equipment}}}$$ {#eq-pue-definition}
 
 $$\text{WUE} = \frac{\text{Annual Water Consumption (Liters)}}{E_{\text{IT Equipment}}\text{ (kWh)}}$$ {#eq-wue-definition}
 
-If the commissioned mechanical and electrical plant fails to achieve the guaranteed design PUE (e.g., $\text{PUE} \le 1.25$ at design ambient conditions) or net critical IT capacity ($\text{MW}_{\text{IT}}$), the EPC contractor faces **Performance Liquidated Damages** (often capitalized over a 5- to 10-year net present value of excess electricity consumption) or mandatory plant rectification prior to Taking Over [@fidic2017silver].
+If the commissioned mechanical and electrical plant fails to achieve the guaranteed design PUE (e.g., $\text{PUE} \le 1.25$ at design ambient conditions) or net critical IT capacity ($\text{MW}_{\text{IT}}$), the EPC contractor faces **Performance Liquidated Damages** (@eq-dual-liquidated-damages, often capitalized over a 5- to 10-year net present value of excess electricity consumption) or mandatory plant rectification prior to Taking Over [@fidic2017silver].
 
 ## Commercial risk allocation: Unforeseen site conditions, grid interconnection delays, and environmental permitting liabilities
 
 Under FIDIC Silver Book Sub-Clause 4.12 (*Unforeseeable Difficulties*), the Contractor is deemed to have obtained all necessary information regarding subsurface ground conditions, hydrological constraints, and local climatic extremes [@fidic2017silver]. For the MEP-QS, three external interface risks require explicit contractual demarcation in the Particular Conditions:
 
-1. **Utility Grid Interconnection Delays**: Demarcating responsibility for utility authority energization milestones—such as **SEC (Saudi Electricity Company)** 132 kV/33 kV grid connections in KSA or **DEWA** 132/11 kV substation approvals in Dubai—where utility outages or delayed permanent power force Level 3/4 commissioning onto temporary diesel generation [@sec_grid_code; @dewa_hv_regulations].
+1. **Utility Grid Interconnection Delays**: Demarcating responsibility for utility authority energization milestones—such as **[SEC]{.gls} (Saudi Electricity Company)** 132 kV/33 kV grid connections in KSA or **[DEWA]{.gls}** 132/11 kV substation approvals in Dubai—where utility outages or delayed permanent power force Level 3/4 commissioning onto temporary diesel generation [@sec_grid_code; @dewa_hv_regulations].
 2. **Subsurface Thermal Resistivity**: Underground HV/MV duct banks require verified soil thermal resistivity ($\text{K}\cdot\text{m/W}$) to prevent cable ampacity derating; unforeseen high-resistivity desert sands necessitate specialized Fluidized Thermal Backfill (FTB) [@bicsi2024002].
 3. **Acoustic & Emissions Permitting**: Compliance with municipal noise limits at the site boundary (typically $55\text{ to }65\text{ dBA}$) and generator $\text{NO}_x/\text{PM}$ emissions tiers, which directly drive the cost of generator acoustic attenuators and Selective Catalytic Reduction (SCR) after-treatment skids [@iso8528_1].

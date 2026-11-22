@@ -19,7 +19,7 @@ CCTV takeoff encompasses perimeter radiometric thermal cameras, PTZ domes, and h
 
 ## Structured cabling: Fiber-optic backbones (Single-Mode OS2, Multi-Mode OM4/OM5), MPO/MTP pre-terminated trunks, and patch panels
 
-In accordance with **ANSI/BICSI 002-2024** and **TIA-942-C**, structured cabling between Meet-Me Rooms (MMRs), Main Distribution Areas (MDAs), and Intermediate/Horizontal Distribution Areas (IDAs/HDAs) utilizes high-core-count **Single-Mode OS2** (up to 144–3456f ribbon fiber) and **Laser-Optimized Multi-Mode OM4/OM5** pre-terminated **MPO/MTP trunk assemblies** [@bicsi2024002; @ref03_amanengineering]. Every fiber link must be priced inclusive of bi-directional **Tier 1 (OLTS attenuation) and Tier 2 (OTDR reflectance trace)** certification testing [@bicsi2024002].
+In accordance with **ANSI/BICSI 002-2024** and **TIA-942-C**, structured cabling between Meet-Me Rooms ([MMRs]{.gls key="mmr"}), Main Distribution Areas (MDAs), and Intermediate/Horizontal Distribution Areas (IDAs/HDAs) utilizes high-core-count **Single-Mode OS2** (up to 144–3456f ribbon fiber) and **Laser-Optimized Multi-Mode OM4/OM5** pre-terminated **MPO/MTP trunk assemblies** [@bicsi2024002; @ref03_amanengineering]. Every fiber link must be priced inclusive of bi-directional **Tier 1 (OLTS attenuation) and Tier 2 (OTDR reflectance trace)** certification testing [@bicsi2024002].
 
 ## Telecommunications pathways: Dual diverse Meet-Me Rooms (MMR), redundant carrier fiber entrance conduits, and overhead basket trays
 

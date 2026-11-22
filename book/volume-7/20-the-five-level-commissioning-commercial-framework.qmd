@@ -9,13 +9,13 @@ categories: ["Volume VII", "Five-Level Commissioning", "FAT", "SAT", "FPT", "IST
 
 Commissioning (Cx) represents a major scope and financial component within data center EPC execution [@ref04_helonic; @ref19_datacenterscope_cx]. While commissioning in standard commercial buildings typically commands $1\%\text{ to }2\%$ of construction value, mission-critical data center commissioning—inclusive of Factory Acceptance Testing (FAT), chemical flushing/passivation, temporary load bank rentals, test utilities/fuel, OEM startup engineers, and multi-trade attendance across five verification levels—represents between **8% and 12% of total project capital expenditure** [@ref04_helonic; @ref19_datacenterscope_cx].
 
-This investment reflects the absolute necessity of proving fault-tolerant system reliability under simulated full load before live client IT equipment is deployed [@uptime2018tier; @ref14_cxplanner]. The commissioning process follows a strict five-level tag hierarchy:
+This investment reflects the absolute necessity of proving fault-tolerant system reliability under simulated full load before live client IT equipment is deployed [@uptime2018tier; @ref14_cxplanner]. The commissioning process follows a strict five-level tag hierarchy (@tbl-five-level-commissioning):
 
-- **Level 1 (Red Tag)**: Factory Acceptance Testing (FAT)
-- **Level 2 (Yellow Tag)**: Component Delivery, Receipt Verification, and Site Acceptance Testing (SAT)
+- **Level 1 (Red Tag)**: Factory Acceptance Testing ([FAT]{.gls})
+- **Level 2 (Yellow Tag)**: Component Delivery, Receipt Verification, and Site Acceptance Testing ([SAT]{.gls})
 - **Level 3 (Green Tag)**: Pre-Commissioning and Individual System Startup
-- **Level 4 (Blue Tag)**: Functional Performance Testing (FPT)
-- **Level 5 (White Tag)**: Facility-Wide Integrated System Testing (IST) [@bicsi2024002; @ref14_cxplanner]
+- **Level 4 (Blue Tag)**: Functional Performance Testing ([FPT]{.gls})
+- **Level 5 (White Tag)**: Facility-Wide Integrated System Testing ([IST]{.gls}) [@bicsi2024002; @ref14_cxplanner]
 
 | Commissioning Level | Engineering & Verification Activities | Scope Inclusions & Contractor Obligations | Dominant Cost Elements & Budget Allocation |
 | :--- | :--- | :--- | :--- |

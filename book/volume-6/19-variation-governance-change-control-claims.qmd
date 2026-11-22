@@ -7,7 +7,7 @@ categories: ["Volume VI", "Variation Management", "Time Impact Analysis", "Liqui
 
 ## Commercial impact of design iteration: Managing addenda during the bid phase and post-award Engineering Change Notices (ECNs)
 
-In fast-track data center builds, IT hardware generations (e.g., GPU rack density stepping from $40\text{ kW}$ to $100+\text{ kW/rack}$) frequently evolve *after* EPC contract award, generating post-award **Engineering Change Notices (ECNs)** or Employer's Variations under **FIDIC Silver Book Clause 13** [@fidic2017silver; @ref08_oracle_estimator; @ref17_apaltek_liquid]. The MEP-QS must evaluate both the **direct re-measurement cost** (updated pipe diameters, CDU capacities, and busway ratings) and the **abortive / restocking cost** for long-lead equipment already in factory production [@fidic2017silver; @rics2021nrm2].
+In fast-track data center builds, IT hardware generations (e.g., GPU rack density stepping from $40\text{ kW}$ to $100+\text{ kW/rack}$) frequently evolve *after* [EPC]{.gls} contract award, generating post-award **Engineering Change Notices ([ECNs]{.gls key="ecn"})** or Employer's Variations under **[FIDIC]{.gls} Silver Book Clause 13** [@fidic2017silver; @ref08_oracle_estimator; @ref17_apaltek_liquid]. The MEP-QS must evaluate both the **direct re-measurement cost** (updated pipe diameters, CDU capacities, and busway ratings) and the **abortive / restocking cost** for long-lead equipment already in factory production [@fidic2017silver; @rics2021nrm2].
 
 ## Evaluating contractor-asserted variations: Material pricing verification, labor productivity benchmarking, and non-productive overtime claims
 
@@ -18,17 +18,17 @@ When auditing trade subcontractor variation proposals, the MEP-QS separates dire
 
 ## Time Impact Analysis (TIA) and extension of time (EOT) commercial valuations under FIDIC Silver Book Sub-Clause 8.4/8.5
 
-Under FIDIC Silver Book (Sub-Clause 8.4 in 1999 / Sub-Clause 8.5 in 2017) and the **SCL Delay and Disruption Protocol**, a contractor seeking an Extension of Time (EOT)—for example, due to late delivery of OFCI generators or delayed SEC/DEWA utility grid energization—must submit a strict **Notice of Claim within 28 days** (Sub-Clause 20.1 / 20.2) supported by a prospective or contemporaneous **Time Impact Analysis (TIA)** [@fidic2017silver; @ref01_projectassure].
+Under FIDIC Silver Book (Sub-Clause 8.4 in 1999 / Sub-Clause 8.5 in 2017) and the **SCL Delay and Disruption Protocol**, a contractor seeking an Extension of Time ([EOT]{.gls})—for example, due to late delivery of [OFCI]{.gls} generators or delayed [SEC]{.gls}/[DEWA]{.gls} utility grid energization—must submit a strict **Notice of Claim within 28 days** (Sub-Clause 20.1 / 20.2) supported by a prospective or contemporaneous **Time Impact Analysis ([TIA]{.gls})** [@fidic2017silver; @ref01_projectassure].
 
-In data center projects, the true critical path almost always runs through **Electrical Room Dry-In $\to$ Switchgear/UPS Installation $\to$ Permanent Power On (PPO) $\to$ Chilled Water / TCS Flushing $\to$ Level 4 FPT $\to$ Level 5 IST** [@ref14_cxplanner]. Any delay claim on non-critical perimeter works that does not consume float on the commissioning critical path does not establish EOT or prolongation cost entitlement [@fidic2017silver].
+In data center projects, the true critical path almost always runs through **Electrical Room Dry-In $\to$ Switchgear/UPS Installation $\to$ Permanent Power On (PPO) $\to$ Chilled Water / TCS Flushing $\to$ Level 4 [FPT]{.gls} $\to$ Level 5 [IST]{.gls}** [@ref14_cxplanner]. Any delay claim on non-critical perimeter works that does not consume float on the commissioning critical path does not establish EOT or prolongation cost entitlement [@fidic2017silver].
 
 ## Quantifying delay liquidated damages (LDs), performance liquidated damages (PUE non-attainment), and commercial cap structures
 
-Turnkey data center EPC contracts impose a dual Liquidated Damages (LD) architecture [@fidic2017silver; @ref01_projectassure]:
+Turnkey data center EPC contracts impose a dual Liquidated Damages ([LD]{.gls}) architecture (@eq-dual-liquidated-damages) [@fidic2017silver; @ref01_projectassure]:
 
 $$\text{LD}_{\text{Total}} = \min\left(\text{Cap}_{\text{LD}}, \; \underbrace{\sum_{d=1}^{D_{\text{delay}}} r_{\text{delay}} \cdot \text{MW}_{\text{delayed}}}_{\text{Delay LDs (Sub-Clause 8.7/8.8)}} + \underbrace{\Delta\text{PUE}_{\text{excess}} \cdot P_{\text{IT}} \cdot 8760\text{ h} \cdot C_{\text{elec}} \cdot \text{PVAF}(r, N)}_{\text{Performance LDs (Schedule of Guarantees)}}\right)$$ {#eq-dual-liquidated-damages}
 
-where $\text{PVAF}(r,N)$ is the present value annuity factor over the performance evaluation horizon $N$ years. Aggregate LD liability is typically capped at $10\%\text{ to }15\%$ of the Contract Price, with sub-caps separating schedule delay LDs from PUE/capacity shortfall LDs [@fidic2017silver].
+where $\text{PVAF}(r,N)$ is the present value annuity factor over the performance evaluation horizon $N$ years. Aggregate LD liability is typically capped at $10\%\text{ to }15\%$ of the Contract Price, with sub-caps separating schedule delay LDs from PUE/capacity shortfall LDs (@sec-epc-delivery-fundamentals) [@fidic2017silver].
 
 ## Provisional sums administration: Conversion of undefined and defined provisional sums into lump-sum packages
 

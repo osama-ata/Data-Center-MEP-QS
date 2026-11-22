@@ -20,6 +20,10 @@ Data-Center-MEP-QS/
 ├── README.md
 └── book/
     ├── _quarto.yml
+    ├── abbreviations-and-units.qmd
+    ├── glossary-filter.lua
+    ├── glossary.qmd
+    ├── glossary.yml
     ├── index.qmd
     ├── intro-commercial-architecture.qmd
     ├── references.bib

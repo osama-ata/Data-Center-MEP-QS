@@ -7,7 +7,7 @@ categories: ["Volume III", "Earthing", "MCBN", "Signal Reference Grid", "Lightni
 
 ## Technical-Commercial Overview: Earthing and Equipotential Bonding {.unnumbered}
 
-Mission-critical facilities require a low-impedance earth electrode grid (typically $<1.0\text{ }\Omega$ overall earth resistance for substations and data halls, vs. $<5\text{ to }10\text{ }\Omega$ in commercial buildings) coupled with an equipotential white-space **Mesh Common Bonding Network (MCBN)** to dissipate high-frequency switching noise and lightning transients [@bicsi2024002; @ref14_cxplanner].
+Mission-critical facilities require a low-impedance earth electrode grid (typically $<1.0\text{ }\Omega$ overall earth resistance for substations and data halls, vs. $<5\text{ to }10\text{ }\Omega$ in commercial buildings) coupled with an equipotential white-space **Mesh Common Bonding Network ([MCBN]{.gls})** to dissipate high-frequency switching noise and lightning transients, measured across the three packages in @tbl-mcbn-earthing-boq [@bicsi2024002; @ref14_cxplanner].
 
 | Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
 | :--- | :--- | :--- | :--- |
@@ -23,7 +23,7 @@ Under RICS NRM2 Section 39, buried perimeter earth rings and substation ground m
 
 ## White space Mesh Common Bonding Networks (MCBN): Signal reference grids (SRG), raised-floor stringer bonding, and rack grounding kits
 
-In accordance with **ANSI/BICSI 002-2024** and **TIA-607-D**, every data hall houses a **Telecommunications Main Grounding Busbar (TMGB)** and localized **Telecommunications Grounding Busbars (TGBs)** interconnected to a high-frequency **Signal Reference Grid (SRG)** [@bicsi2024002; @ref14_cxplanner]. The MEP-QS must quantify:
+In accordance with **ANSI/BICSI 002-2024** and **TIA-607-D**, every data hall houses a **Telecommunications Main Grounding Busbar (TMGB)** and localized **Telecommunications Grounding Busbars (TGBs)** interconnected to a high-frequency **Signal Reference Grid ([SRG]{.gls})** [@bicsi2024002; @ref14_cxplanner]. The MEP-QS must quantify:
 
 - Prefabricated flat-copper-strip SRG grids or bare copper conductor meshes ($600\text{ mm}\times 600\text{ mm}$ or $1200\text{ mm}\times 1200\text{ mm}$ spacing) bonded to raised-floor pedestals via UL-listed low-impedance pedestal clamps (`No.`) [@bicsi2024002; @ref14_cxplanner].
 - Individual **Rack Grounding Kits** (`No.` per cabinet): Two-hole long-barrel compression lugs, green/yellow $\text{LSZH }16\text{ mm}^2$ bonding jumpers, paint-piercing star washers, and antioxidant joint compound for every server rack, CDU, CRAH, and section of wire-mesh cable tray [@bicsi2024002].

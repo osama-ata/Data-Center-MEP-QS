@@ -7,7 +7,7 @@ categories: ["Volume IV", "Pre-Action Sprinkler", "Clean Agent Suppression", "No
 
 ## Double-interlock pre-action sprinkler systems: Riser check valves, dry pipe valves, nitrogen inerting generators, and supervisory pressure sensors
 
-To prevent accidental water discharge in energized white spaces, **NFPA 75 (Standard for the Fire Protection of Information Technology Equipment)** and insurer standards (FM Global Data Sheet 5-32) mandate **Double-Interlock Pre-Action (DIPA)** sprinkler systems [@nfpa75; @ref14_cxplanner]. Water enters the overhead distribution piping only when *two independent events* occur simultaneously: (1) cross-zoned smoke/VESDA detection trips the electric solenoid release valve, and (2) thermal fusing of a sprinkler head drops supervisory gas pressure in the pipe network [@nfpa75; @ref14_cxplanner].
+To prevent accidental water discharge in energized white spaces, **NFPA 75 (Standard for the Fire Protection of Information Technology Equipment)** and insurer standards (FM Global Data Sheet 5-32) mandate **Double-Interlock Pre-Action ([DIPA]{.gls})** sprinkler systems [@nfpa75; @ref14_cxplanner]. Water enters the overhead distribution piping only when *two independent events* occur simultaneously: (1) cross-zoned smoke/[VESDA]{.gls} detection (@sec-fire-detection-vesda) trips the electric solenoid release valve, and (2) thermal fusing of a sprinkler head drops supervisory gas pressure in the pipe network [@nfpa75; @ref14_cxplanner].
 
 Under RICS NRM2 Section 33 and CSI Division 21, the MEP-QS must measure:
 
@@ -17,7 +17,7 @@ Under RICS NRM2 Section 33 and CSI Division 21, the MEP-QS must measure:
 
 ## Clean agent gaseous suppression systems: Chemical agents (FK-5-1-12 / Novec 1230, FM-200) and inert gas systems (IG-541 Inergen, IG-55)
 
-Total-flooding gaseous suppression systems (governed by **NFPA 2001**, **ISO 14520**, and **GCC Civil Defense codes such as Saudi SBC 801 and the UAE Fire and Life Safety Code**) protect electrical rooms (MV/LV/UPS), battery rooms, Meet-Me Rooms (MMRs), and white spaces [@nfpa75; @sbc801_fire; @uae_fire_code; @ref14_cxplanner]:
+Total-flooding gaseous suppression systems (governed by **NFPA 2001**, **ISO 14520**, and **GCC Civil Defense codes such as Saudi SBC 801 and the UAE Fire and Life Safety Code**) protect electrical rooms (MV/LV/UPS), battery rooms, Meet-Me Rooms (MMRs), and white spaces (@tbl-clean-agent-comparison) [@nfpa75; @sbc801_fire; @uae_fire_code; @ref14_cxplanner]:
 
 | Clean Agent System | Chemical / Gas Composition | Cylinder Storage Pressure | QS Measurement & Commercial Cost Drivers |
 | :--- | :--- | :--- | :--- |

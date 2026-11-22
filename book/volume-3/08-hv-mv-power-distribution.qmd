@@ -7,7 +7,7 @@ categories: ["Volume III", "HV Substation", "MV Switchgear", "GIS/AIS", "Transfo
 
 ## Technical-Commercial Overview: Electrical Distribution Hierarchy {.unnumbered}
 
-The electrical distribution system forms the single largest capital cost driver of a mission-critical data center, representing roughly **40% to 48% of total project CapEx** (with core MV/LV distribution packages alone accounting for 25%+) [@ref03_amanengineering; @ref37_aecom_meh2024]. Standard measurement frameworks—including **RICS NRM2 Section 39** and **CSI MasterFormat Division 26**—require granular takeoff from the high-voltage utility substation down to white-space rack PDUs [@rics2021nrm2; @csi2020masterformat; @ref15_irecruit_qs].
+The electrical distribution system forms the single largest capital cost driver of a mission-critical data center, representing roughly **40% to 48% of total project CapEx** (@tbl-capex-distribution, with core MV/LV distribution packages alone accounting for 25%+) [@ref03_amanengineering; @ref37_aecom_meh2024]. Standard measurement frameworks—including **RICS NRM2 Section 39** and **CSI MasterFormat Division 26**—require granular takeoff from the high-voltage utility substation (@tbl-hv-mv-boq) down to white-space rack PDUs (@sec-lv-distribution-white-space-power) [@rics2021nrm2; @csi2020masterformat; @ref15_irecruit_qs].
 
 | Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
 | :--- | :--- | :--- | :--- |
@@ -21,8 +21,8 @@ The electrical distribution system forms the single largest capital cost driver 
 
 Campus-scale data centers ($20\text{ MW to }200+\text{ MW}$) interconnect directly at high voltage ($110\text{ kV}, 132\text{ kV}, \text{or } 220\text{ kV}$) [@ref10_lvi_epc_manager; @ref11_irecruit_substation]:
 
-- **Gas-Insulated Switchgear (GIS)**: Reduces substation footprint by up to $70\%$ compared to outdoor Air-Insulated Switchgear (AIS) and encloses live buses against desert dust and coastal salt pollution [@sec_grid_code; @dewa_hv_regulations].
-- **GCC Utility Demarcation (SEC & DEWA)**: In Saudi Arabia (**SEC** $132\text{ kV}/33\text{ kV}$ or $13.8\text{ kV}$) and the UAE (**DEWA** $132/11\text{ kV}$), the MEP-QS must explicitly separate the **Contestability / Utility-Adopted Scope** (built to utility specification and handed over to SEC/DEWA ownership, including teleprotection, tariff metering panels, and fiber-optic pilot cables) from the **Customer Private MV Side** [@sec_grid_code; @dewa_hv_regulations].
+- **Gas-Insulated Switchgear ([GIS]{.gls})**: Reduces substation footprint by up to $70\%$ compared to outdoor Air-Insulated Switchgear ([AIS]{.gls}) and encloses live buses against desert dust and coastal salt pollution [@sec_grid_code; @dewa_hv_regulations].
+- **GCC Utility Demarcation ([SEC]{.gls} & [DEWA]{.gls})**: In Saudi Arabia (**SEC** $132\text{ kV}/33\text{ kV}$ or $13.8\text{ kV}$) and the UAE (**DEWA** $132/11\text{ kV}$), the MEP-QS must explicitly separate the **Contestability / Utility-Adopted Scope** (built to utility specification and handed over to SEC/DEWA ownership, including teleprotection, tariff metering panels, and fiber-optic pilot cables) from the **Customer Private MV Side** [@sec_grid_code; @dewa_hv_regulations].
 
 ## Medium-voltage switchgear assemblies: Vacuum circuit breakers, protection relays, arc flash mitigation barriers, and interlocking schemes
 

@@ -7,11 +7,11 @@ categories: ["Volume II", "Liquid Cooling", "Direct-to-Chip", "CDU", "TCS", "Cal
 
 ## Technical-Commercial Measurement Breakdown: Liquid Cooling and TCS Packages {.unnumbered}
 
-When rack thermal power densities surpass 20 kW to 30 kW per cabinet, air becomes thermodynamically inefficient and physically constrained due to fan power consumption, acoustic thresholds, and volumetric airflow limits [@ashrae2023liquid; @ref24_h2x_dtc]. The deployment of artificial intelligence (AI) and high-performance computing (HPC) clusters operating between 40 kW and 132 kW per rack requires **Direct-to-Chip (DTC)** or immersion liquid cooling architectures [@ashrae2023liquid; @ref17_apaltek_liquid].
+When rack thermal power densities surpass 20 kW to 30 kW per cabinet, air becomes thermodynamically inefficient and physically constrained due to fan power consumption, acoustic thresholds, and volumetric airflow limits [@ashrae2023liquid; @ref24_h2x_dtc]. The deployment of artificial intelligence (AI) and high-performance computing (HPC) clusters operating between 40 kW and 132 kW per rack requires **Direct-to-Chip ([DTC]{.gls})** or immersion liquid cooling architectures [@ashrae2023liquid; @ref17_apaltek_liquid].
 
-This transition fundamentally alters the Bill of Quantities (BOQ), requiring quantity surveyors to measure two distinct, hydronically isolated circuits: the primary **Facility Water System (FWS)** and the secondary **Technology Cooling System (TCS)**, coupled thermally through plate-frame **Coolant Distribution Units (CDUs)** [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
+This transition fundamentally alters the Bill of Quantities ([BOQ]{.gls}), requiring quantity surveyors to measure two distinct, hydronically isolated circuits: the primary **Facility Water System ([FWS]{.gls})** and the secondary **Technology Cooling System ([TCS]{.gls})**, coupled thermally through plate-frame **Coolant Distribution Units ([CDUs]{.gls key="cdu"})** [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
 
-The secondary TCS circuit, operating directly across micro-channel server cold plates ($25\text{ to }100\text{ }\mu\text{m}$ fin pitch), demands warmer supply temperatures (ASHRAE W27 to W45 classes) and strict fluid cleanliness [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. This loop must be priced using high-grade stainless steel (**ASTM A312 TP304L or TP316L**) or high-density polypropylene (**PP-RCT**) pipework to prevent chemical leaching, galvanic corrosion, and particulate fouling [@ashrae2023liquid; @ref17_apaltek_liquid]. The CDU serves as the technical and contractual partition between FWS and TCS, housing primary modulating control valves, brazed or gasketed SS316/titanium plate heat exchangers, redundant variable-speed circulators, dual A/B power feeds, and $50\text{ }\mu\text{m}$ filtration skids [@ref22_reliabilityengine_liquid; @ref23_keentel_cdu].
+The secondary TCS circuit, operating directly across micro-channel server cold plates ($25\text{ to }100\text{ }\mu\text{m}$ fin pitch), demands warmer supply temperatures (ASHRAE W27 to W45 classes) and strict fluid cleanliness [@ashrae2023liquid; @ref22_reliabilityengine_liquid]. This loop must be priced using high-grade stainless steel (**ASTM A312 TP304L or TP316L**) or high-density polypropylene (**PP-RCT**) pipework to prevent chemical leaching, galvanic corrosion, and particulate fouling [@ashrae2023liquid; @ref17_apaltek_liquid]. The CDU serves as the technical and contractual partition between the primary FWS (@sec-central-chilled-water-plants) and secondary TCS, housing primary modulating control valves, brazed or gasketed SS316/titanium plate heat exchangers, redundant variable-speed circulators, dual A/B power feeds, and $50\text{ }\mu\text{m}$ filtration skids, as broken down in @tbl-tcs-boq-breakdown [@ref22_reliabilityengine_liquid; @ref23_keentel_cdu].
 
 | Mechanical System Element | Takeoff Measurement Unit | Primary Material & Engineering Specifications | Critical QS Inclusions & Cost Drivers |
 | :--- | :--- | :--- | :--- |
@@ -33,25 +33,25 @@ The MEP-QS classifies CDUs into two architectural typologies [@ashrae2023liquid;
 Unlike primary FWS carbon steel pipework, secondary TCS pipework cannot tolerate mill scale, welding slag, or iron oxide corrosion products that would instantly plug server micro-channel cold plates [@ashrae2023liquid]. Takeoff rates for SS316L TCS headers must include:
 
 - **High-Purity Orbital TIG Welding**: Automated orbital welding with internal argon purge gas backing to eliminate interior weld oxidation ("sugaring"), plus borescope inspection logs [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
-- **Rack Cooling Manifolds & Flexible Whip Hoses**: Vertical stainless steel rack manifolds ($40\text{ to }84\text{ ports}$ per rack) and kink-resistant EPDM/PTFE braided flexible hoses connecting header isolation ball valves to each server blade via dripless **Quick Disconnects (QDs)** [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
+- **Rack Cooling Manifolds & Flexible Whip Hoses**: Vertical stainless steel rack manifolds ($40\text{ to }84\text{ ports}$ per rack) and kink-resistant EPDM/PTFE braided flexible hoses connecting header isolation ball valves to each server blade via dripless **Quick Disconnects ([QDs]{.gls key="qd"})** [@ashrae2023liquid; @ref22_reliabilityengine_liquid].
 
 ## Heat transfer thermodynamics: Determining hydronic flow demand from design rack Delta-T ($\Delta T$) and chip envelope limits
 
-The thermodynamic relationship governing the fluid mass flow rate ($\dot{m}$) required to remove heat from the white space is [@ashrae2023liquid; @ref22_reliabilityengine_liquid]:
+The thermodynamic relationship governing the fluid mass flow rate ($\dot{m}$) required to remove heat from the white space is given by @eq-heat-rejection [@ashrae2023liquid; @ref22_reliabilityengine_liquid]:
 
 $$Q = \dot{m} C_p \Delta T$$ {#eq-heat-rejection}
 
 where $Q$ represents the heat rejection duty in kilowatts ($\text{kW}$), $\dot{m}$ is the fluid mass flow rate in kilograms per second ($\text{kg/s}$), $C_p$ is the specific heat capacity of the heat transfer fluid in $\text{kJ/(kg}\cdot\text{K)}$, and $\Delta T$ represents the temperature difference between the TCS supply and return lines in kelvin ($\text{K}$) [@ref22_reliabilityengine_liquid].
 
-Converting mass flow into volumetric flow rate ($\dot{V}$) in liters per second ($\text{L/s}$), accounting for fluid density ($\rho$):
+Converting mass flow into volumetric flow rate ($\dot{V}$) in liters per second ($\text{L/s}$), accounting for fluid density ($\rho$), yields @eq-volumetric-flow:
 
 $$\dot{V} = \frac{Q}{\rho C_p \Delta T}$$ {#eq-volumetric-flow}
 
-For the MEP-QS, changes in the design $\Delta T$ alter fluid flow requirements, which directly impacts pipe sizing, valve bodies, pumping kilowatts, and insulation volumes [@ref24_h2x_dtc]. In a direct-to-chip architecture with a narrow design temperature difference ($\Delta T = 10\text{ K}$) using a standard 25% propylene glycol solution (PG25: $\rho \approx 1020\text{ kg/m}^3$, $C_p \approx 3.93\text{ kJ/(kg}\cdot\text{K)}$), the volumetric flow rate per megawatt ($1000\text{ kW}$) of critical IT heat load is:
+For the MEP-QS, changes in the design $\Delta T$ alter fluid flow requirements, which directly impacts pipe sizing, valve bodies, pumping kilowatts, and insulation volumes [@ref24_h2x_dtc]. In a direct-to-chip architecture with a narrow design temperature difference ($\Delta T = 10\text{ K}$) using a standard 25% propylene glycol solution (PG25: $\rho \approx 1020\text{ kg/m}^3$, $C_p \approx 3.93\text{ kJ/(kg}\cdot\text{K)}$), substituting into @eq-volumetric-flow gives the volumetric flow rate per megawatt ($1000\text{ kW}$) of critical IT heat load in @eq-pg25-10k:
 
 $$\dot{V} = \frac{1000\text{ kW}}{1.02\text{ kg/L} \times 3.93\text{ kJ/(kg}\cdot\text{K)} \times 10\text{ K}} \approx 24.95\text{ L/s} \quad (1497\text{ L/min})$$ {#eq-pg25-10k}
 
-This confirms the empirical rule of approximately $1.5\text{ L/min}$ per kilowatt of critical load [@ref23_keentel_cdu]. Expanding the design $\Delta T$ to $20\text{ K}$ halves the volumetric flow rate to $12.47\text{ L/s}$ ($748.4\text{ L/min}$) [@ref24_h2x_dtc]. This reduction permits smaller header sizes (reducing a nominal bore from $\text{DN125}$ to $\text{DN80}$), cutting stainless steel tonnage and orbital welding labor while reducing secondary pumping power requirements by approximately $70\%$ [@ref24_h2x_dtc].
+This confirms the empirical rule of approximately $1.5\text{ L/min}$ per kilowatt of critical load [@ref23_keentel_cdu]. Expanding the design $\Delta T$ to $20\text{ K}$ halves the volumetric flow rate to $12.47\text{ L/s}$ ($748.4\text{ L/min}$), as modeled across $\Delta T$ steps in @tbl-dtc-flow-calculator [@ref24_h2x_dtc]. This reduction permits smaller header sizes (reducing a nominal bore from $\text{DN125}$ to $\text{DN80}$), cutting stainless steel tonnage and orbital welding labor while reducing secondary pumping power requirements by approximately $70\%$ [@ref24_h2x_dtc].
 
 ```{python}
 #| label: tbl-dtc-flow-calculator
@@ -104,7 +104,7 @@ The CDU plate heat exchanger approach temperature ($\Delta T_{\text{approach}} =
 
 ## Rear Door Heat Exchangers (RDHx) and Immersion Cooling systems: Single-phase and two-phase dielectric fluid measurement and containment tanks
 
-- **Rear Door Heat Exchangers (RDHx)**: Passive or active fan-assisted chilled-water coils mounted directly to the rear frame of standard 19-inch racks ($25\text{ to }50\text{ kW/rack}$), measured per door (`No.`) plus overhead/underfloor flexible hose drops and condensation management controls [@ashrae2023liquid; @ref17_apaltek_liquid].
+- **Rear Door Heat Exchangers ([RDHx]{.gls})**: Passive or active fan-assisted chilled-water coils mounted directly to the rear frame of standard 19-inch racks ($25\text{ to }50\text{ kW/rack}$), measured per door (`No.`) plus overhead/underfloor flexible hose drops and condensation management controls [@ashrae2023liquid; @ref17_apaltek_liquid].
 - **Single-Phase & Two-Phase Immersion Tanks**: Submerge IT servers in synthetic hydrocarbon or fluorocarbon dielectric fluids inside horizontal bath tanks ($50\text{ to }200\text{ kW/tank}$). The MEP-QS must quantify the dielectric fluid initial fill volume ($\text{Liters}$, often representing a major chemical capital cost), overhead gantry cranes for blade extraction, and vapor recovery condensers [@ref17_apaltek_liquid; @ref25_budlong_cooling].
 
 ## Secondary loop treatment: Treated demineralized water, propylene glycol mixes (PG25), biocide packages, micron filtration, and wetted materials compatibility

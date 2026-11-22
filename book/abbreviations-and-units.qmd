@@ -1,0 +1,44 @@
+---
+description: "Master table of mission-critical data center MEP and EPC abbreviations, thermodynamic and electrical equation symbols, and SI-to-Imperial quantity surveying unit conversions."
+categories: ["Nomenclature", "Abbreviations", "Units", "Symbols"]
+---
+
+# Abbreviations, Symbols, and Units {.unnumbered}
+
+Mission-critical data center EPC delivery intersects turnkey contract law, thermodynamic heat-transfer physics, high-voltage power engineering, life-safety codes, and structured quantity surveying [@fidic2017silver; @rics2021nrm2; @bicsi2024002]. This front-matter reference consolidates all acronyms, mathematical symbols, and cross-regional measurement unit conversions used across Volumes I through VII.
+
+## Abbreviations and Acronyms {.unnumbered}
+
+As cataloged in @tbl-abbreviations, each acronym links directly to its full technical and commercial measurement definition in the back-matter Glossary and to the primary chapter or table where it is governed.
+
+::: {#tbl-abbreviations tbl-colwidths="[14,42,24,20]"}
+
+::: {#glossary-abbreviations-table}
+:::
+
+Master Table of Data Center MEP-QS Abbreviations and Acronyms
+:::
+
+## Mathematical and Engineering Symbols {.unnumbered}
+
+All parametric cost, thermodynamic, hydraulic, and electrical sizing equations across the book adhere to the International System of Units (SI) notation summarized in @tbl-math-symbols [@ashrae2021tc99; @ashrae2023liquid; @bicsi2024002].
+
+::: {#tbl-math-symbols tbl-colwidths="[16,44,22,18]"}
+
+::: {#glossary-symbols-table}
+:::
+
+Thermodynamic, Electrical, and Financial Formula Nomenclature
+:::
+
+## SI and Imperial Measurement Unit Conversions {.unnumbered}
+
+Hyperscale Employer's Project Requirements and Basis of Design documents authored in North America frequently specify duties in US Customary / Imperial units, whereas UK, European, and GCC Bills of Quantities prepared under RICS NRM2 measure works in metric SI units [@rics2021nrm2; @ref37_aecom_meh2024]. @tbl-unit-conversions establishes the conversion baseline used for commercial bid leveling and takeoff verification.
+
+::: {#tbl-unit-conversions tbl-colwidths="[22,28,32,18]"}
+
+::: {#glossary-units-table}
+:::
+
+SI and Imperial Unit Conversion Baseline for Data Center MEP Takeoff
+:::

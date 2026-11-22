@@ -9,20 +9,20 @@ categories: ["Volume I", "5D BIM", "Digital Takeoff", "LOD 300-500"]
 
 Hyperscale data center tenders contain thousands of drawing sheets and equipment schedules that must be quantified within 3- to 5-week bid windows [@ref26_aginera_takeoff]. Modern digital takeoff workflows partition measurement into:
 
-- **Schedule-Driven Equipment Extraction**: Automated OCR and structured table parsing of MV/LV panelboard schedules, feeder cable schedules, valve matrices, and DDC I/O point lists directly into RICS NRM2 / CSI MasterFormat BOQ workbooks [@rics2021nrm2; @ref26_aginera_takeoff].
-- **Automated Symbol Recognition**: Vector pattern matching across white space reflected ceiling plans (RCPs) and under-floor layouts to count tap-off units, VESDA sampling ports, clean-agent discharge nozzles, and multi-sensor detectors [@ref26_aginera_takeoff].
+- **Schedule-Driven Equipment Extraction**: Automated OCR and structured table parsing of MV/LV panelboard schedules, feeder cable schedules, valve matrices, and [DDC]{.gls} I/O point lists directly into RICS [NRM2]{.gls} / CSI MasterFormat [BOQ]{.gls} workbooks [@rics2021nrm2; @ref26_aginera_takeoff].
+- **Automated Symbol Recognition**: Vector pattern matching across white space reflected ceiling plans (RCPs) and under-floor layouts to count tap-off units, [VESDA]{.gls} sampling ports, clean-agent discharge nozzles, and multi-sensor detectors [@ref26_aginera_takeoff].
 - **3D Feeder & Pipe Routing Multipliers**: Combining 2D horizontal scale measurements with vertical riser drops, termination slack allowances ($1.5\text{ to }3.0\text{ m}$ per MV/LV switchboard entry), and cable tray catenary sag factors ($2\%\text{ to }3\%$) [@rics2021nrm2].
 
 ## Building Information Modeling (BIM) Level of Development (LOD 300 to LOD 500) and model-derived quantity reliability
 
-The MEP-QS must audit the federated Revit / IFC model's **Level of Development (LOD)** before relying on automated 5D BIM quantity extraction [@rics2021nrm2; @ref21_jfindia_playbook]:
+The MEP-QS must audit the federated Revit / IFC model's **Level of Development ([LOD]{.gls})** (@tbl-bim-lod-matrix) before relying on automated 5D [BIM]{.gls} quantity extraction [@rics2021nrm2; @ref21_jfindia_playbook]:
 
 | BIM Level | Project Stage | Modeled MEP Geometry | Unmodeled Scope Requiring QS Manual Allowance |
 | :--- | :--- | :--- | :--- |
 | **LOD 300** | FEED / EPC Tender | Major plant footprints, primary mains ($\ge \text{DN50}$), main busways and ladder trays [@ref21_jfindia_playbook]. | Small-bore drains/vents ($<\text{DN50}$), seismic bracing, trapeze drop rods, firestopping, cable glands, and termination kits (typically $12\%\text{–}18\%$ of trade package value) [@rics2021nrm2]. |
 | **LOD 350** | Detailed Coordination | Flanged/grooved fittings, valve bodies, hanger clearance zones, busway tap-off boxes [@ref04_helonic]. | Testing consumables, chemical passivation, NDT radiography, and factory spare parts [@rics2021nrm2]. |
 | **LOD 400** | Shop Fabrication | Spool-level pipe lengths, orbital weld seams, exact trapeze strut and seismic cable geometry. | Directly drives pre-fabrication Bills of Materials (BOM) and modular skid procurement [@ref21_jfindia_playbook]. |
-| **LOD 500** | As-Built / COBie | Verified installed geometry linked to serial numbers, warranties, and O&M manuals [@ref28_koenig_5dbim]. | Basis for Final Account re-measurement (where applicable) and asset register handover [@ref28_koenig_5dbim]. |
+| **LOD 500** | As-Built / COBie | Verified installed geometry linked to serial numbers, warranties, and O&M manuals [@ref28_koenig_5dbim]. | Basis for Final Account re-measurement (where applicable) and asset register handover (@sec-handover-final-accounts) [@ref28_koenig_5dbim]. |
 
 : 5D BIM Level of Development (LOD) Quantity Reliability Matrix for MEP-QS {#tbl-bim-lod-matrix}
 

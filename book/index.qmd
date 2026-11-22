@@ -61,6 +61,7 @@ This work employs a dual-licensing model designed for both open industry knowled
 
 - **Permanent DOI**: `10.5281/zenodo.24439435` (`https://doi.org/10.5281/zenodo.24439435`)
 - **Machine-Readable Index**: `/llms.txt`
+- **Nomenclature & Glossary Mirrors**: `/abbreviations-and-units.llms.md` and `/glossary.llms.md`
 - **Per-Chapter Clean Markdown**: Replace `.html` with `.llms.md` on any chapter URL.
 - **In-Browser WebMCP Tools (`document.modelContext` / `window.DataCenterMEPQS`)**:
   1. `calc_dtc_liquid_cooling({ it_load_kw, delta_t_k, density_kg_m3, cp_kj_kg_k })`: Computes secondary TCS coolant volumetric flow (`L/s`, `L/min`, `L/min/kW`) and selects Schedule 10S SS316L header nominal bore (`DN`).

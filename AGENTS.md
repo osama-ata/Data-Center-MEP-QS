@@ -91,6 +91,10 @@ Data-Center-MEP-QS/
 └── book/
     ├── .gitignore
     ├── _quarto.yml
+    ├── abbreviations-and-units.qmd
+    ├── glossary-filter.lua
+    ├── glossary.qmd
+    ├── glossary.yml
     ├── index.qmd
     ├── intro-commercial-architecture.qmd
     ├── references.bib
@@ -140,16 +144,17 @@ Data-Center-MEP-QS/
 Run these from the repository root. They are written to behave the same under `zsh` (the default macOS shell) and `bash`. Do not loop over an unquoted `$FILES` variable: zsh does not word-split it and the loop silently checks nothing.
 
 ```bash
-# 1. Validate YAML syntax of _quarto.yml and CITATION.cff
-ruby -ryaml -e "YAML.load_file('book/_quarto.yml'); YAML.load_file('CITATION.cff'); puts 'YAML valid!'"
+# 1. Validate YAML syntax of _quarto.yml, CITATION.cff, and glossary.yml
+ruby -ryaml -e "['book/_quarto.yml', 'CITATION.cff', 'book/glossary.yml'].each { |f| YAML.load_file(f) }; puts 'YAML valid!'"
 ```
 
 ```bash
-# 2. Source lint: bare footnote digits, unknown cross-ref targets,
-#    links/cross-refs in headings, printed code lines > 72 chars.
+# 2. Source lint: bare footnote digits, unknown cross-ref/glossary targets,
+#    links/cross-refs/glossary spans in headings, printed code lines > 72 chars.
 #    Expected output on a clean tree: "OK" and a summary line.
 python3 - <<'CHECK'
 import glob, re
+gls = set(re.findall(r"^  - key: (\w+)", open("book/glossary.yml", encoding="utf-8").read(), re.M))
 files = [f for f in glob.glob("book/**/*.qmd", recursive=True)
          if "/_book/" not in f]
 defs, refs, bad = set(), [], []
@@ -168,15 +173,22 @@ for f in sorted(files):
             continue
         refs += [(loc, r) for r in
                  re.findall(r"@((?:sec|tbl|eq|fig)-[\w-]+)", line)]
-        if line.lstrip().startswith("#") and re.search(r"@\w|\]\(", line):
-            bad.append(f"{loc}: link or cross-ref inside a heading")
+        if line.lstrip().startswith("#") and re.search(r"@\w|\]\(|\{\.gls", line):
+            bad.append(f"{loc}: link, cross-ref, or .gls inside a heading")
+        if line.lstrip().startswith(":") and "{.gls" in line:
+            bad.append(f"{loc}: .gls inside a table caption")
+        for m in re.finditer(r"\[([^\]]+)\]\{\.gls(?:\s+key=\"(\w+)\")?\}", line):
+            raw = m.group(2) or m.group(1).lower()
+            k = raw[:-1] if raw not in gls and raw.endswith("s") else raw
+            if k not in gls:
+                bad.append(f"{loc}: unknown glossary key '{raw}'")
         s = re.sub(r"\$\$.*?\$\$|\$[^$]*\$|`[^`]*`|https?://\S+", "", line)
         s = re.sub(r"\[[^\]]*@[^\]]*\]|@[\w:-]+|\{[^}]*\}", "", s)
         for m in re.finditer(r"[a-z)][0-9]{1,2}(?=[.,;:]?(\s|$))", s):
             bad.append(f"{loc}: possible bare footnote '{m.group()}'")
 bad += [f"{loc}: unknown target @{r}" for loc, r in refs if r not in defs]
 print("\n".join(bad) or "OK")
-print(f"{len(defs)} labels, {len(refs)} cross-refs, {len(bad)} issues")
+print(f"{len(defs)} labels, {len(refs)} cross-refs, {len(gls)} glossary terms, {len(bad)} issues")
 CHECK
 ```
 

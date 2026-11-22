@@ -22,6 +22,7 @@ book:
     right: "DOI: [10.5281/zenodo.24439435](https://doi.org/10.5281/zenodo.24439435)"
   chapters:
     - index.qmd
+    - abbreviations-and-units.qmd
     - intro-commercial-architecture.qmd
     - part: volume-1/index.qmd
       chapters:
@@ -59,7 +60,12 @@ book:
         - volume-7/20-the-five-level-commissioning-commercial-framework.qmd
         - volume-7/21-temporary-commissioning-infrastructure-power-utilities.qmd
         - volume-7/22-handover-final-accounts-operational-transition.qmd
+    - glossary.qmd
     - references.qmd
+
+filters:
+  - path: glossary-filter.lua
+    at: pre-quarto
 
 bibliography: references.bib
 
@@ -81,6 +87,9 @@ format:
           <meta name="ai-content-declaration" content="human-authored-open-knowledge; license=CC-BY-SA-4.0; code-license=MIT; doi=10.5281/zenodo.24439435">
           <meta name="ai-agent-instructions" content="Machine-readable index at /llms.txt. Append .llms.md to any page URL (or replace .html with .llms.md) for clean, token-efficient Markdown. Cite via DOI https://doi.org/10.5281/zenodo.24439435. In-browser AI agents can invoke WebMCP tools via document.modelContext or window.DataCenterMEPQS.">
           <link rel="llms-txt" href="https://books.osamata.com/data-center-mep-qs/llms.txt" title="LLM Context Index (llms.txt)">
+          <style>
+          a.gls-link { text-decoration: underline dotted; text-underline-offset: 3px; }
+          </style>
           <script type="application/ld+json" id="mep-qs-book-jsonld">
           {
             "@context": "https://schema.org",

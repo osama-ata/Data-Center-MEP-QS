@@ -7,7 +7,7 @@ categories: ["Volume II", "CRAH", "Fan Coil Wall", "Aisle Containment", "HAC/CAC
 
 ## Technical-Commercial Overview: White Space Air Thermal Management {.unnumbered}
 
-Conventional contained air-cooling configurations using chilled-water Computer Room Air Handlers (CRAHs), direct-expansion Computer Room Air Conditioners (CRACs), or perimeter Fan Coil Walls (FCWs) manage low-to-moderate rack power densities (8 kW to 25 kW per cabinet) [@ashrae2021tc99; @ref03_amanengineering]. Even in high-density direct-to-chip liquid-cooled AI halls (where liquid cold plates capture $70\%\text{ to }80\%$ of server heat), white space air handling remains mandatory to reject the remaining $20\%\text{ to }30\%$ airborne heat load from power supplies, storage drives, and networking gear [@ashrae2023liquid; @ref25_budlong_cooling].
+Conventional contained air-cooling configurations using chilled-water Computer Room Air Handlers ([CRAHs]{.gls key="crah"}), direct-expansion Computer Room Air Conditioners ([CRACs]{.gls key="crac"}), or perimeter Fan Coil Walls ([FCWs]{.gls key="fcw"}) manage low-to-moderate rack power densities (8 kW to 25 kW per cabinet) [@ashrae2021tc99; @ref03_amanengineering]. Even in high-density direct-to-chip liquid-cooled AI halls (@sec-liquid-cooling-tcs, where liquid cold plates capture $70\%\text{ to }80\%$ of server heat), white space air handling remains mandatory to reject the remaining $20\%\text{ to }30\%$ airborne heat load from power supplies, storage drives, and networking gear, measured across the packages in @tbl-air-containment-boq [@ashrae2023liquid; @ref25_budlong_cooling].
 
 | Mechanical System Element | Takeoff Measurement Unit | Primary Material & Engineering Specifications | Critical QS Inclusions & Cost Drivers |
 | :--- | :--- | :--- | :--- |
@@ -30,10 +30,10 @@ Hyperscale slab-on-grade data centers frequently replace raised floors and perim
 
 ## Aisle containment architectures: Hot Aisle Containment (HAC) vs. Cold Aisle Containment (CAC), structural ceiling grids, and auto-closing doors
 
-Strict separation of supply and return air streams via **Hot Aisle Containment (HAC)** or **Cold Aisle Containment (CAC)** prevents bypass airflow and allows elevated supply air temperatures ($24^\circ\text{C}\text{ to }27^\circ\text{C}$ per ASHRAE TC 9.9 Recommended Envelope) [@ashrae2021tc99; @ref04_helonic]. The MEP-QS measures containment systems by:
+Strict separation of supply and return air streams via **Hot Aisle Containment ([HAC]{.gls})** or **Cold Aisle Containment ([CAC]{.gls})** prevents bypass airflow and allows elevated supply air temperatures ($24^\circ\text{C}\text{ to }27^\circ\text{C}$ per ASHRAE TC 9.9 Recommended Envelope) [@ashrae2021tc99; @ref04_helonic]. The MEP-QS measures containment systems by:
 
 1. **Vertical Partition Panels & Chimney Extensions**: Measured in $\text{m}^2$ from the top of the IT rack ($2200\text{–}2400\text{ mm}$) to the suspended ceiling plenum or return duct collar [@rics2021nrm2; @ref04_helonic].
-2. **Aisle End-of-Row Doors**: Enumerated (`No.`) as dual sliding or self-closing bi-parting doors with vision panels and magnetic hold-open releases tied to the Fire Alarm Control Panel (FACP) [@nfpa75; @ref04_helonic].
+2. **Aisle End-of-Row Doors**: Enumerated (`No.`) as dual sliding or self-closing bi-parting doors with vision panels and magnetic hold-open releases tied to the Fire Alarm Control Panel ([FACP]{.gls}; see @sec-fire-detection-vesda) [@nfpa75; @ref04_helonic].
 3. **Vacant Rack Blanking Panels**: Provision of modular full-height blanking panels for Day-1 unpopulated rack positions to maintain aisle static pressure during Level 5 IST commissioning [@ref14_cxplanner].
 
 ## Sheet metal ductwork systems: High-velocity supply/return mains, fire/smoke dampers, motorized modulating dampers, and acoustic attenuation

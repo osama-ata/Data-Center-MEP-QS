@@ -7,9 +7,9 @@ categories: ["Volume III", "UPS", "DRUPS", "Lithium-Ion Battery", "NFPA 855"]
 
 ## Technical-Commercial Overview: Conditioned Power and Energy Storage {.unnumbered}
 
-Conditioned, uninterruptible power is maintained by static double-conversion or diesel rotary UPS (DRUPS) modules backed by battery or flywheel energy storage systems [@bicsi2024002; @ref21_jfindia_playbook]. The rapid industry transition from **Valve-Regulated Lead-Acid (VRLA)** batteries to **Lithium-Iron Phosphate (LFP)** or Nickel-Manganese-Cobalt (NMC) chemistries fundamentally restructures battery room and white space economics [@nfpa855; @ref04_helonic].
+Conditioned, uninterruptible power is maintained by static double-conversion or diesel rotary [UPS]{.gls} ([DRUPS]{.gls}) modules backed by battery or flywheel energy storage systems [@bicsi2024002; @ref21_jfindia_playbook]. The rapid industry transition from **Valve-Regulated Lead-Acid ([VRLA]{.gls})** batteries to **Lithium-Iron Phosphate ([LFP]{.gls})** or Nickel-Manganese-Cobalt (NMC) chemistries (@tbl-vrla-vs-lfp) fundamentally restructures battery room and white space economics [@nfpa855; @ref04_helonic].
 
-While lithium-ion cabinets reduce physical floor footprint by $50\%\text{ to }65\%$, reduce structural floor loading by $60\%$, and double service life (10–15 years vs. 4–5 years for VRLA), the MEP-QS must account for substantial secondary code-compliance investments mandated by **NFPA 855 (Standard for the Installation of Stationary Energy Storage Systems)** and local GCC Civil Defense directives [@nfpa855; @sbc801_fire; @uae_fire_code; @ref04_helonic].
+While lithium-ion cabinets reduce physical floor footprint by $50\%\text{ to }65\%$, reduce structural floor loading by $60\%$, and double service life (10–15 years vs. 4–5 years for VRLA), the MEP-QS must account for substantial secondary code-compliance investments mandated by **NFPA 855 (Standard for the Installation of Stationary Energy Storage Systems)** and local GCC Civil Defense directives, as structured in @tbl-ups-battery-boq [@nfpa855; @sbc801_fire; @uae_fire_code; @ref04_helonic].
 
 | Electrical System Package | Primary Unit of Measurement | Standard Measurement Rules & Inclusions | Critical Commercial Risk & Interface Factor |
 | :--- | :--- | :--- | :--- |
@@ -23,8 +23,8 @@ While lithium-ion cabinets reduce physical floor footprint by $50\%\text{ to }65
 
 Under RICS NRM2 Section 39, static UPS systems (IEC 62040-3 **VFI-SS-111** Voltage and Frequency Independent online double-conversion) are enumerated (`No.`) by true kilowatt capacity ($\text{kW} = \text{kVA}$ at unity power factor) [@rics2021nrm2; @bicsi2024002]. The MEP-QS must ensure the BOQ separately measures:
 
-- **External Wrap-Around Maintenance Bypass Switchgear (MBS)**: Input, output, and maintenance bypass ACB/MCCB cubicles with Kirk-key or electrical Castell interlocking so the entire UPS module frame can be electrically isolated for maintenance without dropping the critical load [@uptime2018tier; @ref14_cxplanner].
-- **Dual-Bus Load Bus Synchronization (LBS)**: Inter-system synchronization tie cables allowing downstream Static Transfer Switches (STS) to transfer single-corded loads seamlessly ($<4\text{ ms}$) between System A and System B UPS buses [@bicsi2024002].
+- **External Wrap-Around Maintenance Bypass Switchgear ([MBS]{.gls})**: Input, output, and maintenance bypass [ACB]{.gls}/MCCB cubicles with Kirk-key or electrical Castell interlocking so the entire UPS module frame can be electrically isolated for maintenance without dropping the critical load [@uptime2018tier; @ref14_cxplanner].
+- **Dual-Bus Load Bus Synchronization (LBS)**: Inter-system synchronization tie cables allowing downstream Static Transfer Switches ([STS]{.gls}) to transfer single-corded loads seamlessly ($<4\text{ ms}$) between System A and System B UPS buses [@bicsi2024002].
 
 ## Rotary UPS (DRUPS) systems: Commercial, mechanical, and maintenance evaluation
 

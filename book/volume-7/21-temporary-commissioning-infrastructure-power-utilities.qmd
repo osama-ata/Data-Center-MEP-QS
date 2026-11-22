@@ -7,7 +7,7 @@ categories: ["Volume VII", "Load Banks", "IST Utility Cost", "Generator Fuel", "
 
 ## Technical-Commercial Overview: Temporary Load Banks, Utilities, and Retesting Risk {.unnumbered}
 
-The MEP-QS must establish explicit BOQ line items for Level 4 and Level 5 Integrated System Testing (IST) temporary infrastructure and consumables [@rics2021nrm2; @ref19_datacenterscope_cx]. During Level 5 IST, the entire facility is operated as a synchronized thermal and electrical system under simulated load prior to client handover [@ref14_cxplanner]. This verification requires the rental procurement, temporary cabling, crane/forklift logistics, and continuous operation of large fleets of resistive, reactive, and rack-mountable low-$\Delta T$ load banks [@ref19_datacenterscope_cx; @ref31_unitedrentals_loadbanks]. For high-density liquid-cooled facilities, specialized **liquid-cooled load banks** equipped with blind-mate quick-disconnect manifolds are required to simulate thermal production directly on the secondary TCS loop [@ashrae2023liquid; @ref32_rentaload; @ref39_equipmentshare_liquid_loadbank].
+The MEP-QS must establish explicit [BOQ]{.gls} line items for Level 4 and Level 5 Integrated System Testing ([IST]{.gls}) temporary infrastructure and consumables [@rics2021nrm2; @ref19_datacenterscope_cx]. During Level 5 IST, the entire facility is operated as a synchronized thermal and electrical system under simulated load prior to client handover [@ref14_cxplanner]. This verification requires the rental procurement, temporary cabling, crane/forklift logistics, and continuous operation of large fleets of resistive, reactive, and rack-mountable low-$\Delta T$ load banks [@ref19_datacenterscope_cx; @ref31_unitedrentals_loadbanks]. For high-density liquid-cooled facilities, specialized **liquid-cooled load banks** equipped with blind-mate quick-disconnect manifolds are required to simulate thermal production directly on the secondary [TCS]{.gls} loop [@ashrae2023liquid; @ref32_rentaload; @ref39_equipmentshare_liquid_loadbank].
 
 ## Load bank procurement and logistics: Resistive, reactive, and low Delta-T rack-mountable and floor-standing load banks
 
@@ -26,11 +26,11 @@ Connecting hundreds of load banks across multiple data halls requires renting mi
 
 ## Utility fuel and electrical consumption: Quantifying fuel consumption for continuous generator burn-in and utility power usage during IST
 
-The primary consumable cost drivers during Level 4/5 commissioning are utility electrical energy and generator diesel fuel [@ref19_datacenterscope_cx]. Running an 8-hour full-load thermal heat test on a $20\text{ MW}$ critical facility requires $160\text{ MWh}$ ($160,000\text{ kWh}$) of electrical energy [@ref19_datacenterscope_cx]:
+The primary consumable cost drivers during Level 4/5 commissioning (@sec-five-level-commissioning) are utility electrical energy and generator diesel fuel [@ref19_datacenterscope_cx]. Running an 8-hour full-load thermal heat test on a $20\text{ MW}$ critical facility requires $160\text{ MWh}$ ($160,000\text{ kWh}$) of electrical energy per @eq-ist-energy [@ref19_datacenterscope_cx]:
 
 $$E_{\text{IST}} = P_{\text{critical}} \times t_{\text{test}} = 20\text{ MW} \times 8\text{ h} = 160\text{ MWh}$$ {#eq-ist-energy}
 
-At an industrial utility rate of $\$0.10/\text{kWh}$, the utility power cost alone is $\$16,000$ for a single 8-hour test run (or $\$48,000$ for a 24-hour burn-in), exclusive of PUE cooling overhead, load-bank rental, temporary MV/LV cabling, setup labor, and test engineering fees [@ref19_datacenterscope_cx]. Similarly, running a $20\text{ MW}$ generator farm under a 12-hour blackout endurance test at a specific fuel consumption of $0.26\text{ L/kWh}$ burns $62,400\text{ Liters}$ of diesel fuel per test cycle [@iso8528_1; @ref19_datacenterscope_cx].
+At an industrial utility rate of $\$0.10/\text{kWh}$, the utility power cost alone is $\$16,000$ for a single 8-hour test run (or $\$48,000$ for a 24-hour burn-in), exclusive of PUE cooling overhead, load-bank rental, temporary MV/LV cabling, setup labor, and test engineering fees [@ref19_datacenterscope_cx]. Similarly, running a $20\text{ MW}$ generator farm (@sec-standby-generation-emergency-power) under a 12-hour blackout endurance test at a specific fuel consumption of $0.26\text{ L/kWh}$ burns $62,400\text{ Liters}$ of diesel fuel per test cycle, as evaluated across facility scales in @tbl-ist-loadbank-calculator [@iso8528_1; @ref19_datacenterscope_cx].
 
 ```{python}
 #| label: tbl-ist-loadbank-calculator

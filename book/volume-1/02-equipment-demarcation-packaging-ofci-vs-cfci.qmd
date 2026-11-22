@@ -7,13 +7,13 @@ categories: ["Volume I", "OFCI", "CFCI", "RACI Matrix", "FAT"]
 
 ## The procurement matrix: Categorization of plant into CFCI, OFCI, and Owner-Furnished, Owner-Installed (OFOI)
 
-To protect Ready-for-Service (RFS) milestones against supply-chain lead times that routinely span 50 to 80+ weeks for medium-voltage switchgear, 2.5–4.0 MW standby diesel generators, water-cooled centrifugal chillers, and Coolant Distribution Units (CDUs), hyperscale and colocation employers frequently execute frame agreements with Original Equipment Manufacturers (OEMs) prior to appointing the main EPC contractor [@ref02_linesight; @ref09_orbital_glossary].
+To protect Ready-for-Service ([RFS]{.gls}) milestones against supply-chain lead times that routinely span 50 to 80+ weeks for medium-voltage switchgear, 2.5–4.0 MW standby diesel generators, water-cooled centrifugal chillers, and Coolant Distribution Units ([CDUs]{.gls key="cdu"}), hyperscale and colocation employers frequently execute frame agreements with Original Equipment Manufacturers (OEMs) prior to appointing the main [EPC]{.gls} contractor [@ref02_linesight; @ref09_orbital_glossary].
 
 The MEP-QS must classify every major asset across three commercial procurement categories [@rics2021nrm2; @ref09_orbital_glossary]:
 
-- **OFCI (Owner-Furnished, Contractor-Installed)**: The Employer procures and pays for the capital equipment directly; the EPC Contractor takes custodial delivery at the site perimeter, offloads, rigs, installs, terminates, and integrates the equipment into Level 1–5 commissioning.
-- **CFCI (Contractor-Furnished, Contractor-Installed)**: The EPC Contractor procures, supplies, installs, and warrants all balance-of-plant (BoP) distribution systems (piping, ductwork, busways, cables, containment, supports, fire protection, and controls).
-- **OFOI (Owner-Furnished, Owner-Installed)**: IT server racks, AI/HPC clusters, active core networking switches, and occasionally vendor-turnkey security or specialty battery enclosures installed directly by the Employer's IT integration teams.
+- **[OFCI]{.gls} (Owner-Furnished, Contractor-Installed)**: The Employer procures and pays for the capital equipment directly; the EPC Contractor takes custodial delivery at the site perimeter, offloads, rigs, installs, terminates, and integrates the equipment into Level 1–5 commissioning.
+- **[CFCI]{.gls} (Contractor-Furnished, Contractor-Installed)**: The EPC Contractor procures, supplies, installs, and warrants all balance-of-plant ([BoP]{.gls}) distribution systems (piping, ductwork, busways, cables, containment, supports, fire protection, and controls).
+- **[OFOI]{.gls} (Owner-Furnished, Owner-Installed)**: IT server racks, AI/HPC clusters, active core networking switches, and occasionally vendor-turnkey security or specialty battery enclosures installed directly by the Employer's IT integration teams.
 
 ## Commercial boundary definitions: Offloading, inside-building rigging, setting to pad, and anchor-bolt torque verifications
 
@@ -25,7 +25,7 @@ Ambiguity at the physical handover seam between an OEM delivery truck and the co
 
 ## Responsibility assignment matrices (RACI) for terminal points: Pipe flanges, electrical bus stabs, and dry-contact BMS inputs
 
-To eliminate scope gaps between OEM vendor packages and MEP trade subcontracts, the MEP-QS incorporates a binding **Terminal Point Demarcation Schedule (RACI Matrix)** into every subcontract package [@rics2021nrm2; @ref09_orbital_glossary; @ref12_bidforge]:
+To eliminate scope gaps between OEM vendor packages and MEP trade subcontracts, the MEP-QS incorporates a binding **Terminal Point Demarcation Schedule (RACI Matrix)** (@tbl-ofci-cfci-raci) into every subcontract package [@rics2021nrm2; @ref09_orbital_glossary; @ref12_bidforge]:
 
 | Interface Seam | OFCI OEM Vendor Scope | CFCI MEP Trade Contractor Scope | QS Measurement & Pricing Rule |
 | :--- | :--- | :--- | :--- |
@@ -37,14 +37,14 @@ To eliminate scope gaps between OEM vendor packages and MEP trade subcontracts, 
 
 ## Owner delay mechanisms: Evaluating contractor stand-down, demurrage, and preservation costs for late OFCI deliveries
 
-When OFCI equipment arrives late, out-of-sequence, or with factory defects, the Employer breaches its implied or express supply obligations under the EPC contract, entitling the Contractor to claim an **Extension of Time (EOT)** and **Prolongation / Disruption Costs** (e.g., under modified FIDIC Silver Book Sub-Clause 8.4/8.5 and Clause 20) [@fidic2017silver; @ref01_projectassure]. Conversely, if OFCI equipment arrives *ahead* of building dry-in readiness, the MEP-QS must evaluate:
+When OFCI equipment arrives late, out-of-sequence, or with factory defects, the Employer breaches its implied or express supply obligations under the EPC contract, entitling the Contractor to claim an **Extension of Time ([EOT]{.gls})** and **Prolongation / Disruption Costs** (@sec-variation-governance-claims; e.g., under modified FIDIC Silver Book Sub-Clause 8.4/8.5 and Clause 20) [@fidic2017silver; @ref01_projectassure]. Conversely, if OFCI equipment arrives *ahead* of building dry-in readiness, the MEP-QS must evaluate:
 
 - **Climate-Controlled Warehousing & Demurrage**: Bonded storage fees, double-handling crane lifts, and transport re-mobilization.
 - **Preservation Maintenance**: Continuous energizing of anti-condensation space heaters in MV switchgear and generators, dry-nitrogen positive-pressure blanketing of chiller and CDU heat exchangers, and periodic shaft rotation to prevent bearing brinelling during extended storage [@ref09_orbital_glossary; @ref14_cxplanner].
 
 ## Factory Acceptance Testing (FAT) travel, witnessing allowances, and international factory logistics commercialization
 
-Level 1 Factory Acceptance Testing (FAT) occurs at OEM manufacturing plants across Europe, North America, Asia, or the Middle East [@ref14_cxplanner]. The MEP-QS must establish transparent **Provisional Sums** or itemized schedule allowances covering:
+Level 1 Factory Acceptance Testing ([FAT]{.gls}) occurs at OEM manufacturing plants across Europe, North America, Asia, or the Middle East [@ref14_cxplanner]. The MEP-QS must establish transparent **Provisional Sums** or itemized schedule allowances covering:
 
-- Business/economy airfare, accommodation, per-diem subsistence, and visa costs for the Employer's representatives, the independent Commissioning Agent (CxA), and the EPC Contractor's lead MEP engineers [@rics2021nrm2; @ref14_cxplanner].
+- Business/economy airfare, accommodation, per-diem subsistence, and visa costs for the Employer's representatives, the independent Commissioning Agent ([CxA]{.gls}), and the EPC Contractor's lead MEP engineers [@rics2021nrm2; @ref14_cxplanner].
 - **Re-Inspection Back-Charges**: Contractual deductions stipulating that if an OEM fails a witnessed FAT run due to manufacturing non-conformance, all travel and man-hour costs for the repeat FAT witness trip are back-charged to the defaulting party [@fidic2017silver; @ref19_datacenterscope_cx].

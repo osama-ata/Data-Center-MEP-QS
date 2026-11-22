@@ -1,0 +1,11 @@
+---
+description: "Cross-referenced practitioner glossary of data center Mechanical, Electrical, Plumbing, Automation, and FIDIC EPC Quantity Surveying terms with standard measurement rules and chapter links."
+categories: ["Glossary", "Definitions", "Data Center MEP-QS", "RICS NRM2"]
+---
+
+# Glossary of Terms {.unnumbered}
+
+This glossary defines the core contractual, cost-engineering, mechanical, liquid-cooling, electrical, fire-protection, automation, and commissioning terms used throughout this manual. Every entry summarizes both the technical engineering scope and its commercial demarcation or measurement significance for the MEP Quantity Surveyor, with links back to the primary chapters, tables, and equations where the topic is developed.
+
+::: {#glossary-entries}
+:::

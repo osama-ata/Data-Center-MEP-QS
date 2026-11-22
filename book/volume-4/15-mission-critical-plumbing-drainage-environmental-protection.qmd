@@ -10,7 +10,7 @@ categories: ["Volume IV", "Reverse Osmosis", "Leak Detection", "Industrial Drain
 Data centers utilizing evaporative cooling towers, adiabatic dry coolers, or ultrasonic/steam white-space humidifiers require high-purity water treatment plants to prevent scale deposition and Legionella proliferation [@ashrae2021tc99; @ref22_reliabilityengine_liquid]. Under RICS NRM2 Section 32/33 and CSI Division 22, the MEP-QS quantifies:
 
 - **Raw & Make-Up Water Storage Tanks**: Sectional GRP or reinforced concrete concrete-lined tanks sized for **24 to 72 hours of peak summer evaporative cooling autonomy** [@uptime2018tier; @ref37_aecom_meh2024].
-- **Duplex Water Softeners & Reverse Osmosis (RO) Skids (`No.`)**: Multi-media sand filters, activated carbon filters, duplex ion-exchange softeners, high-pressure RO membrane skids ($\text{m}^3/\text{h}$ permeate rating), UV sterilizers, and chemical dosing pumps [@ref22_reliabilityengine_liquid].
+- **Duplex Water Softeners & Reverse Osmosis ([RO]{.gls}) Skids (`No.`)**: Multi-media sand filters, activated carbon filters, duplex ion-exchange softeners, high-pressure RO membrane skids ($\text{m}^3/\text{h}$ permeate rating), UV sterilizers, and chemical dosing pumps [@ref22_reliabilityengine_liquid].
 
 ## Critical drainage systems: Chilled water leak containment, cooling tower blowdown drains, oily water separators, and fuel trap chambers
 
@@ -21,10 +21,10 @@ Industrial and technical drainage must be strictly segregated from domestic sani
 
 ## Distance-locating leak detection systems: Sensing cables, zonal location modules, alarm panels, and under-floor sensing grids around CDUs and CRACs
 
-In high-density facilities where primary FWS mains and secondary TCS liquid-cooling headers traverse technical galleries and white spaces, a single undetected fluid leak can cause catastrophic short circuits [@ashrae2023liquid; @ref14_cxplanner]. The MEP-QS measures **Addressable Distance-Locating Leak Detection Systems** by:
+In high-density facilities where primary [FWS]{.gls} mains (@sec-central-chilled-water-plants) and secondary [TCS]{.gls} liquid-cooling headers (@sec-liquid-cooling-tcs) traverse technical galleries and white spaces, a single undetected fluid leak can cause catastrophic short circuits [@ashrae2023liquid; @ref14_cxplanner]. The MEP-QS measures **Addressable Distance-Locating Leak Detection Systems** by:
 
-- **Conductive Polymer Sensing Cable (`m`)**: Measured in linear meters along the perimeter of every CRAH unit, CDU skid, under-pipe drip tray, perimeter trench, and beneath raised-floor manifolds, plus adhesive hold-down clips every $600\text{ mm}$ and weighted jumper leads [@rics2021nrm2; @ref14_cxplanner].
-- **Digital Distance-Locating Master Controllers (`No.`)**: Capable of pinpointing water or PG25 glycol contact to within $\pm 1.0\text{ m}$ along the cable run and communicating exact coordinates to the BMS/DCIM via Modbus TCP/BACnet [@ref14_cxplanner].
+- **Conductive Polymer Sensing Cable (`m`)**: Measured in linear meters along the perimeter of every [CRAH]{.gls} unit, [CDU]{.gls} skid, under-pipe drip tray, perimeter trench, and beneath raised-floor manifolds, plus adhesive hold-down clips every $600\text{ mm}$ and weighted jumper leads [@rics2021nrm2; @ref14_cxplanner].
+- **Digital Distance-Locating Master Controllers (`No.`)**: Capable of pinpointing water or PG25 glycol contact to within $\pm 1.0\text{ m}$ along the cable run and communicating exact coordinates to the [BMS]{.gls}/[DCIM]{.gls} (@sec-bms-epms-dcim) via Modbus TCP/BACnet [@ref14_cxplanner].
 
 ## Domestic water, emergency eyewash stations, and sanitary installations within technical and administrative zones
 

@@ -1,0 +1,1129 @@
+# =====================================================================
+# Single-Source Abbreviations, Symbols, Unit Conversions & Glossary
+#Text/Definitions License: CC BY-SA 4.0
+# =====================================================================
+
+terms:
+  - key: acb
+    abbr: ACB
+    term: Air Circuit Breaker
+    domain: Electrical & Power
+    short: Draw-out low-voltage main, bus-tie, or bypass breaker.
+    refs: ["@sec-lv-distribution-white-space-power", "@tbl-lv-busway-boq"]
+    definition: |
+      Low-voltage switching and overcurrent protective device
+      (commonly rated $800\text{ A}$ to $6300\text{ A}$) installed in
+      incoming, bus-section, and maintenance-bypass cubicles of Main
+      Low-Voltage Switchboards and UPS frames, enumerated per assembly
+      and frame rating [@rics2021nrm2; @bicsi2024002].
+
+  - key: ahu
+    abbr: AHU
+    term: Air Handling Unit
+    domain: Mechanical & Liquid Cooling
+    short: Central air-treatment plant for ventilation and pressurization.
+    refs: ["@sec-air-handling-containment", "@tbl-air-containment-boq"]
+    definition: |
+      Packaged air-moving and filtration assembly supplying treated
+      outdoor make-up air, white-space positive pressurization, and
+      corridor conditioning, measured individually by airflow duty,
+      external static pressure, and filtration stages
+      [@ashrae2021tc99; @rics2021nrm2].
+
+  - key: ais
+    abbr: AIS
+    term: Air-Insulated Switchgear
+    domain: Electrical & Power
+    short: High-voltage substation switchgear using atmospheric air clearance.
+    refs: ["@sec-hv-mv-power-distribution", "@tbl-hv-mv-boq"]
+    definition: |
+      High-voltage outdoor or indoor substation equipment in which
+      phase-to-phase and phase-to-earth dielectric isolation relies on
+      open air clearances, requiring a larger civil yard footprint than
+      gas-insulated bays [@sec_grid_code; @dewa_hv_regulations].
+
+  - key: arcp
+    abbr: ARCP
+    term: Agent Releasing Control Panel
+    domain: Fire, Plumbing & Life Safety
+    short: Dedicated fire panel controlling gaseous extinguishant discharge.
+    refs: ["@sec-fire-detection-vesda", "@sec-fire-suppression-white-space"]
+    definition: |
+      Supervised life-safety control panel that processes cross-zoned
+      smoke detection inputs, countdown timers, manual abort switches,
+      and solenoid actuator circuits for clean-agent or pre-action fire
+      suppression zones [@nfpa75; @sbc801_fire].
+
+  - key: asd
+    abbr: ASD
+    term: Aspirating Smoke Detection
+    domain: Fire, Plumbing & Life Safety
+    short: Active air-sampling laser smoke detection network.
+    refs: ["@sec-fire-detection-vesda"]
+    definition: |
+      High-sensitivity fire detection architecture that continuously
+      draws room or plenum air through perforated pipe networks into a
+      central optical or laser chamber to detect incipient pyrolysis
+      before dilution by high-velocity white-space airflows
+      [@nfpa75; @rics2021nrm2].
+
+  - key: ats
+    abbr: ATS
+    term: Automatic Transfer Switch
+    domain: Electrical & Power
+    short: Automated power switching device between primary and backup feeds.
+    refs: ["@sec-central-chilled-water-plants", "@sec-five-level-commissioning"]
+    definition: |
+      Electromechanical or solid-state switching assembly that senses
+      loss or degradation of a primary power source and transfers
+      mechanical or house electrical loads to an alternate feeder
+      [@uptime2018tier; @bicsi2024002].
+
+  - key: bcms
+    abbr: BCMS
+    term: Branch Circuit Monitoring System
+    domain: Electrical & Power
+    short: Multi-channel current and power metering at panelboard poles.
+    refs: ["@sec-lv-distribution-white-space-power"]
+    definition: |
+      Factory- or field-installed current-transformer strip and
+      metering controller integrated into PDUs, RPPs, or busway tap-off
+      boxes to monitor load current, energy consumption, and overload
+      thresholds at individual branch breakers [@bicsi2024002; @rics2021nrm2].
+
+  - key: bim
+    abbr: BIM
+    term: Building Information Modeling
+    domain: Cost & BIM
+    short: Object-based 3D/5D digital representation of facility assets.
+    refs: ["@sec-digital-takeoff-5d-bim", "@tbl-bim-lod-matrix"]
+    definition: |
+      Parametric digital modeling workflow linking spatial geometry
+      (LOD 300 to LOD 500) with equipment schedules, clash coordination,
+      5D quantity extraction, and handover asset attributes
+      [@rics2021nrm2].
+
+  - key: bms
+    abbr: BMS
+    term: Building Management System
+    domain: Automation, ELV & Telecom
+    short: Industrial control platform governing mechanical and environmental plant.
+    refs: ["@sec-bms-epms-dcim", "@tbl-bms-io-points"]
+    definition: |
+      Supervisory and field control network—comprising redundant PLCs,
+      DDC panels, field sensors, and operator workstations—that
+      automates chillers, pumps, air handlers, CDUs, and environmental
+      alarms [@bicsi2024002; @rics2021nrm2].
+
+  - key: bod
+    abbr: BOD
+    term: Basis of Design
+    domain: Commercial & EPC
+    short: Engineering narrative translating Owner requirements into system criteria.
+    refs: ["@sec-epc-delivery-fundamentals"]
+    definition: |
+      Pre-design engineering document establishing the technical
+      parameters, redundancy topologies, environmental envelopes, and
+      load assumptions required to satisfy the Owner's Project
+      Requirements [@bicsi2024002; @uptime2018tier].
+
+  - key: boq
+    abbr: BOQ
+    term: Bill of Quantities
+    domain: Cost & BIM
+    short: Itemized schedule of measured quantities and unit rates for tendering.
+    refs: ["@sec-cost-planning-benchmarking", "@tbl-csi-nrm2-mapping"]
+    definition: |
+      Structured commercial document prepared under standardized
+      measurement rules (such as RICS NRM2) itemizing descriptions,
+      units, and measured quantities of plant, materials, labor, and
+      testing obligations for tender pricing and variation valuation
+      [@rics2021nrm2; @csi2020masterformat].
+
+  - key: bop
+    abbr: BoP
+    term: Balance of Plant
+    domain: Commercial & EPC
+    short: Interconnecting distribution, support, and auxiliary MEP systems.
+    refs: ["@sec-ofci-vs-cfci"]
+    definition: |
+      All supporting mechanical, electrical, plumbing, containment, and
+      controls infrastructure required to interconnect and operate
+      major capital equipment packages within a complete facility
+      [@rics2021nrm2].
+
+  - key: bwic
+    abbr: BWIC
+    term: Builder's Work in Connection
+    domain: Commercial & EPC
+    short: Civil/structural openings, plinths, sleeves, and firestopping for MEP.
+    refs: ["@sec-vendor-package-procurement"]
+    definition: |
+      Ancillary civil, structural, and architectural works—including
+      concrete equipment housekeeping pads, core-drilled penetrations,
+      cast-in sleeves, secondary support steelwork, and firestopping—
+      required to accommodate MEP installations [@rics2021nrm2; @ref02_linesight].
+
+  - key: cac
+    abbr: CAC
+    term: Cold Aisle Containment
+    domain: Mechanical & Liquid Cooling
+    short: Enclosure of server intake aisles to prevent supply/return air mixing.
+    refs: ["@sec-air-handling-containment", "@tbl-air-containment-boq"]
+    definition: |
+      White-space airflow segregation assembly that encloses the cold
+      supply aisle with end-of-row doors and roof panels (including
+      fusible or FACP-interlocked fire-release panels) so conditioned
+      air passes exclusively through IT server intakes
+      [@ashrae2021tc99; @nfpa75].
+
+  - key: capex
+    abbr: CapEx
+    term: Capital Expenditure
+    domain: Cost & BIM
+    short: Upfront investment for engineering, plant procurement, and construction.
+    refs: ["@sec-epc-delivery-fundamentals", "@eq-capex-per-kw"]
+    definition: |
+      Total upfront capital cost incurred to engineer, procure,
+      construct, and commission permanent data center assets prior to
+      commercial operation, typically benchmarked in USD per kilowatt
+      or megawatt of critical IT load [@rics2021nrm2; @ref37_aecom_meh2024].
+
+  - key: cbs
+    abbr: CBS
+    term: Cost Breakdown Structure
+    domain: Cost & BIM
+    short: Hierarchical coding framework organizing project budgets and BOQs.
+    refs: ["@sec-cost-planning-benchmarking", "@tbl-csi-nrm2-mapping"]
+    definition: |
+      Hierarchical cost-coding taxonomy mapping contract packages,
+      elemental estimates, and variation accounts to standard industry
+      classifications such as CSI MasterFormat and RICS NRM2
+      [@rics2021nrm2; @csi2020masterformat].
+
+  - key: cdu
+    abbr: CDU
+    term: Coolant Distribution Unit
+    domain: Mechanical & Liquid Cooling
+    short: Heat-exchange and pumping skid isolating primary FWS from secondary TCS.
+    refs: ["@sec-liquid-cooling-tcs", "@tbl-tcs-boq-breakdown"]
+    definition: |
+      Packaged liquid-to-liquid or liquid-to-air thermal transfer unit
+      incorporating plate heat exchangers, redundant variable-speed
+      pumps, fine filtration, and water-chemistry isolation between the
+      primary Facility Water System and the secondary Technology
+      Cooling System [@ashrae2023liquid].
+
+  - key: cfci
+    abbr: CFCI
+    term: Contractor-Furnished, Contractor-Installed
+    domain: Commercial & EPC
+    short: Equipment and materials procured, installed, and warranted by the EPC.
+    refs: ["@sec-ofci-vs-cfci", "@tbl-ofci-cfci-raci"]
+    definition: |
+      Procurement allocation in which the EPC Contractor (or trade
+      subcontractor) assumes full commercial, supply-chain, rigging,
+      installation, testing, and single-point warranty responsibility
+      for an item of plant or balance-of-plant distribution
+      [@rics2021nrm2; @fidic2017silver].
+
+  - key: cobie
+    abbr: COBie
+    term: Construction Operations Building Information Exchange
+    domain: Cost & BIM
+    short: Structured digital asset data schema handed over for facility O&M.
+    refs: ["@sec-digital-takeoff-5d-bim", "@sec-handover-final-accounts"]
+    definition: |
+      Non-proprietary structured data deliverable extracting serialized
+      equipment attributes, spatial locations, spare-parts lists, and
+      preventive maintenance schedules from LOD 500 BIM models for
+      import into computerized maintenance systems
+      [@rics2021nrm2; @fidic2017silver].
+
+  - key: cop
+    abbr: COP
+    term: Continuous Operating Power
+    domain: Electrical & Power
+    short: ISO 8528-1 generator rating for unlimited hours at constant 100% load.
+    refs: ["@sec-standby-generation-emergency-power", "@tbl-generators-boq"]
+    definition: |
+      Generator set rating defined under ISO 8528-1 denoting the
+      maximum power a generating set can deliver continuously for an
+      unlimited number of annual hours at a constant load between
+      stated maintenance intervals [@iso8528_1; @uptime2018tier].
+
+  - key: crac
+    abbr: CRAC
+    term: Computer Room Air Conditioner
+    domain: Mechanical & Liquid Cooling
+    short: Direct-expansion refrigerant white-space precision cooling unit.
+    refs: ["@sec-air-handling-containment"]
+    definition: |
+      Precision air-conditioning unit utilizing an internal compressor
+      and direct-expansion refrigerant circuit rejected to an outdoor
+      condenser or fluid loop to regulate sensible temperature and
+      humidity in technical rooms [@ashrae2021tc99; @rics2021nrm2].
+
+  - key: crah
+    abbr: CRAH
+    term: Computer Room Air Handler
+    domain: Mechanical & Liquid Cooling
+    short: Chilled-water coil and EC-fan white-space cooling unit.
+    refs: ["@sec-air-handling-containment", "@tbl-air-containment-boq"]
+    definition: |
+      Chilled-water white-space air-handling unit combining finned
+      cooling coils, modulating control valves, and variable-speed
+      electronically commutated fan arrays, leveled commercially on net
+      sensible cooling capacity [@ashrae2021tc99; @bicsi2024002].
+
+  - key: csa
+    abbr: CSA
+    term: Civil, Structural, and Architectural
+    domain: Commercial & EPC
+    short: Core shell, foundations, superstructure, and envelope scope.
+    refs: ["@sec-epc-delivery-fundamentals", "@tbl-capex-distribution"]
+    definition: |
+      Non-MEP building works encompassing earthworks, deep foundations,
+      equipment pads, structural steel or concrete frames, vapor-sealed
+      envelopes, and fire-rated architectural partitions [@rics2021nrm2].
+
+  - key: cxa
+    abbr: CxA
+    term: Commissioning Agent
+    domain: Commissioning & Handover
+    short: Independent specialist directing and witnessing Level 1–5 testing.
+    refs: ["@sec-five-level-commissioning", "@tbl-five-level-commissioning"]
+    definition: |
+      Independent third-party or Employer-appointed engineering
+      authority responsible for authoring test scripts, witnessing
+      Level 1 through Level 5 commissioning, managing deficiency logs,
+      and certifying system readiness [@bicsi2024002; @uptime2018tier].
+
+  - key: dcc
+    abbr: DCC
+    term: Data Center Continuous
+    domain: Electrical & Power
+    short: OEM continuous generator rating with zero runtime cap for Tier III/IV.
+    refs: ["@sec-standby-generation-emergency-power", "@tbl-generators-boq"]
+    definition: |
+      Manufacturer mission-critical generator rating aligned with
+      Uptime Institute Tier III and Tier IV requirements, warranting
+      100% nameplate electrical output for unlimited annual operating
+      hours in a non-utility-paralleled or backup application
+      [@iso8528_1; @uptime2018tier].
+
+  - key: dcim
+    abbr: DCIM
+    term: Data Center Infrastructure Management
+    domain: Automation, ELV & Telecom
+    short: Software layer unifying IT rack telemetry with BMS and EPMS data.
+    refs: ["@sec-bms-epms-dcim"]
+    definition: |
+      Supervisory software and sensor suite aggregating white-space
+      rack environmental telemetry, power branch metering, capacity
+      planning, and automated PUE/WUE performance reporting
+      [@bicsi2024002; @ashrae2021tc99].
+
+  - key: ddc
+    abbr: DDC
+    term: Direct Digital Control
+    domain: Automation, ELV & Telecom
+    short: Microprocessor-based field automation controller and I/O hardware.
+    refs: ["@sec-bms-epms-dcim", "@tbl-bms-io-points"]
+    definition: |
+      Digital field control architecture using microprocessor or PLC
+      controllers to sample analog/digital sensor inputs and execute
+      closed-loop actuator commands across HVAC and plumbing systems
+      [@rics2021nrm2; @csi2020masterformat].
+
+  - key: dewa
+    abbr: DEWA
+    term: Dubai Electricity and Water Authority
+    domain: Electrical & Power
+    short: Public utility governing 132/11 kV grid substations in Dubai.
+    refs: ["@sec-epc-delivery-fundamentals", "@sec-hv-mv-power-distribution"]
+    definition: |
+      Statutory electricity and water utility in the Emirate of Dubai
+      establishing technical standards and contestability demarcation
+      for $132/11\text{ kV}$ substation interconnections
+      [@dewa_hv_regulations].
+
+  - key: dipa
+    abbr: DIPA
+    term: Double-Interlock Pre-Action
+    domain: Fire, Plumbing & Life Safety
+    short: Dry sprinkler system requiring both detector trip and head fusing.
+    refs: ["@sec-fire-suppression-white-space"]
+    definition: |
+      Fire sprinkler configuration holding dry nitrogen or air under
+      supervisory pressure downstream of a deluge clapper valve so
+      water enters white-space piping only upon simultaneous automatic
+      fire-detection release and thermal fusing of a sprinkler bulb
+      [@nfpa75; @rics2021nrm2].
+
+  - key: dnp
+    abbr: DNP
+    term: Defect Notification Period
+    domain: Commercial & EPC
+    short: Post-handover contractual period for rectifying latent defects.
+    refs: ["@sec-vendor-package-procurement", "@sec-handover-final-accounts"]
+    definition: |
+      Post-Taking-Over warranty and defect-rectification window under
+      the FIDIC Silver Book (typically 12 to 24 months from RFS) during
+      which retention moieties and performance security are held until
+      issuance of the Performance Certificate [@fidic2017silver].
+
+  - key: drups
+    abbr: DRUPS
+    term: Diesel Rotary Uninterruptible Power Supply
+    domain: Electrical & Power
+    short: Integrated kinetic flywheel, alternator, and diesel backup machine.
+    refs: ["@sec-ups-energy-storage"]
+    definition: |
+      Electromechanical power-conditioning unit combining a high-speed
+      kinetic energy flywheel, synchronous generator, inductive
+      coupling choke, and diesel engine on one skid to provide
+      battery-free ride-through and continuous backup generation
+      [@bicsi2024002; @iso8528_1].
+
+  - key: dtc
+    abbr: DTC
+    term: Direct-to-Chip
+    domain: Mechanical & Liquid Cooling
+    short: Liquid cooling topology circulating coolant directly through cold plates.
+    refs: ["@sec-liquid-cooling-tcs", "@tbl-dtc-flow-calculator"]
+    definition: |
+      High-density thermal management architecture that circulates
+      treated secondary coolant directly through server CPU/GPU
+      micro-channel cold plates via rack manifolds and dripless quick
+      disconnects [@ashrae2023liquid].
+
+  - key: ecn
+    abbr: ECN
+    term: Engineering Change Notice
+    domain: Commercial & EPC
+    short: Formal post-award design revision document triggering cost/time audit.
+    refs: ["@sec-variation-governance-claims"]
+    definition: |
+      Formal post-contract design modification instruction documenting
+      revisions to drawings, equipment duties, or specifications,
+      evaluated by the MEP-QS for re-measurement, abortive fabrication,
+      and schedule impact under the Variation clause
+      [@fidic2017silver; @rics2021nrm2].
+
+  - key: elv
+    abbr: ELV
+    term: Extra-Low Voltage
+    domain: Automation, ELV & Telecom
+    short: Low-potential security, life-safety, access, and telecom systems.
+    refs: ["@sec-elv-security-access-control"]
+    definition: |
+      Auxiliary building systems operating below standard low-voltage
+      power thresholds, encompassing physical access control, biometric
+      portals, IP/thermal CCTV, public address, and structured
+      telecommunications cabling [@bicsi2024002; @csi2020masterformat].
+
+  - key: eop
+    abbr: EOP
+    term: Emergency Operating Procedure
+    domain: Commissioning & Handover
+    short: Fault-response switching and isolation flowchart for critical alarms.
+    refs: ["@sec-handover-final-accounts"]
+    definition: |
+      Controlled operational response protocol delivered prior to
+      Taking Over that prescribes immediate step-by-step operator
+      actions during abnormal electrical, thermal, or life-safety
+      contingencies [@bicsi2024002; @fidic2017silver].
+
+  - key: eot
+    abbr: EOT
+    term: Extension of Time
+    domain: Commercial & EPC
+    short: Contractual adjustment postponing the Time for Completion milestone.
+    refs: ["@sec-ofci-vs-cfci", "@sec-variation-governance-claims"]
+    definition: |
+      Contractual relief mechanism adjusting the Time for Completion
+      (and relieving Delay Liquidated Damages) when an Employer-risk
+      event—such as late OFCI plant delivery or Employer Variation—
+      delays the commissioning critical path [@fidic2017silver].
+
+  - key: epc
+    abbr: EPC
+    term: Engineering, Procurement, and Construction
+    domain: Commercial & EPC
+    short: Turnkey delivery model placing single-point liability on Contractor.
+    refs: ["@sec-epc-delivery-fundamentals", "@tbl-epc-procurement-models"]
+    definition: |
+      Turnkey contracting methodology under which a single prime
+      contractor assumes comprehensive responsibility for engineering
+      design, equipment procurement, construction, commissioning, and
+      fitness-for-purpose performance guarantees [@fidic2017silver].
+
+  - key: epms
+    abbr: EPMS
+    term: Electrical Power Monitoring System
+    domain: Automation, ELV & Telecom
+    short: High-speed metering and event-recording network across power gear.
+    refs: ["@sec-bms-epms-dcim", "@tbl-bms-io-points"]
+    definition: |
+      Dedicated supervisory telemetry network linking revenue- and
+      power-quality meters, protection relays, breaker statuses, and
+      time-synchronized waveform recorders across HV, MV, UPS, and LV
+      distribution equipment [@bicsi2024002; @rics2021nrm2].
+
+  - key: esp
+    abbr: ESP
+    term: Emergency Standby Power
+    domain: Electrical & Power
+    short: ISO 8528-1 variable-load standby rating capped in annual run hours.
+    refs: ["@sec-standby-generation-emergency-power"]
+    definition: |
+      Commercial standby generator rating under ISO 8528-1 restricted
+      to variable load factors and capped annual operating hours
+      (typically $200\text{ h/yr}$), unsuitable for Uptime Tier III or
+      Tier IV continuous certification without derating [@iso8528_1].
+
+  - key: facp
+    abbr: FACP
+    term: Fire Alarm Control Panel
+    domain: Fire, Plumbing & Life Safety
+    short: Addressable life-safety panel executing detection and cause-and-effect.
+    refs: ["@sec-fire-detection-vesda"]
+    definition: |
+      Centralized life-safety controller monitoring addressable point
+      detectors, VESDA relays, and linear heat cables while executing
+      cause-and-effect trips for dampers, HVAC fans, and access doors
+      [@nfpa75; @sbc801_fire].
+
+  - key: fat
+    abbr: FAT
+    term: Factory Acceptance Testing
+    domain: Commissioning & Handover
+    short: Level 1 (Red Tag) witnessed verification at the OEM manufacturing plant.
+    refs: ["@sec-ofci-vs-cfci", "@sec-five-level-commissioning"]
+    definition: |
+      Level 1 commissioning gate conducted on manufacturer test beds
+      prior to shipment to verify nameplate capacity, dielectric
+      strength, protection logic, and build compliance before issuing
+      Red Tag release [@bicsi2024002; @rics2021nrm2].
+
+  - key: fcw
+    abbr: FCW
+    term: Fan Coil Wall
+    domain: Mechanical & Liquid Cooling
+    short: Bulkhead-mounted chilled-water coil and EC-fan array flooding data halls.
+    refs: ["@sec-air-handling-containment", "@tbl-air-containment-boq"]
+    definition: |
+      Large-surface chilled-water coil and modular EC-fan wall mounted
+      along the mechanical gallery bulkhead of slab-on-grade data halls
+      to supply horizontal low-velocity cooling air without raised
+      floors [@bicsi2024002; @ashrae2021tc99].
+
+  - key: feed
+    abbr: FEED
+    term: Front-End Engineering Design
+    domain: Commercial & EPC
+    short: Pre-tender engineering stage defining plant duties and SLDs/P&IDs.
+    refs: ["@sec-epc-delivery-fundamentals", "@sec-digital-takeoff-5d-bim"]
+    definition: |
+      Early engineering phase developing single-line diagrams, piping
+      and instrumentation diagrams, spatial layouts, and major plant
+      schedules to LOD 300 sufficiency for long-lead OFCI orders and
+      lump-sum EPC tendering [@ref02_linesight; @rics2021nrm2].
+
+  - key: fidic
+    abbr: FIDIC
+    term: International Federation of Consulting Engineers
+    domain: Commercial & EPC
+    short: Publisher of international standard construction contracts (Silver Book).
+    refs: ["@sec-epc-delivery-fundamentals", "@sec-variation-governance-claims"]
+    definition: |
+      International engineering federation publishing standardized
+      contract forms, notably the *Conditions of Contract for
+      EPC/Turnkey Projects* (Silver Book) widely adopted in
+      hyperscale and international data center delivery
+      [@fidic2017silver].
+
+  - key: fpt
+    abbr: FPT
+    term: Functional Performance Testing
+    domain: Commissioning & Handover
+    short: Level 4 (Blue Tag) standalone dynamic testing of individual systems.
+    refs: ["@sec-five-level-commissioning", "@tbl-five-level-commissioning"]
+    definition: |
+      Level 4 commissioning stage validating each standalone MEP system
+      across part-load to full-load steps, control loop tuning, alarm
+      setpoints, and local component failover prior to facility-wide
+      integration [@bicsi2024002].
+
+  - key: fws
+    abbr: FWS
+    term: Facility Water System
+    domain: Mechanical & Liquid Cooling
+    short: Primary plant chilled-water or condenser-water heat-rejection circuit.
+    refs: ["@sec-central-chilled-water-plants", "@tbl-fws-chilled-water-boq"]
+    definition: |
+      Primary building hydronic network (typically Schedule 40 carbon
+      steel) circulating chilled or condenser water between central
+      heat-rejection plant (chillers, cooling towers, adiabatic
+      coolers) and white-space CRAHs or CDU primary plates
+      [@ashrae2023liquid].
+
+  - key: gis
+    abbr: GIS
+    term: Gas-Insulated Switchgear
+    domain: Electrical & Power
+    short: Compact high-voltage substation switchgear enclosed in insulating gas.
+    refs: ["@sec-hv-mv-power-distribution", "@tbl-hv-mv-boq"]
+    definition: |
+      Metal-enclosed high-voltage substation assembly in which
+      conductors and circuit breakers are insulated with pressurized
+      $\text{SF}_6$ or clean-air dielectric gas, minimizing footprint
+      and shielding buses from dust and salt pollution
+      [@sec_grid_code; @dewa_hv_regulations].
+
+  - key: hac
+    abbr: HAC
+    term: Hot Aisle Containment
+    domain: Mechanical & Liquid Cooling
+    short: Physical enclosure capturing server exhaust air back to ceiling plenums.
+    refs: ["@sec-air-handling-containment", "@tbl-air-containment-boq"]
+    definition: |
+      White-space containment architecture enclosing the hot exhaust
+      aisle between opposing server rows with vertical chimneys and
+      aisle doors to route high-temperature return air directly back to
+      CRAH or FCW intakes [@ashrae2021tc99; @nfpa75].
+
+  - key: ist
+    abbr: IST
+    term: Integrated System Testing
+    domain: Commissioning & Handover
+    short: Level 5 (White Tag) full-load blackout and fault-tolerance stress test.
+    refs: ["@sec-five-level-commissioning", "@eq-ist-energy"]
+    definition: |
+      Final Level 5 commissioning stage operating all electrical,
+      mechanical, life-safety, and control systems simultaneously under
+      100% simulated critical load (using resistive and liquid-cooled
+      load banks) through utility blackout and failure scenarios
+      [@uptime2018tier; @bicsi2024002].
+
+  - key: ld
+    abbr: LD
+    term: Liquidated Damages
+    domain: Commercial & EPC
+    short: Pre-agreed contractual damages for RFS delay or PUE/MW shortfall.
+    refs: ["@sec-variation-governance-claims", "@eq-dual-liquidated-damages"]
+    definition: |
+      Contractually pre-estimated monetary compensation payable by the
+      EPC Contractor for failing to achieve Time for Completion (Delay
+      LDs) or guaranteed operational efficiency and capacity thresholds
+      such as design PUE (Performance LDs) [@fidic2017silver].
+
+  - key: lfp
+    abbr: LFP
+    term: Lithium-Iron Phosphate
+    domain: Electrical & Power
+    short: Stationary lithium-ion UPS battery chemistry regulated under NFPA 855.
+    refs: ["@sec-ups-energy-storage", "@tbl-vrla-vs-lfp"]
+    definition: |
+      Cathode chemistry ($\text{LiFePO}_4$) widely deployed in modern
+      UPS battery cabinets for higher power density and 10–15 year
+      service life, subject to UL 9540A thermal runaway and NFPA 855
+      fire-protection mandates [@nfpa855; @bicsi2024002].
+
+  - key: lhd
+    abbr: LHD
+    term: Linear Heat Detection
+    domain: Fire, Plumbing & Life Safety
+    short: Continuous thermal-sensing optical or digital cable along cable trays.
+    refs: ["@sec-fire-detection-vesda"]
+    definition: |
+      Continuous digital or fiber-optic temperature-sensing cable
+      routed along heavy-duty power cable trays, busways, and battery
+      racks to pinpoint localized overheating prior to insulation
+      ignition [@nfpa75; @rics2021nrm2].
+
+  - key: lod
+    abbr: LOD
+    term: Level of Development
+    domain: Cost & BIM
+    short: Standardized metric (LOD 300–500) defining BIM geometric/data maturity.
+    refs: ["@sec-digital-takeoff-5d-bim", "@tbl-bim-lod-matrix"]
+    definition: |
+      Industry specification scale (from LOD 300 tender design through
+      LOD 400 fabrication spools to LOD 500 verified as-builts)
+      governing which MEP components can be auto-extracted from 5D BIM
+      versus manually allowed by the QS [@rics2021nrm2].
+
+  - key: mbs
+    abbr: MBS
+    term: Maintenance Bypass Switchgear
+    domain: Electrical & Power
+    short: External wrap-around switchgear isolating UPS frames without load loss.
+    refs: ["@sec-ups-energy-storage"]
+    definition: |
+      External interlocked wrap-around switchboard allowing an entire
+      static UPS lineup to be electrically isolated for safe
+      maintenance or replacement while transferring critical load
+      without interruption [@uptime2018tier; @bicsi2024002].
+
+  - key: mcbn
+    abbr: MCBN
+    term: Mesh Common Bonding Network
+    domain: Electrical & Power
+    short: Equipotential interconnected bonding grid across white-space metalwork.
+    refs: ["@sec-earthing-bonding-lightning", "@tbl-mcbn-earthing-boq"]
+    definition: |
+      High-frequency equipotential bonding topology interconnecting all
+      metallic racks, cable trays, piping, pedestals, and grounding
+      busbars within a data hall to suppress transient potential
+      differences and electromagnetic noise [@bicsi2024002].
+
+  - key: mgps
+    abbr: MGPS
+    term: Master Generator Paralleling Switchgear
+    domain: Electrical & Power
+    short: Switchgear and PLC control lineup synchronizing multiple generators.
+    refs: ["@sec-standby-generation-emergency-power"]
+    definition: |
+      Medium- or low-voltage switchgear assembly equipped with
+      high-speed synchronizing, load-sharing, and load-shedding
+      controllers to parallel multiple standby generator sets onto a
+      common emergency bus [@uptime2018tier; @bicsi2024002].
+
+  - key: mlvs
+    abbr: MLVS
+    term: Main Low-Voltage Switchboard
+    domain: Electrical & Power
+    short: Form 4b low-voltage main distribution assembly downstream of MV/LV TX.
+    refs: ["@sec-lv-distribution-white-space-power", "@tbl-lv-busway-boq"]
+    definition: |
+      Type-tested low-voltage main switchboard ($400\text{ V}$ to
+      $480\text{ V}$, IEC 61439-2 Form 4b) receiving power from unit
+      transformers and distributing feeders to UPS modules, mechanical
+      switchboards, and white-space PDUs [@rics2021nrm2; @bicsi2024002].
+
+  - key: mmr
+    abbr: MMR
+    term: Meet-Me Room
+    domain: Automation, ELV & Telecom
+    short: Secure carrier-interconnection room with physically diverse entry ducts.
+    refs: ["@sec-elv-security-access-control"]
+    definition: |
+      Hardened telecommunications room where external fiber-optic
+      telecom carriers cross-connect to the facility's internal
+      structured cabling backbone; Tier III/IV topologies mandate at
+      least two geographically separated MMRs
+      [@uptime2018tier; @bicsi2024002].
+
+  - key: nrm2
+    abbr: NRM2
+    term: RICS New Rules of Measurement 2
+    domain: Cost & BIM
+    short: RICS standard for detailed measurement and BOQ preparation.
+    refs: ["@sec-cost-planning-benchmarking", "@tbl-csi-nrm2-mapping"]
+    definition: |
+      Authoritative Royal Institution of Chartered Surveyors ruleset
+      (*Detailed Measurement for Building Works*, 2nd ed.) governing
+      work-section tabulation, measurement units, and pricing
+      inclusions for MEP Bills of Quantities [@rics2021nrm2].
+
+  - key: ofci
+    abbr: OFCI
+    term: Owner-Furnished, Contractor-Installed
+    domain: Commercial & EPC
+    short: Long-lead plant bought directly by Employer and installed by EPC.
+    refs: ["@sec-ofci-vs-cfci", "@tbl-ofci-cfci-raci"]
+    definition: |
+      Hybrid procurement demarcation model in which the Employer
+      directly purchases long-lead capital plant (such as MV
+      switchgear, generators, chillers, or CDUs) from OEMs and hands
+      custodial responsibility to the EPC Contractor at the site
+      perimeter for offloading, rigging, termination, and commissioning
+      [@rics2021nrm2; @fidic2017silver].
+
+  - key: ofoi
+    abbr: OFOI
+    term: Owner-Furnished, Owner-Installed
+    domain: Commercial & EPC
+    short: Equipment (such as IT server racks) procured and installed by Employer.
+    refs: ["@sec-ofci-vs-cfci"]
+    definition: |
+      Demarcation category covering active IT compute racks, AI/HPC
+      clusters, and core networking gear procured, rigged, and
+      commissioned directly by the Employer's own integration teams
+      outside the EPC contract scope [@rics2021nrm2].
+
+  - key: opr
+    abbr: OPR
+    term: Owner's Project Requirements
+    domain: Commercial & EPC
+    short: Employer baseline defining IT MW capacity, Tier level, and PUE target.
+    refs: ["@sec-epc-delivery-fundamentals"]
+    definition: |
+      Foundational Employer governance document specifying critical IT
+      power capacity, Uptime Tier availability topology, rack thermal
+      density, and guaranteed efficiency targets against which Level 5
+      IST and fitness for purpose are judged
+      [@bicsi2024002; @uptime2018tier].
+
+  - key: pdu
+    abbr: PDU
+    term: Power Distribution Unit
+    domain: Electrical & Power
+    short: Floor-standing transformer unit or rack-level power strip (rPDU).
+    refs: ["@sec-lv-distribution-white-space-power", "@tbl-lv-busway-boq"]
+    definition: |
+      Electrical distribution assembly either stepping down and
+      isolating white-space feeders on the data hall floor (floor PDU)
+      or distributing metered receptacles vertically inside each server
+      cabinet (rack PDU / rPDU) [@bicsi2024002; @rics2021nrm2].
+
+  - key: picv
+    abbr: PICV
+    term: Pressure-Independent Control Valve
+    domain: Mechanical & Liquid Cooling
+    short: Two-in-one modulating hydronic control and dynamic balancing valve.
+    refs: ["@sec-central-chilled-water-plants", "@sec-air-handling-containment"]
+    definition: |
+      Hydronic control valve combining an internal differential-pressure
+      regulator with an actuated modulating orifice to maintain exact
+      design flow across CRAH and CDU coils regardless of loop pressure
+      fluctuations [@rics2021nrm2; @ashrae2021tc99].
+
+  - key: pue
+    abbr: PUE
+    term: Power Usage Effectiveness
+    domain: Commercial & EPC
+    short: Ratio of total facility electrical power to IT equipment power.
+    refs: ["@sec-epc-delivery-fundamentals", "@eq-pue-definition"]
+    definition: |
+      Dimensionless energy-efficiency metric equal to total facility
+      power divided by critical IT equipment power, enforced in turnkey
+      EPC contracts as a warranted performance threshold subject to
+      Performance Liquidated Damages [@ashrae2021tc99; @fidic2017silver].
+
+  - key: qd
+    abbr: QD
+    term: Quick Disconnect
+    domain: Mechanical & Liquid Cooling
+    short: Non-drip blind-mate or push-to-connect server liquid coupling.
+    refs: ["@sec-liquid-cooling-tcs", "@tbl-tcs-boq-breakdown"]
+    definition: |
+      Precision flat-face, dual-shutoff dripless fluid coupling
+      connecting secondary TCS rack manifold hoses to individual
+      liquid-cooled server cold plates without spilling coolant or
+      admitting air during hot-swap maintenance [@ashrae2023liquid].
+
+  - key: rdhx
+    abbr: RDHx
+    term: Rear Door Heat Exchanger
+    domain: Mechanical & Liquid Cooling
+    short: Rack-mounted chilled-water rear door coil neutralizing server exhaust.
+    refs: ["@sec-liquid-cooling-tcs"]
+    definition: |
+      Passive or fan-assisted finned hydronic heat exchanger mounted
+      directly to the rear frame of an IT cabinet to absorb server
+      exhaust heat before it enters the white space [@ashrae2023liquid].
+
+  - key: rfq
+    abbr: RFQ
+    term: Request for Quotation
+    domain: Commercial & EPC
+    short: Structured commercial/technical tender inquiry issued to OEMs or trades.
+    refs: ["@sec-vendor-package-procurement", "@tbl-oem-bid-leveling"]
+    definition: |
+      Formal procurement solicitation package bundling pricing
+      schedules, technical compliance matrices, Incoterms delivery
+      rules, and commissioning attendance schedules for competitive
+      vendor bid leveling [@rics2021nrm2; @ref02_linesight].
+
+  - key: rfs
+    abbr: RFS
+    term: Ready-for-Service
+    domain: Commissioning & Handover
+    short: Commercial handover milestone after White Tag IST and Taking Over.
+    refs: ["@sec-epc-delivery-fundamentals", "@sec-handover-final-accounts"]
+    definition: |
+      Contractual completion milestone signifying that Level 5
+      Integrated System Testing, statutory life-safety approvals, and
+      LOD 500 handover records are complete so live customer IT racks
+      can be energized [@fidic2017silver; @bicsi2024002].
+
+  - key: ro
+    abbr: RO
+    term: Reverse Osmosis
+    domain: Fire, Plumbing & Life Safety
+    short: High-pressure membrane demineralization plant for make-up water.
+    refs: ["@sec-plumbing-drainage-environmental"]
+    definition: |
+      Membrane water-purification skid removing dissolved mineral salts
+      and conductivity from raw feed water supplying adiabatic coolers,
+      evaporative towers, and white-space humidifiers
+      [@ashrae2021tc99; @rics2021nrm2].
+
+  - key: rpp
+    abbr: RPP
+    term: Remote Power Panel
+    domain: Electrical & Power
+    short: High-density white-space branch circuit panelboard feeding whips.
+    refs: ["@sec-lv-distribution-white-space-power"]
+    definition: |
+      Floor-mounted white-space distribution cabinet housing dual
+      high-pole-count branch breaker panelboards and integrated BCMS
+      strips to feed under-floor or overhead server rack power whips
+      [@bicsi2024002; @rics2021nrm2].
+
+  - key: sat
+    abbr: SAT
+    term: Site Acceptance Testing
+    domain: Commissioning & Handover
+    short: Level 2 (Yellow Tag) post-delivery physical and static site check.
+    refs: ["@sec-five-level-commissioning", "@tbl-five-level-commissioning"]
+    definition: |
+      Level 2 commissioning verification executed upon site arrival and
+      pad placement—covering shock-log inspection, nameplate checks,
+      anchor-bolt torque audits, and insulation resistance testing—prior
+      to Yellow Tag sign-off [@bicsi2024002].
+
+  - key: sec
+    abbr: SEC
+    term: Saudi Electricity Company
+    domain: Electrical & Power
+    short: National grid operator governing 132 kV / 33 kV / 13.8 kV in KSA.
+    refs: ["@sec-epc-delivery-fundamentals", "@sec-hv-mv-power-distribution"]
+    definition: |
+      Principal electric utility in the Kingdom of Saudi Arabia
+      specifying grid-code protection, tariff metering, and substation
+      adoption rules for $132\text{ kV}$, $33\text{ kV}$, and
+      $13.8\text{ kV}$ data center interconnections [@sec_grid_code].
+
+  - key: soo
+    abbr: SOO
+    term: Sequence of Operations
+    domain: Automation, ELV & Telecom
+    short: Programmed control logic governing normal, failover, and emergency modes.
+    refs: ["@sec-bms-epms-dcim", "@sec-temporary-commissioning-utilities"]
+    definition: |
+      Engineered control-logic specification defining exact PLC/BMS
+      state transitions, valve/damper interlocks, pump staging, and
+      blackout recovery timing verified during Level 4 FPT and Level 5
+      IST [@bicsi2024002; @ashrae2021tc99].
+
+  - key: srg
+    abbr: SRG
+    term: Signal Reference Grid
+    domain: Electrical & Power
+    short: Low-impedance copper mesh beneath white spaces for high-frequency equipotentiality.
+    refs: ["@sec-earthing-bonding-lightning", "@tbl-mcbn-earthing-boq"]
+    definition: |
+      Prefabricated flat-strip or bare-copper conductor grid bonded
+      across raised-floor pedestals or slab penetrations to provide a
+      low-impedance high-frequency reference plane across the white
+      space [@bicsi2024002].
+
+  - key: sts
+    abbr: STS
+    term: Static Transfer Switch
+    domain: Electrical & Power
+    short: Sub-cycle solid-state SCR switch transferring loads between A/B buses.
+    refs: ["@sec-ups-energy-storage", "@sec-lv-distribution-white-space-power"]
+    definition: |
+      Solid-state silicon-controlled rectifier switching assembly that
+      transfers critical loads between synchronized System A and System
+      B UPS buses within $<4\text{ ms}$ without interrupting IT power
+      supplies [@bicsi2024002].
+
+  - key: tco
+    abbr: TCO
+    term: Total Cost of Ownership
+    domain: Cost & BIM
+    short: Lifecycle sum of initial EPC CapEx plus discounted multi-year OpEx.
+    refs: ["@sec-cost-planning-benchmarking", "@eq-tco-model"]
+    definition: |
+      Lifecycle economic evaluation combining upfront EPC capital
+      expenditure with the discounted present value of multi-year
+      electricity consumption (driven by PUE) and preventive/replacement
+      maintenance costs [@rics2021nrm2; @ashrae2023liquid].
+
+  - key: tcs
+    abbr: TCS
+    term: Technology Cooling System
+    domain: Mechanical & Liquid Cooling
+    short: High-purity secondary stainless/PP-RCT liquid loop serving IT racks.
+    refs: ["@sec-liquid-cooling-tcs", "@tbl-tcs-boq-breakdown"]
+    definition: |
+      Hydronically isolated secondary coolant circuit (constructed in
+      orbital-welded SS304L/SS316L or PP-RCT with inhibited PG25 or
+      treated water) circulating between CDU secondary plates and IT
+      server cold plates or rear-door coils [@ashrae2023liquid].
+
+  - key: tes
+    abbr: TES
+    term: Thermal Energy Storage
+    domain: Mechanical & Liquid Cooling
+    short: Chilled-water buffer vessel providing cooling ride-through during blackouts.
+    refs: ["@sec-central-chilled-water-plants", "@eq-tes-volume"]
+    definition: |
+      Pressurized or atmospheric stratified chilled-water storage vessel
+      discharging stored cooling capacity during utility power loss to
+      maintain white-space temperatures while standby generators and
+      chillers restart [@uptime2018tier; @ashrae2021tc99].
+
+  - key: tia
+    abbr: TIA
+    term: Time Impact Analysis
+    domain: Commercial & EPC
+    short: Critical-path schedule delay modeling technique supporting EOT claims.
+    refs: ["@sec-variation-governance-claims"]
+    definition: |
+      Forensic and prospective critical-path scheduling methodology
+      inserting discrete delay fragnets into the Contemporaneous
+      Programme to demonstrate net float consumption and Extension of
+      Time entitlement [@fidic2017silver].
+
+  - key: ups
+    abbr: UPS
+    term: Uninterruptible Power Supply
+    domain: Electrical & Power
+    short: Static double-conversion or rotary system providing zero-break power.
+    refs: ["@sec-ups-energy-storage", "@tbl-ups-battery-boq"]
+    definition: |
+      Power-conditioning and ride-through system (static online
+      double-conversion VFI-SS-111 or rotary DRUPS) isolating IT loads
+      from grid disturbances while bridging the transition to standby
+      generation [@bicsi2024002; @rics2021nrm2].
+
+  - key: vesda
+    abbr: VESDA
+    term: Very Early Smoke Detection Apparatus
+    domain: Fire, Plumbing & Life Safety
+    short: Laser-based multi-stage air-sampling smoke detector for data halls.
+    refs: ["@sec-fire-detection-vesda"]
+    definition: |
+      Laser-chamber aspirating smoke detection system providing staged
+      early-warning alarm thresholds (Alert, Action, Fire 1, Fire 2)
+      across white-space ceilings, containment aisles, and return air
+      grilles [@nfpa75; @sbc801_fire].
+
+  - key: vpf
+    abbr: VPF
+    term: Variable Primary Flow
+    domain: Mechanical & Liquid Cooling
+    short: Chilled-water pumping topology modulating flow directly through chillers.
+    refs: ["@sec-central-chilled-water-plants"]
+    definition: |
+      Central chilled-water plant pumping arrangement using VFD-driven
+      primary pumps, minimum-flow bypass control, and differential
+      pressure transmitters to modulate flow directly through chiller
+      evaporators according to load [@ashrae2021tc99; @rics2021nrm2].
+
+  - key: vrla
+    abbr: VRLA
+    term: Valve-Regulated Lead-Acid
+    domain: Electrical & Power
+    short: Sealed recombinant lead-acid stationary UPS battery chemistry.
+    refs: ["@sec-ups-energy-storage", "@tbl-vrla-vs-lfp"]
+    definition: |
+      Sealed lead-acid battery technology (absorbed glass mat or gel)
+      offering lower initial CapEx than lithium-ion but requiring
+      strict $20^\circ\text{C}$–$25^\circ\text{C}$ room conditioning,
+      hydrogen ventilation, and 4–5 year replacement cycles
+      [@nfpa75; @bicsi2024002].
+
+  - key: wbs
+    abbr: WBS
+    term: Work Breakdown Structure
+    domain: Cost & BIM
+    short: Deliverable-oriented decomposition of EPC engineering and site works.
+    refs: ["@sec-cost-planning-benchmarking", "@tbl-csi-nrm2-mapping"]
+    definition: |
+      Hierarchical decomposition of total EPC project scope into
+      manageable engineering, procurement, construction, and
+      commissioning work packages aligned with the Cost Breakdown
+      Structure [@rics2021nrm2; @csi2020masterformat].
+
+  - key: wue
+    abbr: WUE
+    term: Water Usage Effectiveness
+    domain: Commercial & EPC
+    short: Annual site water consumption (Liters) per kWh of IT equipment energy.
+    refs: ["@sec-epc-delivery-fundamentals", "@eq-wue-definition"]
+    definition: |
+      Sustainability and environmental-permitting metric defined as
+      annual facility water consumption in liters divided by annual IT
+      equipment energy in kilowatt-hours ($\text{L/kWh}$), governing
+      heat-rejection selection between evaporative towers and adiabatic
+      or dry coolers [@ashrae2021tc99].
+
+symbols:
+  - sym: "$Q$"
+    meaning: "Thermal heat rejection duty or critical IT heat load"
+    unit: "kW"
+    ref: "@eq-heat-rejection"
+  - sym: "$\\dot{m}$"
+    meaning: "Coolant mass flow rate"
+    unit: "kg/s"
+    ref: "@eq-heat-rejection"
+  - sym: "$\\dot{V}$"
+    meaning: "Coolant volumetric flow rate"
+    unit: "L/s, L/min"
+    ref: "@eq-volumetric-flow"
+  - sym: "$C_p$"
+    meaning: "Specific heat capacity of heat-transfer fluid at constant pressure"
+    unit: "kJ/(kg·K)"
+    ref: "@eq-volumetric-flow"
+  - sym: "$\\rho$"
+    meaning: "Fluid mass density"
+    unit: "kg/m³, kg/L"
+    ref: "@eq-volumetric-flow"
+  - sym: "$\\Delta T$"
+    meaning: "Supply-to-return fluid or air temperature differential"
+    unit: "K (°C)"
+    ref: "@eq-volumetric-flow"
+  - sym: "$\\eta_{\\text{stratification}}$"
+    meaning: "Volumetric thermocline efficiency of stratified TES tank"
+    unit: "Dimensionless (0.85–0.90)"
+    ref: "@eq-tes-volume"
+  - sym: "$V_{\\text{TES}}$"
+    meaning: "Required chilled-water Thermal Energy Storage ride-through volume"
+    unit: "Liters (L)"
+    ref: "@eq-tes-volume"
+  - sym: "$f_{\\max}$"
+    meaning: "Maximum permissible cable tray cross-sectional fill ratio"
+    unit: "Dimensionless (0.40–0.50)"
+    ref: "@eq-tray-fill-ratio"
+  - sym: "$E_{\\text{IST}}$"
+    meaning: "Cumulative electrical energy consumed during Level 5 IST burn-in"
+    unit: "MWh (kWh)"
+    ref: "@eq-ist-energy"
+  - sym: "$\\text{PVAF}(r, N)$"
+    meaning: "Present Value Annuity Factor at discount rate $r$ over $N$ years"
+    unit: "Years (discounted)"
+    ref: "@eq-dual-liquidated-damages"
+
+units:
+  - quantity: "Cooling Capacity"
+    imperial: "1 Ton of Refrigeration (TR = 12,000 BTU/h)"
+    si: "3.5169 kWth"
+    cite: "[@ashrae2021tc99]"
+  - quantity: "Hydronic Flow Rate"
+    imperial: "15.8503 US gpm (13.1982 UK gpm)"
+    si: "1.0 L/s (3.6 m³/h)"
+    cite: "[@ashrae2023liquid]"
+  - quantity: "Airflow Rate"
+    imperial: "2,118.88 CFM (ft³/min)"
+    si: "1.0 m³/s (3,600 m³/h)"
+    cite: "[@ashrae2021tc99]"
+  - quantity: "Fluid & Gas Pressure"
+    imperial: "14.5038 psi"
+    si: "1.0 bar (100 kPa)"
+    cite: "[@nfpa75]"
+  - quantity: "Pipe Nominal Size"
+    imperial: "NPS 2 in / 4 in / 6 in / 8 in"
+    si: "DN50 / DN100 / DN150 / DN200"
+    cite: "[@rics2021nrm2]"
+  - quantity: "Conductor Gauge / Area"
+    imperial: "4/0 AWG / 500 kcmil"
+    si: "107.2 mm² (nearest IEC: 120 mm²) / 253.4 mm² (240 mm²)"
+    cite: "[@bicsi2024002]"
