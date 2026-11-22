@@ -13,15 +13,23 @@ We welcome contributions from Quantity Surveyors, MEP Cost Engineers, Commission
 
 - **Format**: Quarto Markdown (`.qmd`).
 - **Citations**: Always use BibTeX citation keys (`[@key]`) defined in `book/references.bib`.
-- **Equations & Tables**: Include Quarto cross-reference labels (`{#eq-name}`, `{#tbl-name}`).
+- **Equations & Tables**: Include Quarto cross-reference labels (`{#eq-name}`, `{#tbl-name}`). Tables produced by executable Python cells use `#| label: tbl-name` and `#| tbl-cap: "..."` instead.
+- **Cross-References**: Refer to each table and equation from the prose that discusses it (`@tbl-name`, `@eq-name`), and link to other chapters with their `@sec-*` ids when the other chapter covers the topic being discussed. Keep it to one or two references per sentence.
+- **Headings & Captions**: Do not put links, cross-references, or citations in headings, table captions, or display equations; they leak into the TOC, list of tables, and PDF bookmarks. Reference-style headings that should stay out of the TOC take `{.unnumbered .unlisted}`.
+- **New Claims Need Citations**: Every added figure, percentage, clause number, or definition needs a `[@key]` citation, preferably to a Part A primary standard. Paraphrase standards; never copy their text.
 - **Code Blocks & Console Outputs (A4 PDF Width Rule)**: Keep all lines inside fenced code blocks (`python`, `bibtex`, `bash`, etc.) and their printed console table outputs to **$\le 72$ characters wide** so they fit cleanly inside A4 PDF shaded boxes ($25\text{ mm}$ margins) without overflowing or mid-column wrapping.
 
 ## Local Preview & Rendering
 
 ```bash
 quarto preview book
+```
+
+```bash
 quarto render book
 ```
+
+Before opening a pull request, run the source lint and the post-render cross-reference check in [AGENTS.md](AGENTS.md), Section 5.
 
 ## Licensing & Architectural Decisions
 
