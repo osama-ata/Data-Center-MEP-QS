@@ -8,7 +8,7 @@ book:
   description: "Open reference manual and interactive calculation toolkit for MEP Quantity Surveyors (MEP-QS), Cost Engineers, and EPC Contract Administrators delivering hyperscale and high-density AI/HPC data centers."
   author: "Osama Ata"
   date: last-modified
-  site-url: https://osama-ata.github.io/Data-Center-MEP-QS/
+  site-url: https://books.osamata.com/data-center-mep-qs/
   repo-url: https://github.com/osama-ata/Data-Center-MEP-QS
   repo-subdir: book
   repo-branch: main
@@ -17,6 +17,9 @@ book:
   search: true
   page-navigation: true
   llms-txt: true
+  page-footer:
+    left: "© 2026 Osama Ata · Text: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · Code: [MIT](https://opensource.org/licenses/MIT)"
+    right: "DOI: [10.5281/zenodo.24439435](https://doi.org/10.5281/zenodo.24439435)"
   chapters:
     - index.qmd
     - intro-commercial-architecture.qmd
@@ -73,25 +76,51 @@ format:
     include-in-header:
       - text: |
           <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-          <meta name="ai-content-declaration" content="human-authored-open-knowledge; license=CC-BY-SA-4.0; code-license=MIT">
-          <meta name="ai-agent-instructions" content="Machine-readable index at /llms.txt. Append .llms.md to any page URL (or replace .html with .llms.md) for clean, token-efficient Markdown. In-browser AI agents can invoke WebMCP tools via document.modelContext or window.DataCenterMEPQS.">
-          <link rel="llms-txt" href="https://osama-ata.github.io/Data-Center-MEP-QS/llms.txt" title="LLM Context Index (llms.txt)">
+          <meta name="citation_doi" content="10.5281/zenodo.24439435">
+          <meta name="DC.Identifier" content="10.5281/zenodo.24439435">
+          <meta name="ai-content-declaration" content="human-authored-open-knowledge; license=CC-BY-SA-4.0; code-license=MIT; doi=10.5281/zenodo.24439435">
+          <meta name="ai-agent-instructions" content="Machine-readable index at /llms.txt. Append .llms.md to any page URL (or replace .html with .llms.md) for clean, token-efficient Markdown. Cite via DOI https://doi.org/10.5281/zenodo.24439435. In-browser AI agents can invoke WebMCP tools via document.modelContext or window.DataCenterMEPQS.">
+          <link rel="llms-txt" href="https://books.osamata.com/data-center-mep-qs/llms.txt" title="LLM Context Index (llms.txt)">
           <script type="application/ld+json" id="mep-qs-book-jsonld">
           {
             "@context": "https://schema.org",
             "@type": "Book",
-            "@id": "https://osama-ata.github.io/Data-Center-MEP-QS/#book",
+            "@id": "https://books.osamata.com/data-center-mep-qs/#book",
             "name": "Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery",
             "alternativeHeadline": "Commercial Architecture, Technical Takeoff Methodologies, and Comprehensive Table of Contents",
             "author": {
               "@type": "Person",
               "name": "Osama Ata",
+              "identifier": "https://orcid.org/0009-0006-2951-5712",
+              "sameAs": [
+                "https://orcid.org/0009-0006-2951-5712",
+                "https://github.com/osama-ata"
+              ],
               "url": "https://github.com/osama-ata"
             },
             "inLanguage": "en",
             "license": "https://creativecommons.org/licenses/by-sa/4.0/",
             "isAccessibleForFree": true,
-            "url": "https://osama-ata.github.io/Data-Center-MEP-QS/",
+            "identifier": [
+              {
+                "@type": "PropertyValue",
+                "propertyID": "DOI",
+                "name": "Zenodo Concept DOI (Latest Version)",
+                "value": "10.5281/zenodo.24439434"
+              },
+              {
+                "@type": "PropertyValue",
+                "propertyID": "DOI",
+                "name": "Zenodo Version 0.1.0 DOI",
+                "value": "10.5281/zenodo.24439435"
+              }
+            ],
+            "sameAs": [
+              "https://doi.org/10.5281/zenodo.24439434",
+              "https://doi.org/10.5281/zenodo.24439435",
+              "https://zenodo.org/records/24439435"
+            ],
+            "url": "https://books.osamata.com/data-center-mep-qs/",
             "codeRepository": "https://github.com/osama-ata/Data-Center-MEP-QS",
             "about": [
               "Data Center MEP Quantity Surveying",
@@ -151,7 +180,7 @@ format:
                 "proficiencyLevel": "Expert",
                 "license": "https://creativecommons.org/licenses/by-sa/4.0/",
                 "isAccessibleForFree": true,
-                "isPartOf": { "@id": "https://osama-ata.github.io/Data-Center-MEP-QS/#book" },
+                "isPartOf": { "@id": "https://books.osamata.com/data-center-mep-qs/#book" },
                 "encoding": {
                   "@type": "MediaObject",
                   "encodingFormat": "text/markdown",
@@ -346,9 +375,67 @@ format:
           </script>
   pdf:
     documentclass: scrreprt
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - top=25mm
+      - bottom=25mm
+      - left=25mm
+      - right=25mm
+      - headheight=15pt
+      - footskip=12mm
     toc: true
+    toc-depth: 3
+    lof: false
+    lot: true
     number-sections: true
     colorlinks: true
+    linkcolor: "NavyBlue"
+    urlcolor: "NavyBlue"
+    citecolor: "NavyBlue"
+    code-block-border-left: "#2c3e50"
+    code-block-bg: "#f8f9fa"
+    include-in-header:
+      - text: |
+          \usepackage{microtype}
+          \usepackage{fvextra}
+          \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\small,commandchars=\\\{\}}
+          \RecustomVerbatimEnvironment{verbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\small}
+          \fvset{breaklines=true,breakanywhere=true,fontsize=\small}
+          \emergencystretch=3em
+          \clubpenalty=10000
+          \widowpenalty=10000
+          \displaywidowpenalty=10000
+          \usepackage[automark,headsepline=0.4pt,footsepline=0.4pt]{scrlayer-scrpage}
+          \clearpairofpagestyles
+          \ihead{\headmark}
+          \ohead{\pagemark}
+          \ifoot{\footnotesize Data Center MEP-QS in EPC Delivery \textbar\ CC BY-SA 4.0 / MIT}
+          \ofoot{\footnotesize \href{https://doi.org/10.5281/zenodo.24439435}{DOI: 10.5281/zenodo.24439435}}
+          \setkomafont{pageheadfoot}{\normalfont\footnotesize\scshape}
+          \setkomafont{pagenumber}{\normalfont\footnotesize\bfseries}
+          \AtBeginDocument{
+            \hypersetup{
+              pdftitle={Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery},
+              pdfauthor={Osama Ata},
+              pdfsubject={Data Center MEP Quantity Surveying, Commercial Architecture, Technical Takeoff Methodologies, and Five-Level Commissioning (DOI: 10.5281/zenodo.24439435)},
+              pdfkeywords={Quantity Surveying, Data Center, MEP, EPC, FIDIC Silver Book, Direct-to-Chip Liquid Cooling, RICS NRM2, Commissioning, DOI:10.5281/zenodo.24439435}
+            }
+          }
+    include-before-body:
+      - text: |
+          \vspace*{1cm}
+          \noindent\textbf{Publication \& Open-Access Colophon}\par\smallskip
+          \noindent\footnotesize
+          \textbf{Title:} \emph{Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery: Commercial Architecture, Technical Takeoff Methodologies, and Comprehensive Table of Contents}\\
+          \textbf{Author:} Osama Ata \quad\textbar\quad \textbf{Version:} 0.1.0 (2026)\\
+          \textbf{Permanent DOI:} \href{https://doi.org/10.5281/zenodo.24439435}{\texttt{https://doi.org/10.5281/zenodo.24439435}}\\
+          \textbf{Canonical Web Edition:} \href{https://books.osamata.com/data-center-mep-qs/}{\texttt{https://books.osamata.com/data-center-mep-qs/}}\\
+          \textbf{Source Repository:} \href{https://github.com/osama-ata/Data-Center-MEP-QS}{\texttt{https://github.com/osama-ata/Data-Center-MEP-QS}}\par\smallskip
+          \noindent\textbf{Dual License:} Prose, commercial demarcation tables, and BOQ frameworks are licensed under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{\textbf{Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)}}. Executable Python and JavaScript/WebMCP engineering calculators are licensed under the \href{https://opensource.org/licenses/MIT}{\textbf{MIT License}}.\par
+          \normalsize\clearpage
   epub:
     toc: true
+    toc-depth: 3
     number-sections: true
+    rights: "© 2026 Osama Ata. Text & Tables: CC BY-SA 4.0. Code & Calculators: MIT License. DOI: 10.5281/zenodo.24439435"

@@ -19,6 +19,7 @@ The research and outline baseline lives in [Data Center MEP-QS Outline.md](Data%
 - **Never commit, push, or open a PR unless explicitly instructed by the user.**
 - **No bare footnote digits in book prose.** The source outline contains legacy numeric footnote markers (e.g., `...$9,000 per minute4`). When migrating or authoring prose in `book/**/*.qmd`, always replace bare digits with valid Pandoc/BibTeX citation keys (`[@key]`) defined in [book/references.bib](book/references.bib).
 - **Primary sources over secondary sources.** Entries in `book/references.bib` marked with `[REVIEW-SOURCE]` in their `note` field are legacy job postings, Scribd uploads, or vendor blogs from the initial outline. Whenever expanding a chapter, replace those citations with authoritative primary standards from Part A of `book/references.bib` (e.g., `@fidic2017silver`, `@rics2021nrm2`, `@uptime2018tier`, `@bicsi2024002`, `@ashrae2021tc99`, `@ashrae2023liquid`, `@iso8528_1`, `@nfpa855`, `@nfpa75`, `@csi2020masterformat`) or regional handbooks (`@ref37_aecom_meh2024`, `@ref02_linesight`). Never copy copyrighted verbatim text from standards or Scribd uploads.
+- **Keep code blocks, BibTeX entries, and printed console outputs within 72 characters per line for A4 PDF fidelity.** Even though `fvextra` (`\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines=true,...}` and `\RecustomVerbatimEnvironment{verbatim}{Verbatim}{breaklines=true,...}`) is enabled in `book/_quarto.yml` as a safety net, every Python source block, BibTeX snippet, and `print()` table output must be formatted to $\le 72$ characters wide so code boxes and ASCII tables never overflow or wrap awkwardly across A4 PDF margins ($25\text{ mm}$).
 - **Preserve the canonical repository layout.** Do not add ad-hoc folders or duplicate files at the root or inside `book/`. Keep the exact 7-volume, 22-chapter file tree documented in Section 4.
 
 ---
@@ -27,14 +28,14 @@ The research and outline baseline lives in [Data Center MEP-QS Outline.md](Data%
 
 ### Decision 1: Authoring & Multi-Format Publishing Engine — Quarto Book (`book/_quarto.yml`)
 - **Choice:** Quarto (`.qmd`) book project (`project: type: book`, output directory `_book`).
-- **Why:** The book combines multi-volume hierarchy (7 Volumes as Parts, 22 numbered Chapters), LaTeX thermodynamic and electrical equations (`$$...$$`), wide multi-column BOQ and demarcation pipe tables, cross-references (`{#eq-*}`, `{#tbl-*}`, `{#sec-*}`), BibTeX citations, and executable Python calculation blocks. Quarto builds a searchable HTML website, a print-ready LaTeX PDF (`documentclass: scrreprt`), and an EPUB from a single source tree.
+- **Why:** The book combines multi-volume hierarchy (7 Volumes as Parts, 22 numbered Chapters), LaTeX thermodynamic and electrical equations (`$$...$$`), wide multi-column BOQ and demarcation pipe tables, cross-references (`{#eq-*}`, `{#tbl-*}`, `{#sec-*}`), BibTeX citations, and executable Python calculation blocks. Quarto builds a searchable HTML website, a print-ready A4 LaTeX PDF (`documentclass: scrreprt`, `papersize: a4`, `25mm` normal margins, `scrlayer-scrpage` running headers/footers with chapter title, page number, CC BY-SA 4.0 / MIT license, and DOI `10.5281/zenodo.24439435`, plus `fvextra` line wrapping on both `Highlighting` code blocks and `verbatim` output blocks), and an EPUB from a single source tree.
 - **Math rendering:** Uses KaTeX (`html-math-method: katex`) for fast, deterministic client-side and agent-parseable math rendering.
 
 ### Decision 2: Dual Licensing & Citability (`LICENSE`, `LICENSE-CODE`, `CITATION.cff`)
 - **Choice:**
   - **Prose, Tables, and Documentation:** Creative Commons Attribution-ShareAlike 4.0 International (**CC BY-SA 4.0**) in [LICENSE](LICENSE).
   - **Code, Scripts, and Embedded Calculators:** **MIT License** in [LICENSE-CODE](LICENSE-CODE).
-  - **Academic / Industry Citability:** [CITATION.cff](CITATION.cff) (CFF 1.2.0) at the root for GitHub and Zenodo DOI citation integration.
+  - **Academic / Industry Citability:** [CITATION.cff](CITATION.cff) (CFF 1.2.0) at the root for GitHub and Zenodo DOI (`10.5281/zenodo.24439435`) citation integration.
 - **Why:** CC BY-SA 4.0 ensures the Body of Knowledge and its derivatives remain open, while MIT allows quantity surveyors and engineers to freely embed the Python and JavaScript calculation functions into commercial estimating workbooks, BIM scripts, and ERP tools without copyleft friction.
 
 ### Decision 3: Two-Tier BibTeX Citation Architecture (`book/references.bib`)
@@ -57,10 +58,10 @@ To ensure the rendered HTML site is natively consumable by LLM crawlers, coding 
 2. **Mandatory Per-Page YAML Frontmatter (`description` & `categories`):**
    - Every `.qmd` file in `book/` carries a concise 1–2 sentence `description` and `categories` array in its YAML frontmatter. Quarto uses these fields to populate the page summaries in `/llms.txt` and `<meta name="description">`.
 3. **HTML `<head>` Markdown Alternate Discovery & Crawler Directives:**
-   - Every page injects `<link rel="llms-txt" href="https://osama-ata.github.io/Data-Center-MEP-QS/llms.txt">` and dynamically attaches `<link rel="alternate" type="text/markdown" href="<current-page>.llms.md">`.
+   - Every page injects `<link rel="llms-txt" href="https://books.osamata.com/data-center-mep-qs/llms.txt">` and dynamically attaches `<link rel="alternate" type="text/markdown" href="<current-page>.llms.md">`.
    - Includes `<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">`, `<meta name="ai-content-declaration">`, and `<meta name="ai-agent-instructions">`.
 4. **Dual Schema.org JSON-LD (`Book` + `TechArticle`):**
-   - Every HTML page embeds a site-wide `schema.org/Book` JSON-LD block (`@id: https://osama-ata.github.io/Data-Center-MEP-QS/#book`, `license: CC-BY-SA-4.0`, `isAccessibleForFree: true`) and a page-specific `schema.org/TechArticle` JSON-LD block (`proficiencyLevel: "Expert"`) whose `encoding` property points directly to the page's `text/markdown` `.llms.md` URL.
+   - Every HTML page embeds a site-wide `schema.org/Book` JSON-LD block (`@id: https://books.osamata.com/data-center-mep-qs/#book`, `license: CC-BY-SA-4.0`, `isAccessibleForFree: true`) and a page-specific `schema.org/TechArticle` JSON-LD block (`proficiencyLevel: "Expert"`) whose `encoding` property points directly to the page's `text/markdown` `.llms.md` URL.
 5. **W3C WebMCP (`document.modelContext.registerTool`) & Semantic DOM Hooks (`data-agent-*`):**
    - Registers `calc_dtc_liquid_cooling`, `calc_cable_tray_fill`, and `calc_ist_energy_and_fuel` via the W3C Web Model Context Protocol (`document.modelContext.registerTool` / `navigator.modelContext.registerTool`) with full JSON Schema `inputSchema` and `annotations: { readOnlyHint: true }`, plus a fallback on `window.DataCenterMEPQS`.
    - Applies modern web accessibility and agent landmarks: `<html lang="en">`, `data-agent-role="primary-technical-content"` on `<main>`, `data-agent-component="boq-or-commercial-matrix"` on `<table>` elements, automatic `scope="col"` on all `<thead> <th>` cells, and `tabindex="0" role="region" aria-label="..."` on scrollable `<pre>` code/calculation blocks.

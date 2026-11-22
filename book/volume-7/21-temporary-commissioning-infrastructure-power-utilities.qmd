@@ -36,18 +36,34 @@ At an industrial utility rate of $\$0.10/\text{kWh}$, the utility power cost alo
 #| label: tbl-ist-loadbank-calculator
 #| tbl-cap: "Executable Python Calculator: Level 5 IST Electrical Energy and Diesel Fuel Consumption"
 
-def ist_cost_calculator(load_mw=20.0, hours=8.0, tariff_per_kwh=0.10, genset_hours=4.0, l_per_kwh=0.26, diesel_per_l=1.10):
+def ist_cost_calculator(
+    load_mw=20.0,
+    hours=8.0,
+    tariff_per_kwh=0.10,
+    genset_hours=4.0,
+    l_per_kwh=0.26,
+    diesel_per_l=1.10,
+):
     energy_mwh = load_mw * hours
     utility_usd = energy_mwh * 1000.0 * tariff_per_kwh
     diesel_l = (load_mw * 1000.0 * genset_hours) * l_per_kwh
     diesel_usd = diesel_l * diesel_per_l
     return energy_mwh, utility_usd, diesel_l, diesel_usd
 
-print(f"{'Load (MW)':<10} | {'Duration (h)':<12} | {'Energy (MWh)':<13} | {'Utility Cost ($)':<16} | {'4h Genset Diesel (L)':<20} | {'Diesel Cost ($)'}")
-print("-" * 94)
+hdr = (
+    f"{'MW':<5} | {'Hrs':<4} | {'MWh':<6} | {'Utility ($)':<11} | "
+    f"{'4h Fuel (L)':<11} | {'Fuel ($)'}"
+)
+print(hdr)
+print("-" * len(hdr))
 for mw, hrs in [(10.0, 8.0), (20.0, 8.0), (20.0, 24.0), (40.0, 24.0)]:
     e_mwh, u_usd, d_l, d_usd = ist_cost_calculator(mw, hrs)
-    print(f"{mw:<10.1f} | {hrs:<12.1f} | {e_mwh:<13.1f} | ${u_usd:<15,.2f} | {d_l:<20,.1f} | ${d_usd:,.2f}")
+    u_str = f"${u_usd:,.0f}"
+    d_str = f"${d_usd:,.0f}"
+    print(
+        f"{mw:<5.1f} | {hrs:<4.0f} | {e_mwh:<6.1f} | {u_str:<11} | "
+        f"{d_l:<11,.0f} | {d_str}"
+    )
 ```
 
 ## Rework allowances, retesting liquidated agreements, and allocating failed test re-execution costs

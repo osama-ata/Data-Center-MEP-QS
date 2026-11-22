@@ -55,7 +55,9 @@ $$A_{\text{cables}} = \sum_{i=1}^{N} \pi \left(\frac{d_i}{2}\right)^2 \le f_{\ma
 
 import math
 
-def tray_sizing_calculator(cable_count=48, cable_od_mm=18.0, max_fill=0.40, depth_mm=100.0):
+def tray_sizing_calculator(
+    cable_count=48, cable_od_mm=18.0, max_fill=0.40, depth_mm=100.0
+):
     single_area = math.pi * (cable_od_mm / 2.0) ** 2
     total_area = cable_count * single_area
     min_width = (total_area / max_fill) / depth_mm
@@ -68,10 +70,21 @@ def tray_sizing_calculator(cable_count=48, cable_od_mm=18.0, max_fill=0.40, dept
     actual_fill = total_area / (selected_w * depth_mm)
     return total_area, min_width, selected_w, actual_fill
 
-print(f"{'Cables':<8} | {'OD (mm)':<8} | {'Max Fill':<10} | {'Cable Area (mm2)':<18} | {'Min Width (mm)':<15} | {'Selected Tray (mm)':<18} | {'Actual Fill'}")
-print("-" * 102)
+hdr = (
+    f"{'Qty':<4} | {'OD':<4} | {'Limit':<5} | {'Area (mm2)':<10} | "
+    f"{'Min W':<6} | {'Tray (mm)':<9} | {'Fill'}"
+)
+print(hdr)
+print("-" * len(hdr))
 for count in [24, 36, 48, 64]:
     for f_max in [0.40, 0.50]:
-        area, min_w, sel_w, act_f = tray_sizing_calculator(count, 18.0, f_max, 100.0)
-        print(f"{count:<8} | {18.0:<8.1f} | {int(f_max*100):<9}% | {area:<18.1f} | {min_w:<15.1f} | {sel_w} x 100          | {act_f*100:.1f}%")
+        area, min_w, sel_w, act_f = tray_sizing_calculator(
+            count, 18.0, f_max, 100.0
+        )
+        tray_str = f"{sel_w}x100"
+        print(
+            f"{count:<4} | {18.0:<4.0f} | {int(f_max*100):<4}% | "
+            f"{area:<10.1f} | {min_w:<6.1f} | {tray_str:<9} | "
+            f"{act_f*100:.1f}%"
+        )
 ```

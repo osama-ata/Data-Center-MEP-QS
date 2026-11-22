@@ -5,11 +5,20 @@ title: "Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center E
 authors:
   - family-names: "Ata"
     given-names: "Osama"
+    orcid: "https://orcid.org/0009-0006-2951-5712"
 version: 0.1.0
-date-released: 2026-11-21
+date-released: 2026-11-22
+doi: 10.5281/zenodo.24439434
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24439434
+    description: "Zenodo Concept DOI (always resolves to latest release)"
+  - type: doi
+    value: 10.5281/zenodo.24439435
+    description: "Zenodo Version 0.1.0 DOI"
 license: CC-BY-SA-4.0
 repository-code: "https://github.com/osama-ata/Data-Center-MEP-QS"
-url: "https://osama-ata.github.io/Data-Center-MEP-QS/"
+url: "https://books.osamata.com/data-center-mep-qs/"
 keywords:
   - quantity-surveying
   - data-center

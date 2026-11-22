@@ -14,6 +14,7 @@ We welcome contributions from Quantity Surveyors, MEP Cost Engineers, Commission
 - **Format**: Quarto Markdown (`.qmd`).
 - **Citations**: Always use BibTeX citation keys (`[@key]`) defined in `book/references.bib`.
 - **Equations & Tables**: Include Quarto cross-reference labels (`{#eq-name}`, `{#tbl-name}`).
+- **Code Blocks & Console Outputs (A4 PDF Width Rule)**: Keep all lines inside fenced code blocks (`python`, `bibtex`, `bash`, etc.) and their printed console table outputs to **$\le 72$ characters wide** so they fit cleanly inside A4 PDF shaded boxes ($25\text{ mm}$ margins) without overflowing or mid-column wrapping.
 
 ## Local Preview & Rendering
 

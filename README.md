@@ -2,6 +2,7 @@
 
 **Commercial Architecture, Technical Takeoff Methodologies, and Comprehensive Table of Contents**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24439435.svg)](https://doi.org/10.5281/zenodo.24439435)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/Text_License-CC_BY--SA_4.0-lightgrey.svg)](LICENSE)
 [![License: MIT](https://img.shields.io/badge/Code_License-MIT-blue.svg)](LICENSE-CODE)
 
@@ -84,6 +85,26 @@ quarto preview book
 
 # Build HTML, PDF, and EPUB outputs
 quarto render book
+```
+
+## Citation
+
+If you reference this book, its takeoff frameworks, or its engineering calculators, please cite it using its Zenodo DOI:
+
+- **Concept DOI (always resolves to latest release)**: [10.5281/zenodo.24439434](https://doi.org/10.5281/zenodo.24439434)
+- **Version 0.1.0 DOI**: [10.5281/zenodo.24439435](https://doi.org/10.5281/zenodo.24439435) ([Zenodo Record](https://zenodo.org/records/24439435))
+- **Author ORCID**: [0009-0006-2951-5712](https://orcid.org/0009-0006-2951-5712)
+
+```bibtex
+@book{ata2026datacenter_mep_qs,
+  author    = {Ata, Osama},
+  title     = {Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery: Commercial Architecture, Technical Takeoff Methodologies, and Comprehensive Table of Contents},
+  year      = {2026},
+  version   = {0.1.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.24439435},
+  url       = {https://doi.org/10.5281/zenodo.24439435}
+}
 ```
 
 ## License

@@ -59,13 +59,22 @@ This confirms the empirical rule of approximately $1.5\text{ L/min}$ per kilowat
 
 import math
 
-def dtc_flow_calculator(it_load_kw=1000.0, delta_t_k=10.0, rho_kg_m3=1020.0, cp_kj_kg_k=3.93, max_vel_m_s=2.4):
+def dtc_flow_calculator(
+    it_load_kw=1000.0,
+    delta_t_k=10.0,
+    rho_kg_m3=1020.0,
+    cp_kj_kg_k=3.93,
+    max_vel_m_s=2.4,
+):
     rho_kg_l = rho_kg_m3 / 1000.0
     v_dot_l_s = it_load_kw / (rho_kg_l * cp_kj_kg_k * delta_t_k)
     v_dot_l_min = v_dot_l_s * 60.0
     l_min_per_kw = v_dot_l_min / it_load_kw
     # Standard Sch 10S SS316L pipes (DN, ID_mm)
-    pipes = [(50, 54.79), (65, 66.93), (80, 82.80), (100, 108.20), (125, 134.50), (150, 161.46)]
+    pipes = [
+        (50, 54.79), (65, 66.93), (80, 82.80),
+        (100, 108.20), (125, 134.50), (150, 161.46),
+    ]
     selected_dn, actual_vel = pipes[-1][0], 0.0
     for dn, id_mm in pipes:
         area_m2 = math.pi * ((id_mm / 1000.0) / 2.0) ** 2
@@ -75,11 +84,18 @@ def dtc_flow_calculator(it_load_kw=1000.0, delta_t_k=10.0, rho_kg_m3=1020.0, cp_
             break
     return v_dot_l_s, v_dot_l_min, l_min_per_kw, selected_dn, actual_vel
 
-print(f"{'Delta-T (K)':<12} | {'Flow (L/s)':<12} | {'Flow (L/min)':<14} | {'L/min/kW':<10} | {'Header DN':<10} | {'Velocity (m/s)'}")
-print("-" * 78)
+hdr = (
+    f"{'dT (K)':<7} | {'Flow (L/s)':<10} | {'Flow (L/m)':<10} | "
+    f"{'L/m/kW':<8} | {'Header':<7} | {'Vel (m/s)'}"
+)
+print(hdr)
+print("-" * len(hdr))
 for dt in [8.0, 10.0, 12.0, 15.0, 20.0]:
     v_ls, v_lmin, l_kw, dn, vel = dtc_flow_calculator(1000.0, dt)
-    print(f"{dt:<12.1f} | {v_ls:<12.2f} | {v_lmin:<14.1f} | {l_kw:<10.2f} | DN{dn:<8} | {vel:.2f}")
+    print(
+        f"{dt:<7.1f} | {v_ls:<10.2f} | {v_lmin:<10.1f} | "
+        f"{l_kw:<8.2f} | DN{dn:<5} | {vel:.2f}"
+    )
 ```
 
 ## Heat exchanger approach temperature analysis and secondary pumping power quantification

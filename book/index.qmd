@@ -20,9 +20,46 @@ Unlike standard commercial real estate, where architectural and structural scope
 - **Volume VI**: Procurement Execution, Subcontract Management, and Supply Chain (Chapters 18–19)
 - **Volume VII**: Testing, Commissioning, Integrated Systems Testing, and Closeout (Chapters 20–22)
 
+## How to Cite This Book
+
+- **Permanent Concept DOI (all versions / latest)**: [10.5281/zenodo.24439434](https://doi.org/10.5281/zenodo.24439434)
+- **Version 0.1.0 DOI**: [10.5281/zenodo.24439435](https://doi.org/10.5281/zenodo.24439435) ([Zenodo Record](https://zenodo.org/records/24439435))
+- **Author ORCID**: [0009-0006-2951-5712](https://orcid.org/0009-0006-2951-5712)
+- **Canonical Web Edition**: [https://books.osamata.com/data-center-mep-qs/](https://books.osamata.com/data-center-mep-qs/)
+- **Source Repository**: [https://github.com/osama-ata/Data-Center-MEP-QS](https://github.com/osama-ata/Data-Center-MEP-QS)
+- **APA / Text Citation**:
+  > Ata, O. (2026). *Mechanical, Electrical, and Plumbing Quantity Surveying in Data Center EPC Delivery: Commercial Architecture, Technical Takeoff Methodologies, and Comprehensive Table of Contents* (Version 0.1.0). Zenodo. https://doi.org/10.5281/zenodo.24439435
+
+```bibtex
+@book{ata2026datacenter_mep_qs,
+  author    = {Ata, Osama},
+  title     = {Mechanical, Electrical, and Plumbing Quantity
+               Surveying in Data Center EPC Delivery: Commercial
+               Architecture, Technical Takeoff Methodologies,
+               and Comprehensive Table of Contents},
+  year      = {2026},
+  version   = {0.1.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.24439435},
+  url       = {https://doi.org/10.5281/zenodo.24439435},
+  note      = {Licensed under CC BY-SA 4.0 (text/tables)
+               and MIT License (code/calculators)}
+}
+```
+
+## Dual Licensing & Open-Access Colophon
+
+This work employs a dual-licensing model designed for both open industry knowledge sharing and frictionless commercial engineering implementation:
+
+1. **Book Prose, Tables, and Takeoff Frameworks — [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**:
+   All text, commercial demarcation matrices, Bills of Quantities (BOQ) hierarchies, and documentation are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License**. You are free to share, copy, redistribute, and adapt the material for any purpose (including commercially), provided you give appropriate attribution, link to the license and DOI (`10.5281/zenodo.24439435`), and distribute derivative prose under the same license.
+2. **Embedded Calculators, Python Scripts, and WebMCP Tools — [MIT License](https://opensource.org/licenses/MIT)**:
+   All executable Python calculation cells, parametric sizing models, and client-side JavaScript / W3C WebMCP functions (`window.DataCenterMEPQS`) are licensed under the **MIT License**. Quantity surveyors, cost engineers, and software developers may freely embed these scripts into proprietary estimating workbooks, 5D BIM pipelines, and ERP platforms without copyleft restrictions.
+
 ::: {.content-visible when-format="llms-txt"}
 ## AI Agent & LLM Quick-Reference Index
 
+- **Permanent DOI**: `10.5281/zenodo.24439435` (`https://doi.org/10.5281/zenodo.24439435`)
 - **Machine-Readable Index**: `/llms.txt`
 - **Per-Chapter Clean Markdown**: Replace `.html` with `.llms.md` on any chapter URL.
 - **In-Browser WebMCP Tools (`document.modelContext` / `window.DataCenterMEPQS`)**:
