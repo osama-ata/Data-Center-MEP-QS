@@ -12,12 +12,17 @@ A Quarto book project covering commercial governance, equipment demarcation (OFC
 
 ```text
 Data-Center-MEP-QS/
+├── .github/workflows/deploy.yml
 ├── .gitignore
+├── AGENTS.md
+├── CLAUDE.md
 ├── CITATION.cff
 ├── CONTRIBUTING.md
+├── Data Center MEP-QS Outline.md
 ├── LICENSE
 ├── LICENSE-CODE
 ├── README.md
+├── wip/              # drafts & research, never rendered
 └── book/
     ├── _quarto.yml
     ├── abbreviations-and-units.qmd

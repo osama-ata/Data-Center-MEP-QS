@@ -29,9 +29,14 @@ jobs:
         with:
           tinytex: true
 
+      - name: Install Chrome Headless Shell (Mermaid diagrams in PDF/EPUB)
+        run: quarto install chrome-headless-shell --no-prompt
+
       - name: Validate YAML metadata
+        # safe_load with Date permitted: Ruby 3.1+ (Psych 4) rejects the
+        # date-released value in CITATION.cff under plain YAML.load_file.
         run: |
-          ruby -ryaml -e "YAML.load_file('book/_quarto.yml'); YAML.load_file('CITATION.cff'); puts 'YAML valid!'"
+          ruby -ryaml -rdate -e "['book/_quarto.yml', 'CITATION.cff', 'book/glossary.yml'].each { |f| YAML.safe_load(File.read(f), permitted_classes: [Date], aliases: true) }; puts 'YAML valid!'"
 
       - name: Render Quarto Book (HTML, PDF, EPUB, llms.txt, .llms.md)
         run: quarto render book

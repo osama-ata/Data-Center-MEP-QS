@@ -23,6 +23,7 @@ The research and outline baseline lives in [Data Center MEP-QS Outline.md](Data%
   - *Scope:* the rule covers anything **printed in the book**: fenced code in `.qmd` files, BibTeX snippets quoted in prose, and the console output of executed cells. Quarto cell-option lines (`#| label:`, `#| tbl-cap:`) are stripped from the rendered output and are exempt. `book/references.bib` is never printed verbatim, so its source lines are not bound by the rule; keep new entries tidy, but do not reflow the existing file.
 - **Preserve the canonical repository layout.** Do not add ad-hoc folders or duplicate files at the root or inside `book/`. Keep the exact 7-volume, 22-chapter file tree documented in Section 4.
   - Any new file (front/back matter, Lua filter, data file, script) needs the user's explicit approval **before** it is created, and the same change must update Section 4 of this file and the tree in [README.md](README.md).
+- **Draft in `wip/`, not in `book/`.** New prose, tables, figures, and BibTeX entries start as drafts in `wip/` with `status`/`target` front matter. They move into `book/` one item per commit, and only once the maintainer marks them `ready` (see [wip/README.md](wip/README.md)). Findings flagged UNVERIFIED, VENDOR, or snippet in `wip/research/` must be checked against the source before promotion.
 - **Never overwrite work you did not make.** Several agents (Claude Code, Antigravity, Codex, …) may work in this checkout at once. Run `git status` before editing. If a file already has uncommitted changes you did not make, do not edit, revert, reformat, or stage it; tell the user and wait.
 - **No new factual claims without a citation.** Each benchmark, cost figure, percentage, standard clause number, or definition you add to the prose needs a `[@key]` citation. This applies to mechanical edits too (wiring cross-references, tagging glossary terms, fixing typos). They must not slip in new technical assertions such as "via Time Impact Analysis" or "through LOD 500 COBie handover" unless that is the stated purpose of the change and the claim is cited.
 
@@ -88,6 +89,13 @@ Data-Center-MEP-QS/
 ├── LICENSE                 # CC BY-SA 4.0 (Book text, prose, tables)
 ├── LICENSE-CODE            # MIT License (Code, calculators, scripts)
 ├── README.md               # Repository overview & quick start
+├── wip/                    # Staging area, never rendered (see wip/README.md)
+│   ├── README.md           # Status levels & promotion checklist
+│   ├── enrichment-plan.md  # Approved research & enrichment plan
+│   ├── research/           # Source register, image register, notes, report
+│   ├── sources.bib         # Draft BibTeX, not loaded by the book
+│   ├── chapters/           # Draft sections, one folder per chapter
+│   └── figures/            # Figure prototypes & licensed image candidates
 └── book/
     ├── .gitignore
     ├── _quarto.yml
@@ -145,8 +153,11 @@ Run these from the repository root. They are written to behave the same under `z
 
 ```bash
 # 1. Validate YAML syntax of _quarto.yml, CITATION.cff, and glossary.yml
-ruby -ryaml -e "['book/_quarto.yml', 'CITATION.cff', 'book/glossary.yml'].each { |f| YAML.load_file(f) }; puts 'YAML valid!'"
+#    (same command as CI; Date must be permitted for Ruby >= 3.1)
+ruby -ryaml -rdate -e "['book/_quarto.yml', 'CITATION.cff', 'book/glossary.yml'].each { |f| YAML.safe_load(File.read(f), permitted_classes: [Date], aliases: true) }; puts 'YAML valid!'"
 ```
+
+Keep this command identical to the "Validate YAML metadata" step in `.github/workflows/deploy.yml`. Plain `YAML.load_file` passes on the macOS system Ruby (2.6) but fails on the CI runner's Ruby 3.3, because `CITATION.cff` contains a `date-released` date. That mismatch kept every deploy failing from `1eeb8ac` until the fix.
 
 ```bash
 # 2. Source lint: bare footnote digits, unknown cross-ref/glossary targets,
